@@ -1,0 +1,2636 @@
+db_id,query,question,database_schema
+manufactory_1,SELECT COUNT(DISTINCT name) FROM products WHERE name NOT IN (SELECT t1.name FROM products as t1 JOIN manufacturers as t2 ON t1.manufacturer  =  t2.code WHERE t2.name  =  'Sony'),Find number of products which Sony does not make.,"CREATE TABLE `Manufacturers` (
+  Code INTEGER,
+  Name VARCHAR(255),
+  Headquarter VARCHAR(255),
+  Founder VARCHAR(255),
+  Revenue REAL
+);
+
+CREATE TABLE `Products` (
+  Code INTEGER,
+  Name VARCHAR(255),
+  Price DECIMAL,
+  Manufacturer INTEGER REFERENCES Manufacturers(Code)
+);
+
+"
+manufactory_1,SELECT COUNT(*) FROM products WHERE price >= 180,How many products have prices of at least 180?,"CREATE TABLE `Products` (
+  Code INTEGER,
+  Name VARCHAR(255),
+  Price DECIMAL,
+  Manufacturer INTEGER REFERENCES Manufacturers(Code)
+);
+
+"
+manufactory_1,"SELECT name ,  headquarter ,  revenue FROM manufacturers ORDER BY revenue DESC","Find the name, headquarter and revenue of all manufacturers sorted by their revenue in the descending order.","CREATE TABLE `Manufacturers` (
+  Code INTEGER,
+  Name VARCHAR(255),
+  Headquarter VARCHAR(255),
+  Founder VARCHAR(255),
+  Revenue REAL
+);
+
+"
+manufactory_1,SELECT COUNT(*) FROM manufacturers WHERE founder  =  'Andy',How many companies were created by Andy?,"CREATE TABLE `Manufacturers` (
+  Code INTEGER,
+  Name VARCHAR(255),
+  Headquarter VARCHAR(255),
+  Founder VARCHAR(255),
+  Revenue REAL
+);
+
+"
+manufactory_1,SELECT name FROM manufacturers WHERE revenue BETWEEN 100 AND 150,Find the name of companies whose revenue is between 100 and 150.,"CREATE TABLE `Manufacturers` (
+  Code INTEGER,
+  Name VARCHAR(255),
+  Headquarter VARCHAR(255),
+  Founder VARCHAR(255),
+  Revenue REAL
+);
+
+"
+manufactory_1,"SELECT AVG(t1.price) ,  t2.name FROM products as t1 JOIN manufacturers as t2 ON t1.manufacturer  =  t2.code GROUP BY t2.name HAVING AVG(t1.price) >= 150",Select the names of manufacturer whose products have an average price higher than or equal to $150.,"CREATE TABLE `Manufacturers` (
+  Code INTEGER,
+  Name VARCHAR(255),
+  Headquarter VARCHAR(255),
+  Founder VARCHAR(255),
+  Revenue REAL
+);
+
+CREATE TABLE `Products` (
+  Code INTEGER,
+  Name VARCHAR(255),
+  Price DECIMAL,
+  Manufacturer INTEGER REFERENCES Manufacturers(Code)
+);
+
+"
+manufactory_1,SELECT name FROM manufacturers WHERE revenue  >  (SELECT AVG(revenue) FROM manufacturers),Find the name of companies whose revenue is greater than the average revenue of all companies.,"CREATE TABLE `Manufacturers` (
+  Code INTEGER,
+  Name VARCHAR(255),
+  Headquarter VARCHAR(255),
+  Founder VARCHAR(255),
+  Revenue REAL
+);
+
+"
+manufactory_1,SELECT name FROM products WHERE price  <=  200,What are the names of products with price at most 200?,"CREATE TABLE `Products` (
+  Code INTEGER,
+  Name VARCHAR(255),
+  Price DECIMAL,
+  Manufacturer INTEGER REFERENCES Manufacturers(Code)
+);
+
+"
+game_1,"SELECT fname ,  age FROM student WHERE stuid IN (SELECT stuid FROM sportsinfo WHERE sportname  =  ""Football"" INTERSECT SELECT stuid FROM sportsinfo WHERE sportname  =  ""Lacrosse"")",Find the first name and age of the students who are playing both Football and Lacrosse.,"CREATE TABLE `Student` (
+  StuID INTEGER,
+  LName VARCHAR(12),
+  Fname VARCHAR(12),
+  Age INTEGER,
+  Sex VARCHAR(1),
+  Major INTEGER,
+  Advisor INTEGER,
+  city_code VARCHAR(3)
+);
+
+CREATE TABLE `SportsInfo` (
+  StuID INTEGER REFERENCES Student(StuID),
+  SportName VARCHAR(32),
+  HoursPerWeek INTEGER,
+  GamesPlayed INTEGER,
+  OnScholarship VARCHAR(1)
+);
+
+"
+game_1,SELECT gname FROM plays_games as t1 JOIN video_games as t2 ON t1.gameid  =  t2.gameid GROUP BY t1.gameid HAVING SUM(hours_played)  >=  1000,What are the names of all the games that have been played for at least 1000 hours?,"CREATE TABLE `Video_Games` (
+  GameID INTEGER,
+  GName VARCHAR(40),
+  GType VARCHAR(40)
+);
+
+CREATE TABLE `Plays_Games` (
+  StuID INTEGER REFERENCES Student(StuID),
+  GameID INTEGER REFERENCES Video_Games(GameID),
+  Hours_Played INTEGER
+);
+
+"
+game_1,"SELECT COUNT(*) FROM video_games WHERE gtype  =  ""Massively multiplayer online game""",How many video games have type Massively multiplayer online game?,"CREATE TABLE `Video_Games` (
+  GameID INTEGER,
+  GName VARCHAR(40),
+  GType VARCHAR(40)
+);
+
+"
+game_1,SELECT COUNT(*) FROM video_games,How many video games do you have?,"CREATE TABLE `Video_Games` (
+  GameID INTEGER,
+  GName VARCHAR(40),
+  GType VARCHAR(40)
+);
+
+"
+game_1,SELECT COUNT(DISTINCT gtype) FROM video_games,How many video game types exist?,"CREATE TABLE `Video_Games` (
+  GameID INTEGER,
+  GName VARCHAR(40),
+  GType VARCHAR(40)
+);
+
+"
+game_1,"SELECT SUM(hoursperweek) ,  SUM(gamesplayed) FROM sportsinfo as t1 JOIN student as t2 ON t1.stuid  =  t2.stuid WHERE t2.fname  =  ""David"" AND t2.lname  =  ""Shieber""",What is the total number of hours per work and number of games played by David Shieber?,"CREATE TABLE `SportsInfo` (
+  StuID INTEGER REFERENCES Student(StuID),
+  SportName VARCHAR(32),
+  HoursPerWeek INTEGER,
+  GamesPlayed INTEGER,
+  OnScholarship VARCHAR(1)
+);
+
+"
+game_1,SELECT stuid FROM student EXCEPT SELECT stuid FROM plays_games,Show ids of students who don't play video game.,"CREATE TABLE `Student` (
+  StuID INTEGER,
+  LName VARCHAR(12),
+  Fname VARCHAR(12),
+  Age INTEGER,
+  Sex VARCHAR(1),
+  Major INTEGER,
+  Advisor INTEGER,
+  city_code VARCHAR(3)
+);
+
+CREATE TABLE `Plays_Games` (
+  StuID INTEGER REFERENCES Student(StuID),
+  GameID INTEGER REFERENCES Video_Games(GameID),
+  Hours_Played INTEGER
+);
+
+"
+game_1,SELECT stuid FROM student EXCEPT SELECT stuid FROM sportsinfo,What are the ids of all students who don't play sports?,"CREATE TABLE `Student` (
+  StuID INTEGER,
+  LName VARCHAR(12),
+  Fname VARCHAR(12),
+  Age INTEGER,
+  Sex VARCHAR(1),
+  Major INTEGER,
+  Advisor INTEGER,
+  city_code VARCHAR(3)
+);
+
+CREATE TABLE `SportsInfo` (
+  StuID INTEGER REFERENCES Student(StuID),
+  SportName VARCHAR(32),
+  HoursPerWeek INTEGER,
+  GamesPlayed INTEGER,
+  OnScholarship VARCHAR(1)
+);
+
+"
+musical,"SELECT nominee FROM musical WHERE award  =  ""Tony award"" INTERSECT SELECT nominee FROM musical WHERE award  =  ""Drama Desk award""","Show the nominees that have nominated musicals for both ""Tony Award"" and ""Drama Desk Award"".","CREATE TABLE `musical` (
+  Musical_ID INT PRIMARY KEY,
+  Name TEXT,
+  Year INT,
+  Award TEXT,
+  Category TEXT,
+  Nominee TEXT,
+  Result TEXT
+);
+
+"
+musical,"SELECT t2.name ,  COUNT(*) FROM actor as t1 JOIN musical as t2 ON t1.musical_id  =  t2.musical_id GROUP BY t1.musical_id",How many actors have appeared in each musical?,"CREATE TABLE `actor` (
+  Actor_ID INT PRIMARY KEY,
+  Name TEXT,
+  Musical_ID INT REFERENCES actor(Actor_ID),
+  Character TEXT,
+  Duration TEXT,
+  age INT
+);
+
+CREATE TABLE `musical` (
+  Musical_ID INT PRIMARY KEY,
+  Name TEXT,
+  Year INT,
+  Award TEXT,
+  Category TEXT,
+  Nominee TEXT,
+  Result TEXT
+);
+
+"
+musical,SELECT name FROM musical WHERE musical_id NOT IN (SELECT musical_id FROM actor),List the name of musicals that do not have actors.,"CREATE TABLE `actor` (
+  Actor_ID INT PRIMARY KEY,
+  Name TEXT,
+  Musical_ID INT REFERENCES actor(Actor_ID),
+  Character TEXT,
+  Duration TEXT,
+  age INT
+);
+
+CREATE TABLE `musical` (
+  Musical_ID INT PRIMARY KEY,
+  Name TEXT,
+  Year INT,
+  Award TEXT,
+  Category TEXT,
+  Nominee TEXT,
+  Result TEXT
+);
+
+"
+musical,SELECT t2.name FROM actor as t1 JOIN musical as t2 ON t1.musical_id  =  t2.musical_id GROUP BY t1.musical_id HAVING COUNT(*)  >=  3,What are the names of musicals who have at 3 or more actors?,"CREATE TABLE `actor` (
+  Actor_ID INT PRIMARY KEY,
+  Name TEXT,
+  Musical_ID INT REFERENCES actor(Actor_ID),
+  Character TEXT,
+  Duration TEXT,
+  age INT
+);
+
+CREATE TABLE `musical` (
+  Musical_ID INT PRIMARY KEY,
+  Name TEXT,
+  Year INT,
+  Award TEXT,
+  Category TEXT,
+  Nominee TEXT,
+  Result TEXT
+);
+
+"
+entrepreneur,"SELECT t2.name ,  t1.company FROM entrepreneur as t1 JOIN people as t2 ON t1.people_id  =  t2.people_id ORDER BY t1.money_requested","What are the names of entrepreneurs and their corresponding investors, ordered descending by the amount of money requested?","CREATE TABLE `entrepreneur` (
+  Entrepreneur_ID INT PRIMARY KEY,
+  People_ID INT REFERENCES people(People_ID),
+  Company TEXT,
+  Money_Requested REAL,
+  Investor TEXT
+);
+
+CREATE TABLE `people` (
+  People_ID INT PRIMARY KEY,
+  Name TEXT,
+  Height REAL,
+  Weight REAL,
+  Date_of_Birth TEXT
+);
+
+"
+entrepreneur,SELECT t2.name FROM entrepreneur as t1 JOIN people as t2 ON t1.people_id  =  t2.people_id ORDER BY t2.weight DESC LIMIT 1,What is the name of the entrepreneur with the greatest weight?,"CREATE TABLE `entrepreneur` (
+  Entrepreneur_ID INT PRIMARY KEY,
+  People_ID INT REFERENCES people(People_ID),
+  Company TEXT,
+  Money_Requested REAL,
+  Investor TEXT
+);
+
+CREATE TABLE `people` (
+  People_ID INT PRIMARY KEY,
+  Name TEXT,
+  Height REAL,
+  Weight REAL,
+  Date_of_Birth TEXT
+);
+
+"
+entrepreneur,SELECT name FROM people ORDER BY weight ASC,What are the names of people in ascending order of weight?,"CREATE TABLE `people` (
+  People_ID INT PRIMARY KEY,
+  Name TEXT,
+  Height REAL,
+  Weight REAL,
+  Date_of_Birth TEXT
+);
+
+"
+entrepreneur,SELECT COUNT(DISTINCT company) FROM entrepreneur,Count the number of different companies.,"CREATE TABLE `architect` (
+  id TEXT PRIMARY KEY,
+  name TEXT,
+  nationality TEXT,
+  gender TEXT
+);
+
+"
+cre_Theme_park,"SELECT t1.name FROM tourist_attractions as t1 JOIN visitors as t2 JOIN visits as t3 ON t1.tourist_attraction_id  =  t3.tourist_attraction_id AND t2.tourist_id  =  t3.tourist_id WHERE t2.tourist_details  =  ""Vincent"" INTERSECT SELECT t1.name FROM tourist_attractions as t1 JOIN visitors as t2 JOIN visits as t3 ON t1.tourist_attraction_id  =  t3.tourist_attraction_id AND t2.tourist_id  =  t3.tourist_id WHERE t2.tourist_details  =  ""Marcelle""",What are the names of the tourist attractions Vincent and Marcelle visit?,"CREATE TABLE `Visits` (
+  Visit_ID INTEGER,
+  Tourist_Attraction_ID INTEGER REFERENCES Tourist_Attractions(Tourist_Attraction_ID),
+  Tourist_ID INTEGER REFERENCES Visitors(Tourist_ID),
+  Visit_Date DATETIME,
+  Visit_Details VARCHAR(40)
+);
+
+CREATE TABLE `Visitors` (
+  Tourist_ID INTEGER PRIMARY KEY,
+  Tourist_Details VARCHAR(255)
+);
+
+CREATE TABLE `Tourist_Attractions` (
+  Tourist_Attraction_ID INTEGER,
+  Attraction_Type_Code CHAR(15) REFERENCES Ref_Attraction_Types(Attraction_Type_Code),
+  Location_ID INTEGER REFERENCES Locations(Location_ID),
+  How_to_Get_There VARCHAR(255),
+  Name VARCHAR(255),
+  Description VARCHAR(255),
+  Opening_Hours VARCHAR(255),
+  Other_Details VARCHAR(255)
+);
+
+"
+cre_Theme_park,SELECT DISTINCT visit_date FROM visits,What are the distinct visit dates?,"CREATE TABLE `Visits` (
+  Visit_ID INTEGER,
+  Tourist_Attraction_ID INTEGER REFERENCES Tourist_Attractions(Tourist_Attraction_ID),
+  Tourist_ID INTEGER REFERENCES Visitors(Tourist_ID),
+  Visit_Date DATETIME,
+  Visit_Details VARCHAR(40)
+);
+
+"
+cre_Theme_park,"SELECT t2.name FROM locations as t1 JOIN tourist_attractions as t2 ON t1.location_id  =  t2.location_id WHERE t1.address  =  ""660 Shea Crescent"" OR t2.how_to_get_there  =  ""walk""",Find the names of the tourist attractions that is either accessible by walk or at address 660 Shea Crescent.,"CREATE TABLE `Locations` (
+  Location_ID INTEGER,
+  Location_Name VARCHAR(255),
+  Address VARCHAR(255),
+  Other_Details VARCHAR(255)
+);
+
+CREATE TABLE `Tourist_Attractions` (
+  Tourist_Attraction_ID INTEGER,
+  Attraction_Type_Code CHAR(15) REFERENCES Ref_Attraction_Types(Attraction_Type_Code),
+  Location_ID INTEGER REFERENCES Locations(Location_ID),
+  How_to_Get_There VARCHAR(255),
+  Name VARCHAR(255),
+  Description VARCHAR(255),
+  Opening_Hours VARCHAR(255),
+  Other_Details VARCHAR(255)
+);
+
+"
+cre_Theme_park,SELECT how_to_get_there FROM tourist_attractions GROUP BY how_to_get_there ORDER BY COUNT(*) DESC LIMIT 1,Which transportation method is used the most often to get to tourist attractions?,"CREATE TABLE `Tourist_Attractions` (
+  Tourist_Attraction_ID INTEGER,
+  Attraction_Type_Code CHAR(15) REFERENCES Ref_Attraction_Types(Attraction_Type_Code),
+  Location_ID INTEGER REFERENCES Locations(Location_ID),
+  How_to_Get_There VARCHAR(255),
+  Name VARCHAR(255),
+  Description VARCHAR(255),
+  Opening_Hours VARCHAR(255),
+  Other_Details VARCHAR(255)
+);
+
+"
+cre_Theme_park,"SELECT t1.museum_details ,  t2.opening_hours FROM museums as t1 JOIN tourist_attractions as t2 ON t1.museum_id  =  t2.tourist_attraction_id",Give me the detail and opening hour for each museum.,"CREATE TABLE `Museums` (
+  Museum_ID INTEGER REFERENCES Tourist_Attractions(Tourist_Attraction_ID),
+  Museum_Details VARCHAR(255)
+);
+
+CREATE TABLE `Tourist_Attractions` (
+  Tourist_Attraction_ID INTEGER,
+  Attraction_Type_Code CHAR(15) REFERENCES Ref_Attraction_Types(Attraction_Type_Code),
+  Location_ID INTEGER REFERENCES Locations(Location_ID),
+  How_to_Get_There VARCHAR(255),
+  Name VARCHAR(255),
+  Description VARCHAR(255),
+  Opening_Hours VARCHAR(255),
+  Other_Details VARCHAR(255)
+);
+
+"
+cre_Theme_park,"SELECT t2.name FROM locations as t1 JOIN tourist_attractions as t2 ON t1.location_id  =  t2.location_id WHERE t1.address  =  ""254 Ottilie Junction"" OR t2.how_to_get_there  =  ""bus""",Find the names of the tourist attractions that is either accessible by bus or at address 254 Ottilie Junction.,"CREATE TABLE `Locations` (
+  Location_ID INTEGER,
+  Location_Name VARCHAR(255),
+  Address VARCHAR(255),
+  Other_Details VARCHAR(255)
+);
+
+CREATE TABLE `Tourist_Attractions` (
+  Tourist_Attraction_ID INTEGER,
+  Attraction_Type_Code CHAR(15) REFERENCES Ref_Attraction_Types(Attraction_Type_Code),
+  Location_ID INTEGER REFERENCES Locations(Location_ID),
+  How_to_Get_There VARCHAR(255),
+  Name VARCHAR(255),
+  Description VARCHAR(255),
+  Opening_Hours VARCHAR(255),
+  Other_Details VARCHAR(255)
+);
+
+"
+cre_Theme_park,SELECT COUNT(DISTINCT name) FROM photos,Count the number of distinct names associated with the photos.,"CREATE TABLE `Photos` (
+  Photo_ID INTEGER,
+  Tourist_Attraction_ID INTEGER REFERENCES Tourist_Attractions(Tourist_Attraction_ID),
+  Name VARCHAR(255),
+  Description VARCHAR(255),
+  Filename VARCHAR(255),
+  Other_Details VARCHAR(255)
+);
+
+"
+cre_Theme_park,"SELECT t1.name FROM staff as t1 JOIN tourist_attractions as t2 ON t1.tourist_attraction_id  =  t2.tourist_attraction_id WHERE t2.name  =  ""US museum""","What is the name of the staff that is in charge of the attraction named ""US museum""?","CREATE TABLE `Staff` (
+  Staff_ID INTEGER,
+  Tourist_Attraction_ID INTEGER REFERENCES Tourist_Attractions(Tourist_Attraction_ID),
+  Name VARCHAR(40),
+  Other_Details VARCHAR(255)
+);
+
+CREATE TABLE `Tourist_Attractions` (
+  Tourist_Attraction_ID INTEGER,
+  Attraction_Type_Code CHAR(15) REFERENCES Ref_Attraction_Types(Attraction_Type_Code),
+  Location_ID INTEGER REFERENCES Locations(Location_ID),
+  How_to_Get_There VARCHAR(255),
+  Name VARCHAR(255),
+  Description VARCHAR(255),
+  Opening_Hours VARCHAR(255),
+  Other_Details VARCHAR(255)
+);
+
+"
+wrestler,SELECT team FROM elimination GROUP BY team HAVING COUNT(*)  >  3,Which teams had more than 3 eliminations?,"CREATE TABLE `Elimination` (
+  Elimination_ID TEXT PRIMARY KEY,
+  Wrestler_ID TEXT REFERENCES wrestler(Wrestler_ID),
+  Team TEXT,
+  Eliminated_By TEXT,
+  Elimination_Move TEXT,
+  Time TEXT
+);
+
+"
+wrestler,SELECT location FROM wrestler GROUP BY location HAVING COUNT(*)  >  2,List the locations that are shared by more than two wrestlers.,"CREATE TABLE `wrestler` (
+  Wrestler_ID INT PRIMARY KEY,
+  Name TEXT,
+  Reign TEXT,
+  Days_held TEXT,
+  Location TEXT,
+  Event TEXT
+);
+
+"
+wrestler,SELECT COUNT(*) FROM wrestler,How many wrestlers are there?,"CREATE TABLE `wrestler` (
+  Wrestler_ID INT PRIMARY KEY,
+  Name TEXT,
+  Reign TEXT,
+  Days_held TEXT,
+  Location TEXT,
+  Event TEXT
+);
+
+"
+wrestler,SELECT COUNT(DISTINCT team) FROM elimination,What is the number of distinct teams that suffer elimination?,"CREATE TABLE `Elimination` (
+  Elimination_ID TEXT PRIMARY KEY,
+  Wrestler_ID TEXT REFERENCES wrestler(Wrestler_ID),
+  Team TEXT,
+  Eliminated_By TEXT,
+  Elimination_Move TEXT,
+  Time TEXT
+);
+
+"
+yelp,"SELECT COUNT(DISTINCT t1.text) FROM user as t2 JOIN tip as t1 ON t2.user_id  =  t1.user_id WHERE t1.year  =  2010 AND t2.name  =  ""Michelle"";",How many tips has Michelle written in 2010,"CREATE TABLE `user` (
+  uid INT PRIMARY KEY,
+  user_id TEXT,
+  name TEXT
+);
+
+CREATE TABLE `tip` (
+  tip_id INT PRIMARY KEY,
+  business_id TEXT REFERENCES business(business_id),
+  text TEXT,
+  user_id TEXT REFERENCES user(user_id),
+  likes INT,
+  year INT,
+  month TEXT
+);
+
+"
+yelp,"SELECT t4.name FROM category as t2 JOIN business as t1 ON t2.business_id  =  t1.business_id JOIN review as t3 ON t3.business_id  =  t1.business_id JOIN user as t4 ON t4.user_id  =  t3.user_id WHERE t1.name  =  ""Mesa Grill"" AND t2.category_name  =  ""restaurant"";","Find all users who reviewed restaurant "" Mesa Grill ""","CREATE TABLE `category` (
+  id INT PRIMARY KEY,
+  business_id TEXT REFERENCES business(business_id),
+  category_name TEXT
+);
+
+CREATE TABLE `user` (
+  uid INT PRIMARY KEY,
+  user_id TEXT,
+  name TEXT
+);
+
+CREATE TABLE `review` (
+  rid INT PRIMARY KEY,
+  business_id TEXT REFERENCES business(business_id),
+  user_id TEXT REFERENCES user(user_id),
+  rating REAL,
+  text TEXT,
+  year INT,
+  month TEXT
+);
+
+CREATE TABLE `business` (
+  bid INT PRIMARY KEY,
+  business_id TEXT,
+  name TEXT,
+  full_address TEXT,
+  city TEXT,
+  latitude TEXT,
+  longitude TEXT,
+  review_count INT,
+  is_open INT,
+  rating REAL,
+  state TEXT
+);
+
+"
+yelp,"SELECT COUNT(DISTINCT t4.name) FROM category as t2 JOIN business as t1 ON t2.business_id  =  t1.business_id JOIN review as t3 ON t3.business_id  =  t1.business_id JOIN user as t4 ON t4.user_id  =  t3.user_id WHERE t1.name  =  ""Vintner Grill"" AND t2.category_name  =  ""category_category_name0"" AND t3.year  =  2010;","How many people reviewed restaurant "" Vintner Grill "" in 2010 ?","CREATE TABLE `category` (
+  id INT PRIMARY KEY,
+  business_id TEXT REFERENCES business(business_id),
+  category_name TEXT
+);
+
+CREATE TABLE `user` (
+  uid INT PRIMARY KEY,
+  user_id TEXT,
+  name TEXT
+);
+
+CREATE TABLE `review` (
+  rid INT PRIMARY KEY,
+  business_id TEXT REFERENCES business(business_id),
+  user_id TEXT REFERENCES user(user_id),
+  rating REAL,
+  text TEXT,
+  year INT,
+  month TEXT
+);
+
+CREATE TABLE `business` (
+  bid INT PRIMARY KEY,
+  business_id TEXT,
+  name TEXT,
+  full_address TEXT,
+  city TEXT,
+  latitude TEXT,
+  longitude TEXT,
+  review_count INT,
+  is_open INT,
+  rating REAL,
+  state TEXT
+);
+
+"
+yelp,"SELECT t1.neighbourhood_name FROM category as t3 JOIN business as t2 ON t3.business_id  =  t2.business_id JOIN category as t4 ON t4.business_id  =  t2.business_id JOIN neighbourhood as t1 ON t1.business_id  =  t2.business_id WHERE t2.city  =  ""Madison"" AND t3.category_name  =  ""Italian"" AND t4.category_name  =  ""restaurant"";",List all the neighbourhoods with Italian restaurant in Madison,"CREATE TABLE `category` (
+  id INT PRIMARY KEY,
+  business_id TEXT REFERENCES business(business_id),
+  category_name TEXT
+);
+
+CREATE TABLE `neighbourhood` (
+  id INT PRIMARY KEY,
+  business_id TEXT REFERENCES business(business_id),
+  neighbourhood_name TEXT
+);
+
+CREATE TABLE `business` (
+  bid INT PRIMARY KEY,
+  business_id TEXT,
+  name TEXT,
+  full_address TEXT,
+  city TEXT,
+  latitude TEXT,
+  longitude TEXT,
+  review_count INT,
+  is_open INT,
+  rating REAL,
+  state TEXT
+);
+
+"
+yelp,"SELECT COUNT(DISTINCT t1.name) FROM category as t2 JOIN business as t1 ON t2.business_id  =  t1.business_id WHERE t1.city  =  ""Madison"" AND t2.category_name  =  ""escape games"";",How many escape games are there in Madison ?,"CREATE TABLE `category` (
+  id INT PRIMARY KEY,
+  business_id TEXT REFERENCES business(business_id),
+  category_name TEXT
+);
+
+CREATE TABLE `business` (
+  bid INT PRIMARY KEY,
+  business_id TEXT,
+  name TEXT,
+  full_address TEXT,
+  city TEXT,
+  latitude TEXT,
+  longitude TEXT,
+  review_count INT,
+  is_open INT,
+  rating REAL,
+  state TEXT
+);
+
+"
+yelp,"SELECT COUNT(DISTINCT t1.text) FROM user as t2 JOIN review as t1 ON t2.user_id  =  t1.user_id WHERE t1.month  =  ""March"" AND t1.year  =  2014 AND t2.name  =  ""Michelle"";",How many reviews has Michelle written in March 2014 ?,"CREATE TABLE `user` (
+  uid INT PRIMARY KEY,
+  user_id TEXT,
+  name TEXT
+);
+
+CREATE TABLE `review` (
+  rid INT PRIMARY KEY,
+  business_id TEXT REFERENCES business(business_id),
+  user_id TEXT REFERENCES user(user_id),
+  rating REAL,
+  text TEXT,
+  year INT,
+  month TEXT
+);
+
+"
+yelp,"SELECT t1.name FROM category as t2 JOIN business as t1 ON t2.business_id  =  t1.business_id WHERE t1.city  =  ""Dallas"" AND t1.rating  >  4.5 AND t2.category_name  =  ""restaurant"";",Find all Dallas restaurant with a rating above 4.5,"CREATE TABLE `category` (
+  id INT PRIMARY KEY,
+  business_id TEXT REFERENCES business(business_id),
+  category_name TEXT
+);
+
+CREATE TABLE `LOCATION` (
+  RESTAURANT_ID INT PRIMARY KEY REFERENCES RESTAURANT(RESTAURANT_ID),
+  HOUSE_NUMBER INT,
+  STREET_NAME TEXT,
+  CITY_NAME TEXT REFERENCES GEOGRAPHIC(CITY_NAME)
+);
+
+CREATE TABLE `RESTAURANT` (
+  ID INT PRIMARY KEY,
+  NAME TEXT,
+  FOOD_TYPE TEXT,
+  CITY_NAME TEXT REFERENCES GEOGRAPHIC(CITY_NAME),
+  RATING REAL
+);
+
+CREATE TABLE `business` (
+  bid INT PRIMARY KEY,
+  business_id TEXT,
+  name TEXT,
+  full_address TEXT,
+  city TEXT,
+  latitude TEXT,
+  longitude TEXT,
+  review_count INT,
+  is_open INT,
+  rating REAL,
+  state TEXT
+);
+
+"
+yelp,"SELECT AVG(t1.rating) FROM user as t2 JOIN review as t1 ON t2.user_id  =  t1.user_id WHERE t2.name  =  ""Michelle"";",what is the average rating given in Michelle reviews,"CREATE TABLE `user` (
+  uid INT PRIMARY KEY,
+  user_id TEXT,
+  name TEXT
+);
+
+CREATE TABLE `review` (
+  rid INT PRIMARY KEY,
+  business_id TEXT REFERENCES business(business_id),
+  user_id TEXT REFERENCES user(user_id),
+  rating REAL,
+  text TEXT,
+  year INT,
+  month TEXT
+);
+
+"
+yelp,"SELECT t1.name FROM review as t2 JOIN business as t1 ON t2.business_id  =  t1.business_id JOIN user as t3 ON t3.user_id  =  t2.user_id WHERE t2.rating  =  5 AND t3.name  =  ""Niloofar"";",list all the businesses which Niloofar rated 5,"CREATE TABLE `business` (
+  bid INT PRIMARY KEY,
+  business_id TEXT,
+  name TEXT,
+  full_address TEXT,
+  city TEXT,
+  latitude TEXT,
+  longitude TEXT,
+  review_count INT,
+  is_open INT,
+  rating REAL,
+  state TEXT
+);
+
+CREATE TABLE `user` (
+  uid INT PRIMARY KEY,
+  user_id TEXT,
+  name TEXT
+);
+
+CREATE TABLE `review` (
+  rid INT PRIMARY KEY,
+  business_id TEXT REFERENCES business(business_id),
+  user_id TEXT REFERENCES user(user_id),
+  rating REAL,
+  text TEXT,
+  year INT,
+  month TEXT
+);
+
+"
+yelp,"SELECT SUM(t2.likes) FROM tip as t2 JOIN business as t1 ON t2.business_id  =  t1.business_id JOIN user as t3 ON t3.user_id  =  t2.user_id WHERE t1.name  =  ""Cafe Zinho"" AND t3.name  =  ""Niloofar"";","What is the total likes on tips from Niloofar about "" Cafe Zinho ""","CREATE TABLE `business` (
+  bid INT PRIMARY KEY,
+  business_id TEXT,
+  name TEXT,
+  full_address TEXT,
+  city TEXT,
+  latitude TEXT,
+  longitude TEXT,
+  review_count INT,
+  is_open INT,
+  rating REAL,
+  state TEXT
+);
+
+CREATE TABLE `tip` (
+  tip_id INT PRIMARY KEY,
+  business_id TEXT REFERENCES business(business_id),
+  text TEXT,
+  user_id TEXT REFERENCES user(user_id),
+  likes INT,
+  year INT,
+  month TEXT
+);
+
+CREATE TABLE `user` (
+  uid INT PRIMARY KEY,
+  user_id TEXT,
+  name TEXT
+);
+
+"
+yelp,"SELECT t2.text FROM review as t2 JOIN business as t1 ON t2.business_id  =  t1.business_id WHERE t1.name  =  ""Kabob Palace"" AND t2.year  =  2014;","Find all reviews about "" Kabob Palace "" in year 2014","CREATE TABLE `business` (
+  bid INT PRIMARY KEY,
+  business_id TEXT,
+  name TEXT,
+  full_address TEXT,
+  city TEXT,
+  latitude TEXT,
+  longitude TEXT,
+  review_count INT,
+  is_open INT,
+  rating REAL,
+  state TEXT
+);
+
+CREATE TABLE `review` (
+  rid INT PRIMARY KEY,
+  business_id TEXT REFERENCES business(business_id),
+  user_id TEXT REFERENCES user(user_id),
+  rating REAL,
+  text TEXT,
+  year INT,
+  month TEXT
+);
+
+"
+behavior_monitoring,"SELECT date_incident_start ,  date_incident_end FROM behavior_incident WHERE incident_type_code  =  ""NOISE""","What are the start and end dates for incidents with incident type code ""NOISE""?","CREATE TABLE `Behavior_Incident` (
+  incident_id INTEGER,
+  incident_type_code VARCHAR(10) REFERENCES Ref_Incident_Type(incident_type_code),
+  student_id INTEGER REFERENCES Students(student_id),
+  date_incident_start DATETIME,
+  date_incident_end DATETIME,
+  incident_summary VARCHAR(255),
+  recommendations VARCHAR(255),
+  other_details VARCHAR(255)
+);
+
+"
+behavior_monitoring,"SELECT MAX(monthly_rental) ,  MIN(monthly_rental) FROM student_addresses",Find the maximum and minimum monthly rental for all student addresses.,"CREATE TABLE `Student_Addresses` (
+  student_id INTEGER REFERENCES Students(student_id),
+  address_id INTEGER REFERENCES Addresses(address_id),
+  date_address_from DATETIME,
+  date_address_to DATETIME,
+  monthly_rental DECIMAL(19,4),
+  other_details VARCHAR(255)
+);
+
+"
+behavior_monitoring,"SELECT gender FROM teachers WHERE last_name  =  ""Medhurst""","What is the gender of the teacher with last name ""Medhurst""?","CREATE TABLE `Teachers` (
+  teacher_id INTEGER,
+  address_id INTEGER REFERENCES Addresses(address_id),
+  first_name VARCHAR(80),
+  middle_name VARCHAR(80),
+  last_name VARCHAR(80),
+  gender VARCHAR(1),
+  cell_mobile_number VARCHAR(40),
+  email_address VARCHAR(40),
+  other_details VARCHAR(255)
+);
+
+"
+behavior_monitoring,SELECT COUNT(DISTINCT student_id) FROM students_in_detention,How many distinct students have been in detention?,"CREATE TABLE `Detention` (
+  detention_id INTEGER,
+  detention_type_code VARCHAR(10) REFERENCES Ref_Detention_Type(detention_type_code),
+  teacher_id INTEGER REFERENCES Teachers(teacher_id),
+  datetime_detention_start DATETIME,
+  datetime_detention_end DATETIME,
+  detention_summary VARCHAR(255),
+  other_details VARCHAR(255)
+);
+
+"
+film_rank,SELECT AVG(gross_in_dollar) FROM film,Return the average gross sales in dollars across all films.,"CREATE TABLE `film` (
+  Film_ID INT PRIMARY KEY,
+  Title TEXT,
+  Studio TEXT,
+  Director TEXT,
+  Gross_in_dollar INT
+);
+
+"
+film_rank,"SELECT studio FROM film WHERE director  =  ""Nicholas Meyer"" INTERSECT SELECT studio FROM film WHERE director  =  ""Walter Hill""",What are the names of studios that have produced films with both Nicholas Meyer and Walter Hill?,"CREATE TABLE `film` (
+  Film_ID INT PRIMARY KEY,
+  Title TEXT,
+  Studio TEXT,
+  Director TEXT,
+  Gross_in_dollar INT
+);
+
+"
+film_rank,"SELECT low_estimate ,  high_estimate FROM film_market_estimation",Return the low and high estimates for all film markets.,"CREATE TABLE `film_market_estimation` (
+  Estimation_ID INT PRIMARY KEY,
+  Low_Estimate REAL,
+  High_Estimate REAL,
+  Film_ID INT REFERENCES film(Film_ID),
+  Type TEXT,
+  Market_ID INT REFERENCES market(Market_ID),
+  Year INT
+);
+
+"
+film_rank,"SELECT studio FROM film EXCEPT SELECT studio FROM film WHERE director  =  ""Walter Hill""",Which studios have never worked with the director Walter Hill?,"CREATE TABLE `film` (
+  Film_ID INT PRIMARY KEY,
+  Title TEXT,
+  Studio TEXT,
+  Director TEXT,
+  Gross_in_dollar INT
+);
+
+"
+product_catalog,SELECT t1.catalog_entry_name FROM catalog_contents as t1 JOIN catalog_contents_Additional_Attributes as t2 ON t1.catalog_entry_id  =  t2.catalog_entry_id WHERE t2.attribute_value  =  (SELECT attribute_value FROM catalog_contents_Additional_Attributes GROUP BY attribute_value ORDER BY COUNT(*) DESC LIMIT 1),What are the entry names of catalog with the attribute possessed by most entries.,"CREATE TABLE `Catalog_Contents` (
+  catalog_entry_id INTEGER,
+  catalog_level_number INTEGER REFERENCES Catalog_Structure(catalog_level_number),
+  parent_entry_id INTEGER,
+  previous_entry_id INTEGER,
+  next_entry_id INTEGER,
+  catalog_entry_name VARCHAR(80),
+  product_stock_number VARCHAR(50),
+  price_in_dollars DOUBLE,
+  price_in_euros DOUBLE,
+  price_in_pounds DOUBLE,
+  capacity VARCHAR(20),
+  length VARCHAR(20),
+  height VARCHAR(20),
+  width VARCHAR(20)
+);
+
+CREATE TABLE `Catalog_Contents_Additional_Attributes` (
+  catalog_entry_id INTEGER REFERENCES Catalog_Contents(catalog_entry_id),
+  catalog_level_number INTEGER REFERENCES Catalog_Structure(catalog_level_number),
+  attribute_id INTEGER,
+  attribute_value VARCHAR(255)
+);
+
+"
+product_catalog,"SELECT catalog_level_name ,  catalog_level_number FROM catalog_structure WHERE catalog_level_number BETWEEN 5 AND 10",What are the name and level of catalog structure with level number between 5 and 10,"CREATE TABLE `Catalog_Structure` (
+  catalog_level_number INTEGER,
+  catalog_id INTEGER REFERENCES Catalogs(catalog_id),
+  catalog_level_name VARCHAR(50)
+);
+
+"
+product_catalog,"SELECT DISTINCT(catalog_publisher) FROM catalogs WHERE catalog_publisher LIKE ""%Murray%""","Find all the catalog publishers whose name contains ""Murray""","CREATE TABLE `Catalogs` (
+  catalog_id INTEGER,
+  catalog_name VARCHAR(50),
+  catalog_publisher VARCHAR(80),
+  date_of_publication DATETIME,
+  date_of_latest_revision DATETIME
+);
+
+"
+product_catalog,SELECT catalog_entry_name FROM catalog_contents ORDER BY price_in_dollars DESC LIMIT 1,Find the entry name of the catalog with the highest price (in USD).,"CREATE TABLE `Catalog_Contents` (
+  catalog_entry_id INTEGER,
+  catalog_level_number INTEGER REFERENCES Catalog_Structure(catalog_level_number),
+  parent_entry_id INTEGER,
+  previous_entry_id INTEGER,
+  next_entry_id INTEGER,
+  catalog_entry_name VARCHAR(80),
+  product_stock_number VARCHAR(50),
+  price_in_dollars DOUBLE,
+  price_in_euros DOUBLE,
+  price_in_pounds DOUBLE,
+  capacity VARCHAR(20),
+  length VARCHAR(20),
+  height VARCHAR(20),
+  width VARCHAR(20)
+);
+
+"
+flight_4,"SELECT COUNT(*) ,  country FROM airports GROUP BY country ORDER BY COUNT(*) DESC","What is the number of airports per country, ordered from most to least?","CREATE TABLE `airports` (
+  apid INTEGER,
+  name TEXT,
+  city TEXT,
+  country TEXT,
+  x REAL,
+  y REAL,
+  elevation bigint,
+  iata character varchar(3),
+  icao character varchar(4)
+);
+
+"
+flight_4,"SELECT name ,  city ,  country FROM airports ORDER BY elevation LIMIT 1","Find the name, city, and country of the airport that has the lowest altitude.","CREATE TABLE `airports` (
+  apid INTEGER,
+  name TEXT,
+  city TEXT,
+  country TEXT,
+  x REAL,
+  y REAL,
+  elevation bigint,
+  iata character varchar(3),
+  icao character varchar(4)
+);
+
+"
+flight_4,SELECT COUNT(DISTINCT city) FROM airports WHERE country  =  'Greenland',In how many cities are there airports in the country of Greenland?,"CREATE TABLE `airports` (
+  apid INTEGER,
+  name TEXT,
+  city TEXT,
+  country TEXT,
+  x REAL,
+  y REAL,
+  elevation bigint,
+  iata character varchar(3),
+  icao character varchar(4)
+);
+
+"
+flight_4,SELECT COUNT(*) FROM airlines,How many airlines are there?,"CREATE TABLE `airlines` (
+  alid INTEGER,
+  name TEXT,
+  iata varchar(2),
+  icao varchar(3),
+  callsign TEXT,
+  country TEXT,
+  active varchar(2)
+);
+
+"
+flight_4,"SELECT name ,  city ,  country FROM airports ORDER BY elevation LIMIT 1","What is the name, city, and country of the airport with the lowest altitude?","CREATE TABLE `airports` (
+  apid INTEGER,
+  name TEXT,
+  city TEXT,
+  country TEXT,
+  x REAL,
+  y REAL,
+  elevation bigint,
+  iata character varchar(3),
+  icao character varchar(4)
+);
+
+"
+flight_4,"SELECT COUNT(*) ,  country FROM airports GROUP BY country ORDER BY COUNT(*) DESC",How many airports are there per country? Order the countries by decreasing number of airports.,"CREATE TABLE `airports` (
+  apid INTEGER,
+  name TEXT,
+  city TEXT,
+  country TEXT,
+  x REAL,
+  y REAL,
+  elevation bigint,
+  iata character varchar(3),
+  icao character varchar(4)
+);
+
+"
+flight_4,SELECT COUNT(*) FROM airlines WHERE country  =  'Russia',What is the number of airlines based in Russia?,"CREATE TABLE `airlines` (
+  alid INTEGER,
+  name TEXT,
+  iata varchar(2),
+  icao varchar(3),
+  callsign TEXT,
+  country TEXT,
+  active varchar(2)
+);
+
+"
+flight_4,"SELECT t1.name ,  t2.alid FROM airlines as t1 JOIN routes as t2 ON t1.alid  =  t2.alid GROUP BY t2.alid ORDER BY COUNT(*) DESC LIMIT 10",Find the names of the top 10 airlines that operate the most number of routes.,"CREATE TABLE `airlines` (
+  alid INTEGER,
+  name TEXT,
+  iata varchar(2),
+  icao varchar(3),
+  callsign TEXT,
+  country TEXT,
+  active varchar(2)
+);
+
+CREATE TABLE `routes` (
+  rid INTEGER,
+  dst_apid INTEGER REFERENCES airports(apid),
+  dst_ap varchar(4),
+  src_apid bigint REFERENCES airports(apid),
+  src_ap varchar(4),
+  alid bigint REFERENCES airlines(alid),
+  airline varchar(4),
+  codeshare TEXT
+);
+
+"
+game_injury,SELECT date FROM game ORDER BY home_team DESC,List the dates of games by the home team name in descending order.,"CREATE TABLE `game` (
+  stadium_id INT REFERENCES stadium(id),
+  id INT PRIMARY KEY,
+  Season INT,
+  Date TEXT,
+  Home_team TEXT,
+  Away_team TEXT,
+  Score TEXT,
+  Competition TEXT
+);
+
+"
+hospital_1,SELECT t1.name FROM physician as t1 JOIN patient as t2 ON t1.employeeid  =  t2.pcp GROUP BY t1.employeeid HAVING COUNT(*)  >  1,Which physicians are in charge of more than one patient? Give me their names.,"CREATE TABLE `Patient` (
+  SSN INTEGER,
+  Name VARCHAR(30),
+  Address VARCHAR(30),
+  Phone VARCHAR(30),
+  InsuranceID INTEGER,
+  PCP INTEGER REFERENCES Physician(EmployeeID)
+);
+
+CREATE TABLE `Physician` (
+  EmployeeID INTEGER,
+  Name VARCHAR(30),
+  Position VARCHAR(30),
+  SSN INTEGER
+);
+
+"
+hospital_1,SELECT name FROM department GROUP BY departmentid ORDER BY COUNT(departmentid) DESC LIMIT 1;,Find the department with the most employees.,"CREATE TABLE `architect` (
+  id TEXT PRIMARY KEY,
+  name TEXT,
+  nationality TEXT,
+  gender TEXT
+);
+
+"
+hospital_1,"SELECT name ,  cost FROM procedures ORDER BY cost DESC",Sort the list of names and costs of all procedures in the descending order of cost.,"CREATE TABLE `Procedures` (
+  Code INTEGER,
+  Name VARCHAR(30),
+  Cost REAL
+);
+
+"
+hospital_1,"SELECT name FROM procedures WHERE cost  <  5000 INTERSECT SELECT t3.name FROM physician as t1 JOIN trained_in as t2 ON t1.employeeid  =  t2.physician JOIN procedures as t3 ON t3.code  =  t2.treatment WHERE t1.name  =  ""John Wen""",Find the names of all procedures such that the cost is less than 5000 and physician John Wen was trained in.,"CREATE TABLE `Trained_In` (
+  Physician INTEGER PRIMARY KEY REFERENCES Physician(EmployeeID),
+  Treatment INTEGER PRIMARY KEY REFERENCES Procedures(Code),
+  CertificationDate DATETIME,
+  CertificationExpires DATETIME
+);
+
+CREATE TABLE `Procedures` (
+  Code INTEGER,
+  Name VARCHAR(30),
+  Cost REAL
+);
+
+CREATE TABLE `Physician` (
+  EmployeeID INTEGER,
+  Name VARCHAR(30),
+  Position VARCHAR(30),
+  SSN INTEGER
+);
+
+"
+hospital_1,SELECT t1.name FROM physician as t1 JOIN prescribes as t2 ON t1.employeeid = t2.physician ORDER BY t2.dose DESC LIMIT 1,What are the names of the physician who prescribed the highest dose?,"CREATE TABLE `Physician` (
+  EmployeeID INTEGER,
+  Name VARCHAR(30),
+  Position VARCHAR(30),
+  SSN INTEGER
+);
+
+CREATE TABLE `Prescribes` (
+  Physician INTEGER PRIMARY KEY REFERENCES Physician(EmployeeID),
+  Patient INTEGER PRIMARY KEY REFERENCES Patient(SSN),
+  Medication INTEGER PRIMARY KEY REFERENCES Medication(Code),
+  Date DATETIME PRIMARY KEY,
+  Appointment INTEGER REFERENCES Appointment(AppointmentID),
+  Dose VARCHAR(30)
+);
+
+"
+hospital_1,SELECT appointmentid FROM appointment ORDER BY start DESC LIMIT 1,Find the id of the appointment with the most recent start date?,"CREATE TABLE `Appointment` (
+  AppointmentID INTEGER,
+  Patient INTEGER REFERENCES Patient(SSN),
+  PrepNurse INTEGER REFERENCES Nurse(EmployeeID),
+  Physician INTEGER REFERENCES Physician(EmployeeID),
+  Start DATETIME,
+  End DATETIME,
+  ExaminationRoom TEXT
+);
+
+"
+hospital_1,SELECT DISTINCT t1.name FROM nurse as t1 JOIN on_call as t2 ON t1.employeeid  =  t2.nurse,Find the names of nurses who are on call.,"CREATE TABLE `On_Call` (
+  Nurse INTEGER PRIMARY KEY REFERENCES Nurse(EmployeeID),
+  BlockFloor INTEGER PRIMARY KEY REFERENCES Block(BlockFloor),
+  BlockCode INTEGER PRIMARY KEY REFERENCES Block(BlockCode),
+  OnCallStart DATETIME PRIMARY KEY,
+  OnCallEnd DATETIME PRIMARY KEY
+);
+
+CREATE TABLE `Nurse` (
+  EmployeeID INTEGER,
+  Name VARCHAR(30),
+  Position VARCHAR(30),
+  Registered BOOLEAN,
+  SSN INTEGER
+);
+
+"
+hospital_1,"SELECT name FROM procedures WHERE cost  >  1000 EXCEPT SELECT t3.name FROM physician as t1 JOIN trained_in as t2 ON t1.employeeid  =  t2.physician JOIN procedures as t3 ON t3.code  =  t2.treatment WHERE t1.name  =  ""John Wen""",Find the names of all procedures which cost more than 1000 but which physician John Wen was not trained in?,"CREATE TABLE `Trained_In` (
+  Physician INTEGER PRIMARY KEY REFERENCES Physician(EmployeeID),
+  Treatment INTEGER PRIMARY KEY REFERENCES Procedures(Code),
+  CertificationDate DATETIME,
+  CertificationExpires DATETIME
+);
+
+CREATE TABLE `Procedures` (
+  Code INTEGER,
+  Name VARCHAR(30),
+  Cost REAL
+);
+
+CREATE TABLE `Physician` (
+  EmployeeID INTEGER,
+  Name VARCHAR(30),
+  Position VARCHAR(30),
+  SSN INTEGER
+);
+
+"
+hospital_1,SELECT name FROM department GROUP BY departmentid ORDER BY COUNT(departmentid) DESC LIMIT 1;,Which department has the largest number of employees?,"CREATE TABLE `Department` (
+  DepartmentID INTEGER,
+  Name VARCHAR(30),
+  Head INTEGER REFERENCES Physician(EmployeeID)
+);
+
+"
+hospital_1,"SELECT name FROM procedures WHERE cost  >  1000 UNION SELECT t3.name FROM physician as t1 JOIN trained_in as t2 ON t1.employeeid  =  t2.physician JOIN procedures as t3 ON t3.code  =  t2.treatment WHERE t1.name  =  ""John Wen""",Find all procedures which cost more than 1000 or which physician John Wen was trained in.,"CREATE TABLE `Trained_In` (
+  Physician INTEGER PRIMARY KEY REFERENCES Physician(EmployeeID),
+  Treatment INTEGER PRIMARY KEY REFERENCES Procedures(Code),
+  CertificationDate DATETIME,
+  CertificationExpires DATETIME
+);
+
+CREATE TABLE `Procedures` (
+  Code INTEGER,
+  Name VARCHAR(30),
+  Cost REAL
+);
+
+CREATE TABLE `Physician` (
+  EmployeeID INTEGER,
+  Name VARCHAR(30),
+  Position VARCHAR(30),
+  SSN INTEGER
+);
+
+"
+company_office,SELECT stories FROM buildings ORDER BY height DESC LIMIT 1,What is the stories of highest building?,"CREATE TABLE `buildings` (
+  id INT PRIMARY KEY,
+  name TEXT,
+  City TEXT,
+  Height INT,
+  Stories INT,
+  Status TEXT
+);
+
+"
+company_office,SELECT name FROM companies ORDER BY market_value_billion DESC,Sort the company names in descending order of the company's market value.,"CREATE TABLE `company` (
+  Company_ID INT PRIMARY KEY,
+  Rank INT,
+  Company TEXT,
+  Headquarters TEXT,
+  Main_Industry TEXT,
+  Sales_billion REAL,
+  Profits_billion REAL,
+  Assets_billion REAL,
+  Market_Value REAL
+);
+
+"
+company_office,"SELECT industry FROM companies WHERE headquarters  =  ""USA"" INTERSECT SELECT industry FROM companies WHERE headquarters  =  ""China""","Which industries have both companies with headquarter in ""USA"" and companies with headquarter in ""China""?","CREATE TABLE `Companies` (
+  id INT PRIMARY KEY,
+  name TEXT,
+  Headquarters TEXT,
+  Industry TEXT,
+  Sales_billion REAL,
+  Profits_billion REAL,
+  Assets_billion REAL,
+  Market_Value_billion TEXT
+);
+
+"
+company_office,"SELECT name FROM buildings WHERE status  =  ""on-hold"" ORDER BY stories ASC","Please show the names of the buildings whose status is ""on-hold"", in ascending order of stories.","CREATE TABLE `buildings` (
+  id INT PRIMARY KEY,
+  name TEXT,
+  City TEXT,
+  Height INT,
+  Stories INT,
+  Status TEXT
+);
+
+"
+party_people,SELECT minister FROM party WHERE party_name != 'Progress Party',Show all ministers who do not belong to Progress Party.,"CREATE TABLE `party` (
+  Party_ID INT PRIMARY KEY,
+  Minister TEXT,
+  Took_office TEXT,
+  Left_office TEXT,
+  Region_ID INT REFERENCES region(Region_ID),
+  Party_name TEXT
+);
+
+"
+party_people,SELECT minister FROM party WHERE took_office  >  1961 OR took_office  <  1959,Who are the ministers who took office after 1961 or before 1959?,"CREATE TABLE `party` (
+  Party_ID INT PRIMARY KEY,
+  Minister TEXT,
+  Took_office TEXT,
+  Left_office TEXT,
+  Region_ID INT REFERENCES region(Region_ID),
+  Party_name TEXT
+);
+
+"
+party_people,"SELECT minister ,  party_name FROM party ORDER BY took_office DESC","Who are the ministers and what parties do they belong to, listed descending by the times they took office?","CREATE TABLE `party` (
+  Party_ID INT PRIMARY KEY,
+  Minister TEXT,
+  Took_office TEXT,
+  Left_office TEXT,
+  Region_ID INT REFERENCES region(Region_ID),
+  Party_name TEXT
+);
+
+"
+party_people,"SELECT t2.party_name ,  COUNT(*) FROM party_events as t1 JOIN party as t2 ON t1.party_id  =  t2.party_id GROUP BY t1.party_id",Show party names and the number of events for each party.,"CREATE TABLE `party` (
+  Party_ID INT PRIMARY KEY,
+  Minister TEXT,
+  Took_office TEXT,
+  Left_office TEXT,
+  Region_ID INT REFERENCES region(Region_ID),
+  Party_name TEXT
+);
+
+CREATE TABLE `party_events` (
+  Event_ID INT PRIMARY KEY,
+  Event_Name TEXT,
+  Party_ID INT REFERENCES party(Party_ID),
+  Member_in_charge_ID INT REFERENCES member(Member_ID)
+);
+
+"
+browser_web,SELECT t1.name FROM browser as t1 JOIN accelerator_compatible_browser as t2 ON t1.id  =  t2.browser_id JOIN web_client_accelerator as t3 ON t2.accelerator_id  =  t3.id WHERE t3.name  =  'CProxy' AND t2.compatible_since_year  >  1998,What is the name of the browser that became compatible with the accelerator 'CProxy' after year 1998 ?,"CREATE TABLE `Web_client_accelerator` (
+  id INT PRIMARY KEY,
+  name TEXT,
+  Operating_system TEXT,
+  Client TEXT,
+  Connection TEXT
+);
+
+CREATE TABLE `browser` (
+  id INT PRIMARY KEY,
+  name TEXT,
+  market_share REAL
+);
+
+CREATE TABLE `accelerator_compatible_browser` (
+  accelerator_id INT PRIMARY KEY REFERENCES Web_client_accelerator(id),
+  browser_id INT PRIMARY KEY REFERENCES browser(id),
+  compatible_since_year INT
+);
+
+"
+tracking_share_transactions,"SELECT t2.lot_id ,  AVG(amount_of_transaction) FROM transactions as t1 JOIN transactions_lots as t2 ON t1.transaction_id  =  t2.transaction_id GROUP BY t2.lot_id ORDER BY AVG(amount_of_transaction)","Show the average amount of transactions for different lots, ordered by average amount of transactions.","CREATE TABLE `Transactions_Lots` (
+  transaction_id INTEGER REFERENCES Transactions(transaction_id),
+  lot_id INTEGER REFERENCES Lots(lot_id)
+);
+
+"
+tracking_share_transactions,SELECT investor_details FROM investors,Show all investor details.,"CREATE TABLE `Investors` (
+  investor_id INTEGER,
+  Investor_details VARCHAR(255)
+);
+
+"
+tracking_share_transactions,SELECT lot_details FROM lots EXCEPT SELECT t1.lot_details FROM lots as t1 JOIN transactions_lots as t2 ON t1.lot_id  =  t2.lot_id,What are the details of the lots which are not used in any transactions?,"CREATE TABLE `Lots` (
+  lot_id INTEGER,
+  investor_id INTEGER REFERENCES Investors(investor_id),
+  lot_details VARCHAR(255)
+);
+
+CREATE TABLE `Transactions_Lots` (
+  transaction_id INTEGER REFERENCES Transactions(transaction_id),
+  lot_id INTEGER REFERENCES Lots(lot_id)
+);
+
+"
+tracking_share_transactions,"SELECT investor_id ,  COUNT(*) FROM transactions WHERE transaction_type_code  =  ""SALE"" GROUP BY investor_id","Show the number of transactions with transaction type code ""SALE"" for different investors if it is larger than 0.","CREATE TABLE `Transactions` (
+  transaction_id INTEGER,
+  investor_id INTEGER REFERENCES Investors(investor_id),
+  transaction_type_code VARCHAR(10) REFERENCES Ref_Transaction_Types(transaction_type_code),
+  date_of_transaction DATETIME,
+  amount_of_transaction DECIMAL(19,4),
+  share_count VARCHAR(40),
+  other_details VARCHAR(255)
+);
+
+"
+university_basketball,"SELECT COUNT(*) ,  affiliation FROM university WHERE enrollment  >  20000 GROUP BY affiliation","What are the different affiliations, and how many schools with each have an enrollment size of above 20000?","CREATE TABLE `university` (
+  School_ID INT PRIMARY KEY,
+  School TEXT,
+  Location TEXT,
+  Founded REAL,
+  Affiliation TEXT,
+  Enrollment REAL,
+  Nickname TEXT,
+  Primary_conference TEXT
+);
+
+"
+university_basketball,SELECT school FROM university WHERE founded  >  1850 OR affiliation  =  'Public',What are the schools that were either founded before 1850 or are public?,"CREATE TABLE `university` (
+  School_ID INT PRIMARY KEY,
+  School TEXT,
+  Location TEXT,
+  Founded REAL,
+  Affiliation TEXT,
+  Enrollment REAL,
+  Nickname TEXT,
+  Primary_conference TEXT
+);
+
+"
+university_basketball,SELECT MAX(enrollment) FROM university,What is the maximum enrollment across all schools?,"CREATE TABLE `university` (
+  School_ID INT PRIMARY KEY,
+  School TEXT,
+  Location TEXT,
+  Founded REAL,
+  Affiliation TEXT,
+  Enrollment REAL,
+  Nickname TEXT,
+  Primary_conference TEXT
+);
+
+"
+university_basketball,"SELECT t2.team_name ,  t2.acc_regular_season FROM university as t1 JOIN basketball_match as t2 ON t1.school_id  =  t2.school_id ORDER BY t1.founded LIMIT 1",What is the team name and acc regular season score of the school that was founded for the longest time?,"CREATE TABLE `basketball_match` (
+  Team_ID INT PRIMARY KEY,
+  School_ID INT REFERENCES university(School_ID),
+  Team_Name TEXT,
+  ACC_Regular_Season TEXT,
+  ACC_Percent TEXT,
+  ACC_Home TEXT,
+  ACC_Road TEXT,
+  All_Games TEXT,
+  All_Games_Percent INT,
+  All_Home TEXT,
+  All_Road TEXT,
+  All_Neutral TEXT
+);
+
+CREATE TABLE `university` (
+  School_ID INT PRIMARY KEY,
+  School TEXT,
+  Location TEXT,
+  Founded REAL,
+  Affiliation TEXT,
+  Enrollment REAL,
+  Nickname TEXT,
+  Primary_conference TEXT
+);
+
+"
+restaurants,"SELECT t3.house_number  ,  t1.name FROM restaurant as t1 JOIN geographic as t2 ON t1.city_name  =  t2.city_name JOIN location as t3 ON t1.id  =  t3.restaurant_id WHERE t2.region  =  ""yosemite and mono lake area"" AND t1.food_type  =  ""french"" AND t1.rating  >  2.5;",give me a good place in the yosemite and mono lake area for french food ?,"CREATE TABLE `LOCATION` (
+  RESTAURANT_ID INT PRIMARY KEY REFERENCES RESTAURANT(RESTAURANT_ID),
+  HOUSE_NUMBER INT,
+  STREET_NAME TEXT,
+  CITY_NAME TEXT REFERENCES GEOGRAPHIC(CITY_NAME)
+);
+
+CREATE TABLE `RESTAURANT` (
+  ID INT PRIMARY KEY,
+  NAME TEXT,
+  FOOD_TYPE TEXT,
+  CITY_NAME TEXT REFERENCES GEOGRAPHIC(CITY_NAME),
+  RATING REAL
+);
+
+CREATE TABLE `GEOGRAPHIC` (
+  CITY_NAME TEXT PRIMARY KEY,
+  COUNTY TEXT,
+  REGION TEXT
+);
+
+"
+restaurants,"SELECT t2.house_number  ,  t1.name FROM restaurant as t1 JOIN location as t2 ON t1.id  =  t2.restaurant_id WHERE t2.city_name  =  ""san francisco"" AND t2.street_name  =  ""buchanan"" AND t1.food_type  =  ""arabic"" AND t1.rating  >  2.5;",give me some restaurants good for arabic food on buchanan in san francisco ?,"CREATE TABLE `RESTAURANT` (
+  ID INT PRIMARY KEY,
+  NAME TEXT,
+  FOOD_TYPE TEXT,
+  CITY_NAME TEXT REFERENCES GEOGRAPHIC(CITY_NAME),
+  RATING REAL
+);
+
+CREATE TABLE `LOCATION` (
+  RESTAURANT_ID INT PRIMARY KEY REFERENCES RESTAURANT(RESTAURANT_ID),
+  HOUSE_NUMBER INT,
+  STREET_NAME TEXT,
+  CITY_NAME TEXT REFERENCES GEOGRAPHIC(CITY_NAME)
+);
+
+"
+restaurants,"SELECT t2.house_number  ,  t1.name FROM location as t2 JOIN restaurant as t1 ON t1.id  =  t2.restaurant_id  WHERE t1.city_name IN ( SELECT city_name FROM geographic WHERE region  =  ""region0"" ) AND t1.rating  >  2.5;",give me some good restaurants in the bay area ?,"CREATE TABLE `LOCATION` (
+  RESTAURANT_ID INT PRIMARY KEY REFERENCES RESTAURANT(RESTAURANT_ID),
+  HOUSE_NUMBER INT,
+  STREET_NAME TEXT,
+  CITY_NAME TEXT REFERENCES GEOGRAPHIC(CITY_NAME)
+);
+
+CREATE TABLE `RESTAURANT` (
+  ID INT PRIMARY KEY,
+  NAME TEXT,
+  FOOD_TYPE TEXT,
+  CITY_NAME TEXT REFERENCES GEOGRAPHIC(CITY_NAME),
+  RATING REAL
+);
+
+CREATE TABLE `GEOGRAPHIC` (
+  CITY_NAME TEXT PRIMARY KEY,
+  COUNTY TEXT,
+  REGION TEXT
+);
+
+"
+restaurants,"SELECT t2.house_number  ,  t1.name FROM restaurant as t1 JOIN location as t2 ON t1.id  =  t2.restaurant_id WHERE t2.city_name  =  ""mountain view"" AND t1.food_type  =  ""arabic"" AND t1.rating  >  2.5;",give me a good restaurant in mountain view for arabic food ?,"CREATE TABLE `RESTAURANT` (
+  ID INT PRIMARY KEY,
+  NAME TEXT,
+  FOOD_TYPE TEXT,
+  CITY_NAME TEXT REFERENCES GEOGRAPHIC(CITY_NAME),
+  RATING REAL
+);
+
+CREATE TABLE `LOCATION` (
+  RESTAURANT_ID INT PRIMARY KEY REFERENCES RESTAURANT(RESTAURANT_ID),
+  HOUSE_NUMBER INT,
+  STREET_NAME TEXT,
+  CITY_NAME TEXT REFERENCES GEOGRAPHIC(CITY_NAME)
+);
+
+"
+restaurants,"SELECT t2.house_number  ,  t1.name FROM restaurant as t1 JOIN location as t2 ON t1.id  =  t2.restaurant_id WHERE t2.city_name  =  ""san francisco"" AND t1.food_type  =  ""french"" AND t1.rating  =  ( SELECT MAX(t1.rating) FROM restaurant as t1 JOIN location as t2 ON t1.id  =  t2.restaurant_id WHERE t2.city_name  =  ""san francisco"" AND t1.food_type  =  ""french"" );",Give me the best french in san francisco ?,"CREATE TABLE `RESTAURANT` (
+  ID INT PRIMARY KEY,
+  NAME TEXT,
+  FOOD_TYPE TEXT,
+  CITY_NAME TEXT REFERENCES GEOGRAPHIC(CITY_NAME),
+  RATING REAL
+);
+
+CREATE TABLE `LOCATION` (
+  RESTAURANT_ID INT PRIMARY KEY REFERENCES RESTAURANT(RESTAURANT_ID),
+  HOUSE_NUMBER INT,
+  STREET_NAME TEXT,
+  CITY_NAME TEXT REFERENCES GEOGRAPHIC(CITY_NAME)
+);
+
+"
+restaurants,"SELECT t2.house_number  ,  t1.name FROM restaurant as t1 JOIN location as t2 ON t1.id  =  t2.restaurant_id WHERE t2.city_name  =  ""san francisco"" AND t1.name  =  ""jamerican cuisine"";",where can i find a jamerican cuisine in san francisco ?,"CREATE TABLE `RESTAURANT` (
+  ID INT PRIMARY KEY,
+  NAME TEXT,
+  FOOD_TYPE TEXT,
+  CITY_NAME TEXT REFERENCES GEOGRAPHIC(CITY_NAME),
+  RATING REAL
+);
+
+CREATE TABLE `LOCATION` (
+  RESTAURANT_ID INT PRIMARY KEY REFERENCES RESTAURANT(RESTAURANT_ID),
+  HOUSE_NUMBER INT,
+  STREET_NAME TEXT,
+  CITY_NAME TEXT REFERENCES GEOGRAPHIC(CITY_NAME)
+);
+
+"
+restaurants,"SELECT t2.house_number  ,  t1.name FROM restaurant as t1 JOIN location as t2 ON t1.id  =  t2.restaurant_id WHERE t2.city_name  =  ""san francisco"" AND t2.street_name  =  ""buchanan"" AND t1.food_type  =  ""arabic"" AND t1.rating  >  2.5;",where can i eat arabic food on buchanan in san francisco ?,"CREATE TABLE `RESTAURANT` (
+  ID INT PRIMARY KEY,
+  NAME TEXT,
+  FOOD_TYPE TEXT,
+  CITY_NAME TEXT REFERENCES GEOGRAPHIC(CITY_NAME),
+  RATING REAL
+);
+
+CREATE TABLE `LOCATION` (
+  RESTAURANT_ID INT PRIMARY KEY REFERENCES RESTAURANT(RESTAURANT_ID),
+  HOUSE_NUMBER INT,
+  STREET_NAME TEXT,
+  CITY_NAME TEXT REFERENCES GEOGRAPHIC(CITY_NAME)
+);
+
+"
+restaurants,"SELECT t2.house_number  ,  t1.name FROM restaurant as t1 JOIN location as t2 ON t1.id  =  t2.restaurant_id WHERE t2.city_name  =  ""san francisco"" AND t1.food_type  =  ""french"" AND t1.rating  =  ( SELECT MAX(t1.rating) FROM restaurant as t1 JOIN location as t2 ON t1.id  =  t2.restaurant_id WHERE t2.city_name  =  ""san francisco"" AND t1.food_type  =  ""french"" );",Give me the best place in san francisco for french food ?,"CREATE TABLE `RESTAURANT` (
+  ID INT PRIMARY KEY,
+  NAME TEXT,
+  FOOD_TYPE TEXT,
+  CITY_NAME TEXT REFERENCES GEOGRAPHIC(CITY_NAME),
+  RATING REAL
+);
+
+CREATE TABLE `LOCATION` (
+  RESTAURANT_ID INT PRIMARY KEY REFERENCES RESTAURANT(RESTAURANT_ID),
+  HOUSE_NUMBER INT,
+  STREET_NAME TEXT,
+  CITY_NAME TEXT REFERENCES GEOGRAPHIC(CITY_NAME)
+);
+
+"
+restaurants,"SELECT t2.house_number  ,  t1.name FROM restaurant as t1 JOIN location as t2 ON t1.id  =  t2.restaurant_id WHERE t2.city_name  =  ""san francisco"" AND t1.name  =  ""jamerican cuisine"";",where is a jamerican cuisine in san francisco ?,"CREATE TABLE `RESTAURANT` (
+  ID INT PRIMARY KEY,
+  NAME TEXT,
+  FOOD_TYPE TEXT,
+  CITY_NAME TEXT REFERENCES GEOGRAPHIC(CITY_NAME),
+  RATING REAL
+);
+
+CREATE TABLE `LOCATION` (
+  RESTAURANT_ID INT PRIMARY KEY REFERENCES RESTAURANT(RESTAURANT_ID),
+  HOUSE_NUMBER INT,
+  STREET_NAME TEXT,
+  CITY_NAME TEXT REFERENCES GEOGRAPHIC(CITY_NAME)
+);
+
+"
+restaurants,"SELECT t3.house_number  ,  t1.name FROM restaurant as t1 JOIN geographic as t2 ON t1.city_name  =  t2.city_name JOIN location as t3 ON t1.id  =  t3.restaurant_id WHERE t2.region  =  ""bay area"" AND t1.food_type  =  ""american"" AND t1.rating  =  ( SELECT MAX(t1.rating) FROM restaurant as t1 JOIN geographic as t2 ON t1.city_name  =  t2.city_name WHERE t2.region  =  ""bay area"" AND t1.food_type  =  ""american"" );",give me the best restaurant in bay area for american food ?,"CREATE TABLE `LOCATION` (
+  RESTAURANT_ID INT PRIMARY KEY REFERENCES RESTAURANT(RESTAURANT_ID),
+  HOUSE_NUMBER INT,
+  STREET_NAME TEXT,
+  CITY_NAME TEXT REFERENCES GEOGRAPHIC(CITY_NAME)
+);
+
+CREATE TABLE `RESTAURANT` (
+  ID INT PRIMARY KEY,
+  NAME TEXT,
+  FOOD_TYPE TEXT,
+  CITY_NAME TEXT REFERENCES GEOGRAPHIC(CITY_NAME),
+  RATING REAL
+);
+
+CREATE TABLE `GEOGRAPHIC` (
+  CITY_NAME TEXT PRIMARY KEY,
+  COUNTY TEXT,
+  REGION TEXT
+);
+
+"
+restaurants,"SELECT t3.house_number  ,  t1.name FROM restaurant as t1 JOIN geographic as t2 ON t1.city_name  =  t2.city_name JOIN location as t3 ON t1.id  =  t3.restaurant_id WHERE t2.region  =  ""bay area"" AND t1.food_type  =  ""american"" AND t1.rating  =  ( SELECT MAX(t1.rating) FROM restaurant as t1 JOIN geographic as t2 ON t1.city_name  =  t2.city_name WHERE t2.region  =  ""bay area"" AND t1.food_type  =  ""american"" );",what is the best restaurant in the bay area for american food ?,"CREATE TABLE `LOCATION` (
+  RESTAURANT_ID INT PRIMARY KEY REFERENCES RESTAURANT(RESTAURANT_ID),
+  HOUSE_NUMBER INT,
+  STREET_NAME TEXT,
+  CITY_NAME TEXT REFERENCES GEOGRAPHIC(CITY_NAME)
+);
+
+CREATE TABLE `RESTAURANT` (
+  ID INT PRIMARY KEY,
+  NAME TEXT,
+  FOOD_TYPE TEXT,
+  CITY_NAME TEXT REFERENCES GEOGRAPHIC(CITY_NAME),
+  RATING REAL
+);
+
+CREATE TABLE `GEOGRAPHIC` (
+  CITY_NAME TEXT PRIMARY KEY,
+  COUNTY TEXT,
+  REGION TEXT
+);
+
+"
+restaurants,"SELECT t2.house_number  ,  t1.name FROM restaurant as t1 JOIN location as t2 ON t1.id  =  t2.restaurant_id WHERE t2.city_name  =  ""san francisco"" AND t2.street_name  =  ""buchanan"" AND t1.food_type  =  ""arabic"" AND t1.rating  >  2.5;",where is a good arabic on buchanan in san francisco ?,"CREATE TABLE `RESTAURANT` (
+  ID INT PRIMARY KEY,
+  NAME TEXT,
+  FOOD_TYPE TEXT,
+  CITY_NAME TEXT REFERENCES GEOGRAPHIC(CITY_NAME),
+  RATING REAL
+);
+
+CREATE TABLE `LOCATION` (
+  RESTAURANT_ID INT PRIMARY KEY REFERENCES RESTAURANT(RESTAURANT_ID),
+  HOUSE_NUMBER INT,
+  STREET_NAME TEXT,
+  CITY_NAME TEXT REFERENCES GEOGRAPHIC(CITY_NAME)
+);
+
+"
+twitter_1,SELECT name FROM user_profiles ORDER BY followers DESC LIMIT 1,Find the name of the user who has the largest number of followers.,"CREATE TABLE `user_profiles` (
+  uid int(11) PRIMARY KEY,
+  name varchar(255),
+  email varchar(255),
+  partitionid int(11),
+  followers int(11)
+);
+
+"
+twitter_1,"SELECT name ,  followers FROM user_profiles ORDER BY followers DESC","List the name and number of followers for each user, and sort the results by the number of followers in descending order.","CREATE TABLE `user_profiles` (
+  uid int(11) PRIMARY KEY,
+  name varchar(255),
+  email varchar(255),
+  partitionid int(11),
+  followers int(11)
+);
+
+"
+bike_1,SELECT date FROM weather WHERE max_temperature_f  >  85,What are the dates with a maximum temperature higher than 85?,"CREATE TABLE `weather` (
+  date TEXT,
+  max_temperature_f INTEGER,
+  mean_temperature_f INTEGER,
+  min_temperature_f INTEGER,
+  max_dew_point_f INTEGER,
+  mean_dew_point_f INTEGER,
+  min_dew_point_f INTEGER,
+  max_humidity INTEGER,
+  mean_humidity INTEGER,
+  min_humidity INTEGER,
+  max_sea_level_pressure_inches NUMERIC,
+  mean_sea_level_pressure_inches NUMERIC,
+  min_sea_level_pressure_inches NUMERIC,
+  max_visibility_miles INTEGER,
+  mean_visibility_miles INTEGER,
+  min_visibility_miles INTEGER,
+  max_wind_Speed_mph INTEGER,
+  mean_wind_speed_mph INTEGER,
+  max_gust_speed_mph INTEGER,
+  precipitation_inches INTEGER,
+  cloud_cover INTEGER,
+  events TEXT,
+  wind_dir_degrees INTEGER,
+  zip_code INTEGER
+);
+
+"
+bike_1,SELECT zip_code FROM weather GROUP BY zip_code HAVING AVG(mean_humidity)  <  70 INTERSECT SELECT zip_code FROM trip GROUP BY zip_code HAVING COUNT(*)  >=  100,Give me the zip code where the average mean humidity is below 70 and at least 100 trips took place.,"CREATE TABLE `trip` (
+  id INTEGER,
+  duration INTEGER,
+  start_date TEXT,
+  start_station_name TEXT,
+  start_station_id INTEGER,
+  end_date TEXT,
+  end_station_name TEXT,
+  end_station_id INTEGER,
+  bike_id INTEGER,
+  subscription_type TEXT,
+  zip_code INTEGER
+);
+
+CREATE TABLE `weather` (
+  date TEXT,
+  max_temperature_f INTEGER,
+  mean_temperature_f INTEGER,
+  min_temperature_f INTEGER,
+  max_dew_point_f INTEGER,
+  mean_dew_point_f INTEGER,
+  min_dew_point_f INTEGER,
+  max_humidity INTEGER,
+  mean_humidity INTEGER,
+  min_humidity INTEGER,
+  max_sea_level_pressure_inches NUMERIC,
+  mean_sea_level_pressure_inches NUMERIC,
+  min_sea_level_pressure_inches NUMERIC,
+  max_visibility_miles INTEGER,
+  mean_visibility_miles INTEGER,
+  min_visibility_miles INTEGER,
+  max_wind_Speed_mph INTEGER,
+  mean_wind_speed_mph INTEGER,
+  max_gust_speed_mph INTEGER,
+  precipitation_inches INTEGER,
+  cloud_cover INTEGER,
+  events TEXT,
+  wind_dir_degrees INTEGER,
+  zip_code INTEGER
+);
+
+"
+bike_1,SELECT t1.id FROM trip as t1 JOIN weather as t2 ON t1.zip_code  =  t2.zip_code GROUP BY t2.zip_code HAVING AVG(t2.mean_temperature_f)  >  60,Give me ids for all the trip that took place in a zip code area with average mean temperature above 60.,"CREATE TABLE `trip` (
+  id INTEGER,
+  duration INTEGER,
+  start_date TEXT,
+  start_station_name TEXT,
+  start_station_id INTEGER,
+  end_date TEXT,
+  end_station_name TEXT,
+  end_station_id INTEGER,
+  bike_id INTEGER,
+  subscription_type TEXT,
+  zip_code INTEGER
+);
+
+CREATE TABLE `weather` (
+  date TEXT,
+  max_temperature_f INTEGER,
+  mean_temperature_f INTEGER,
+  min_temperature_f INTEGER,
+  max_dew_point_f INTEGER,
+  mean_dew_point_f INTEGER,
+  min_dew_point_f INTEGER,
+  max_humidity INTEGER,
+  mean_humidity INTEGER,
+  min_humidity INTEGER,
+  max_sea_level_pressure_inches NUMERIC,
+  mean_sea_level_pressure_inches NUMERIC,
+  min_sea_level_pressure_inches NUMERIC,
+  max_visibility_miles INTEGER,
+  mean_visibility_miles INTEGER,
+  min_visibility_miles INTEGER,
+  max_wind_Speed_mph INTEGER,
+  mean_wind_speed_mph INTEGER,
+  max_gust_speed_mph INTEGER,
+  precipitation_inches INTEGER,
+  cloud_cover INTEGER,
+  events TEXT,
+  wind_dir_degrees INTEGER,
+  zip_code INTEGER
+);
+
+"
+bike_1,SELECT DISTINCT start_station_name FROM trip WHERE duration  <  100,What are all the different start station names for a trip that lasted less than 100?,"CREATE TABLE `trip` (
+  id INTEGER,
+  duration INTEGER,
+  start_date TEXT,
+  start_station_name TEXT,
+  start_station_id INTEGER,
+  end_date TEXT,
+  end_station_name TEXT,
+  end_station_id INTEGER,
+  bike_id INTEGER,
+  subscription_type TEXT,
+  zip_code INTEGER
+);
+
+"
+bike_1,"SELECT id FROM station WHERE city  =  ""San Francisco"" INTERSECT SELECT station_id FROM status GROUP BY station_id HAVING AVG(bikes_available)  >  10",What are the ids of the stations in San Francisco that normally have more than 10 bikes available?,"CREATE TABLE `station` (
+  id INTEGER,
+  name TEXT,
+  lat NUMERIC,
+  long NUMERIC,
+  dock_count INTEGER,
+  city TEXT,
+  installation_date TEXT
+);
+
+CREATE TABLE `status` (
+  station_id INTEGER REFERENCES station(id),
+  bikes_available INTEGER,
+  docks_available INTEGER,
+  time TEXT
+);
+
+"
+bike_1,SELECT id FROM trip WHERE duration  >=  (SELECT AVG(duration) FROM trip WHERE zip_code  =  94103),What are the ids of all trips that had a duration as long as the average trip duration in the zip code 94103?,"CREATE TABLE `trip` (
+  id INTEGER,
+  duration INTEGER,
+  start_date TEXT,
+  start_station_name TEXT,
+  start_station_id INTEGER,
+  end_date TEXT,
+  end_station_name TEXT,
+  end_station_id INTEGER,
+  bike_id INTEGER,
+  subscription_type TEXT,
+  zip_code INTEGER
+);
+
+"
+bike_1,"SELECT date FROM weather WHERE zip_code  =  94107 AND events != ""Fog"" AND events != ""Rain""",On which day has it neither been foggy nor rained in the zip code of 94107?,"CREATE TABLE `weather` (
+  date TEXT,
+  max_temperature_f INTEGER,
+  mean_temperature_f INTEGER,
+  min_temperature_f INTEGER,
+  max_dew_point_f INTEGER,
+  mean_dew_point_f INTEGER,
+  min_dew_point_f INTEGER,
+  max_humidity INTEGER,
+  mean_humidity INTEGER,
+  min_humidity INTEGER,
+  max_sea_level_pressure_inches NUMERIC,
+  mean_sea_level_pressure_inches NUMERIC,
+  min_sea_level_pressure_inches NUMERIC,
+  max_visibility_miles INTEGER,
+  mean_visibility_miles INTEGER,
+  min_visibility_miles INTEGER,
+  max_wind_Speed_mph INTEGER,
+  mean_wind_speed_mph INTEGER,
+  max_gust_speed_mph INTEGER,
+  precipitation_inches INTEGER,
+  cloud_cover INTEGER,
+  events TEXT,
+  wind_dir_degrees INTEGER,
+  zip_code INTEGER
+);
+
+"
+bike_1,SELECT COUNT(DISTINCT city) FROM station,What is the number of distinct cities the stations are located at?,"CREATE TABLE `station` (
+  id INTEGER,
+  name TEXT,
+  lat NUMERIC,
+  long NUMERIC,
+  dock_count INTEGER,
+  city TEXT,
+  installation_date TEXT
+);
+
+"
+bike_1,"SELECT start_station_name ,  start_station_id FROM trip WHERE start_date LIKE ""8/%"" GROUP BY start_station_name ORDER BY COUNT(*) DESC LIMIT 1",What are the start station's name and id for the one that had the most start trips in August?,"CREATE TABLE `trip` (
+  id INTEGER,
+  duration INTEGER,
+  start_date TEXT,
+  start_station_name TEXT,
+  start_station_id INTEGER,
+  end_date TEXT,
+  end_station_name TEXT,
+  end_station_id INTEGER,
+  bike_id INTEGER,
+  subscription_type TEXT,
+  zip_code INTEGER
+);
+
+CREATE TABLE `station` (
+  id INTEGER,
+  name TEXT,
+  lat NUMERIC,
+  long NUMERIC,
+  dock_count INTEGER,
+  city TEXT,
+  installation_date TEXT
+);
+
+"
+bike_1,"SELECT start_station_id ,  start_station_name FROM trip GROUP BY start_station_name HAVING COUNT(*)  >=  200",Find the ids and names of stations from which at least 200 trips started.,"CREATE TABLE `trip` (
+  id INTEGER,
+  duration INTEGER,
+  start_date TEXT,
+  start_station_name TEXT,
+  start_station_id INTEGER,
+  end_date TEXT,
+  end_station_name TEXT,
+  end_station_id INTEGER,
+  bike_id INTEGER,
+  subscription_type TEXT,
+  zip_code INTEGER
+);
+
+CREATE TABLE `station` (
+  id INTEGER,
+  name TEXT,
+  lat NUMERIC,
+  long NUMERIC,
+  dock_count INTEGER,
+  city TEXT,
+  installation_date TEXT
+);
+
+"
+csu_1,"SELECT campus FROM campuses WHERE location  =  ""Chico""",What campuses are located in Chico?,"CREATE TABLE `Campuses` (
+  Id INTEGER,
+  Campus TEXT,
+  Location TEXT,
+  County TEXT,
+  Year INTEGER
+);
+
+"
+csu_1,"SELECT COUNT(*) FROM campuses WHERE county  =  ""Los Angeles""",How many campuses are there in Los Angeles county?,"CREATE TABLE `Campuses` (
+  Id INTEGER,
+  Campus TEXT,
+  Location TEXT,
+  County TEXT,
+  Year INTEGER
+);
+
+"
+csu_1,"SELECT COUNT(*) FROM campuses WHERE county  =  ""Los Angeles""",How many campuses exist are in the county of LA?,"CREATE TABLE `Campuses` (
+  Id INTEGER,
+  Campus TEXT,
+  Location TEXT,
+  County TEXT,
+  Year INTEGER
+);
+
+"
+csu_1,"SELECT campus FROM campuses WHERE county  =  ""Los Angeles""",Report the name of all campuses in Los Angeles county.,"CREATE TABLE `Campuses` (
+  Id INTEGER,
+  Campus TEXT,
+  Location TEXT,
+  County TEXT,
+  Year INTEGER
+);
+
+"
+csu_1,"SELECT degrees FROM campuses as t1 JOIN degrees as t2 ON t1.id  =  t2.campus WHERE t1.campus  =  ""San Jose State University"" AND t2.year  =  2000","How many degrees were conferred in ""San Jose State University"" in 2000?","CREATE TABLE `Campuses` (
+  Id INTEGER,
+  Campus TEXT,
+  Location TEXT,
+  County TEXT,
+  Year INTEGER
+);
+
+CREATE TABLE `degrees` (
+  Year INTEGER PRIMARY KEY,
+  Campus INTEGER PRIMARY KEY REFERENCES Campuses(Id),
+  Degrees INTEGER
+);
+
+"
+csu_1,"SELECT faculty FROM faculty as t1 JOIN campuses as t2 ON t1.campus  =  t2.id WHERE t1.year  =  2002 AND t2.campus  =  ""Long Beach State University""",What is the number of faculty at Long Beach State University in 2002?,"CREATE TABLE `Campuses` (
+  Id INTEGER,
+  Campus TEXT,
+  Location TEXT,
+  County TEXT,
+  Year INTEGER
+);
+
+CREATE TABLE `faculty` (
+  Campus INTEGER REFERENCES Campuses(Id),
+  Year INTEGER,
+  Faculty REAL
+);
+
+"
+csu_1,SELECT COUNT(*) FROM campuses,What is the total number of campuses?,"CREATE TABLE `Campuses` (
+  Id INTEGER,
+  Campus TEXT,
+  Location TEXT,
+  County TEXT,
+  Year INTEGER
+);
+
+"
+news_report,SELECT nationality FROM journalist GROUP BY nationality ORDER BY COUNT(*) DESC LIMIT 1,Show the most common nationality for journalists.,"CREATE TABLE `journalist` (
+  journalist_ID INT PRIMARY KEY,
+  Name TEXT,
+  Nationality TEXT,
+  Age TEXT,
+  Years_working INT
+);
+
+"
+icfp_1,"SELECT t3.title FROM authors as t1 JOIN authorship as t2 ON t1.authid  =  t2.authid JOIN papers as t3 ON t2.paperid  =  t3.paperid WHERE t1.fname  =  ""Olin"" AND t1.lname  =  ""Shivers""","Find the papers which have ""Olin Shivers"" as an author.","CREATE TABLE `Papers` (
+  paperID INTEGER,
+  title TEXT
+);
+
+CREATE TABLE `Authorship` (
+  authID INTEGER PRIMARY KEY REFERENCES Authors(authID),
+  instID INTEGER PRIMARY KEY REFERENCES Inst(instID),
+  paperID INTEGER PRIMARY KEY REFERENCES Papers(paperID),
+  authOrder INTEGER
+);
+
+CREATE TABLE `Authors` (
+  authID INTEGER,
+  lname TEXT,
+  fname TEXT
+);
+
+"
+icfp_1,"SELECT COUNT(DISTINCT t1.title) FROM papers as t1 JOIN authorship as t2 ON t1.paperid  =  t2.paperid JOIN inst as t3 ON t2.instid  =  t3.instid WHERE t3.name  =  ""Tokohu University""","Find the number of papers published by authors from the institution ""Tokohu University"".","CREATE TABLE `Inst` (
+  instID INTEGER,
+  name TEXT,
+  country TEXT
+);
+
+CREATE TABLE `Authorship` (
+  authID INTEGER PRIMARY KEY REFERENCES Authors(authID),
+  instID INTEGER PRIMARY KEY REFERENCES Inst(instID),
+  paperID INTEGER PRIMARY KEY REFERENCES Papers(paperID),
+  authOrder INTEGER
+);
+
+CREATE TABLE `Papers` (
+  paperID INTEGER,
+  title TEXT
+);
+
+"
+icfp_1,SELECT t1.name FROM inst as t1 JOIN authorship as t2 ON t1.instid  =  t2.instid JOIN papers as t3 ON t2.paperid  =  t3.paperid GROUP BY t1.name ORDER BY COUNT(*) DESC LIMIT 1,Which institution has the most papers? Find the name of the institution.,"CREATE TABLE `Inst` (
+  instID INTEGER,
+  name TEXT,
+  country TEXT
+);
+
+CREATE TABLE `Authorship` (
+  authID INTEGER PRIMARY KEY REFERENCES Authors(authID),
+  instID INTEGER PRIMARY KEY REFERENCES Inst(instID),
+  paperID INTEGER PRIMARY KEY REFERENCES Papers(paperID),
+  authOrder INTEGER
+);
+
+CREATE TABLE `Papers` (
+  paperID INTEGER,
+  title TEXT
+);
+
+"
+icfp_1,"SELECT COUNT(*) FROM authors as t1 JOIN authorship as t2 ON t1.authid  =  t2.authid JOIN papers as t3 ON t2.paperid  =  t3.paperid WHERE  t1.fname  =  ""Atsushi"" AND t1.lname  =  ""Ohori""","How many papers are ""Atsushi Ohori"" the author of?","CREATE TABLE `Papers` (
+  paperID INTEGER,
+  title TEXT
+);
+
+CREATE TABLE `Authorship` (
+  authID INTEGER PRIMARY KEY REFERENCES Authors(authID),
+  instID INTEGER PRIMARY KEY REFERENCES Inst(instID),
+  paperID INTEGER PRIMARY KEY REFERENCES Papers(paperID),
+  authOrder INTEGER
+);
+
+CREATE TABLE `Authors` (
+  authID INTEGER,
+  lname TEXT,
+  fname TEXT
+);
+
+"
+icfp_1,SELECT t1.name FROM inst as t1 JOIN authorship as t2 ON t1.instid  =  t2.instid JOIN papers as t3 ON t2.paperid  =  t3.paperid GROUP BY t1.name ORDER BY COUNT(*) DESC LIMIT 1,Find the name of the organization that has published the largest number of papers.,"CREATE TABLE `Inst` (
+  instID INTEGER,
+  name TEXT,
+  country TEXT
+);
+
+CREATE TABLE `Papers` (
+  paperID INTEGER,
+  title TEXT
+);
+
+"
+icfp_1,"SELECT t3.title FROM authors as t1 JOIN authorship as t2 ON t1.authid  =  t2.authid JOIN papers as t3 ON t2.paperid  =  t3.paperid WHERE  t1.fname  =  ""Aaron"" AND t1.lname  =  ""Turon""","Find all the papers published by ""Aaron Turon"".","CREATE TABLE `Papers` (
+  paperID INTEGER,
+  title TEXT
+);
+
+CREATE TABLE `Authorship` (
+  authID INTEGER PRIMARY KEY REFERENCES Authors(authID),
+  instID INTEGER PRIMARY KEY REFERENCES Inst(instID),
+  paperID INTEGER PRIMARY KEY REFERENCES Papers(paperID),
+  authOrder INTEGER
+);
+
+CREATE TABLE `Authors` (
+  authID INTEGER,
+  lname TEXT,
+  fname TEXT
+);
+
+"
+manufacturer,SELECT SUM(num_of_component) FROM furniture,How many furniture components are there in total?,"CREATE TABLE `furniture` (
+  Furniture_ID INT PRIMARY KEY,
+  Name TEXT,
+  Num_of_Component INT,
+  Market_Rate REAL
+);
+
+"
+network_2,SELECT t2.friend FROM person as t1 JOIN personFriend as t2 ON t1.name  =  t2.friend WHERE t2.name  =  'Alice' AND t1.gender  =  'male' AND t1.job  =  'doctor',Find the male friend of Alice whose job is a doctor?,"CREATE TABLE `PersonFriend` (
+  name varchar(20) REFERENCES Person(name),
+  friend varchar(20) REFERENCES Person(name),
+  year INTEGER
+);
+
+CREATE TABLE `Person` (
+  name varchar(20) PRIMARY KEY,
+  age INTEGER,
+  city TEXT,
+  gender TEXT,
+  job TEXT
+);
+
+"
+network_2,SELECT name FROM person EXCEPT SELECT name FROM personfriend,Who is the person that has no friend?,"CREATE TABLE `PersonFriend` (
+  name varchar(20) REFERENCES Person(name),
+  friend varchar(20) REFERENCES Person(name),
+  year INTEGER
+);
+
+CREATE TABLE `Person` (
+  name varchar(20) PRIMARY KEY,
+  age INTEGER,
+  city TEXT,
+  gender TEXT,
+  job TEXT
+);
+
+"
+network_2,SELECT t1.age FROM person as t1 JOIN personFriend as t2 ON t1.name  =  t2.friend WHERE t2.name =  'Zach' AND t2.year  =  (SELECT MAX(year) FROM personFriend WHERE name =  'Zach'),What are the ages of all of Zach's friends who are in the longest relationship?,"CREATE TABLE `PersonFriend` (
+  name varchar(20) REFERENCES Person(name),
+  friend varchar(20) REFERENCES Person(name),
+  year INTEGER
+);
+
+CREATE TABLE `Person` (
+  name varchar(20) PRIMARY KEY,
+  age INTEGER,
+  city TEXT,
+  gender TEXT,
+  job TEXT
+);
+
+"
+network_2,SELECT COUNT(*) FROM person WHERE age  >  (SELECT MAX(age) FROM person WHERE job  =  'engineer'),Find the number of people whose age is greater than all engineers.,"CREATE TABLE `Person` (
+  name varchar(20) PRIMARY KEY,
+  age INTEGER,
+  city TEXT,
+  gender TEXT,
+  job TEXT
+);
+
+"
+network_2,"SELECT MIN(age) ,  job FROM person GROUP BY job",What is minimum age for different job title?,"CREATE TABLE `Person` (
+  name varchar(20) PRIMARY KEY,
+  age INTEGER,
+  city TEXT,
+  gender TEXT,
+  job TEXT
+);
+
+"
+network_2,"SELECT AVG(age) ,  gender FROM person GROUP BY gender","How old is each gender, on average?","CREATE TABLE `Person` (
+  name varchar(20) PRIMARY KEY,
+  age INTEGER,
+  city TEXT,
+  gender TEXT,
+  job TEXT
+);
+
+"
+network_2,SELECT DISTINCT t4.name FROM personfriend as t1 JOIN person as t2 ON t1.name  =  t2.name JOIN personfriend as t3 ON t1.friend  =  t3.name JOIN personfriend as t4 ON t3.friend  =  t4.name WHERE t2.name  =  'Alice' AND t4.name != 'Alice',Find Alice's friends of friends.,"CREATE TABLE `PersonFriend` (
+  name varchar(20) REFERENCES Person(name),
+  friend varchar(20) REFERENCES Person(name),
+  year INTEGER
+);
+
+CREATE TABLE `Person` (
+  name varchar(20) PRIMARY KEY,
+  age INTEGER,
+  city TEXT,
+  gender TEXT,
+  job TEXT
+);
+
+"
+network_2,SELECT age FROM person WHERE job  =  'doctor' AND name  =  'Zach',What is the age of the doctor named Zach?,"CREATE TABLE `Person` (
+  name varchar(20) PRIMARY KEY,
+  age INTEGER,
+  city TEXT,
+  gender TEXT,
+  job TEXT
+);
+
+"
+medicine_enzyme_interaction,"SELECT product ,  chromosome ,  porphyria FROM enzyme WHERE location  =  'Cytosol'","What is the product, chromosome and porphyria related to the enzymes which take effect at the location 'Cytosol'?","CREATE TABLE `enzyme` (
+  id INT PRIMARY KEY,
+  name TEXT,
+  Location TEXT,
+  Product TEXT,
+  Chromosome TEXT,
+  OMIM INT,
+  Porphyria TEXT
+);
+
+"
+medicine_enzyme_interaction,SELECT name FROM enzyme WHERE product != 'Heme',What are the names of enzymes who does not produce 'Heme'?,"CREATE TABLE `enzyme` (
+  id INT PRIMARY KEY,
+  name TEXT,
+  Location TEXT,
+  Product TEXT,
+  Chromosome TEXT,
+  OMIM INT,
+  Porphyria TEXT
+);
+
+"
+medicine_enzyme_interaction,"SELECT name FROM enzyme WHERE name LIKE ""%ALA%""","Which enzyme names have the substring ""ALA""?","CREATE TABLE `enzyme` (
+  id INT PRIMARY KEY,
+  name TEXT,
+  Location TEXT,
+  Product TEXT,
+  Chromosome TEXT,
+  OMIM INT,
+  Porphyria TEXT
+);
+
+"
+medicine_enzyme_interaction,"SELECT t1.id ,  t1.name FROM medicine as t1 JOIN medicine_enzyme_interaction as t2 ON t2.medicine_id  =  t1.id GROUP BY t1.id HAVING COUNT(*)  >=  2","For every medicine id, what are the names of the medicines that can interact with more than one enzyme?","CREATE TABLE `medicine` (
+  id INT PRIMARY KEY,
+  name TEXT,
+  Trade_Name TEXT,
+  FDA_approved TEXT
+);
+
+CREATE TABLE `medicine_enzyme_interaction` (
+  enzyme_id INT PRIMARY KEY REFERENCES enzyme(id),
+  medicine_id INT PRIMARY KEY REFERENCES medicine(id),
+  interaction_type TEXT
+);
+
+"
+apartment_rentals,"SELECT t1.booking_start_date ,  t1.booking_start_date FROM apartment_bookings as t1 JOIN apartments as t2 ON t1.apt_id  =  t2.apt_id WHERE t2.bedroom_count  >  2",Find the booking start date and end date for the apartments that have more than two bedrooms.,"CREATE TABLE `Apartments` (
+  apt_id INTEGER PRIMARY KEY,
+  building_id INTEGER REFERENCES Apartment_Buildings(building_id),
+  apt_type_code CHAR(15),
+  apt_number CHAR(10),
+  bathroom_count INTEGER,
+  bedroom_count INTEGER,
+  room_count CHAR(5)
+);
+
+CREATE TABLE `Apartment_Bookings` (
+  apt_booking_id INTEGER PRIMARY KEY,
+  apt_id INTEGER REFERENCES Apartments(apt_id),
+  guest_id INTEGER REFERENCES Guests(guest_id),
+  booking_status_code CHAR(15),
+  booking_start_date DATETIME,
+  booking_end_date DATETIME
+);
+
+"
+apartment_rentals,"SELECT t1.booking_start_date ,  t1.booking_start_date FROM apartment_bookings as t1 JOIN guests as t2 ON t1.guest_id  =  t2.guest_id WHERE t2.gender_code  =  ""Female""","Show the start dates and end dates of all the apartment bookings made by guests with gender code ""Female"".","CREATE TABLE `Guests` (
+  guest_id INTEGER PRIMARY KEY,
+  gender_code CHAR(1),
+  guest_first_name VARCHAR(80),
+  guest_last_name VARCHAR(80),
+  date_of_birth DATETIME
+);
+
+CREATE TABLE `Apartment_Bookings` (
+  apt_booking_id INTEGER PRIMARY KEY,
+  apt_id INTEGER REFERENCES Apartments(apt_id),
+  guest_id INTEGER REFERENCES Guests(guest_id),
+  booking_status_code CHAR(15),
+  booking_start_date DATETIME,
+  booking_end_date DATETIME
+);
+
+"
+apartment_rentals,SELECT t1.building_address FROM apartment_buildings as t1 JOIN apartments as t2 ON t1.building_id  =  t2.building_id WHERE t2.bathroom_count  >  2,Which buildings have apartments that have more than two bathrooms? Give me the addresses of the buildings.,"CREATE TABLE `Apartments` (
+  apt_id INTEGER PRIMARY KEY,
+  building_id INTEGER REFERENCES Apartment_Buildings(building_id),
+  apt_type_code CHAR(15),
+  apt_number CHAR(10),
+  bathroom_count INTEGER,
+  bedroom_count INTEGER,
+  room_count CHAR(5)
+);
+
+CREATE TABLE `Apartment_Buildings` (
+  building_id INTEGER PRIMARY KEY,
+  building_short_name CHAR(15),
+  building_full_name VARCHAR(80),
+  building_description VARCHAR(255),
+  building_address VARCHAR(255),
+  building_manager VARCHAR(50),
+  building_phone VARCHAR(80)
+);
+
+"
+apartment_rentals,"SELECT t2.guest_first_name ,  t2.guest_last_name FROM apartment_bookings as t1 JOIN guests as t2 ON t1.guest_id  =  t2.guest_id WHERE t1.booking_status_code  =  ""Confirmed""","Show the first names and last names of all the guests that have apartment bookings with status code ""Confirmed"".","CREATE TABLE `Guests` (
+  guest_id INTEGER PRIMARY KEY,
+  gender_code CHAR(1),
+  guest_first_name VARCHAR(80),
+  guest_last_name VARCHAR(80),
+  date_of_birth DATETIME
+);
+
+CREATE TABLE `Apartment_Bookings` (
+  apt_booking_id INTEGER PRIMARY KEY,
+  apt_id INTEGER REFERENCES Apartments(apt_id),
+  guest_id INTEGER REFERENCES Guests(guest_id),
+  booking_status_code CHAR(15),
+  booking_start_date DATETIME,
+  booking_end_date DATETIME
+);
+
+"
+apartment_rentals,SELECT t1.facility_code FROM apartment_facilities as t1 JOIN apartments as t2 ON t1.apt_id  =  t2.apt_id WHERE t2.bedroom_count  >  4,Show the facility codes of apartments with more than 4 bedrooms.,"CREATE TABLE `Apartments` (
+  apt_id INTEGER PRIMARY KEY,
+  building_id INTEGER REFERENCES Apartment_Buildings(building_id),
+  apt_type_code CHAR(15),
+  apt_number CHAR(10),
+  bathroom_count INTEGER,
+  bedroom_count INTEGER,
+  room_count CHAR(5)
+);
+
+CREATE TABLE `Apartment_Facilities` (
+  apt_id INTEGER PRIMARY KEY REFERENCES Apartments(apt_id),
+  facility_code CHAR(15) PRIMARY KEY
+);
+
+"
+apartment_rentals,SELECT apt_number FROM apartments ORDER BY room_count ASC,Return all the apartment numbers sorted by the room count in ascending order.,"CREATE TABLE `Apartments` (
+  apt_id INTEGER PRIMARY KEY,
+  building_id INTEGER REFERENCES Apartment_Buildings(building_id),
+  apt_type_code CHAR(15),
+  apt_number CHAR(10),
+  bathroom_count INTEGER,
+  bedroom_count INTEGER,
+  room_count CHAR(5)
+);
+
+"
+apartment_rentals,SELECT AVG(bedroom_count) FROM apartments,Find the average number of bedrooms of all the apartments.,"CREATE TABLE `Apartments` (
+  apt_id INTEGER PRIMARY KEY,
+  building_id INTEGER REFERENCES Apartment_Buildings(building_id),
+  apt_type_code CHAR(15),
+  apt_number CHAR(10),
+  bathroom_count INTEGER,
+  bedroom_count INTEGER,
+  room_count CHAR(5)
+);
+
+"
+apartment_rentals,"SELECT building_full_name FROM apartment_buildings WHERE building_full_name LIKE ""%court%""","What are the building full names that contain the word ""court""?","CREATE TABLE `Apartment_Buildings` (
+  building_id INTEGER PRIMARY KEY,
+  building_short_name CHAR(15),
+  building_full_name VARCHAR(80),
+  building_description VARCHAR(255),
+  building_address VARCHAR(255),
+  building_manager VARCHAR(50),
+  building_phone VARCHAR(80)
+);
+
+"
+program_share,"SELECT name ,  origin ,  owner FROM program","What are the name, origin and owner of each program?","CREATE TABLE `program` (
+  Program_ID INT PRIMARY KEY,
+  Name TEXT,
+  Origin TEXT,
+  Launch REAL,
+  Owner TEXT
+);
+
+"
+program_share,"SELECT name FROM program EXCEPT SELECT t1.name FROM program as t1 JOIN broadcast as t2 ON t1.program_id  =  t2.program_id WHERE t2.time_of_day  =  ""Morning""",Find the names of programs that are never broadcasted in the morning.,"CREATE TABLE `broadcast` (
+  Channel_ID INT PRIMARY KEY REFERENCES channel(Channel_ID),
+  Program_ID INT PRIMARY KEY REFERENCES program(Program_ID),
+  Time_of_day TEXT
+);
+
+CREATE TABLE `program` (
+  Program_ID INT PRIMARY KEY,
+  Name TEXT,
+  Origin TEXT,
+  Launch REAL,
+  Owner TEXT
+);
+
+"
+program_share,SELECT owner FROM channel ORDER BY rating_in_percent DESC LIMIT 1,What is the owner of the channel that has the highest rating ratio?,"CREATE TABLE `channel` (
+  Channel_ID INT PRIMARY KEY,
+  Name TEXT,
+  Owner TEXT,
+  Share_in_percent REAL,
+  Rating_in_percent REAL
+);
+
+"
+program_share,SELECT name FROM channel WHERE owner  =  'CCTV' OR owner  =  'HBS',List the names of all the channels owned by either CCTV or HBS,"CREATE TABLE `channel` (
+  Channel_ID INT PRIMARY KEY,
+  Name TEXT,
+  Owner TEXT,
+  Share_in_percent REAL,
+  Rating_in_percent REAL
+);
+
+"
+local_govt_mdm,SELECT * FROM customer_master_index ORDER BY cmi_details DESC,"List all information about customer master index, and sort them by details in descending order.","CREATE TABLE `Customer_Master_Index` (
+  master_customer_id INTEGER,
+  cmi_details VARCHAR(255)
+);
+
+"
+store_product,"SELECT district_name ,  city_population FROM district WHERE city_population BETWEEN 200000 AND 2000000",Find the name and population of district with population between 200000 and 2000000,"CREATE TABLE `district` (
+  District_ID INT PRIMARY KEY,
+  District_name TEXT,
+  Headquartered_City TEXT,
+  City_Population REAL,
+  City_Area REAL
+);
+
+"
+store_product,SELECT district_name FROM district ORDER BY city_area ASC LIMIT 1,What is the name of the district with the smallest area?,"CREATE TABLE `district` (
+  District_ID INT PRIMARY KEY,
+  District_name TEXT,
+  Headquartered_City TEXT,
+  City_Population REAL,
+  City_Area REAL
+);
+
+"
+store_product,SELECT SUM(city_population) FROM district WHERE city_area  >  (SELECT AVG(city_area) FROM district),What is the total population for all the districts that have an area larger tahn the average city area?,"CREATE TABLE `district` (
+  District_ID INT PRIMARY KEY,
+  District_name TEXT,
+  Headquartered_City TEXT,
+  City_Population REAL,
+  City_Area REAL
+);
+
+"
+store_product,SELECT district_name FROM district ORDER BY city_population DESC LIMIT 1,What is the name of the district with the most residents?,"CREATE TABLE `district` (
+  District_ID INT PRIMARY KEY,
+  District_name TEXT,
+  Headquartered_City TEXT,
+  City_Population REAL,
+  City_Area REAL
+);
+
+"
+gas_company,SELECT manager_name FROM gas_station WHERE open_year  >  2000 GROUP BY manager_name ORDER BY COUNT(*) DESC LIMIT 1,What is the name of the manager with the most gas stations that opened after 2000?,"CREATE TABLE `gas_station` (
+  Station_ID INT PRIMARY KEY,
+  Open_Year INT,
+  Location TEXT,
+  Manager_Name TEXT,
+  Vice_Manager_Name TEXT,
+  Representative_Name TEXT
+);
+
+"
+gas_company,"SELECT company ,  rank FROM company ORDER BY sales_billion DESC",List the company name and rank for all companies in the decreasing order of their sales.,"CREATE TABLE `company` (
+  Company_ID INT PRIMARY KEY,
+  Rank INT,
+  Company TEXT,
+  Headquarters TEXT,
+  Main_Industry TEXT,
+  Sales_billion REAL,
+  Profits_billion REAL,
+  Assets_billion REAL,
+  Market_Value REAL
+);
+
+"
+gas_company,"SELECT company ,  main_industry FROM company WHERE headquarters != 'USA'",What are the companies and main industries of all companies that are not headquartered in the United States?,"CREATE TABLE `company` (
+  Company_ID INT PRIMARY KEY,
+  Rank INT,
+  Company TEXT,
+  Headquarters TEXT,
+  Main_Industry TEXT,
+  Sales_billion REAL,
+  Profits_billion REAL,
+  Assets_billion REAL,
+  Market_Value REAL
+);
+
+"
+gas_company,SELECT t3.manager_name FROM station_company as t1 JOIN company as t2 ON t1.company_id  =  t2.company_id JOIN gas_station as t3 ON t1.station_id  =  t3.station_id WHERE t2.company  =  'ExxonMobil',Show the manager name for gas stations belonging to the ExxonMobil company.,"CREATE TABLE `gas_station` (
+  Station_ID INT PRIMARY KEY,
+  Open_Year INT,
+  Location TEXT,
+  Manager_Name TEXT,
+  Vice_Manager_Name TEXT,
+  Representative_Name TEXT
+);
+
+CREATE TABLE `station_company` (
+  Station_ID INT PRIMARY KEY REFERENCES gas_station(Station_ID),
+  Company_ID INT PRIMARY KEY REFERENCES company(Company_ID),
+  Rank_of_the_Year INT
+);
+
+CREATE TABLE `company` (
+  Company_ID INT PRIMARY KEY,
+  Rank INT,
+  Company TEXT,
+  Headquarters TEXT,
+  Main_Industry TEXT,
+  Sales_billion REAL,
+  Profits_billion REAL,
+  Assets_billion REAL,
+  Market_Value REAL
+);
+
+"
+entertainment_awards,SELECT festival_name FROM festival_detail WHERE year  =  2007,What are the names of festivals held in year 2007?,"CREATE TABLE `festival_detail` (
+  Festival_ID INT PRIMARY KEY,
+  Festival_Name TEXT,
+  Chair_Name TEXT,
+  Location TEXT,
+  Year INT,
+  Num_of_Audience INT
+);
+
+"
+entertainment_awards,SELECT year FROM festival_detail GROUP BY year HAVING COUNT(*)  >  1,List the year in which there are more than one festivals.,"CREATE TABLE `festival_detail` (
+  Festival_ID INT PRIMARY KEY,
+  Festival_Name TEXT,
+  Chair_Name TEXT,
+  Location TEXT,
+  Year INT,
+  Num_of_Audience INT
+);
+
+"
+protein_institute,SELECT name FROM building WHERE building_id NOT IN (SELECT building_id FROM institution),Show the name of buildings that do not have any institution.,"CREATE TABLE `Institution` (
+  Institution_id TEXT PRIMARY KEY,
+  Institution TEXT,
+  Location TEXT,
+  Founded REAL,
+  Type TEXT,
+  Enrollment INT,
+  Team TEXT,
+  Primary_Conference TEXT,
+  building_id TEXT REFERENCES building(building_id)
+);
+
+CREATE TABLE `building` (
+  building_id TEXT PRIMARY KEY,
+  Name TEXT,
+  Street_address TEXT,
+  Years_as_tallest TEXT,
+  Height_feet INT,
+  Floors INT
+);
+
+"
+protein_institute,SELECT name FROM building EXCEPT SELECT t1.name FROM building as t1 JOIN institution as t2 ON t1.building_id  =  t2.building_id WHERE t2.founded  =  2003,Show the names of buildings except for those having an institution founded in 2003.,"CREATE TABLE `Institution` (
+  Institution_id TEXT PRIMARY KEY,
+  Institution TEXT,
+  Location TEXT,
+  Founded REAL,
+  Type TEXT,
+  Enrollment INT,
+  Team TEXT,
+  Primary_Conference TEXT,
+  building_id TEXT REFERENCES building(building_id)
+);
+
+CREATE TABLE `building` (
+  building_id TEXT PRIMARY KEY,
+  Name TEXT,
+  Street_address TEXT,
+  Years_as_tallest TEXT,
+  Height_feet INT,
+  Floors INT
+);
+
+"
+roller_coaster,"SELECT status ,  COUNT(*) FROM roller_coaster GROUP BY status",Show the different statuses and the numbers of roller coasters for each status.,"CREATE TABLE `roller_coaster` (
+  Roller_Coaster_ID INT PRIMARY KEY,
+  Name TEXT,
+  Park TEXT,
+  Country_ID INT REFERENCES country(Country_ID),
+  Length REAL,
+  Height REAL,
+  Speed TEXT,
+  Opened TEXT,
+  Status TEXT
+);
+
+"
+local_govt_in_alabama,SELECT COUNT(*) FROM participants WHERE participant_type_code  =  'Organizer',How many participants belong to the type 'Organizer'?,"CREATE TABLE `Participants` (
+  Participant_ID INTEGER,
+  Participant_Type_Code CHAR(15),
+  Participant_Details VARCHAR(255)
+);
+
+"
+architecture,"SELECT name ,  built_year FROM mill WHERE type  =  'Grondzeiler'",What are the names and year of construction for the mills of 'Grondzeiler' type?,"CREATE TABLE `mill` (
+  architect_id INT REFERENCES architect(id),
+  id INT PRIMARY KEY,
+  location TEXT,
+  name TEXT,
+  type TEXT,
+  built_year INT,
+  notes TEXT
+);
+
+"
+railway,"SELECT builder ,  COUNT(*) FROM railway GROUP BY builder","Show different builders of railways, along with the corresponding number of railways using each builder.","CREATE TABLE `railway` (
+  Railway_ID INT PRIMARY KEY,
+  Railway TEXT,
+  Builder TEXT,
+  Built TEXT,
+  Wheels TEXT,
+  Location TEXT,
+  ObjectNumber TEXT
+);
+
+"
+railway,"SELECT wheels ,  location FROM railway",List the wheels and locations of the railways.,"CREATE TABLE `railway` (
+  Railway_ID INT PRIMARY KEY,
+  Railway TEXT,
+  Builder TEXT,
+  Built TEXT,
+  Wheels TEXT,
+  Location TEXT,
+  ObjectNumber TEXT
+);
+
+"
+book_2,"SELECT title ,  issues FROM book",What are the title and issues of the books?,"CREATE TABLE `book` (
+  Book_ID INT PRIMARY KEY,
+  Title TEXT,
+  Issues REAL,
+  Writer TEXT
+);
+
+"
+book_2,"SELECT t1.title ,  t2.publication_date FROM book as t1 JOIN publication as t2 ON t1.book_id  =  t2.book_id",Show the title and publication dates of books.,"CREATE TABLE `book` (
+  Book_ID INT PRIMARY KEY,
+  Title TEXT,
+  Issues REAL,
+  Writer TEXT
+);
+
+CREATE TABLE `publication` (
+  Publication_ID INT PRIMARY KEY,
+  Book_ID INT REFERENCES book(Book_ID),
+  Publisher TEXT,
+  Publication_Date TEXT,
+  Price REAL
+);
+
+"

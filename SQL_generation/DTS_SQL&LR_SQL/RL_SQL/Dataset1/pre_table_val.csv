@@ -1,0 +1,384 @@
+reference_tables,predicted_tables
+manufacturers,manufacturers
+manufacturers,manufacturers
+manufacturers,manufacturers
+products,products
+manufacturers,manufacturers
+manufacturers,manufacturers
+manufacturers,manufacturers
+products,products
+sportsinfo,"sportsinfo, plays_games"
+plays_games,plays_games
+student,student
+plays_games,plays_games
+video_games,video_games
+video_games,video_games
+"student, sportsinfo","sportsinfo, student"
+video_games,video_games
+documents,documents
+documents,documents
+accounts,accounts
+documents_with_expenses,"documents_with_expenses, ref_budget_codes"
+"documents, documents_with_expenses","documents, documents_with_expenses"
+ref_budget_codes,ref_budget_codes
+ref_document_types,ref_document_types
+"projects, documents","documents, projects"
+"venue, paper","venue, paper"
+"paper, cite","paper, cite"
+paper,None
+"paperdataset, dataset, paper, venue","paper, paperdataset, dataset"
+"writes, author","writes, author"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"paperkeyphrase, keyphrase, paper, venue","paperkeyphrase, paper, venue, keyphrase"
+"writes, author","writes, author"
+"writes, author, paper","writes, paper, author"
+"writes, author","writes, author"
+"paperkeyphrase, keyphrase, cite","paperkeyphrase, paper, cite, keyphrase"
+"paperdataset, dataset, paper","paper, paperdataset, dataset"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"venue, paper","venue, paper"
+"paper, cite, venue","paper, cite, venue"
+"venue, paper","venue, paper"
+"paper, paperkeyphrase, writes, author","paperkeyphrase, paper, writes, keyphrase, author"
+"paperdataset, dataset, paper","paper, paperdataset, dataset"
+"paperdataset, dataset, paperkeyphrase, keyphrase","paperkeyphrase, paperdataset, dataset, keyphrase"
+"writes, author, paper","writes, paper, author"
+"paperkeyphrase, keyphrase, paper, cite","paperkeyphrase, paper, cite, keyphrase"
+"paperkeyphrase, keyphrase, paper, writes, author","paperkeyphrase, paper, writes, keyphrase, author"
+"paperkeyphrase, keyphrase, paper, writes, author","paperkeyphrase, paper, writes, keyphrase, author"
+"venue, paper, writes","venue, paper, writes"
+"venue, paper","venue, paper"
+"paperkeyphrase, keyphrase, writes, author","paperkeyphrase, paper, writes, keyphrase, author"
+"paperkeyphrase, keyphrase, paper, writes, author","paperkeyphrase, paper, writes, keyphrase, author"
+"writes, author","writes, author"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"venue, paper","venue, paper"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"writes, author","writes, author"
+paper,paper
+"paperkeyphrase, keyphrase, paper, cite","paperkeyphrase, paper, cite, keyphrase"
+"paper, cite, paperkeyphrase, venue","paperkeyphrase, paper, venue, keyphrase"
+paper,None
+"writes, author","writes, author"
+"venue, paper, writes","venue, paper, writes"
+"writes, author, paper","writes, author"
+"paper, paperdataset, writes, author","paper, writes, paperdataset, author"
+"paperkeyphrase, keyphrase, paper, writes, author","paperkeyphrase, paper, writes, keyphrase, author"
+"writes, author, paper","writes, paper, author"
+"paperkeyphrase, keyphrase, paper, writes, author","paperkeyphrase, paper, writes, keyphrase, author"
+"writes, author","writes, author"
+"writes, author, paper","writes, paper, author"
+"venue, paper, writes","venue, paper, writes"
+"venue, paper, writes, cite","paper, cite, venue"
+"writes, author, paper","writes, paper, author"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"paperkeyphrase, keyphrase, paper, venue","paperkeyphrase, paper, venue, keyphrase"
+"writes, author","writes, author"
+"venue, paper","venue, paper"
+"writes, author","writes, author"
+"paper, cite, writes, author","paper, cite, writes, author"
+school,university
+"endowment, school","endowment, school"
+musical,musical
+musical,musical
+actor,actor
+actor,actor
+entrepreneur,entrepreneur
+"entrepreneur, people","entrepreneur, people"
+entrepreneur,None
+entrepreneur,None
+invoices,invoices
+"tracks, playlist_tracks, playlists","tracks, playlist_tracks, playlists"
+employees,employees
+"albums, artists","artists, albums"
+employees,None
+tracks,tracks
+"playlist_tracks, playlists","playlist_tracks, playlists"
+"customers, invoices","customers, invoices"
+"employees, customers","employees, customers"
+"genres, tracks","tracks, genres"
+"albums, tracks","albums, tracks"
+"tourist_attractions, visitors, visits","tourist_attractions, visits, visitors"
+"ref_attraction_types, tourist_attractions","ref_attraction_types, tourist_attractions"
+"tourist_attractions, visitors, visits","tourist_attractions, visits, visitors"
+locations,locations
+hotels,hotels
+visitors,visitors
+"staff, tourist_attractions","staff, tourist_attractions"
+hotels,hotels
+flight,flight
+"flight, aircraft","flight, aircraft"
+employee,None
+employee,employee
+flight,flight
+aircraft,aircraft
+employee,employee
+"employee, certificate, aircraft","employee, certificate, aircraft"
+flight,flight
+state,state
+city,city
+"state, border_info","state, border_info"
+river,river
+highlow,highlow
+border_info,border_info
+"city, state","city, state"
+state,state
+city,city
+"state, river","state, river"
+"city, state","city, state"
+state,state
+border_info,border_info
+"state, city","city, state"
+river,river
+city,city
+city,city
+highlow,highlow
+river,river
+"city, state","city, state"
+city,city
+river,river
+mountain,mountain
+river,river
+border_info,border_info
+city,city
+"state, border_info","state, border_info"
+river,river
+"city, state","city, state"
+state,state
+city,city
+"river, state","river, state"
+"city, river","city, river"
+state,state
+"state, border_info","state, border_info"
+"state, river","state, river"
+city,city
+city,city
+state,state
+river,river
+"city, state","city, state"
+border_info,border_info
+state,state
+river,river
+state,state
+border_info,border_info
+river,river
+border_info,border_info
+"river, state","river, state"
+city,city
+river,river
+mountain,mountain
+state,state
+"river, state","river, state"
+city,city
+river,river
+wrestler,wrestler
+wrestler,wrestler
+wrestler,wrestler
+elimination,elimination
+"review, business, user","business, review, user"
+"category, business, review, user","category, business, review, user"
+"category, business, neighbourhood",None
+"user, review","review, user"
+"checkin, business","checkin, business"
+"category, business","category, business"
+"checkin, business","checkin, business"
+"tip, business, user","tip, business, user"
+"category, business, checkin","category, business, checkin"
+"neighbourhood, business","neighbourhood, business"
+"category, business, review","category, business, review"
+book_club,book_club
+book_club,book_club
+movie,movie
+assessment_notes,assessment_notes
+"teachers, detention","teachers, detention"
+"assessment_notes, teachers","assessment_notes, teachers"
+students_in_detention,"detention, students_in_detention"
+club,club
+"club, player","club, player"
+player,player
+club,club
+player,player
+track,track
+track,track
+"race, track","race, track"
+"race, track","race, track"
+film,film
+film,film
+"film_market_estimation, market","film_market_estimation, market"
+"film_market_estimation, market",film_market_estimation
+attribute_definitions,attribute_definitions
+catalogs,catalogs
+"catalog_contents, catalog_contents_Additional_Attributes",catalog_contents
+catalog_contents,products
+airports,airports
+airports,airports
+"airlines, routes","routes, airports, airlines"
+"airports, routes","airports, routes"
+airports,airports
+"airports, routes","airports, routes"
+"airports, routes","airports, routes"
+airports,airports
+files,"files, song"
+song,song
+"artist, song","artist, song"
+song,song
+song,song
+artist,artist
+song,song
+files,files
+"files, song","files, song"
+files,"files, song"
+stadium,stadium
+medication,medication
+"patient, appointment","patient, appointment"
+undergoes,undergoes
+"patient, prescribes, medication","patient, prescribes, medication"
+"physician, patient",patient
+appointment,appointment
+"department, physician","department, physician"
+"appointment, patient","patient, appointment"
+medication,medication
+"appointment, patient","patient, appointment"
+"wine, appellations","wine, appellations"
+"grapes, wine","grapes, wine"
+"appellations, wine","wine, appellations"
+"grapes, wine","grapes, wine"
+"appellations, wine","wine, appellations"
+wine,wine
+wine,wine
+wine,wine
+companies,companies
+"buildings, office_locations","buildings, office_locations"
+companies,companies
+buildings,buildings
+party_events,party_events
+region,region
+party_events,party_events
+party,party
+"browser, accelerator_compatible_browser, web_client_accelerator","accelerator_compatible_browser, web_client_accelerator, browser"
+"purchases, transactions","purchases, transactions"
+"lots, transactions_lots, transactions","transactions, transactions_lots, lots"
+transactions,transactions
+transactions,transactions
+university,university
+university,university
+"university, basketball_match","university, basketball_match"
+university,university
+"restaurant, location","restaurant, location"
+"restaurant, geographic, location","restaurant, geographic, location"
+"location, restaurant, geographic","restaurant, geographic, location"
+"restaurant, location","restaurant, location"
+"restaurant, location","restaurant, location"
+"restaurant, location","restaurant, location"
+"location, restaurant, geographic","restaurant, geographic, location"
+"restaurant, geographic, location","restaurant, geographic, location"
+"restaurant, location","restaurant, location"
+"restaurant, location","category, business"
+"restaurant, location","restaurant, location"
+"restaurant, geographic, location","restaurant, geographic, location"
+user_profiles,user_profiles
+user_profiles,"user_profiles, follows"
+"station, trip","station, trip"
+weather,weather
+"station, status","station, status"
+trip,trip
+"trip, station","station, trip"
+station,station
+trip,trip
+"station, status","station, status"
+station,station
+station,station
+campuses,campuses
+faculty,faculty
+"campuses, csu_fees","campuses, csu_fees"
+campuses,campuses
+campuses,campuses
+csu_fees,csu_fees
+"campuses, csu_fees","campuses, csu_fees"
+journalist,journalist
+rooms,rooms
+rooms,rooms
+"rooms, reservations","rooms, reservations"
+"reservations, rooms","reservations, rooms"
+"reservations, rooms","reservations, rooms"
+rooms,rooms
+rooms,rooms
+"authorship, papers","authorship, papers"
+"papers, authorship, inst","authorship, papers, inst"
+"authors, authorship, inst","authors, authorship, inst"
+papers,papers
+"authors, authorship, inst","authors, authorship, inst"
+"authors, authorship, papers","writes, papers"
+furniture,furniture
+person,person
+person,person
+"person, personFriend","person, personFriend"
+"person, personFriend","person, personFriend"
+person,person
+"person, personFriend","person, personFriend"
+personfriend,"person, personFriend"
+person,person
+"medicine_enzyme_interaction, medicine, enzyme","medicine_enzyme_interaction, enzyme, medicine"
+"medicine, medicine_enzyme_interaction","medicine_enzyme_interaction, medicine"
+"medicine, medicine_enzyme_interaction","medicine_enzyme_interaction, medicine"
+enzyme,enzyme
+apartments,apartments
+apartment_buildings,apartment_buildings
+"apartment_bookings, apartments","apartment_bookings, apartments"
+"apartment_bookings, guests","apartment_bookings, guests"
+"apartment_bookings, guests","apartment_bookings, guests"
+apartment_bookings,apartment_bookings
+"apartment_buildings, apartments","apartment_buildings, apartments"
+"apartment_bookings, guests","apartment_bookings, guests"
+bank,bank
+"customer, loan","customer, loan"
+customer,customer
+"loan, bank, customer","bank, loan, customer"
+customer,customer
+customer,customer
+"bank, loan",loan
+bank,bank
+shop,shop
+"stock, device","stock, device"
+shop,shop
+device,device
+"ship, captain","ship, captain"
+ship,ship
+"ship, captain","ship, captain"
+captain,captain
+program,program
+"channel, broadcast","channel, broadcast"
+program,program
+channel,channel
+"election, representative","election, representative"
+representative,representative
+"chip_model, phone, screen_mode","chip_model, phone, screen_mode"
+"chip_model, phone","chip_model, phone"
+"repair_assignment, machine, technician","repair_assignment, technician, machine"
+technician,technician
+technician,technician
+"acceptance, submission","acceptance, submission"
+submission,submission
+submission,submission
+"cmi_cross_references, council_tax","cmi_cross_references, council_tax"
+product,product
+district,district
+district,district
+district,district
+"station_company, company","station_company, company"
+company,company
+company,companies
+company,companies
+"artwork, nomination","artwork, nomination"
+festival_detail,festival_detail
+institution,institution
+"building, institution","building, institution"
+"country, roller_coaster","country, roller_coaster"
+services,services
+mill,mill
+"railway, train",railway
+"railway, train","railway, train"
+publication,publication
+publication,publication

@@ -1,0 +1,1737 @@
+,reference_tables,predicted_tables
+0,manufacturers,manufacturers
+1,manufacturers,manufacturers
+2,"products, manufacturers","manufacturers, products"
+3,manufacturers,manufacturers
+4,manufacturers,manufacturers
+5,manufacturers,manufacturers
+6,manufacturers,manufacturers
+7,products,products
+8,"products, manufacturers","manufacturers, products"
+9,products,products
+10,products,products
+11,manufacturers,manufacturers
+12,"products, manufacturers","manufacturers, products"
+13,manufacturers,manufacturers
+14,products,products
+15,products,products
+16,products,products
+17,"products, manufacturers","manufacturers, products"
+18,products,products
+19,manufacturers,manufacturers
+20,manufacturers,manufacturers
+21,manufacturers,manufacturers
+22,"products, manufacturers","manufacturers, products"
+23,manufacturers,manufacturers
+24,"products, manufacturers","manufacturers, products"
+25,manufacturers,manufacturers
+26,manufacturers,manufacturers
+27,products,products
+28,products,products
+29,manufacturers,manufacturers
+30,products,products
+31,manufacturers,manufacturers
+32,"products, manufacturers","manufacturers, products"
+33,"products, manufacturers","manufacturers, products"
+34,products,products
+35,manufacturers,manufacturers
+36,manufacturers,manufacturers
+37,manufacturers,manufacturers
+38,"products, manufacturers","manufacturers, products"
+39,manufacturers,manufacturers
+40,products,products
+41,manufacturers,manufacturers
+42,"products, manufacturers","manufacturers, products"
+43,"products, manufacturers","manufacturers, products"
+44,"products, manufacturers","manufacturers, products"
+45,manufacturers,manufacturers
+46,products,products
+47,manufacturers,manufacturers
+48,products,products
+49,manufacturers,manufacturers
+50,products,products
+51,products,products
+52,"products, manufacturers","manufacturers, products"
+53,manufacturers,manufacturers
+54,manufacturers,manufacturers
+55,products,products
+56,manufacturers,manufacturers
+57,"products, manufacturers","manufacturers, products"
+58,manufacturers,manufacturers
+59,products,products
+60,manufacturers,manufacturers
+61,"products, manufacturers","manufacturers, products"
+62,"manufacturers, products","manufacturers, products"
+63,products,products
+64,manufacturers,"station, person"
+65,manufacturers,manufacturers
+66,manufacturers,manufacturers
+67,manufacturers,manufacturers
+68,"manufacturers, products","manufacturers, products"
+69,products,products
+70,manufacturers,manufacturers
+71,"products, manufacturers","manufacturers, products"
+72,video_games,video_games
+73,sportsinfo,sportsinfo
+74,sportsinfo,sportsinfo
+75,"student, sportsinfo","student, sportsinfo"
+76,"sportsinfo, student","student, sportsinfo"
+77,student,student
+78,video_games,video_games
+79,plays_games,plays_games
+80,"student, sportsinfo",sportsinfo
+81,sportsinfo,sportsinfo
+82,student,student
+83,plays_games,plays_games
+84,"sportsinfo, student","student, sportsinfo"
+85,"sportsinfo, student","student, sportsinfo"
+86,"student, sportsinfo","student, sportsinfo"
+87,video_games,video_games
+88,video_games,video_games
+89,"plays_games, video_games","plays_games, video_games"
+90,plays_games,plays_games
+91,video_games,video_games
+92,"plays_games, video_games, student","student, plays_games, video_games"
+93,student,student
+94,sportsinfo,sportsinfo
+95,"plays_games, video_games","plays_games, video_games"
+96,sportsinfo,sportsinfo
+97,"sportsinfo, student","student, sportsinfo"
+98,"sportsinfo, student","student, sportsinfo"
+99,"student, sportsinfo","student, sportsinfo"
+100,student,student
+101,student,student
+102,"student, plays_games, video_games","plays_games, student, video_games"
+103,video_games,video_games
+104,sportsinfo,sportsinfo
+105,sportsinfo,sportsinfo
+106,"sportsinfo, student","student, sportsinfo"
+107,"student, sportsinfo","student, sportsinfo"
+108,sportsinfo,sportsinfo
+109,"student, sportsinfo","student, sportsinfo"
+110,"sportsinfo, plays_games","plays_games, sportsinfo"
+111,sportsinfo,sportsinfo
+112,video_games,video_games
+113,video_games,video_games
+114,sportsinfo,sportsinfo
+115,sportsinfo,sportsinfo
+116,video_games,video_games
+117,sportsinfo,sportsinfo
+118,"student, sportsinfo","student, sportsinfo"
+119,video_games,video_games
+120,student,student
+121,plays_games,plays_games
+122,"plays_games, video_games, student","student, plays_games, video_games"
+123,"student, plays_games, video_games","plays_games, student, video_games"
+124,video_games,video_games
+125,video_games,video_games
+126,video_games,video_games
+127,video_games,video_games
+128,sportsinfo,sportsinfo
+129,"sportsinfo, student","student, sportsinfo"
+130,plays_games,plays_games
+131,video_games,video_games
+132,"student, plays_games","plays_games, student"
+133,"sportsinfo, student","student, sportsinfo"
+134,student,student
+135,sportsinfo,sportsinfo
+136,"plays_games, video_games","plays_games, video_games"
+137,student,student
+138,"student, sportsinfo","student, sportsinfo"
+139,plays_games,plays_games
+140,video_games,video_games
+141,student,student
+142,sportsinfo,sportsinfo
+143,sportsinfo,sportsinfo
+144,"sportsinfo, plays_games","plays_games, sportsinfo"
+145,"sportsinfo, student","student, sportsinfo"
+146,video_games,video_games
+147,student,student
+148,sportsinfo,sportsinfo
+149,sportsinfo,sportsinfo
+150,musical,musical
+151,"actor, musical","actor, musical"
+152,"actor, musical","actor, musical"
+153,"actor, musical","actor, musical"
+154,musical,musical
+155,musical,musical
+156,musical,musical
+157,actor,actor
+158,actor,actor
+159,actor,actor
+160,actor,actor
+161,musical,musical
+162,actor,actor
+163,musical,musical
+164,musical,musical
+165,"actor, musical","actor, musical"
+166,actor,actor
+167,musical,musical
+168,actor,actor
+169,actor,actor
+170,actor,actor
+171,musical,musical
+172,actor,actor
+173,musical,musical
+174,"actor, musical","actor, musical"
+175,"musical, actor","actor, musical"
+176,musical,musical
+177,"actor, musical","actor, musical"
+178,musical,musical
+179,"actor, musical","actor, musical"
+180,musical,musical
+181,musical,musical
+182,actor,actor
+183,"actor, musical","actor, musical"
+184,actor,actor
+185,musical,musical
+186,entrepreneur,None
+187,entrepreneur,entrepreneur
+188,"entrepreneur, people","people, entrepreneur"
+189,entrepreneur,entrepreneur
+190,entrepreneur,entrepreneur
+191,"entrepreneur, people","people, entrepreneur"
+192,entrepreneur,entrepreneur
+193,"entrepreneur, people","people, entrepreneur"
+194,entrepreneur,entrepreneur
+195,"people, entrepreneur","people, entrepreneur"
+196,"entrepreneur, people","people, entrepreneur"
+197,entrepreneur,entrepreneur
+198,"entrepreneur, people","people, entrepreneur"
+199,people,people
+200,"people, entrepreneur","people, entrepreneur"
+201,"entrepreneur, people","people, entrepreneur"
+202,entrepreneur,entrepreneur
+203,people,people
+204,"entrepreneur, people","people, entrepreneur"
+205,people,people
+206,entrepreneur,entrepreneur
+207,entrepreneur,entrepreneur
+208,entrepreneur,entrepreneur
+209,entrepreneur,entrepreneur
+210,entrepreneur,entrepreneur
+211,"entrepreneur, people","people, entrepreneur"
+212,entrepreneur,entrepreneur
+213,entrepreneur,entrepreneur
+214,"entrepreneur, people","people, entrepreneur"
+215,"entrepreneur, people","people, entrepreneur"
+216,"entrepreneur, people","people, entrepreneur"
+217,"entrepreneur, people","people, entrepreneur"
+218,"entrepreneur, people","people, entrepreneur"
+219,entrepreneur,entrepreneur
+220,"entrepreneur, people","people, entrepreneur"
+221,entrepreneur,entrepreneur
+222,hotels,hotels
+223,"tourist_attractions, visits","visits, tourist_attractions"
+224,hotels,hotels
+225,tourist_attractions,tourist_attractions
+226,"tourist_attractions, tourist_attraction_features, features","tourist_attractions, features, tourist_attraction_features"
+227,locations,locations
+228,hotels,hotels
+229,hotels,hotels
+230,"ref_attraction_types, tourist_attractions","ref_attraction_types, tourist_attractions"
+231,hotels,hotels
+232,"museums, tourist_attractions","museums, tourist_attractions"
+233,locations,locations
+234,"photos, tourist_attractions","photos, tourist_attractions"
+235,"royal_family, tourist_attractions","royal_family, tourist_attractions"
+236,"tourist_attractions, visitors, visits","visits, tourist_attractions, visitors"
+237,locations,locations
+238,"shops, tourist_attractions","shops, tourist_attractions"
+239,"tourist_attractions, visits","visits, tourist_attractions"
+240,"tourist_attractions, visitors, visits","visits, tourist_attractions, visitors"
+241,hotels,hotels
+242,"shops, tourist_attractions","shops, tourist_attractions"
+243,hotels,hotels
+244,hotels,hotels
+245,visitors,visitors
+246,staff,staff
+247,"visitors, visits","visits, visitors"
+248,hotels,hotels
+249,"staff, tourist_attractions","staff, tourist_attractions"
+250,hotels,hotels
+251,"locations, tourist_attractions","tourist_attractions, locations"
+252,"street_markets, tourist_attractions","street_markets, tourist_attractions"
+253,"tourist_attractions, visits, visitors","visits, tourist_attractions, visitors"
+254,"tourist_attractions, visits","visits, tourist_attractions"
+255,locations,locations
+256,"photos, tourist_attractions","photos, tourist_attractions"
+257,"tourist_attractions, visits","visits, tourist_attractions"
+258,hotels,hotels
+259,visits,visits
+260,"tourist_attractions, visitors, visits","visits, tourist_attractions, visitors"
+261,hotels,hotels
+262,hotels,hotels
+263,locations,locations
+264,hotels,hotels
+265,tourist_attractions,tourist_attractions
+266,photos,photos
+267,"photos, tourist_attractions","photos, tourist_attractions"
+268,tourist_attractions,tourist_attractions
+269,tourist_attractions,tourist_attractions
+270,"hotels, ref_hotel_star_ratings","ref_hotel_star_ratings, hotels"
+271,"visitors, visits","visits, visitors"
+272,tourist_attractions,tourist_attractions
+273,locations,locations
+274,staff,staff
+275,"ref_attraction_types, tourist_attractions","ref_attraction_types, tourist_attractions"
+276,"tourist_attractions, visits","visits, tourist_attractions"
+277,tourist_attractions,tourist_attractions
+278,"tourist_attractions, visitors, visits","visits, tourist_attractions, visitors"
+279,locations,locations
+280,"tourist_attractions, visitors, visits","visits, tourist_attractions, visitors"
+281,"locations, tourist_attractions","tourist_attractions, locations"
+282,"tourist_attractions, tourist_attraction_features, features","tourist_attractions, features, tourist_attraction_features"
+283,hotels,hotels
+284,"hotels, ref_hotel_star_ratings","ref_hotel_star_ratings, hotels"
+285,"royal_family, tourist_attractions","royal_family, tourist_attractions"
+286,hotels,hotels
+287,"visitors, visits","visits, visitors"
+288,hotels,hotels
+289,hotels,hotels
+290,"tourist_attractions, visits, visitors","visits, tourist_attractions, visitors"
+291,"street_markets, tourist_attractions","street_markets, tourist_attractions"
+292,visitors,visitors
+293,"photos, tourist_attractions","photos, tourist_attractions"
+294,"tourist_attractions, visits","visits, tourist_attractions"
+295,"visitors, visits","visits, visitors"
+296,locations,locations
+297,tourist_attractions,tourist_attractions
+298,elimination,elimination
+299,"elimination, wrestler","wrestler, elimination"
+300,wrestler,wrestler
+301,wrestler,wrestler
+302,elimination,elimination
+303,"elimination, wrestler","wrestler, elimination"
+304,elimination,elimination
+305,"elimination, wrestler","wrestler, elimination"
+306,elimination,elimination
+307,"wrestler, elimination","wrestler, elimination"
+308,elimination,elimination
+309,wrestler,wrestler
+310,wrestler,wrestler
+311,"elimination, wrestler","wrestler, elimination"
+312,"elimination, wrestler","wrestler, elimination"
+313,elimination,elimination
+314,elimination,elimination
+315,elimination,elimination
+316,wrestler,wrestler
+317,wrestler,wrestler
+318,"elimination, wrestler","wrestler, elimination"
+319,wrestler,wrestler
+320,wrestler,wrestler
+321,wrestler,wrestler
+322,wrestler,wrestler
+323,"elimination, wrestler","wrestler, elimination"
+324,elimination,elimination
+325,wrestler,wrestler
+326,wrestler,wrestler
+327,wrestler,wrestler
+328,wrestler,wrestler
+329,wrestler,wrestler
+330,"wrestler, elimination","wrestler, elimination"
+331,elimination,elimination
+332,wrestler,wrestler
+333,"elimination, wrestler","wrestler, elimination"
+334,"review, business","business, review"
+335,"user, review","user, review"
+336,"category, business","business, category"
+337,review,review
+338,"category, business, review","review, business, category"
+339,"category, business","business, category"
+340,"category, business","business, category"
+341,business,business
+342,"review, business","business, review"
+343,"user, tip","user, tip"
+344,"neighbourhood, business","business, neighbourhood"
+345,"category, business, tip, user","user, business, tip, category"
+346,"category, business, neighbourhood","business, neighbourhood, category"
+347,tip,tip
+348,"category, business","business, category"
+349,"category, business, checkin","business, checkin, category"
+350,"category, business","business, category"
+351,"category, business","business, category"
+352,"user, tip","user, tip"
+353,user,user
+354,"review, business, user","user, business, review"
+355,"category, business","business, category"
+356,"checkin, business","business, checkin"
+357,"checkin, business, neighbourhood","business, neighbourhood, checkin"
+358,"category, business","business, category"
+359,"user, tip","user, tip"
+360,"category, business, neighbourhood","business, neighbourhood, category"
+361,business,business
+362,"category, business","business, category"
+363,"tip, business","business, tip"
+364,"category, business, review, user","review, business, user, category"
+365,"neighbourhood, business","business, neighbourhood"
+366,"category, business, review, user","review, business, user, category"
+367,"category, business","business, category"
+368,"category, business","business, category"
+369,business,business
+370,"category, business, review, user","review, business, user, category"
+371,business,business
+372,"category, business, checkin","business, checkin, category"
+373,"user, tip","user, tip"
+374,"checkin, business","business, checkin"
+375,user,user
+376,"category, business, review","review, business, category"
+377,business,business
+378,"category, business, review, user","review, business, user, category"
+379,"category, business","business, category"
+380,"category, business","business, category"
+381,"neighbourhood, business, review","business, neighbourhood, review"
+382,tip,tip
+383,"user, review","user, review"
+384,business,business
+385,"category, business","business, category"
+386,"category, business","business, category"
+387,business,None
+388,"tip, business, user","user, business, tip"
+389,"user, review","user, review"
+390,"category, business","business, category"
+391,business,business
+392,business,business
+393,"category, business, neighbourhood","business, neighbourhood, category"
+394,"category, business","business, category"
+395,"review, business, user","user, business, review"
+396,"category, business, review, user","review, business, user, category"
+397,"category, business","business, category"
+398,"category, business","business, category"
+399,"category, business","business, category"
+400,"category, business, checkin","business, checkin, category"
+401,business,business
+402,"category, business","business, category"
+403,"category, business","business, category"
+404,"category, business","business, category"
+405,"tip, business","business, tip"
+406,"category, business, neighbourhood","business, neighbourhood, category"
+407,"category, business","business, category"
+408,"category, business, checkin","business, checkin, category"
+409,"user, review, tip","user, tip, review"
+410,"review, business, user","user, business, review"
+411,business,business
+412,"tip, business","business, tip"
+413,"category, business","business, category"
+414,"neighbourhood, business","business, neighbourhood"
+415,review,review
+416,"category, business, review, user","review, business, user, category"
+417,"review, business, user","user, business, review"
+418,"review, business, user","user, business, review"
+419,"category, business","business, category"
+420,"user, review","user, review"
+421,"category, business, checkin","business, checkin, category"
+422,"tip, business, user","user, business, tip"
+423,business,business
+424,"tip, business","business, tip"
+425,"category, business","business, category"
+426,"category, business, review, user","review, business, user, category"
+427,"user, review","user, review"
+428,"category, business, review, user","review, business, user, category"
+429,"category, business","business, category"
+430,"category, business, review, user","review, business, user, category"
+431,"category, business","business, category"
+432,"category, business","business, category"
+433,review,review
+434,"detention, Ref_detention_Type","detention, Ref_detention_Type"
+435,teachers,teachers
+436,"addresses, teachers","addresses, teachers"
+437,"addresses, Student_addresses","addresses, Student_addresses"
+438,"student_addresses, students","student_addresses, students"
+439,detention,detention
+440,students,students
+441,"addresses, Student_addresses","addresses, Student_addresses"
+442,"addresses, students, teachers","students, addresses, teachers"
+443,"assessment_notes, students","students, assessment_notes"
+444,"assessment_notes, students","students, assessment_notes"
+445,"assessment_notes, teachers","assessment_notes, teachers"
+446,"student_addresses, students","student_addresses, students"
+447,"students, behavior_incident","students, behavior_incident"
+448,"addresses, teachers","addresses, teachers"
+449,teachers,teachers
+450,"teachers, detention","detention, teachers"
+451,detention,detention
+452,assessment_notes,assessment_notes
+453,"addresses, Student_addresses","addresses, Student_addresses"
+454,"behavior_incident, students","students, behavior_incident"
+455,student_addresses,student_addresses
+456,"behavior_incident, ref_incident_type","behavior_incident, ref_incident_type"
+457,"assessment_notes, teachers","assessment_notes, teachers"
+458,addresses,addresses
+459,assessment_notes,assessment_notes
+460,"detention, teachers","detention, teachers"
+461,assessment_notes,assessment_notes
+462,students,students
+463,ref_incident_type,ref_incident_type
+464,addresses,addresses
+465,"detention, teachers","detention, teachers"
+466,behavior_incident,behavior_incident
+467,"addresses, students","students, addresses"
+468,"behavior_incident, students","students, behavior_incident"
+469,"addresses, Student_addresses","addresses, Student_addresses"
+470,"film_market_estimation, market","film_market_estimation, market"
+471,"film, film_market_estimation, market","film, film_market_estimation, market"
+472,"film, film_market_estimation","film, film_market_estimation"
+473,"film, film_market_estimation","film, film_market_estimation"
+474,film,film
+475,"film_market_estimation, market","film_market_estimation, market"
+476,market,market
+477,"film, film_market_estimation","film, film_market_estimation"
+478,film,film
+479,"film_market_estimation, market","film_market_estimation, market"
+480,market,market
+481,film_market_estimation,film_market_estimation
+482,market,market
+483,"film, film_market_estimation","film, film_market_estimation"
+484,film,film
+485,film,film
+486,market,market
+487,market,market
+488,film,film
+489,"film, film_market_estimation, market","film, film_market_estimation, market"
+490,film,film
+491,film_market_estimation,film_market_estimation
+492,market,market
+493,film,film
+494,market,market
+495,market,market
+496,film,film
+497,"film_market_estimation, market","film_market_estimation, market"
+498,film,film
+499,film,film
+500,film,film
+501,"film, film_market_estimation","film, film_market_estimation"
+502,film_market_estimation,film_market_estimation
+503,"film_market_estimation, market","film_market_estimation, market"
+504,"film_market_estimation, market","film_market_estimation, market"
+505,film,film
+506,"film, film_market_estimation","film, film_market_estimation"
+507,"film, film_market_estimation","film, film_market_estimation"
+508,"film, film_market_estimation","film, film_market_estimation"
+509,film,film
+510,film,film
+511,film,film
+512,film,film
+513,film,film
+514,catalog_contents,products
+515,catalog_contents,catalog_contents
+516,"catalog_contents, catalog_contents_Additional_Attributes","catalog_contents, catalog_contents_Additional_Attributes"
+517,"catalog_contents, catalog_contents_Additional_Attributes","catalog_contents, catalog_contents_Additional_Attributes"
+518,"catalogs, catalog_structure","catalogs, catalog_structure"
+519,"catalog_contents, catalog_structure","catalog_contents, catalog_structure"
+520,catalog_contents,catalog_contents
+521,catalog_contents,catalog_contents
+522,catalog_contents,catalog_contents
+523,attribute_definitions,attribute_definitions
+524,catalogs,catalogs
+525,catalog_contents,catalog_contents
+526,catalog_contents,catalog_contents
+527,catalog_contents,catalog_contents
+528,"attribute_definitions, catalog_contents_additional_attributes","attribute_definitions, catalog_contents_additional_attributes"
+529,catalog_contents,catalog_contents
+530,catalog_contents,catalog_contents
+531,catalog_contents,catalog_contents
+532,catalog_contents,catalog_contents
+533,"catalogs, catalog_structure","catalog_structure, catalogs"
+534,catalog_contents,catalog_contents
+535,catalog_contents,catalog_contents
+536,catalogs,catalogs
+537,"attribute_definitions, catalog_contents_additional_attributes","attribute_definitions, catalog_contents_additional_attributes"
+538,catalog_contents,catalog_contents
+539,catalogs,catalogs
+540,catalog_contents,catalog_contents
+541,"catalog_contents, catalog_structure","catalog_contents, catalog_structure"
+542,attribute_definitions,attribute_definitions
+543,attribute_definitions,attribute_definitions
+544,"catalog_contents, catalog_contents_Additional_Attributes","catalog_contents, catalog_contents_Additional_Attributes"
+545,catalog_contents,catalog_contents
+546,catalogs,catalogs
+547,catalog_contents,catalog_contents
+548,catalog_structure,catalog_structure
+549,catalog_contents,catalog_contents
+550,attribute_definitions,attribute_definitions
+551,catalogs,catalogs
+552,"routes, airports","airports, routes"
+553,airports,airports
+554,airports,airports
+555,airports,airports
+556,"routes, airports","airports, routes"
+557,airlines,airlines
+558,airlines,airlines
+559,airports,airports
+560,airports,airports
+561,airports,airports
+562,"airports, routes","airports, routes"
+563,airlines,airlines
+564,airlines,airlines
+565,airports,airports
+566,"airlines, routes","routes, airlines"
+567,"airports, routes","airports, routes"
+568,airports,airports
+569,"airports, routes","airports, routes"
+570,"routes, airports","airports, routes"
+571,airports,airports
+572,"airports, routes","airports, routes"
+573,airports,airports
+574,airports,airports
+575,airports,airports
+576,"airports, routes","airports, routes"
+577,airports,airports
+578,airports,airports
+579,"airports, routes","airports, routes"
+580,"airports, routes","airports, routes"
+581,airlines,airlines
+582,airports,airports
+583,airlines,airlines
+584,"airports, routes","airports, routes"
+585,"airports, routes","airports, routes"
+586,"airlines, routes","routes, airlines"
+587,airports,airports
+588,"airlines, routes","routes, airlines"
+589,"airports, routes","airports, routes"
+590,"airports, routes","airports, routes"
+591,airports,airports
+592,airports,airports
+593,"airports, routes","airports, routes"
+594,"airports, routes","airports, routes"
+595,airlines,airlines
+596,"airlines, routes","routes, airlines"
+597,"airports, routes","airports, routes"
+598,"routes, airports, airlines","airports, routes, airlines"
+599,airports,airports
+600,airports,airports
+601,"routes, airports","airports, routes"
+602,airports,airports
+603,airports,airports
+604,airports,airports
+605,airports,airports
+606,"airports, routes","airports, routes"
+607,airports,airports
+608,"airports, routes","airports, routes"
+609,"airlines, routes","routes, airlines"
+610,"routes, airports","airports, routes"
+611,"routes, airports","airports, routes"
+612,"airlines, routes","routes, airlines"
+613,airlines,airlines
+614,airports,airports
+615,airlines,airlines
+616,"airlines, routes","routes, airlines"
+617,airports,airports
+618,airports,airports
+619,airlines,airlines
+620,airports,airports
+621,"airlines, routes","routes, airlines"
+622,"routes, airports, airlines","airports, routes, airlines"
+623,airports,airports
+624,airports,airports
+625,"airlines, routes","routes, airlines"
+626,injury_accident,injury_accident
+627,game,game
+628,"game, stadium, injury_accident","stadium, game, injury_accident"
+629,"stadium, game, injury_accident","stadium, game, injury_accident"
+630,"game, injury_accident","injury_accident, game"
+631,"stadium, game, injury_accident","stadium, game, injury_accident"
+632,stadium,stadium
+633,game,game
+634,stadium,stadium
+635,"stadium, game, injury_accident","stadium, game, injury_accident"
+636,"game, stadium, injury_accident","stadium, game, injury_accident"
+637,"game, injury_accident","injury_accident, game"
+638,"game, injury_accident","injury_accident, game"
+639,"injury_accident, game","injury_accident, game"
+640,injury_accident,injury_accident
+641,"stadium, game","stadium, game"
+642,stadium,stadium
+643,"game, injury_accident","injury_accident, game"
+644,"appointment, patient","appointment, patient"
+645,"physician, appointment","physician, appointment"
+646,"patient, prescribes, medication","medication, prescribes, patient"
+647,"nurse, appointment","nurse, appointment"
+648,"procedures, physician, trained_in","physician, procedures, trained_in"
+649,undergoes,undergoes
+650,stay,stay
+651,physician,physician
+652,"physician, trained_in, procedures","physician, procedures, trained_in"
+653,room,room
+654,medication,medication
+655,"patient, appointment","appointment, patient"
+656,"physician, affiliated_with, department","physician, affiliated_with, department"
+657,"physician, affiliated_with, department","physician, affiliated_with, department"
+658,"physician, trained_in, procedures","physician, procedures, trained_in"
+659,"physician, trained_in, procedures","physician, procedures, trained_in"
+660,"physician, prescribes","physician, prescribes"
+661,"stay, patient, prescribes, medication","stay, prescribes, patient, medication"
+662,"patient, prescribes, medication","medication, prescribes, patient"
+663,"physician, affiliated_with, department","physician, affiliated_with, department"
+664,"appointment, patient","appointment, patient"
+665,"appointment, physician","physician, appointment"
+666,room,room
+667,nurse,nurse
+668,"procedures, physician, trained_in","physician, procedures, trained_in"
+669,appointment,appointment
+670,"nurse, on_call","nurse, on_call"
+671,"appointment, patient","appointment, patient"
+672,"physician, prescribes, medication","physician, medication, prescribes"
+673,"physician, trained_in, procedures","physician, procedures, trained_in"
+674,"physician, affiliated_with, department","physician, affiliated_with, department"
+675,"affiliated_with, department","affiliated_with, department"
+676,stay,stay
+677,"physician, patient","physician, patient"
+678,"stay, patient, prescribes, medication","stay, prescribes, patient, medication"
+679,"appointment, physician","physician, appointment"
+680,affiliated_with,affiliated_with
+681,"undergoes, patient, stay","stay, undergoes, patient"
+682,appointment,appointment
+683,"nurse, appointment","nurse, appointment"
+684,nurse,nurse
+685,"physician, patient","physician, patient"
+686,affiliated_with,affiliated_with
+687,"department, physician","physician, department"
+688,"medication, prescribes","medication, prescribes"
+689,room,room
+690,"physician, trained_in, procedures","physician, procedures, trained_in"
+691,"physician, patient","physician, patient"
+692,"medication, prescribes","medication, prescribes"
+693,"physician, prescribes, medication","physician, medication, prescribes"
+694,department,department
+695,"appointment, patient","appointment, patient"
+696,stay,stay
+697,"patient, prescribes, medication","medication, prescribes, patient"
+698,"block, room","room, block"
+699,"undergoes, patient, stay","stay, undergoes, patient"
+700,"block, room","room, block"
+701,room,room
+702,undergoes,undergoes
+703,"physician, appointment","physician, appointment"
+704,"undergoes, nurse","nurse, undergoes"
+705,"procedures, physician, trained_in","physician, procedures, trained_in"
+706,"physician, trained_in, procedures","physician, procedures, trained_in"
+707,"affiliated_with, department","affiliated_with, department"
+708,"physician, prescribes, medication","physician, medication, prescribes"
+709,procedures,procedures
+710,"department, physician","physician, department"
+711,"physician, affiliated_with, department","physician, affiliated_with, department"
+712,appointment,appointment
+713,"physician, prescribes, medication","physician, medication, prescribes"
+714,on_call,on_call
+715,"patient, prescribes, physician","physician, prescribes, patient"
+716,on_call,on_call
+717,procedures,procedures
+718,"patient, prescribes, medication","medication, prescribes, patient"
+719,procedures,procedures
+720,procedures,procedures
+721,physician,physician
+722,stay,stay
+723,"block, room","room, block"
+724,"patient, appointment","appointment, patient"
+725,"physician, trained_in, procedures","physician, procedures, trained_in"
+726,"block, room","room, block"
+727,"undergoes, nurse","nurse, undergoes"
+728,department,department
+729,medication,medication
+730,"physician, affiliated_with, department","physician, affiliated_with, department"
+731,"patient, prescribes, physician","physician, prescribes, patient"
+732,procedures,procedures
+733,"physician, trained_in, procedures","physician, procedures, trained_in"
+734,companies,companies
+735,buildings,buildings
+736,"office_locations, buildings, companies","companies, office_locations, buildings"
+737,companies,companies
+738,companies,companies
+739,"office_locations, buildings, companies","companies, office_locations, buildings"
+740,companies,companies
+741,buildings,buildings
+742,companies,companies
+743,companies,companies
+744,companies,companies
+745,companies,companies
+746,buildings,buildings
+747,companies,companies
+748,companies,companies
+749,companies,companies
+750,companies,companies
+751,"buildings, office_locations","office_locations, buildings"
+752,companies,companies
+753,companies,companies
+754,companies,companies
+755,companies,companies
+756,"office_locations, buildings, companies","companies, office_locations, buildings"
+757,companies,companies
+758,"buildings, office_locations","office_locations, buildings"
+759,"office_locations, buildings, companies","companies, office_locations, buildings"
+760,companies,companies
+761,buildings,buildings
+762,companies,companies
+763,companies,companies
+764,"office_locations, buildings, companies","companies, office_locations, buildings"
+765,companies,companies
+766,companies,companies
+767,companies,companies
+768,companies,companies
+769,"office_locations, buildings, companies","companies, office_locations, buildings"
+770,"member, party","member, party"
+771,party,party
+772,party,party
+773,party,party
+774,party,party
+775,"party_events, party","party_events, party"
+776,"region, party, party_events","party_events, region, party"
+777,party_events,party_events
+778,party,party
+779,member,member
+780,"member, party","member, party"
+781,party_events,party_events
+782,"member, party","member, party"
+783,party_events,party_events
+784,"member, party","member, party"
+785,"member, party_events","party_events, member"
+786,"member, party","member, party"
+787,party,party
+788,region,region
+789,"party, member","member, party"
+790,"party_events, party","party_events, party"
+791,region,region
+792,"party, region","region, party"
+793,"party, region","region, party"
+794,party,party
+795,region,region
+796,"member, party_events","party_events, member"
+797,"member, party_events","party_events, member"
+798,"member, party","member, party"
+799,"party_events, party","party_events, party"
+800,"member, party","member, party"
+801,"party, member","member, party"
+802,"member, party","member, party"
+803,region,region
+804,member,member
+805,party_events,party_events
+806,party,party
+807,"region, party, party_events","party_events, region, party"
+808,party,party
+809,"member, party_events","party_events, member"
+810,web_client_accelerator,web_client_accelerator
+811,browser,browser
+812,web_client_accelerator,web_client_accelerator
+813,"browser, accelerator_compatible_browser","browser, accelerator_compatible_browser"
+814,browser,browser
+815,"web_client_accelerator, accelerator_compatible_browser","accelerator_compatible_browser, web_client_accelerator"
+816,web_client_accelerator,web_client_accelerator
+817,web_client_accelerator,web_client_accelerator
+818,"accelerator_compatible_browser, browser, web_client_accelerator","browser, accelerator_compatible_browser, web_client_accelerator"
+819,"accelerator_compatible_browser, browser, web_client_accelerator","browser, accelerator_compatible_browser, web_client_accelerator"
+820,"web_client_accelerator, accelerator_compatible_browser, browser","browser, accelerator_compatible_browser, web_client_accelerator"
+821,"web_client_accelerator, accelerator_compatible_browser, browser","browser, accelerator_compatible_browser, web_client_accelerator"
+822,browser,browser
+823,browser,browser
+824,browser,browser
+825,"web_client_accelerator, accelerator_compatible_browser, browser","browser, accelerator_compatible_browser, web_client_accelerator"
+826,"web_client_accelerator, accelerator_compatible_browser","accelerator_compatible_browser, web_client_accelerator"
+827,"sales, transactions","transactions, sales"
+828,lots,lots
+829,"investors, transactions","investors, transactions"
+830,"investors, transactions","investors, transactions"
+831,transactions,transactions
+832,transactions,transactions
+833,"investors, transactions","investors, transactions"
+834,transactions,transactions
+835,transactions,transactions
+836,transactions,transactions
+837,"lots, transactions_lots, transactions","transactions, transactions_lots, lots"
+838,"purchases, transactions","purchases, transactions"
+839,transactions,transactions
+840,transactions,transactions
+841,transactions,transactions
+842,transactions,transactions
+843,transactions,transactions
+844,"ref_transaction_types, transactions","transactions, ref_transaction_types"
+845,"transactions, transactions_lots","transactions_lots, transactions"
+846,lots,lots
+847,transactions,transactions
+848,"ref_transaction_types, transactions","transactions, ref_transaction_types"
+849,transactions,transactions
+850,"investors, lots","investors, lots"
+851,transactions,transactions
+852,transactions,transactions
+853,investors,investors
+854,"investors, transactions","investors, transactions"
+855,transactions,transactions
+856,transactions,transactions
+857,"investors, transactions","investors, transactions"
+858,"lots, transactions_lots, transactions","transactions, transactions_lots, lots"
+859,ref_transaction_types,ref_transaction_types
+860,transactions,transactions
+861,transactions,transactions
+862,transactions,transactions
+863,"sales, purchases","purchases, sales"
+864,"university, basketball_match","university, basketball_match"
+865,university,university
+866,basketball_match,basketball_match
+867,university,university
+868,university,university
+869,basketball_match,basketball_match
+870,"university, basketball_match","university, basketball_match"
+871,university,university
+872,basketball_match,basketball_match
+873,university,university
+874,"university, basketball_match","university, basketball_match"
+875,university,university
+876,"university, basketball_match","university, basketball_match"
+877,"university, basketball_match","university, basketball_match"
+878,university,university
+879,university,university
+880,"university, basketball_match","university, basketball_match"
+881,basketball_match,basketball_match
+882,"university, basketball_match","university, basketball_match"
+883,"university, basketball_match","university, basketball_match"
+884,university,university
+885,university,university
+886,basketball_match,basketball_match
+887,basketball_match,basketball_match
+888,university,university
+889,university,university
+890,university,university
+891,university,university
+892,university,university
+893,"university, basketball_match","university, basketball_match"
+894,university,university
+895,university,university
+896,basketball_match,basketball_match
+897,university,university
+898,university,university
+899,university,university
+900,university,university
+901,university,university
+902,university,university
+903,basketball_match,basketball_match
+904,university,university
+905,university,university
+906,"restaurant, geographic, location","location, restaurant, geographic"
+907,"restaurant, location","location, restaurant"
+908,"restaurant, location","location, restaurant"
+909,"restaurant, location","location, restaurant"
+910,"restaurant, geographic, location","location, restaurant, geographic"
+911,"restaurant, location","location, restaurant"
+912,"restaurant, geographic","restaurant, geographic"
+913,"restaurant, location","location, restaurant"
+914,"restaurant, location","location, restaurant"
+915,"restaurant, location","location, restaurant"
+916,"restaurant, geographic, location","location, restaurant, geographic"
+917,"location, restaurant, geographic","location, restaurant, geographic"
+918,"location, restaurant, geographic","location, restaurant, geographic"
+919,"restaurant, location","location, restaurant"
+920,"restaurant, location","location, restaurant"
+921,"restaurant, location","location, restaurant"
+922,"restaurant, location","location, restaurant"
+923,"restaurant, location","location, restaurant"
+924,"restaurant, geographic","restaurant, geographic"
+925,"restaurant, location","location, restaurant"
+926,"restaurant, geographic, location","location, restaurant, geographic"
+927,"restaurant, location","location, restaurant"
+928,"restaurant, location","location, restaurant"
+929,"restaurant, geographic, location","location, restaurant, geographic"
+930,"restaurant, geographic, location","location, restaurant, geographic"
+931,"restaurant, location","location, restaurant"
+932,"restaurant, geographic, location","location, restaurant, geographic"
+933,"restaurant, geographic, location","location, restaurant, geographic"
+934,"restaurant, geographic, location","location, restaurant, geographic"
+935,"restaurant, location","location, restaurant"
+936,"location, restaurant, geographic","location, restaurant, geographic"
+937,"restaurant, location","location, restaurant"
+938,"restaurant, location","location, restaurant"
+939,"restaurant, geographic, location","location, restaurant, geographic"
+940,"restaurant, location","location, restaurant"
+941,"restaurant, geographic, location","location, restaurant, geographic"
+942,"restaurant, location","location, restaurant"
+943,"location, restaurant, geographic","location, restaurant, geographic"
+944,"restaurant, location","location, restaurant"
+945,"restaurant, location","location, restaurant"
+946,"restaurant, location","location, restaurant"
+947,"restaurant, geographic","restaurant, geographic"
+948,"restaurant, location","location, restaurant"
+949,"restaurant, location","location, restaurant"
+950,"restaurant, location","location, restaurant"
+951,"restaurant, location","location, restaurant"
+952,"restaurant, location","location, restaurant"
+953,"restaurant, geographic, location","location, restaurant, geographic"
+954,"restaurant, location","location, restaurant"
+955,"restaurant, location","location, restaurant"
+956,"restaurant, location","location, restaurant"
+957,"restaurant, location","location, restaurant"
+958,"restaurant, location","location, restaurant"
+959,"restaurant, location","location, restaurant"
+960,"restaurant, geographic, location","location, restaurant, geographic"
+961,"restaurant, location","location, restaurant"
+962,"restaurant, location","location, restaurant"
+963,"restaurant, location","location, restaurant"
+964,"restaurant, location","location, restaurant"
+965,"restaurant, geographic, location","location, restaurant, geographic"
+966,"restaurant, geographic, location","location, restaurant, geographic"
+967,"location, restaurant, geographic","location, restaurant, geographic"
+968,"restaurant, location","location, restaurant"
+969,"restaurant, location","location, restaurant"
+970,"location, restaurant, geographic","location, restaurant, geographic"
+971,"restaurant, location","location, restaurant"
+972,"restaurant, location","location, restaurant"
+973,"restaurant, geographic, location","location, restaurant, geographic"
+974,"restaurant, location","location, restaurant"
+975,"restaurant, location","location, restaurant"
+976,"restaurant, location","location, restaurant"
+977,"restaurant, location","location, restaurant"
+978,"restaurant, location","location, restaurant"
+979,"restaurant, location","location, restaurant"
+980,"location, restaurant, geographic","location, restaurant, geographic"
+981,"restaurant, location","location, restaurant"
+982,"restaurant, location","location, restaurant"
+983,"restaurant, location","location, restaurant"
+984,"restaurant, geographic","restaurant, geographic"
+985,"restaurant, location","location, restaurant"
+986,"restaurant, geographic","restaurant, geographic"
+987,"restaurant, geographic, location","location, restaurant, geographic"
+988,"restaurant, location","location, restaurant"
+989,"restaurant, location","location, restaurant"
+990,"restaurant, geographic, location","location, restaurant, geographic"
+991,"restaurant, geographic","restaurant, geographic"
+992,"restaurant, location","location, restaurant"
+993,"restaurant, location","location, restaurant"
+994,"restaurant, geographic, location","location, restaurant, geographic"
+995,"restaurant, location","location, restaurant"
+996,"restaurant, location","location, restaurant"
+997,"restaurant, location","location, restaurant"
+998,"restaurant, location","location, restaurant"
+999,"restaurant, location","location, restaurant"
+1000,"restaurant, location","location, restaurant"
+1001,"restaurant, location","location, restaurant"
+1002,"restaurant, geographic, location","location, restaurant, geographic"
+1003,"restaurant, geographic","restaurant, geographic"
+1004,"restaurant, location","location, restaurant"
+1005,"restaurant, geographic, location","location, restaurant, geographic"
+1006,"restaurant, location","location, restaurant"
+1007,"restaurant, location","location, restaurant"
+1008,"restaurant, location","location, restaurant"
+1009,"restaurant, location","location, restaurant"
+1010,"restaurant, location","location, restaurant"
+1011,"restaurant, location","location, restaurant"
+1012,"restaurant, geographic, location","location, restaurant, geographic"
+1013,"restaurant, location","location, restaurant"
+1014,"restaurant, location","location, restaurant"
+1015,"restaurant, location","location, restaurant"
+1016,"restaurant, location","location, restaurant"
+1017,"restaurant, location","location, restaurant"
+1018,"restaurant, location","location, restaurant"
+1019,"user_profiles, follows","follows, user_profiles"
+1020,tweets,tweets
+1021,user_profiles,user_profiles
+1022,"user_profiles, tweets","user_profiles, tweets"
+1023,"user_profiles, follows","follows, user_profiles"
+1024,tweets,tweets
+1025,user_profiles,user_profiles
+1026,"user_profiles, tweets","user_profiles, tweets"
+1027,user_profiles,user
+1028,user_profiles,user_profiles
+1029,user_profiles,user_profiles
+1030,"user_profiles, tweets","user_profiles, tweets"
+1031,follows,"follows, user_profiles"
+1032,"user_profiles, tweets","user_profiles, tweets"
+1033,user_profiles,user_profiles
+1034,user_profiles,user_profiles
+1035,"user_profiles, tweets","user_profiles, tweets"
+1036,tweets,tweets
+1037,tweets,tweets
+1038,"user_profiles, tweets","user_profiles, tweets"
+1039,user_profiles,user_profiles
+1040,"user_profiles, follows","follows, user_profiles"
+1041,follows,"follows, user_profiles"
+1042,"user_profiles, follows","follows, user_profiles"
+1043,user_profiles,user_profiles
+1044,weather,weather
+1045,station,station
+1046,weather,weather
+1047,"trip, station","station, trip"
+1048,weather,weather
+1049,weather,weather
+1050,weather,weather
+1051,station,station
+1052,trip,trip
+1053,station,station
+1054,"station, trip","station, trip"
+1055,trip,trip
+1056,trip,trip
+1057,weather,weather
+1058,"station, status","station, status"
+1059,station,station
+1060,station,station
+1061,"station, status","station, status"
+1062,trip,trip
+1063,"station, trip","station, trip"
+1064,weather,weather
+1065,"station, trip","station, trip"
+1066,"station, trip","station, trip"
+1067,"weather, trip","weather, trip"
+1068,"station, status","station, status"
+1069,station,station
+1070,"station, status","station, status"
+1071,weather,weather
+1072,station,station
+1073,"station, status","station, status"
+1074,"station, trip","station, trip"
+1075,weather,weather
+1076,"station, status","station, status"
+1077,trip,trip
+1078,"trip, station","station, trip"
+1079,weather,weather
+1080,trip,trip
+1081,trip,trip
+1082,weather,weather
+1083,station,station
+1084,"trip, station","station, trip"
+1085,station,station
+1086,weather,weather
+1087,"trip, weather","weather, trip"
+1088,weather,weather
+1089,weather,weather
+1090,trip,trip
+1091,"station, status","station, status"
+1092,trip,trip
+1093,weather,weather
+1094,weather,weather
+1095,trip,trip
+1096,"station, status","station, status"
+1097,trip,trip
+1098,trip,trip
+1099,station,station
+1100,trip,"station, trip"
+1101,"status, station","station, status"
+1102,"station, trip","station, trip"
+1103,weather,weather
+1104,"station, status","station, status"
+1105,"trip, station","station, trip"
+1106,trip,"station, trip"
+1107,weather,weather
+1108,weather,weather
+1109,station,station
+1110,weather,weather
+1111,weather,weather
+1112,"station, status","station, status"
+1113,weather,weather
+1114,station,station
+1115,"station, status","station, status"
+1116,station,station
+1117,"trip, station","station, trip"
+1118,weather,weather
+1119,"station, trip","station, trip"
+1120,"trip, station","station, trip"
+1121,trip,trip
+1122,weather,weather
+1123,station,station
+1124,weather,weather
+1125,weather,weather
+1126,"station, status","station, status"
+1127,"station, trip","station, trip"
+1128,weather,weather
+1129,"status, station","station, status"
+1130,"station, trip","station, trip"
+1131,"station, trip","station, trip"
+1132,"station, status","station, status"
+1133,weather,weather
+1134,"station, trip","station, trip"
+1135,trip,trip
+1136,"station, trip","station, trip"
+1137,station,business
+1138,degrees,"degrees, campuses"
+1139,campuses,campuses
+1140,"campuses, faculty, degrees","faculty, degrees, campuses"
+1141,"discipline_enrollments, campuses","discipline_enrollments, campuses"
+1142,"campuses, faculty","faculty, campuses"
+1143,degrees,"degrees, campuses"
+1144,"campuses, degrees",degrees
+1145,"campuses, faculty","faculty, campuses"
+1146,"campuses, csu_fees","csu_fees, campuses"
+1147,campuses,campuses
+1148,campuses,campuses
+1149,faculty,faculty
+1150,campuses,campuses
+1151,csu_fees,csu_fees
+1152,"campuses, faculty","faculty, campuses"
+1153,degrees,degrees
+1154,csu_fees,csu_fees
+1155,campuses,campuses
+1156,"discipline_enrollments, campuses","discipline_enrollments, campuses"
+1157,"campuses, degrees","degrees, campuses"
+1158,degrees,degrees
+1159,csu_fees,csu_fees
+1160,"campuses, faculty, degrees","faculty, degrees, campuses"
+1161,"csu_fees, campuses","csu_fees, campuses"
+1162,"campuses, degrees","degrees, campuses"
+1163,"faculty, campuses","faculty, campuses"
+1164,"campuses, enrollments","enrollments, campuses"
+1165,"campuses, degrees",degrees
+1166,campuses,campuses
+1167,"campuses, faculty, degrees","faculty, degrees, campuses"
+1168,campuses,campuses
+1169,"faculty, campuses","campuses, faculty"
+1170,campuses,campuses
+1171,campuses,campuses
+1172,csu_fees,csu_fees
+1173,"campuses, csu_fees","csu_fees, campuses"
+1174,"faculty, campuses","campuses, faculty"
+1175,"csu_fees, campuses","csu_fees, campuses"
+1176,"campuses, csu_fees","csu_fees, campuses"
+1177,campuses,campuses
+1178,campuses,campuses
+1179,"campuses, faculty, degrees","faculty, degrees, campuses"
+1180,campuses,campuses
+1181,csu_fees,csu_fees
+1182,"campuses, csu_fees","csu_fees, campuses"
+1183,"campuses, faculty","faculty, campuses"
+1184,"discipline_enrollments, campuses","discipline_enrollments, campuses"
+1185,csu_fees,csu_fees
+1186,"csu_fees, campuses","csu_fees, campuses"
+1187,"campuses, degrees","degrees, campuses"
+1188,"campuses, enrollments","enrollments, campuses"
+1189,campuses,campuses
+1190,"campuses, faculty","faculty, campuses"
+1191,csu_fees,csu_fees
+1192,"csu_fees, campuses","csu_fees, campuses"
+1193,"campuses, degrees","degrees, campuses"
+1194,"campuses, degrees","degrees, campuses"
+1195,campuses,campuses
+1196,csu_fees,csu_fees
+1197,faculty,faculty
+1198,"discipline_enrollments, campuses","discipline_enrollments, campuses"
+1199,"campuses, faculty","faculty, campuses"
+1200,campuses,campuses
+1201,"news_report, event, journalist","event, journalist, news_report"
+1202,"news_report, event, journalist","event, journalist, news_report"
+1203,journalist,journalist
+1204,journalist,journalist
+1205,journalist,journalist
+1206,"journalist, news_report","journalist, news_report"
+1207,event,event
+1208,"news_report, event, journalist","event, journalist, news_report"
+1209,event,event
+1210,"news_report, event, journalist","event, journalist, news_report"
+1211,"journalist, news_report","journalist, news_report"
+1212,journalist,journalist
+1213,journalist,journalist
+1214,journalist,journalist
+1215,journalist,journalist
+1216,event,event
+1217,journalist,journalist
+1218,"authors, authorship, papers","authors, papers, authorship"
+1219,"authors, authorship, inst","authors, inst, authorship"
+1220,"authors, authorship, inst","authors, inst, authorship"
+1221,"authors, authorship, papers, inst","authors, inst, papers, authorship"
+1222,"authors, authorship, papers","authors, papers, authorship"
+1223,papers,papers
+1224,"authors, authorship, papers","authors, papers, authorship"
+1225,authors,authors
+1226,inst,inst
+1227,papers,papers
+1228,papers,papers
+1229,"authors, authorship, inst","authors, inst, authorship"
+1230,"authors, authorship, papers","authors, papers, authorship"
+1231,authors,authors
+1232,"papers, authorship, inst","inst, papers, authorship"
+1233,"authors, authorship, papers","authors, papers, authorship"
+1234,"papers, authorship, inst","inst, papers, authorship"
+1235,papers,papers
+1236,authors,authors
+1237,"authors, authorship, inst","authors, inst, authorship"
+1238,"papers, authorship, inst","inst, papers, authorship"
+1239,"authors, authorship, papers","authors, papers, authorship"
+1240,authors,authors
+1241,"authors, authorship, papers","authors, papers, authorship"
+1242,authors,authors
+1243,"authors, authorship, inst","authors, inst, authorship"
+1244,"authors, authorship, papers, inst","authors, inst, papers, authorship"
+1245,authors,authors
+1246,"authors, authorship, papers","authors, papers, authorship"
+1247,"inst, authorship, papers","inst, papers, authorship"
+1248,papers,papers
+1249,"authors, authorship, papers","authors, papers, authorship"
+1250,"authors, authorship, papers","authors, papers, authorship"
+1251,"authors, authorship, inst","authors, inst, authorship"
+1252,"authors, authorship, papers","authors, papers, authorship"
+1253,"authors, authorship, papers","authors, papers, authorship"
+1254,authors,authors
+1255,"papers, authorship, inst","inst, papers, authorship"
+1256,"papers, authorship, inst","inst, papers, authorship"
+1257,authors,authors
+1258,"authors, authorship, inst","authors, inst, authorship"
+1259,authors,authors
+1260,"authors, authorship, papers","authors, papers, authorship"
+1261,authors,authors
+1262,"authorship, papers","papers, authorship"
+1263,"authors, authorship, inst","authors, inst, authorship"
+1264,"authors, authorship, papers","authors, papers, authorship"
+1265,authors,authors
+1266,"authors, authorship, papers","authors, papers, authorship"
+1267,"authors, authorship, papers","authors, papers, authorship"
+1268,inst,inst
+1269,"inst, authorship, papers","inst, papers, authorship"
+1270,"authors, authorship, papers","authors, papers, authorship"
+1271,"authors, authorship, papers, inst","authors, inst, papers, authorship"
+1272,"papers, authorship, inst","inst, papers, authorship"
+1273,"papers, authorship, inst","inst, papers, authorship"
+1274,"authors, authorship, papers, inst","authors, inst, papers, authorship"
+1275,authors,authors
+1276,papers,papers
+1277,"authorship, papers","papers, authorship"
+1278,furniture,furniture
+1279,manufacturer,manufacturer
+1280,manufacturer,manufacturer
+1281,"furniture, furniture_manufacte, manufacturer","furniture, furniture_manufacte, manufacturer"
+1282,"manufacturer, furniture_manufacte","manufacturer, furniture_manufacte"
+1283,"furniture, furniture_manufacte","furniture, furniture_manufacte"
+1284,manufacturer,manufacturer
+1285,"furniture, furniture_manufacte","furniture, furniture_manufacte"
+1286,"furniture, furniture_manufacte","furniture, furniture_manufacte"
+1287,manufacturer,manufacturer
+1288,furniture,furniture
+1289,"manufacturer, furniture_manufacte","manufacturer, furniture_manufacte"
+1290,manufacturer,manufacturer
+1291,furniture,furniture
+1292,furniture,furniture
+1293,"person, personFriend","personFriend, person"
+1294,personfriend,personfriend
+1295,person,person
+1296,"person, personFriend","personFriend, person"
+1297,"person, personFriend",personfriend
+1298,person,person
+1299,"person, personFriend","personFriend, person"
+1300,person,person
+1301,"person, personFriend","personFriend, person"
+1302,person,person
+1303,person,person
+1304,personfriend,personfriend
+1305,"person, personFriend","personFriend, person"
+1306,"person, personFriend","personFriend, person"
+1307,person,person
+1308,person,person
+1309,person,person
+1310,"person, personFriend","personFriend, person"
+1311,"person, personFriend","personFriend, person"
+1312,"personfriend, person","personFriend, person"
+1313,"person, personFriend","personFriend, person"
+1314,"person, personFriend","personFriend, person"
+1315,person,person
+1316,person,person
+1317,person,person
+1318,person,person
+1319,"person, personFriend","personFriend, person"
+1320,"person, personFriend","personFriend, person"
+1321,"person, personFriend","personFriend, person"
+1322,"person, personFriend","personFriend, person"
+1323,"person, personFriend","personFriend, person"
+1324,person,person
+1325,personfriend,"personFriend, person"
+1326,person,person
+1327,person,person
+1328,person,person
+1329,"person, personFriend","personFriend, person"
+1330,"person, personFriend","personFriend, person"
+1331,personfriend,personfriend
+1332,person,person
+1333,"person, personFriend","personFriend, person"
+1334,"person, personFriend","personFriend, person"
+1335,"person, personFriend","personFriend, person"
+1336,"person, personFriend","personFriend, person"
+1337,person,person
+1338,person,person
+1339,person,person
+1340,person,person
+1341,"person, personFriend","personFriend, person"
+1342,"person, personFriend","personFriend, person"
+1343,person,person
+1344,"personfriend, person","personFriend, person"
+1345,"person, personFriend","personFriend, person"
+1346,person,person
+1347,person,person
+1348,"person, personfriend","personFriend, person"
+1349,"person, personFriend","personFriend, person"
+1350,person,person
+1351,"person, personFriend","personFriend, person"
+1352,person,person
+1353,person,person
+1354,person,person
+1355,person,person
+1356,person,person
+1357,person,person
+1358,person,person
+1359,person,person
+1360,"person, personFriend","personFriend, person"
+1361,"person, personFriend","personFriend, person"
+1362,"personfriend, person","personFriend, person"
+1363,person,person
+1364,"person, personFriend","personFriend, person"
+1365,"person, personFriend","personFriend, person"
+1366,personfriend,personfriend
+1367,person,person
+1368,person,person
+1369,"person, personFriend","personFriend, person"
+1370,personfriend,personfriend
+1371,"enzyme, medicine_enzyme_interaction","medicine_enzyme_interaction, enzyme"
+1372,"medicine, medicine_enzyme_interaction","medicine_enzyme_interaction, medicine"
+1373,"enzyme, medicine_enzyme_interaction","medicine_enzyme_interaction, enzyme"
+1374,"medicine, medicine_enzyme_interaction","medicine_enzyme_interaction, medicine"
+1375,"medicine, medicine_enzyme_interaction, enzyme","medicine_enzyme_interaction, enzyme, medicine"
+1376,"enzyme, medicine_enzyme_interaction","medicine_enzyme_interaction, enzyme"
+1377,medicine,medicine
+1378,enzyme,enzyme
+1379,"medicine_enzyme_interaction, medicine, enzyme","medicine_enzyme_interaction, enzyme, medicine"
+1380,medicine,medicine
+1381,enzyme,enzyme
+1382,medicine,medicine
+1383,enzyme,enzyme
+1384,"medicine, medicine_enzyme_interaction","medicine_enzyme_interaction, medicine"
+1385,medicine_enzyme_interaction,medicine_enzyme_interaction
+1386,"medicine, medicine_enzyme_interaction, enzyme","medicine_enzyme_interaction, enzyme, medicine"
+1387,enzyme,enzyme
+1388,medicine,medicine
+1389,"enzyme, medicine_enzyme_interaction","medicine_enzyme_interaction, enzyme"
+1390,"medicine, medicine_enzyme_interaction","medicine_enzyme_interaction, medicine"
+1391,"enzyme, medicine_enzyme_interaction, medicine","medicine_enzyme_interaction, enzyme, medicine"
+1392,medicine,medicine
+1393,"enzyme, medicine_enzyme_interaction, medicine","medicine_enzyme_interaction, enzyme, medicine"
+1394,medicine_enzyme_interaction,medicine_enzyme_interaction
+1395,"enzyme, medicine_enzyme_interaction","medicine_enzyme_interaction, enzyme"
+1396,"medicine, medicine_enzyme_interaction","medicine_enzyme_interaction, medicine"
+1397,enzyme,enzyme
+1398,enzyme,enzyme
+1399,"medicine_enzyme_interaction, medicine, enzyme","medicine_enzyme_interaction, enzyme, medicine"
+1400,medicine,medicine
+1401,enzyme,enzyme
+1402,"enzyme, medicine_enzyme_interaction","medicine_enzyme_interaction, enzyme"
+1403,"medicine, medicine_enzyme_interaction","medicine_enzyme_interaction, medicine"
+1404,enzyme,enzyme
+1405,"medicine, medicine_enzyme_interaction","medicine_enzyme_interaction, medicine"
+1406,enzyme,enzyme
+1407,enzyme,enzyme
+1408,medicine,medicine
+1409,enzyme,enzyme
+1410,medicine,medicine
+1411,"apartment_bookings, apartments","apartment_bookings, apartments"
+1412,"apartment_bookings, guests","guests, apartment_bookings"
+1413,apartments,apartments
+1414,guests,guests
+1415,apartment_buildings,apartment_buildings
+1416,"apartment_facilities, apartments","apartment_facilities, apartments"
+1417,"apartments, apartment_facilities","apartment_facilities, apartments"
+1418,apartment_buildings,apartment_buildings
+1419,apartments,apartments
+1420,"apartment_buildings, apartments","apartment_buildings, apartments"
+1421,apartments,apartments
+1422,"apartment_buildings, apartments","apartment_buildings, apartments"
+1423,apartments,apartments
+1424,"apartments, view_unit_status","view_unit_status, apartments"
+1425,apartments,apartments
+1426,apartment_bookings,apartment_bookings
+1427,apartments,apartments
+1428,apartments,apartments
+1429,apartment_bookings,apartment_bookings
+1430,apartments,apartments
+1431,apartments,apartments
+1432,apartment_buildings,apartment_buildings
+1433,apartments,apartments
+1434,"apartment_bookings, guests","guests, apartment_bookings"
+1435,"apartment_bookings, guests","guests, apartment_bookings"
+1436,"apartment_buildings, apartments","apartment_buildings, apartments"
+1437,"apartment_bookings, apartments","apartment_bookings, apartments"
+1438,apartments,apartments
+1439,apartments,apartments
+1440,"apartment_facilities, apartments","apartment_facilities, apartments"
+1441,"apartment_bookings, guests","guests, apartment_bookings"
+1442,guests,guests
+1443,apartments,apartments
+1444,apartment_buildings,apartment_buildings
+1445,guests,guests
+1446,apartments,apartments
+1447,apartments,apartments
+1448,guests,guests
+1449,"apartment_bookings, apartments","apartment_bookings, apartments"
+1450,"apartment_bookings, apartments","apartment_bookings, apartments"
+1451,apartments,apartments
+1452,"apartment_bookings, apartments","apartment_bookings, apartments"
+1453,"apartment_bookings, apartments","apartment_bookings, apartments"
+1454,apartment_bookings,apartment_bookings
+1455,apartments,apartments
+1456,apartment_buildings,apartment_buildings
+1457,"apartment_bookings, apartments","apartment_bookings, apartments"
+1458,apartments,apartments
+1459,"apartment_buildings, apartments","apartment_buildings, apartments"
+1460,"apartments, view_unit_status","view_unit_status, apartments"
+1461,apartment_bookings,apartment_bookings
+1462,apartment_bookings,apartment_bookings
+1463,"apartment_bookings, apartments","apartment_bookings, apartments"
+1464,guests,guests
+1465,apartment_bookings,apartment_bookings
+1466,"apartment_bookings, apartments","apartment_bookings, apartments"
+1467,apartments,apartments
+1468,guests,guests
+1469,apartments,apartments
+1470,"apartment_bookings, apartments","apartment_bookings, apartments"
+1471,"apartment_bookings, apartments","apartment_bookings, apartments"
+1472,"apartment_buildings, apartments","apartment_buildings, apartments"
+1473,"apartment_bookings, apartments","apartment_bookings, apartments"
+1474,apartments,apartments
+1475,"apartment_bookings, apartments","apartment_bookings, apartments"
+1476,apartment_buildings,apartment_buildings
+1477,"apartments, apartment_facilities","apartment_facilities, apartments"
+1478,apartment_buildings,apartment_buildings
+1479,apartments,apartments
+1480,"apartment_facilities, apartments","apartment_facilities, apartments"
+1481,apartments,apartments
+1482,apartments,apartments
+1483,channel,channel
+1484,program,program
+1485,channel,channel
+1486,program,program
+1487,channel,channel
+1488,broadcast,broadcast
+1489,program,program
+1490,"channel, broadcast","channel, broadcast"
+1491,"program, broadcast","program, broadcast"
+1492,channel,channel
+1493,channel,channel
+1494,program,program
+1495,channel,channel
+1496,"program, broadcast","program, broadcast"
+1497,"program, broadcast","program, broadcast"
+1498,"program, broadcast","program, broadcast"
+1499,program,program
+1500,channel,channel
+1501,channel,channel
+1502,"channel, broadcast","channel, broadcast"
+1503,program,program
+1504,broadcast,broadcast
+1505,program,program
+1506,broadcast,broadcast
+1507,"channel, broadcast","channel, broadcast"
+1508,program,program
+1509,program,program
+1510,channel,channel
+1511,broadcast,broadcast
+1512,program,program
+1513,program,program
+1514,channel,channel
+1515,channel,channel
+1516,channel,channel
+1517,"program, broadcast","program, broadcast"
+1518,"channel, broadcast","channel, broadcast"
+1519,"rent_arrears, cmi_cross_references, customer_master_index","customer_master_index, rent_arrears, cmi_cross_references"
+1520,"cmi_cross_references, benefits_overpayments","benefits_overpayments, cmi_cross_references"
+1521,"cmi_cross_references, parking_fines","parking_fines, cmi_cross_references"
+1522,"cmi_cross_references, council_tax","council_tax, cmi_cross_references"
+1523,rent_arrears,rent_arrears
+1524,"electoral_register, cmi_cross_references","electoral_register, cmi_cross_references"
+1525,parking_fines,parking_fines
+1526,"customer_master_index, cmi_cross_references","customer_master_index, cmi_cross_references"
+1527,"business_rates, cmi_cross_references","business_rates, cmi_cross_references"
+1528,cmi_cross_references,cmi_cross_references
+1529,cmi_cross_references,cmi_cross_references
+1530,"customer_master_index, cmi_cross_references","customer_master_index, cmi_cross_references"
+1531,"cmi_cross_references, parking_fines","parking_fines, cmi_cross_references"
+1532,product,products
+1533,store,store
+1534,"store, store_district, district","district, store, store_district"
+1535,"store, store_district, district","district, store, store_district"
+1536,product,product
+1537,"store, store_district, district","district, store, store_district"
+1538,product,product
+1539,"store, store_district, district","district, store, store_district"
+1540,district,district
+1541,product,product
+1542,district,district
+1543,district,district
+1544,product,product
+1545,product,products
+1546,"store, store_district, district","district, store, store_district"
+1547,district,district
+1548,"store, store_district, district","district, store, store_district"
+1549,"store, store_district, district","district, store, store_district"
+1550,product,product
+1551,district,district
+1552,"store, store_district, district","district, store, store_district"
+1553,"product, store_product, store","store, store_product, product"
+1554,product,product
+1555,product,product
+1556,"product, store_product, store","store, store_product, product"
+1557,"store, store_district, district","district, store, store_district"
+1558,district,district
+1559,product,product
+1560,product,product
+1561,"store, store_district, district","district, store, store_district"
+1562,district,district
+1563,district,district
+1564,district,district
+1565,store,store
+1566,"store, store_district, district","district, store, store_district"
+1567,district,district
+1568,product,product
+1569,product,product
+1570,"store, store_district, district","district, store, store_district"
+1571,product,product
+1572,gas_station,gas_station
+1573,company,company
+1574,"station_company, company","station_company, company"
+1575,gas_station,gas_station
+1576,company,companies
+1577,company,companies
+1578,company,company
+1579,company,companies
+1580,company,companies
+1581,company,companies
+1582,company,companies
+1583,company,companies
+1584,company,companies
+1585,"station_company, company, gas_station","gas_station, station_company, company"
+1586,gas_station,gas_station
+1587,gas_station,gas_station
+1588,gas_station,gas_station
+1589,company,company
+1590,company,company
+1591,company,companies
+1592,company,companies
+1593,company,company
+1594,company,None
+1595,company,company
+1596,company,company
+1597,company,companies
+1598,company,companies
+1599,"company, station_company","station_company, company"
+1600,gas_station,gas_station
+1601,company,company
+1602,"company, station_company","station_company, company"
+1603,gas_station,gas_station
+1604,"station_company, company, gas_station","gas_station, station_company, company"
+1605,gas_station,gas_station
+1606,company,company
+1607,gas_station,gas_station
+1608,"station_company, company, gas_station","gas_station, station_company, company"
+1609,company,company
+1610,"station_company, company, gas_station","gas_station, station_company, company"
+1611,"station_company, company, gas_station","gas_station, station_company, company"
+1612,"station_company, company","station_company, company"
+1613,company,companies
+1614,festival_detail,festival_detail
+1615,festival_detail,festival_detail
+1616,artwork,artwork
+1617,"nomination, artwork, festival_detail","nomination, festival_detail, artwork"
+1618,artwork,artwork
+1619,festival_detail,festival_detail
+1620,"nomination, artwork, festival_detail","nomination, festival_detail, artwork"
+1621,festival_detail,festival_detail
+1622,festival_detail,festival_detail
+1623,"nomination, artwork, festival_detail","nomination, festival_detail, artwork"
+1624,artwork,artwork
+1625,festival_detail,festival_detail
+1626,"nomination, artwork, festival_detail","nomination, festival_detail, artwork"
+1627,"artwork, nomination","artwork, nomination"
+1628,festival_detail,festival_detail
+1629,festival_detail,festival_detail
+1630,artwork,artwork
+1631,"nomination, artwork, festival_detail","nomination, festival_detail, artwork"
+1632,"nomination, artwork, festival_detail","nomination, festival_detail, artwork"
+1633,artwork,artwork
+1634,building,buildings
+1635,building,building
+1636,"institution, protein, building","institution, protein, building"
+1637,"institution, protein","institution, protein"
+1638,building,building
+1639,institution,institution
+1640,building,buildings
+1641,building,buildings
+1642,"building, institution","institution, building"
+1643,"institution, protein","institution, protein"
+1644,building,building
+1645,institution,institution
+1646,"institution, protein","institution, protein"
+1647,institution,institution
+1648,"building, institution","institution, building"
+1649,institution,institution
+1650,"institution, protein","institution, protein"
+1651,institution,institution
+1652,roller_coaster,roller_coaster
+1653,roller_coaster,roller_coaster
+1654,"country, roller_coaster","roller_coaster, country"
+1655,"country, roller_coaster","roller_coaster, country"
+1656,roller_coaster,roller_coaster
+1657,roller_coaster,roller_coaster
+1658,"country, roller_coaster","roller_coaster, country"
+1659,"country, roller_coaster","roller_coaster, country"
+1660,roller_coaster,roller_coaster
+1661,"country, roller_coaster","roller_coaster, country"
+1662,roller_coaster,roller_coaster
+1663,"country, roller_coaster","roller_coaster, country"
+1664,roller_coaster,roller_coaster
+1665,country,country
+1666,roller_coaster,roller_coaster
+1667,roller_coaster,roller_coaster
+1668,events,events
+1669,"services, events","events, services"
+1670,"events, participants_in_events","events, participants_in_events"
+1671,"events, participants_in_events","events, participants_in_events"
+1672,participants_in_events,participants_in_events
+1673,"participants, participants_in_events, events, services","participants, events, participants_in_events, services"
+1674,services,services
+1675,participants,participants
+1676,"participants, participants_in_events","participants, participants_in_events"
+1677,participants_in_events,participants_in_events
+1678,"events, participants_in_events, participants","participants, events, participants_in_events"
+1679,"events, services","events, services"
+1680,participants,participants
+1681,"participants, participants_in_Events","participants, participants_in_events"
+1682,bridge,bridge
+1683,"architect, mill","mill, architect"
+1684,"bridge, architect","architect, bridge"
+1685,"architect, bridge","architect, bridge"
+1686,architect,architect
+1687,"architect, mill","mill, architect"
+1688,mill,mill
+1689,"architect, bridge, mill","mill, architect, bridge"
+1690,"mill, architect","mill, architect"
+1691,mill,mill
+1692,"bridge, architect","architect, bridge"
+1693,architect,architect
+1694,"mill, architect, bridge","mill, architect, bridge"
+1695,mill,mill
+1696,"architect, mill","mill, architect"
+1697,bridge,bridge
+1698,railway,railway
+1699,railway,railway
+1700,manager,manager
+1701,"railway, train","railway, train"
+1702,manager,manager
+1703,train,train
+1704,manager,manager
+1705,manager,manager
+1706,railway,railway
+1707,manager,manager
+1708,"railway, train","railway, train"
+1709,"railway, train","railway, train"
+1710,railway,railway
+1711,"railway, train","railway, train"
+1712,manager,manager
+1713,railway,railway
+1714,"railway, train","railway, train"
+1715,manager,manager
+1716,manager,manager
+1717,publication,publication
+1718,publication,publication
+1719,publication,publication
+1720,publication,publication
+1721,book,book
+1722,publication,publication
+1723,publication,publication
+1724,book,book
+1725,publication,publication
+1726,"book, publication","publication, book"
+1727,book,book
+1728,publication,publication
+1729,publication,publication
+1730,book,book
+1731,book,book
+1732,publication,publication
+1733,"book, publication","publication, book"
+1734,"book, publication","publication, book"
+1735,publication,publication

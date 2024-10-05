@@ -1,0 +1,316 @@
+noReference_group
+"CREATE TABLE `Video_Games` (
+  GameID INTEGER,
+  GName VARCHAR(40),
+  GType VARCHAR(40)
+);"
+"CREATE TABLE `Ref_Budget_Codes` (
+  Budget_Type_Code CHAR(15) PRIMARY KEY,
+  Budget_Type_Description VARCHAR(255)
+);"
+"CREATE TABLE `Projects` (
+  Project_ID INTEGER,
+  Project_Details VARCHAR(255)
+);"
+"CREATE TABLE `author` (
+  authorId INTEGER,
+  authorName varchar(50)
+);"
+"CREATE TABLE `dataset` (
+  datasetId INTEGER,
+  datasetName varchar(50)
+);"
+"CREATE TABLE `journal` (
+  journalId INTEGER,
+  journalName varchar(100)
+);"
+"CREATE TABLE `keyphrase` (
+  keyphraseId INTEGER,
+  keyphraseName varchar(50)
+);"
+"CREATE TABLE `paperDataset` (
+  paperId INTEGER PRIMARY KEY,
+  datasetId INTEGER PRIMARY KEY
+);"
+"CREATE TABLE `musical` (
+  Musical_ID INT PRIMARY KEY,
+  Name TEXT,
+  Year INT,
+  Award TEXT,
+  Category TEXT,
+  Nominee TEXT,
+  Result TEXT
+);"
+"CREATE TABLE `sqlite_sequence` (
+  name ,
+  seq 
+);"
+"CREATE TABLE `genres` (
+  id INTEGER PRIMARY KEY,
+  name VARCHAR(120)
+);"
+"CREATE TABLE `media_types` (
+  id INTEGER PRIMARY KEY,
+  name VARCHAR(120)
+);"
+"CREATE TABLE `Locations` (
+  Location_ID INTEGER,
+  Location_Name VARCHAR(255),
+  Address VARCHAR(255),
+  Other_Details VARCHAR(255)
+);"
+"CREATE TABLE `Visitors` (
+  Tourist_ID INTEGER PRIMARY KEY,
+  Tourist_Details VARCHAR(255)
+);"
+"CREATE TABLE `Features` (
+  Feature_ID INTEGER,
+  Feature_Details VARCHAR(255)
+);"
+"CREATE TABLE `lake` (
+  lake_name TEXT,
+  area double,
+  country_name varchar(3),
+  state_name TEXT
+);"
+"CREATE TABLE `user` (
+  uid INT PRIMARY KEY,
+  user_id TEXT,
+  name TEXT
+);"
+"CREATE TABLE `movie` (
+  movie_id INT PRIMARY KEY,
+  Title TEXT,
+  Year INT,
+  Director TEXT,
+  Budget_million REAL,
+  Gross_worldwide INT
+);"
+"CREATE TABLE `Ref_Address_Types` (
+  address_type_code VARCHAR(15) PRIMARY KEY,
+  address_type_description VARCHAR(80)
+);"
+"CREATE TABLE `market` (
+  Market_ID INT PRIMARY KEY,
+  Country TEXT,
+  Number_cities INT
+);"
+"CREATE TABLE `Attribute_Definitions` (
+  attribute_id INTEGER,
+  attribute_name VARCHAR(30),
+  attribute_data_type VARCHAR(10)
+);"
+"CREATE TABLE `airlines` (
+  alid INTEGER,
+  name TEXT,
+  iata varchar(2),
+  icao varchar(3),
+  callsign TEXT,
+  country TEXT,
+  active varchar(2)
+);"
+"CREATE TABLE `Procedures` (
+  Code INTEGER,
+  Name VARCHAR(30),
+  Cost REAL
+);"
+"CREATE TABLE `Medication` (
+  Code INTEGER,
+  Name VARCHAR(30),
+  Brand VARCHAR(30),
+  Description VARCHAR(30)
+);"
+"CREATE TABLE `appellations` (
+  No INTEGER,
+  Appelation TEXT PRIMARY KEY,
+  County TEXT,
+  State TEXT,
+  Area TEXT,
+  isAVA TEXT
+);"
+"CREATE TABLE `Companies` (
+  id INT PRIMARY KEY,
+  name TEXT,
+  Headquarters TEXT,
+  Industry TEXT,
+  Sales_billion REAL,
+  Profits_billion REAL,
+  Assets_billion REAL,
+  Market_Value_billion TEXT
+);"
+"CREATE TABLE `browser` (
+  id INT PRIMARY KEY,
+  name TEXT,
+  market_share REAL
+);"
+"CREATE TABLE `Ref_Transaction_Types` (
+  transaction_type_code VARCHAR(10) PRIMARY KEY,
+  transaction_type_description VARCHAR(80)
+);"
+"CREATE TABLE `trip` (
+  id INTEGER,
+  duration INTEGER,
+  start_date TEXT,
+  start_station_name TEXT,
+  start_station_id INTEGER,
+  end_date TEXT,
+  end_station_name TEXT,
+  end_station_id INTEGER,
+  bike_id INTEGER,
+  subscription_type TEXT,
+  zip_code INTEGER
+);"
+"CREATE TABLE `weather` (
+  date TEXT,
+  max_temperature_f INTEGER,
+  mean_temperature_f INTEGER,
+  min_temperature_f INTEGER,
+  max_dew_point_f INTEGER,
+  mean_dew_point_f INTEGER,
+  min_dew_point_f INTEGER,
+  max_humidity INTEGER,
+  mean_humidity INTEGER,
+  min_humidity INTEGER,
+  max_sea_level_pressure_inches NUMERIC,
+  mean_sea_level_pressure_inches NUMERIC,
+  min_sea_level_pressure_inches NUMERIC,
+  max_visibility_miles INTEGER,
+  mean_visibility_miles INTEGER,
+  min_visibility_miles INTEGER,
+  max_wind_Speed_mph INTEGER,
+  mean_wind_speed_mph INTEGER,
+  max_gust_speed_mph INTEGER,
+  precipitation_inches INTEGER,
+  cloud_cover INTEGER,
+  events TEXT,
+  wind_dir_degrees INTEGER,
+  zip_code INTEGER
+);"
+"CREATE TABLE `event` (
+  Event_ID INT PRIMARY KEY,
+  Date TEXT,
+  Venue TEXT,
+  Name TEXT,
+  Event_Attendance INT
+);"
+"CREATE TABLE `Inst` (
+  instID INTEGER,
+  name TEXT,
+  country TEXT
+);"
+"CREATE TABLE `Papers` (
+  paperID INTEGER,
+  title TEXT
+);"
+"CREATE TABLE `furniture` (
+  Furniture_ID INT PRIMARY KEY,
+  Name TEXT,
+  Num_of_Component INT,
+  Market_Rate REAL
+);"
+"CREATE TABLE `medicine` (
+  id INT PRIMARY KEY,
+  name TEXT,
+  Trade_Name TEXT,
+  FDA_approved TEXT
+);"
+"CREATE TABLE `Guests` (
+  guest_id INTEGER PRIMARY KEY,
+  gender_code CHAR(1),
+  guest_first_name VARCHAR(80),
+  guest_last_name VARCHAR(80),
+  date_of_birth DATETIME
+);"
+"CREATE TABLE `device` (
+  Device_ID INT PRIMARY KEY,
+  Device TEXT,
+  Carrier TEXT,
+  Package_Version TEXT,
+  Applications TEXT,
+  Software_Platform TEXT
+);"
+"CREATE TABLE `program` (
+  Program_ID INT PRIMARY KEY,
+  Name TEXT,
+  Origin TEXT,
+  Launch REAL,
+  Owner TEXT
+);"
+"CREATE TABLE `screen_mode` (
+  Graphics_mode REAL PRIMARY KEY,
+  Char_cells TEXT,
+  Pixels TEXT,
+  Hardware_colours REAL,
+  used_kb REAL,
+  map TEXT,
+  Type TEXT
+);"
+"CREATE TABLE `repair` (
+  repair_ID INT PRIMARY KEY,
+  name TEXT,
+  Launch_Date TEXT,
+  Notes TEXT
+);"
+"CREATE TABLE `machine` (
+  Machine_ID INT PRIMARY KEY,
+  Making_Year INT,
+  Class TEXT,
+  Team TEXT,
+  Machine_series TEXT,
+  value_points REAL,
+  quality_rank INT
+);"
+"CREATE TABLE `workshop` (
+  Workshop_ID INT PRIMARY KEY,
+  Date TEXT,
+  Venue TEXT,
+  Name TEXT
+);"
+"CREATE TABLE `product` (
+  product_id INT PRIMARY KEY,
+  product TEXT,
+  dimensions TEXT,
+  dpi REAL,
+  pages_per_minute_color REAL,
+  max_page_size TEXT,
+  interface TEXT
+);"
+"CREATE TABLE `district` (
+  District_ID INT PRIMARY KEY,
+  District_name TEXT,
+  Headquartered_City TEXT,
+  City_Population REAL,
+  City_Area REAL
+);"
+"CREATE TABLE `company` (
+  Company_ID INT PRIMARY KEY,
+  Rank INT,
+  Company TEXT,
+  Headquarters TEXT,
+  Main_Industry TEXT,
+  Sales_billion REAL,
+  Profits_billion REAL,
+  Assets_billion REAL,
+  Market_Value REAL
+);"
+"CREATE TABLE `festival_detail` (
+  Festival_ID INT PRIMARY KEY,
+  Festival_Name TEXT,
+  Chair_Name TEXT,
+  Location TEXT,
+  Year INT,
+  Num_of_Audience INT
+);"
+"CREATE TABLE `Participants` (
+  Participant_ID INTEGER,
+  Participant_Type_Code CHAR(15),
+  Participant_Details VARCHAR(255)
+);"
+"CREATE TABLE `manager` (
+  Manager_ID INT PRIMARY KEY,
+  Name TEXT,
+  Country TEXT,
+  Working_year_starts TEXT,
+  Age INT,
+  Level INT
+);"

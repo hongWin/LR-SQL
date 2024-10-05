@@ -1,0 +1,178 @@
+SELECT COUNT(*) FROM Products AS p LEFT JOIN Manufacturers AS m ON p.Manufacturer = m.Code WHERE m.Name != 'Sony'
+SELECT COUNT(*) FROM Products WHERE Price >= 180
+SELECT Name, Headquarter, Revenue FROM Manufacturers ORDER BY Revenue DESC
+SELECT COUNT(*) FROM entrepreneur WHERE People_ID IN (SELECT People_ID FROM people WHERE Name = 'Andy')
+SELECT Name FROM Manufacturers WHERE Revenue BETWEEN 100 AND 150
+SELECT m.Name FROM Manufacturers m JOIN Products p ON m.Code = p.Manufacturer GROUP BY m.Name HAVING AVG(p.Price) >= 150
+SELECT Name FROM Manufacturers WHERE Revenue > (SELECT AVG(Revenue) FROM Manufacturers)
+SELECT Name, Price FROM Products WHERE Price <= 200
+SELECT s.Fname, s.Age FROM Student s JOIN Plays_Games pg1 ON s.StuID = pg1.StuID JOIN SportsInfo si1 ON s.StuID = si1.StuID AND si1.SportName = 'Football' JOIN Plays_Games pg2 ON s.StuID = pg2.StuID JOIN SportsInfo si2 ON s.StuID = si2.StuID AND si2.SportName = 'Lacrosse' WHERE pg1.GameID = pg2.GameID
+SELECT Name FROM game WHERE Hours_Played >= 1000
+SELECT COUNT(*) FROM Video_Games WHERE GType = 'Massively multiplayer online game'
+SELECT COUNT(*) FROM `Video_Games`
+SELECT COUNT(DISTINCT GType) AS NumberOfGameTypes FROM Video_Games
+SELECT SUM(SportsInfo.HoursPerWeek) AS TotalHoursPerWeek, SUM(SportsInfo.GamesPlayed) AS TotalGamesPlayed FROM SportsInfo JOIN Student ON SportsInfo.StuID = Student.StuID WHERE Student.Fname = 'David' AND Student.LName = 'Shieber'
+SELECT s.StuID FROM Student s LEFT JOIN Plays_Games pg ON s.StuID = pg.StuID WHERE pg.StuID IS NULL
+SELECT StuID FROM Student WHERE StuID NOT IN (SELECT DISTINCT StuID FROM Plays_Games)
+SELECT t1.Name, COUNT(DISTINCT t2.Award) AS Awards_Nominated FROM actor AS t1 JOIN musical AS t2 ON t1.Musical_ID = t2.Musical_ID WHERE t2.Award IN ('Tony Award', 'Drama Desk Award') GROUP BY t1.Name HAVING COUNT(DISTINCT t2.Award) = 2
+SELECT m.Musical_ID, m.Name, COUNT(a.Actor_ID) AS Actor_Count FROM musical AS m LEFT JOIN actor AS a ON m.Musical_ID = a.Musical_ID GROUP BY m.Musical_ID, m.Name
+SELECT m.Name FROM musical AS m LEFT JOIN actor AS a ON m.Musical_ID = a.Musical_ID WHERE a.Actor_ID IS NULL
+SELECT m.Name, COUNT(a.Actor_ID) AS Number_of_Actors FROM musical AS m JOIN actor AS a ON m.Musical_ID = a.Musical_ID GROUP BY m.Name HAVING COUNT(a.Actor_ID) >= 3
+SELECT e.Name AS Entrepreneur_Name, i.Investor AS Investor_Name, e.Money_Requested FROM entrepreneur e JOIN people p ON e.People_ID = p.People_ID JOIN Investors i ON e.Investor = i.investor_id ORDER BY e.Money_Requested DESC
+SELECT Name, Weight FROM entrepreneur JOIN people ON entrepreneur.People_ID = people.People_ID WHERE Weight = (SELECT MAX(Weight) FROM people)
+SELECT Name, Weight FROM people ORDER BY Weight ASC
+SELECT COUNT(DISTINCT Name) AS Number_of_Companies FROM Manufacturers
+SELECT t3.Name FROM `Visits` AS t1 JOIN `Tourist_Attractions` AS t2 ON t1.Tourist_Attraction_ID = t2.Tourist_Attraction_ID JOIN `Visitors` AS t3 ON t1.Tourist_ID = t3.Tourist_ID WHERE t3.Tourist_Details = 'Vincent' OR t3.Tourist_Details = 'Marcelle'
+SELECT DISTINCT Visit_Date FROM Visits
+SELECT Name, CASE WHEN How_to_Get_There = 'Walk' THEN 'Accessible by Walk' WHEN Location_ID IN (SELECT Location_ID FROM Locations WHERE Address = '660 Shea Crescent') THEN 'At Address 660 Shea Crescent' ELSE 'Not Accessible by Walk or Not at Address 660 Shea Crescent' END AS Accessibility FROM Tourist_Attractions
+SELECT How_to_Get_There, COUNT(*) AS Frequency FROM Tourist_Attractions GROUP BY How_to_Get_There ORDER BY Frequency DESC LIMIT 1
+SELECT Name, Opening_Hours FROM Museums JOIN Tourist_Attractions ON Museums.Museum_ID = Tourist_Attractions.Tourist_Attraction_ID
+SELECT Name FROM Tourist_Attractions WHERE How_to_Get_There LIKE '%bus%' OR Address = '254 Ottilie Junction'
+SELECT COUNT(DISTINCT Name) AS DistinctNamesCount FROM Photos
+SELECT t3.Name FROM `Tourist_Attractions` AS t1 JOIN `Museums` AS t2 ON t1.Tourist_Attraction_ID = t2.Museum_ID JOIN `Staff` AS t3 ON t1.Tourist_Attraction_ID = t3.Tourist_Attraction_ID WHERE t1.Name = 'US museum'
+SELECT Team FROM Elimination GROUP BY Team HAVING COUNT(Elimination_ID) > 3
+SELECT Location, COUNT(*) AS Shared_Count FROM wrestler GROUP BY Location HAVING COUNT(*) > 2
+SELECT COUNT(*) FROM `wrestler`
+SELECT COUNT(DISTINCT Team) AS DistinctTeamsEliminated FROM Elimination
+SELECT COUNT(*) FROM tip WHERE user_id = (SELECT user_id FROM user_profiles WHERE name = 'Michelle') AND year = 2010
+SELECT u.name FROM user AS u JOIN review AS r ON u.uid = r.user_id JOIN business AS b ON r.business_id = b.business_id WHERE b.name = 'Mesa Grill'
+SELECT COUNT(*) FROM review WHERE business_id = (SELECT business_id FROM business WHERE name = 'Vintner Grill') AND year = 2010
+SELECT n.neighbourhood_name FROM `neighbourhood` n JOIN `business` b ON n.business_id = b.business_id JOIN `category` c ON b.business_id = c.business_id WHERE c.category_name = 'Italian' AND b.city = 'Madison'
+SELECT COUNT(*) FROM business WHERE city = 'Madison' AND category_name = 'Escape Room'
+SELECT COUNT(*) FROM review WHERE user_id = (SELECT user_id FROM user_profiles WHERE name = 'Michelle') AND year = 2014 AND month = 'March'
+SELECT name, rating FROM business WHERE city = 'Dallas' AND rating > 4.5
+SELECT AVG(rating) AS average_rating FROM review WHERE user_id = (SELECT user_id FROM user_profiles WHERE name = 'Michelle')
+SELECT b.name, b.business_id FROM business b JOIN review r ON b.bid = r.business_id JOIN user u ON r.user_id = u.uid WHERE u.name = 'Niloofar' AND r.rating = 5
+SELECT SUM(tip.likes) AS total_likes FROM tip JOIN business ON tip.business_id = business.business_id WHERE business.name = 'Cafe Zinho' AND tip.user_id = 'Niloofar'
+SELECT r.text FROM review r JOIN business b ON r.business_id = b.business_id WHERE b.name = 'Kabob Palace' AND r.year = 2014
+SELECT t1.date_incident_start, t1.date_incident_end FROM `Behavior_Incident` AS t1 JOIN `Ref_Incident_Type` AS t2 ON t1.incident_type_code = t2.incident_type_code WHERE t2.incident_type_code = 'NOISE'
+SELECT MIN(monthly_rental) AS Min_Monthly_Rental, MAX(monthly_rental) AS Max_Monthly_Rental FROM Student_Addresses
+SELECT t2.gender FROM `Teachers` AS t1 JOIN `People` AS t2 ON t1.People_ID = t2.People_ID WHERE t1.last_name = 'Medhurst'
+SELECT COUNT(DISTINCT student_id) AS DistinctStudentsInDetention FROM Students_in_Detention
+SELECT AVG(Gross_in_dollar) AS Average_Gross_Sales FROM film
+SELECT DISTINCT t1.Studio FROM film AS t1 JOIN ( SELECT Film_ID FROM film WHERE Director = 'Nicholas Meyer' ) AS t2 ON t1.Film_ID = t2.Film_ID JOIN ( SELECT Film_ID FROM film WHERE Director = 'Walter Hill' ) AS t3 ON t1.Film_ID = t3.Film_ID GROUP BY t1.Studio
+SELECT Market_ID, Low_Estimate, High_Estimate FROM film_market_estimation
+SELECT Studio FROM film WHERE Director != 'Walter Hill' GROUP BY Studio
+SELECT catalog_name, COUNT(*) AS entry_count FROM Catalog_Contents GROUP BY catalog_name ORDER BY entry_count DESC LIMIT 1
+SELECT catalog_level_name, catalog_level_number FROM Catalog_Structure WHERE catalog_level_number BETWEEN 5 AND 10
+SELECT catalog_publisher FROM Catalogs WHERE catalog_publisher LIKE '%Murray%'
+SELECT catalog_name FROM Catalogs JOIN Catalog_Contents ON Catalogs.catalog_id = Catalog_Contents.catalog_id WHERE price_in_dollars = ( SELECT MAX(price_in_dollars) FROM Catalog_Contents ) ```
+SELECT Country, COUNT(*) AS Number_of_Airports FROM airports GROUP BY Country ORDER BY Number_of_Airports DESC
+SELECT Name, City, Country FROM airports ORDER BY elevation ASC LIMIT 1
+SELECT COUNT(DISTINCT city) AS Number_of_Cities_With_Airports FROM airports WHERE country = 'Greenland'
+SELECT COUNT(*) AS Number_of_Airlines FROM airlines
+SELECT Name, City, Country FROM airports ORDER BY elevation ASC LIMIT 1
+SELECT Country, COUNT(*) AS Number_of_Airports FROM airports GROUP BY Country ORDER BY Number_of_Airports DESC
+SELECT COUNT(*) AS Number_of_Airlines FROM airlines WHERE country = 'Russia'
+SELECT a.name, COUNT(r.rid) AS number_of_routes FROM airlines AS a JOIN routes AS r ON a.alid = r.alid GROUP BY a.name ORDER BY number_of_routes DESC LIMIT 10
+SELECT g.Date, s.Name FROM game AS g JOIN stadium AS s ON g.stadium_id = s.id ORDER BY g.Date DESC
+SELECT p.Name FROM Physician p JOIN ( SELECT Physician FROM Appointment GROUP BY Physician HAVING COUNT(DISTINCT Patient) > 1 ) ap ON p.EmployeeID = ap.Physician
+SELECT d.DepartmentID, d.Name, COUNT(e.EmployeeID) AS EmployeeCount FROM Department d JOIN Affiliated_With a ON d.DepartmentID = a.Department JOIN Physician p ON a.Physician = p.EmployeeID GROUP BY d.DepartmentID, d.Name ORDER BY EmployeeCount DESC LIMIT 1
+SELECT p.Name, p.Cost FROM Procedures AS p ORDER BY p.Cost DESC
+SELECT Name FROM Procedures WHERE Cost < 5000 AND EXISTS ( SELECT 1 FROM Trained_In JOIN Physician ON Trained_In.Physician = Physician.EmployeeID WHERE Physician.Name = 'John Wen' AND Trained_In.Treatment = Procedures.Code )
+SELECT p.Name FROM Physician p JOIN Prescribes pr ON p.EmployeeID = pr.Physician JOIN ( SELECT MAX(CAST(pr.Dose AS REAL)) AS MaxDose FROM Prescribes pr ) AS MaxDoseQuery ON CAST(pr.Dose AS REAL) = MaxDoseQuery.MaxDose
+SELECT MAX(Start) AS MostRecentStartDate, AppointmentID FROM `Appointment` GROUP BY AppointmentID ORDER BY MostRecentStartDate DESC LIMIT 1
+SELECT Name FROM Nurse WHERE EmployeeID IN ( SELECT Nurse FROM On_Call )
+SELECT DISTINCT p.Name FROM Procedures p LEFT JOIN Trained_In ti ON p.Code = ti.Treatment LEFT JOIN Physician ph ON ti.Physician = ph.EmployeeID WHERE p.Cost > 1000 AND ph.Name != 'John Wen'
+SELECT Department.Name, COUNT(Employee.EmployeeID) AS EmployeeCount FROM Department JOIN Employee ON Department.DepartmentID = Employee.DepartmentID GROUP BY Department.DepartmentID ORDER BY EmployeeCount DESC LIMIT 1
+SELECT p.Name, p.Cost FROM Procedures AS p WHERE p.Cost > 1000 OR EXISTS ( SELECT 1 FROM Trained_In AS ti WHERE ti.Physician = (SELECT EmployeeID FROM Physician WHERE Name = 'John Wen') AND ti.Treatment = p.Code )
+SELECT t1.name, t1.Stories FROM buildings AS t1 WHERE t1.Height = (SELECT MAX(Height) FROM buildings)
+SELECT Name, Market_Value_billion FROM Companies ORDER BY Market_Value_billion DESC
+SELECT DISTINCT t1.Industry FROM Companies AS t1 JOIN Companies AS t2 ON t1.Industry = t2.Industry WHERE t1.Headquarters = 'USA' AND t2.Headquarters = 'China'
+SELECT name, Stories FROM buildings WHERE Status = 'on-hold' ORDER BY Stories ASC
+SELECT Name FROM party WHERE Party_name != 'Progress Party'
+SELECT Minister, Took_office FROM party WHERE Took_office > '1961' OR Took_office < '1959'
+SELECT m.Minister, p.Party_name, COUNT(p.Took_office) AS Times_Took_Office FROM party AS p JOIN member AS m ON p.Party_ID = m.Party_ID GROUP BY m.Minister, p.Party_name ORDER BY COUNT(p.Took_office) DESC
+SELECT p.Party_name, COUNT(pe.Event_ID) AS Number_of_Events FROM `party` p JOIN `party_events` pe ON p.Party_ID = pe.Party_ID GROUP BY p.Party_name
+SELECT t2.name, t2.Client FROM `accelerator_compatible_browser` AS t1 JOIN `browser` AS t2 ON t1.browser_id = t2.id WHERE t1.compatible_since_year > 1998
+SELECT t1.lot_id, AVG(t2.amount_of_transaction) AS average_transactions FROM `Transactions_Lots` AS t1 JOIN `Transactions` AS t2 ON t1.transaction_id = t2.transaction_id GROUP BY t1.lot_id ORDER BY average_transactions
+SELECT Investor_details FROM Investors
+SELECT l.lot_id, l.lot_details FROM `Lots` l LEFT JOIN `Transactions_Lots` tl ON l.lot_id = tl.lot_id WHERE tl.transaction_id IS NULL
+SELECT t3.Name, COUNT(t1.transaction_id) AS transaction_count FROM Transactions AS t1 JOIN Investors AS t3 ON t1.investor_id = t3.investor_id JOIN Ref_Transaction_Types AS t2 ON t1.transaction_type_code = t2.transaction_type_code WHERE t2.transaction_type_description = 'SALE' AND COUNT(t1.transaction_id) > 0 GROUP BY t3.Name
+SELECT Affiliation, COUNT(*) AS NumberOfSchools FROM university WHERE Enrollment > 20000 GROUP BY Affiliation
+SELECT School, Location FROM university WHERE Founded < 1850 OR Affiliation = 'Public'
+SELECT MAX(Enrollment) AS Max_Enrollment FROM university
+SELECT t1.Team_Name, t1.ACC_Regular_Season FROM basketball_match AS t1 JOIN university AS t2 ON t1.School_ID = t2.School_ID ORDER BY t2.Founded DESC LIMIT 1
+SELECT t1.Name, t1.Location, t2.Food_Type, t2.Rating FROM `Tourist_Attractions` AS t1 JOIN `RESTAURANT` AS t2 ON t1.Location = t2.CITY_NAME WHERE t2.Food_Type = 'French' AND t1.Location IN ( SELECT Location_Name FROM `Locations` WHERE Location_Name LIKE '%Yosemite%' OR Location_Name LIKE '%Mono Lake%' )
+SELECT r.name, r.food_type, r.rating FROM `RESTAURANT` r JOIN `LOCATION` l ON r.ID = l.RESTAURANT_ID JOIN `GEOGRAPHIC` g ON r.CITY_NAME = g.CITY_NAME WHERE r.food_type = 'Arabic' AND g.city = 'Buchanan' AND g.state = 'San Francisco'
+SELECT r.name, r.food_type, r.rating FROM `RESTAURANT` r JOIN `GEOGRAPHIC` g ON r.CITY_NAME = g.CITY_NAME WHERE g.REGION = 'Bay Area' ORDER BY r.rating DESC
+SELECT r.name, r.food_type, r.rating FROM `RESTAURANT` r JOIN `LOCATION` l ON r.ID = l.RESTAURANT_ID JOIN `GEOGRAPHIC` g ON r.CITY_NAME = g.CITY_NAME WHERE r.food_type = 'Arabic' AND g.CITY_NAME = 'Mountain View'
+SELECT Name, City FROM business WHERE category_name = 'French' AND city = 'San Francisco'
+SELECT b.name, b.full_address, b.city FROM business b JOIN category c ON b.business_id = c.business_id WHERE c.category_name = 'Jamerican Cuisine' AND b.city = 'San Francisco'
+SELECT Name, full_address, city, state FROM business WHERE category_name = 'Arabic Food' AND city = 'San Francisco' AND state = 'CA'
+SELECT b.name, b.full_address, b.rating FROM business b JOIN category c ON b.business_id = c.business_id JOIN Ref_Detention_Type d ON b.business_id = d.business_id WHERE b.city = 'San Francisco' AND c.category_name = 'French' AND b.is_open = 1 ORDER BY b.rating DESC LIMIT 1
+SELECT name, full_address FROM business WHERE name = 'Jamerican Cuisine' AND city = 'San Francisco'
+SELECT b.name, b.rating FROM business b JOIN location l ON b.business_id = l.business_id JOIN geographic g ON l.city_name = g.city_name WHERE g.city = 'Bay Area' AND b.food_type = 'American Food' ORDER BY b.rating DESC LIMIT 1
+SELECT b.name, b.food_type, b.rating FROM business b JOIN category c ON b.business_id = c.business_id JOIN location l ON b.business_id = l.business_id JOIN geographic g ON l.city_name = g.city_name WHERE g.city = 'San Francisco' AND c.category_name = 'American (New)' ORDER BY b.rating DESC LIMIT 1
+SELECT Name, Location FROM business WHERE name = 'Buchanan' AND city = 'San Francisco'
+SELECT name, followers FROM user_profiles ORDER BY followers DESC LIMIT 1
+SELECT name, followers FROM user_profiles ORDER BY followers DESC
+SELECT date, max_temperature_f FROM weather WHERE max_temperature_f > 85
+SELECT zip_code FROM weather WHERE mean_humidity < 70 AND (SELECT COUNT(*) FROM trip WHERE zip_code = weather.zip_code) >= 100
+SELECT t1.id FROM trip AS t1 JOIN weather AS t2 ON t1.zip_code = t2.zip_code WHERE t2.mean_temperature_f > 60
+SELECT DISTINCT t.start_station_name FROM `trip` AS t WHERE t.duration < 100
+SELECT id, name FROM station WHERE city = 'San Francisco' AND bikes_available > 10
+SELECT t1.id FROM trip AS t1 JOIN ( SELECT AVG(duration) AS avg_duration FROM trip WHERE zip_code = 94103 ) AS t2 ON t1.duration = t2.avg_duration WHERE t1.zip_code = 94103
+SELECT date FROM weather WHERE zip_code = 94107 AND events NOT LIKE '%fog%' AND events NOT LIKE '%rain%'
+SELECT COUNT(DISTINCT city) AS distinct_cities_count FROM station
+SELECT t1.name, t1.id FROM station AS t1 JOIN ( SELECT start_station_id, COUNT(*) AS start_trips FROM trip WHERE EXTRACT(MONTH FROM start_date) = 8 GROUP BY start_station_id ) AS t2 ON t1.id = t2.start_station_id WHERE t2.start_trips = ( SELECT MAX(start_trips) FROM ( SELECT start_station_id, COUNT(*) AS start_trips FROM trip WHERE EXTRACT(MONTH FROM start_date) = 8 GROUP BY start_station_id ) AS t3 ) ```
+SELECT t1.id, t1.name FROM station AS t1 JOIN ( SELECT start_station_id, COUNT(*) AS trip_count FROM trip GROUP BY start_station_id HAVING COUNT(*) >= 200 ) AS t2 ON t1.id = t2.start_station_id
+SELECT Campus, Location FROM Campuses WHERE Location = 'Chico'
+SELECT COUNT(*) AS NumberOfCampuses FROM Campuses WHERE County = 'Los Angeles'
+SELECT COUNT(*) FROM Campuses WHERE County = 'LA'
+SELECT Campus FROM Campuses WHERE County = 'Los Angeles'
+SELECT Degrees FROM degrees WHERE Campus = (SELECT Campus FROM Campuses WHERE Name = 'San Jose State University') AND Year = 2000
+SELECT Campus, Year, Faculty FROM faculty WHERE Campus = (SELECT Id FROM Campuses WHERE School = 'Long Beach State University') AND Year = 2002
+SELECT COUNT(*) AS TotalNumberofCampuses FROM Campuses
+SELECT Nationality, COUNT(*) AS Frequency FROM journalist GROUP BY Nationality ORDER BY Frequency DESC LIMIT 1
+SELECT Papers.title FROM Papers JOIN Authorship ON Papers.paperID = Authorship.paperID JOIN Authors ON Authorship.authID = Authors.authID WHERE Authors.lname = 'Shivers' AND Authors.fname = 'Olin'
+SELECT COUNT(*) FROM Papers WHERE instID IN ( SELECT instID FROM Inst WHERE name = 'Tokohu University' )
+SELECT Name, COUNT(*) AS Paper_Count FROM Manufacturers JOIN Products ON Manufacturers.Code = Products.Manufacturer GROUP BY Manufacturers.Name ORDER BY Paper_Count DESC LIMIT 1
+SELECT COUNT(*) FROM Papers JOIN Authors ON Papers.authID = Authors.authID WHERE Authors.lname = 'Ohori' AND Authors.fname = 'Atsushi'
+SELECT m.Name, COUNT(p.paperID) AS Paper_Count FROM Manufacturers m JOIN Products pr ON m.Code = pr.Manufacturer JOIN Catalog_Contents cc ON pr.Code = cc.product_stock_number JOIN Catalog_Contents_Additional_Attributes ccaa ON cc.catalog_entry_id = ccaa.catalog_entry_id JOIN Catalogs c ON cc.catalog_id = c.catalog_id JOIN Papers p ON c.catalog_publisher = p.authID GROUP BY m.Name ORDER BY Paper_Count DESC LIMIT 1
+SELECT Papers.title FROM Papers JOIN Authors ON Papers.authID = Authors.authID WHERE Authors.fname = 'Aaron' AND Authors.lname = 'Turon'
+SELECT COUNT(*) AS Total_Furniture_Components FROM furniture
+SELECT p1.Name AS MaleFriendName, p1.job FROM Person AS p1 JOIN PersonFriend AS pf ON p1.name = pf.friend JOIN Person AS p2 ON p2.name = pf.name WHERE p2.Name = 'Alice' AND p1.job = 'doctor' AND p1.Sex = 'M'
+SELECT p.name FROM Person p LEFT JOIN PersonFriend pf ON p.name = pf.name WHERE pf.friend IS NULL
+SELECT t2.age FROM `PersonFriend` AS t1 JOIN `Person` AS t2 ON t1.friend = t2.name WHERE t1.year = (SELECT MAX(year) FROM `PersonFriend` WHERE name = 'Zach') ```
+SELECT COUNT(*) FROM Student WHERE Age > ( SELECT MAX(Age) FROM Student WHERE Major = ( SELECT Major FROM Student WHERE LName = 'Engineer' ) )
+SELECT job, MIN(age) AS Minimum_Age FROM Person GROUP BY job
+SELECT Sex, AVG(Age) AS Average_Age FROM Student GROUP BY Sex
+SELECT DISTINCT f2.Name AS FriendOfFriend FROM PersonFriend AS f1 JOIN PersonFriend AS f2 ON f1.friend = f2.friend WHERE f1.name = 'Alice' AND f2.name != 'Alice'
+SELECT p.Name, p.age FROM Physician p JOIN People pe ON p.Name = pe.Name WHERE p.Position = 'Doctor' AND pe.Name = 'Zach'
+SELECT e.Product, e.Chromosome, e.Porphyria FROM enzyme AS e WHERE e.Location = 'Cytosol'
+SELECT e.name FROM enzyme e WHERE e.Porphyria <> 'Heme'
+SELECT name FROM enzyme WHERE name LIKE '%ALA%'
+SELECT m.id, m.name FROM medicine AS m JOIN medicine_enzyme_interaction AS me ON m.id = me.medicine_id GROUP BY m.id, m.name HAVING COUNT(DISTINCT me.enzyme_id) > 1
+SELECT a.apt_booking_id, a.booking_start_date, a.booking_end_date FROM Apartment_Bookings a JOIN Apartments b ON a.apt_id = b.apt_id WHERE b.bedroom_count > 2
+SELECT a.booking_start_date, a.booking_end_date FROM Apartment_Bookings AS a JOIN Guests AS g ON a.guest_id = g.guest_id WHERE g.gender_code = 'Female'
+SELECT b.building_address FROM Apartment_Buildings b JOIN Apartments a ON b.building_id = a.building_id WHERE a.bathroom_count > 2
+SELECT t1.first_name, t1.last_name FROM Guests AS t1 JOIN Apartment_Bookings AS t2 ON t1.guest_id = t2.guest_id WHERE t2.booking_status_code = 'Confirmed'
+SELECT apt_id FROM Apartments WHERE bedroom_count > 4
+SELECT apt_number, room_count FROM Apartments ORDER BY room_count ASC
+SELECT AVG(bedroom_count) AS average_bedrooms FROM Apartments
+SELECT name AS Building_Full_Name FROM buildings WHERE name LIKE '%court%'
+SELECT p.Name, p.Origin, p.Owner FROM program AS p
+SELECT Name FROM program WHERE Program_ID NOT IN ( SELECT Program_ID FROM broadcast WHERE Time_of_day = 'Morning' )
+SELECT t1.Owner, t2.Rating_in_percent FROM `channel` AS t1 JOIN ( SELECT Channel_ID, MAX(Rating_in_percent) AS MaxRating FROM `channel` GROUP BY Channel_ID ) AS t2 ON t1.Channel_ID = t2.Channel_ID WHERE t2.MaxRating = t1.Rating_in_percent
+SELECT Name FROM channel WHERE Owner = 'CCTV' OR Owner = 'HBS'
+SELECT * FROM `Customer_Master_Index` ORDER BY `cmi_details` DESC
+SELECT District_name, City_Population FROM district WHERE City_Population BETWEEN 200000 AND 2000000
+SELECT District_name, City_Area FROM district ORDER BY City_Area ASC LIMIT 1
+SELECT District_name, SUM(City_Population) AS Total_Population FROM district WHERE City_Area > (SELECT AVG(City_Area) FROM district) GROUP BY District_name
+SELECT District_name, City_Population FROM district ORDER BY City_Population DESC LIMIT 1
+SELECT m.Name, COUNT(gas.Station_ID) AS Num_Gas_Station FROM manager m JOIN gas_station gas ON m.Manager_ID = gas.Manager_Name WHERE gas.Open_Year > 2000 GROUP BY m.Name ORDER BY Num_Gas_Station DESC LIMIT 1
+SELECT Name, Rank FROM Companies ORDER BY Sales_billion DESC
+SELECT t1.name, t1.Main_Industry FROM `company` AS t1 WHERE t1.Headquarters != 'United States'
+SELECT t1.Manager_Name FROM `gas_station` AS t1 JOIN `station_company` AS t2 ON t1.Station_ID = t2.Station_ID JOIN `company` AS t3 ON t2.Company_ID = t3.Company_ID WHERE t3.name = 'ExxonMobil'
+SELECT Festival_Name FROM festival_detail WHERE Year = 2007
+SELECT Year FROM festival_detail GROUP BY Year HAVING COUNT(Festival_ID) > 1
+SELECT b.name FROM buildings b LEFT JOIN Institution i ON b.building_id = i.building_id WHERE i.Institution IS NULL
+SELECT b.name FROM buildings b LEFT JOIN Office_locations ol ON b.id = ol.building_id LEFT JOIN Companies c ON ol.company_id = c.id LEFT JOIN Institution i ON c.id = i.building_id WHERE i.Founded != 2003 OR i.Founded IS NULL
+SELECT Status, COUNT(*) AS Number_of_Roller_Coasters FROM roller_coaster GROUP BY Status
+SELECT COUNT(*) FROM Participants WHERE Participant_Type_Code = 'Organizer'
+SELECT m.Name, m.built_year FROM mill AS m WHERE m.type = 'Grondzeiler'
+SELECT t1.Builder, COUNT(t2.Railway) AS Number_of_Railways FROM railway AS t1 LEFT JOIN railway AS t2 ON t1.Builder = t2.Builder GROUP BY t1.Builder
+SELECT t1.Railway, t1.Location FROM `railway` AS t1
+SELECT b.Title, b.Issues FROM book AS b
+SELECT Title, Publication_Date FROM book

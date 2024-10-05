@@ -1,0 +1,178 @@
+SELECT COUNT(DISTINCT name) FROM products WHERE name NOT IN (SELECT t1.name FROM products as t1 JOIN manufacturers as t2 ON t1.manufacturer  =  t2.code WHERE t2.name  =  'Sony')	manufactory_1
+SELECT COUNT(*) FROM products WHERE price >= 180	manufactory_1
+SELECT name ,  headquarter ,  revenue FROM manufacturers ORDER BY revenue DESC	manufactory_1
+SELECT COUNT(*) FROM manufacturers WHERE founder  =  'Andy'	manufactory_1
+SELECT name FROM manufacturers WHERE revenue BETWEEN 100 AND 150	manufactory_1
+SELECT AVG(t1.price) ,  t2.name FROM products as t1 JOIN manufacturers as t2 ON t1.manufacturer  =  t2.code GROUP BY t2.name HAVING AVG(t1.price) >= 150	manufactory_1
+SELECT name FROM manufacturers WHERE revenue  >  (SELECT AVG(revenue) FROM manufacturers)	manufactory_1
+SELECT name FROM products WHERE price  <=  200	manufactory_1
+SELECT fname ,  age FROM student WHERE stuid IN (SELECT stuid FROM sportsinfo WHERE sportname  =  "Football" INTERSECT SELECT stuid FROM sportsinfo WHERE sportname  =  "Lacrosse")	game_1
+SELECT gname FROM plays_games as t1 JOIN video_games as t2 ON t1.gameid  =  t2.gameid GROUP BY t1.gameid HAVING SUM(hours_played)  >=  1000	game_1
+SELECT COUNT(*) FROM video_games WHERE gtype  =  "Massively multiplayer online game"	game_1
+SELECT COUNT(*) FROM video_games	game_1
+SELECT COUNT(DISTINCT gtype) FROM video_games	game_1
+SELECT SUM(hoursperweek) ,  SUM(gamesplayed) FROM sportsinfo as t1 JOIN student as t2 ON t1.stuid  =  t2.stuid WHERE t2.fname  =  "David" AND t2.lname  =  "Shieber"	game_1
+SELECT stuid FROM student EXCEPT SELECT stuid FROM plays_games	game_1
+SELECT stuid FROM student EXCEPT SELECT stuid FROM sportsinfo	game_1
+SELECT nominee FROM musical WHERE award  =  "Tony award" INTERSECT SELECT nominee FROM musical WHERE award  =  "Drama Desk award"	musical
+SELECT t2.name ,  COUNT(*) FROM actor as t1 JOIN musical as t2 ON t1.musical_id  =  t2.musical_id GROUP BY t1.musical_id	musical
+SELECT name FROM musical WHERE musical_id NOT IN (SELECT musical_id FROM actor)	musical
+SELECT t2.name FROM actor as t1 JOIN musical as t2 ON t1.musical_id  =  t2.musical_id GROUP BY t1.musical_id HAVING COUNT(*)  >=  3	musical
+SELECT t2.name ,  t1.company FROM entrepreneur as t1 JOIN people as t2 ON t1.people_id  =  t2.people_id ORDER BY t1.money_requested	entrepreneur
+SELECT t2.name FROM entrepreneur as t1 JOIN people as t2 ON t1.people_id  =  t2.people_id ORDER BY t2.weight DESC LIMIT 1	entrepreneur
+SELECT name FROM people ORDER BY weight ASC	entrepreneur
+SELECT COUNT(DISTINCT company) FROM entrepreneur	entrepreneur
+SELECT t1.name FROM tourist_attractions as t1 JOIN visitors as t2 JOIN visits as t3 ON t1.tourist_attraction_id  =  t3.tourist_attraction_id AND t2.tourist_id  =  t3.tourist_id WHERE t2.tourist_details  =  "Vincent" INTERSECT SELECT t1.name FROM tourist_attractions as t1 JOIN visitors as t2 JOIN visits as t3 ON t1.tourist_attraction_id  =  t3.tourist_attraction_id AND t2.tourist_id  =  t3.tourist_id WHERE t2.tourist_details  =  "Marcelle"	cre_Theme_park
+SELECT DISTINCT visit_date FROM visits	cre_Theme_park
+SELECT t2.name FROM locations as t1 JOIN tourist_attractions as t2 ON t1.location_id  =  t2.location_id WHERE t1.address  =  "660 Shea Crescent" OR t2.how_to_get_there  =  "walk"	cre_Theme_park
+SELECT how_to_get_there FROM tourist_attractions GROUP BY how_to_get_there ORDER BY COUNT(*) DESC LIMIT 1	cre_Theme_park
+SELECT t1.museum_details ,  t2.opening_hours FROM museums as t1 JOIN tourist_attractions as t2 ON t1.museum_id  =  t2.tourist_attraction_id	cre_Theme_park
+SELECT t2.name FROM locations as t1 JOIN tourist_attractions as t2 ON t1.location_id  =  t2.location_id WHERE t1.address  =  "254 Ottilie Junction" OR t2.how_to_get_there  =  "bus"	cre_Theme_park
+SELECT COUNT(DISTINCT name) FROM photos	cre_Theme_park
+SELECT t1.name FROM staff as t1 JOIN tourist_attractions as t2 ON t1.tourist_attraction_id  =  t2.tourist_attraction_id WHERE t2.name  =  "US museum"	cre_Theme_park
+SELECT team FROM elimination GROUP BY team HAVING COUNT(*)  >  3	wrestler
+SELECT location FROM wrestler GROUP BY location HAVING COUNT(*)  >  2	wrestler
+SELECT COUNT(*) FROM wrestler	wrestler
+SELECT COUNT(DISTINCT team) FROM elimination	wrestler
+SELECT COUNT(DISTINCT t1.text) FROM user as t2 JOIN tip as t1 ON t2.user_id  =  t1.user_id WHERE t1.year  =  2010 AND t2.name  =  "Michelle";	yelp
+SELECT t4.name FROM category as t2 JOIN business as t1 ON t2.business_id  =  t1.business_id JOIN review as t3 ON t3.business_id  =  t1.business_id JOIN user as t4 ON t4.user_id  =  t3.user_id WHERE t1.name  =  "Mesa Grill" AND t2.category_name  =  "restaurant";	yelp
+SELECT COUNT(DISTINCT t4.name) FROM category as t2 JOIN business as t1 ON t2.business_id  =  t1.business_id JOIN review as t3 ON t3.business_id  =  t1.business_id JOIN user as t4 ON t4.user_id  =  t3.user_id WHERE t1.name  =  "Vintner Grill" AND t2.category_name  =  "category_category_name0" AND t3.year  =  2010;	yelp
+SELECT t1.neighbourhood_name FROM category as t3 JOIN business as t2 ON t3.business_id  =  t2.business_id JOIN category as t4 ON t4.business_id  =  t2.business_id JOIN neighbourhood as t1 ON t1.business_id  =  t2.business_id WHERE t2.city  =  "Madison" AND t3.category_name  =  "Italian" AND t4.category_name  =  "restaurant";	yelp
+SELECT COUNT(DISTINCT t1.name) FROM category as t2 JOIN business as t1 ON t2.business_id  =  t1.business_id WHERE t1.city  =  "Madison" AND t2.category_name  =  "escape games";	yelp
+SELECT COUNT(DISTINCT t1.text) FROM user as t2 JOIN review as t1 ON t2.user_id  =  t1.user_id WHERE t1.month  =  "March" AND t1.year  =  2014 AND t2.name  =  "Michelle";	yelp
+SELECT t1.name FROM category as t2 JOIN business as t1 ON t2.business_id  =  t1.business_id WHERE t1.city  =  "Dallas" AND t1.rating  >  4.5 AND t2.category_name  =  "restaurant";	yelp
+SELECT AVG(t1.rating) FROM user as t2 JOIN review as t1 ON t2.user_id  =  t1.user_id WHERE t2.name  =  "Michelle";	yelp
+SELECT t1.name FROM review as t2 JOIN business as t1 ON t2.business_id  =  t1.business_id JOIN user as t3 ON t3.user_id  =  t2.user_id WHERE t2.rating  =  5 AND t3.name  =  "Niloofar";	yelp
+SELECT SUM(t2.likes) FROM tip as t2 JOIN business as t1 ON t2.business_id  =  t1.business_id JOIN user as t3 ON t3.user_id  =  t2.user_id WHERE t1.name  =  "Cafe Zinho" AND t3.name  =  "Niloofar";	yelp
+SELECT t2.text FROM review as t2 JOIN business as t1 ON t2.business_id  =  t1.business_id WHERE t1.name  =  "Kabob Palace" AND t2.year  =  2014;	yelp
+SELECT date_incident_start ,  date_incident_end FROM behavior_incident WHERE incident_type_code  =  "NOISE"	behavior_monitoring
+SELECT MAX(monthly_rental) ,  MIN(monthly_rental) FROM student_addresses	behavior_monitoring
+SELECT gender FROM teachers WHERE last_name  =  "Medhurst"	behavior_monitoring
+SELECT COUNT(DISTINCT student_id) FROM students_in_detention	behavior_monitoring
+SELECT AVG(gross_in_dollar) FROM film	film_rank
+SELECT studio FROM film WHERE director  =  "Nicholas Meyer" INTERSECT SELECT studio FROM film WHERE director  =  "Walter Hill"	film_rank
+SELECT low_estimate ,  high_estimate FROM film_market_estimation	film_rank
+SELECT studio FROM film EXCEPT SELECT studio FROM film WHERE director  =  "Walter Hill"	film_rank
+SELECT t1.catalog_entry_name FROM catalog_contents as t1 JOIN catalog_contents_Additional_Attributes as t2 ON t1.catalog_entry_id  =  t2.catalog_entry_id WHERE t2.attribute_value  =  (SELECT attribute_value FROM catalog_contents_Additional_Attributes GROUP BY attribute_value ORDER BY COUNT(*) DESC LIMIT 1)	product_catalog
+SELECT catalog_level_name ,  catalog_level_number FROM catalog_structure WHERE catalog_level_number BETWEEN 5 AND 10	product_catalog
+SELECT DISTINCT(catalog_publisher) FROM catalogs WHERE catalog_publisher LIKE "%Murray%"	product_catalog
+SELECT catalog_entry_name FROM catalog_contents ORDER BY price_in_dollars DESC LIMIT 1	product_catalog
+SELECT COUNT(*) ,  country FROM airports GROUP BY country ORDER BY COUNT(*) DESC	flight_4
+SELECT name ,  city ,  country FROM airports ORDER BY elevation LIMIT 1	flight_4
+SELECT COUNT(DISTINCT city) FROM airports WHERE country  =  'Greenland'	flight_4
+SELECT COUNT(*) FROM airlines	flight_4
+SELECT name ,  city ,  country FROM airports ORDER BY elevation LIMIT 1	flight_4
+SELECT COUNT(*) ,  country FROM airports GROUP BY country ORDER BY COUNT(*) DESC	flight_4
+SELECT COUNT(*) FROM airlines WHERE country  =  'Russia'	flight_4
+SELECT t1.name ,  t2.alid FROM airlines as t1 JOIN routes as t2 ON t1.alid  =  t2.alid GROUP BY t2.alid ORDER BY COUNT(*) DESC LIMIT 10	flight_4
+SELECT date FROM game ORDER BY home_team DESC	game_injury
+SELECT t1.name FROM physician as t1 JOIN patient as t2 ON t1.employeeid  =  t2.pcp GROUP BY t1.employeeid HAVING COUNT(*)  >  1	hospital_1
+SELECT name FROM department GROUP BY departmentid ORDER BY COUNT(departmentid) DESC LIMIT 1;	hospital_1
+SELECT name ,  cost FROM procedures ORDER BY cost DESC	hospital_1
+SELECT name FROM procedures WHERE cost  <  5000 INTERSECT SELECT t3.name FROM physician as t1 JOIN trained_in as t2 ON t1.employeeid  =  t2.physician JOIN procedures as t3 ON t3.code  =  t2.treatment WHERE t1.name  =  "John Wen"	hospital_1
+SELECT t1.name FROM physician as t1 JOIN prescribes as t2 ON t1.employeeid = t2.physician ORDER BY t2.dose DESC LIMIT 1	hospital_1
+SELECT appointmentid FROM appointment ORDER BY start DESC LIMIT 1	hospital_1
+SELECT DISTINCT t1.name FROM nurse as t1 JOIN on_call as t2 ON t1.employeeid  =  t2.nurse	hospital_1
+SELECT name FROM procedures WHERE cost  >  1000 EXCEPT SELECT t3.name FROM physician as t1 JOIN trained_in as t2 ON t1.employeeid  =  t2.physician JOIN procedures as t3 ON t3.code  =  t2.treatment WHERE t1.name  =  "John Wen"	hospital_1
+SELECT name FROM department GROUP BY departmentid ORDER BY COUNT(departmentid) DESC LIMIT 1;	hospital_1
+SELECT name FROM procedures WHERE cost  >  1000 UNION SELECT t3.name FROM physician as t1 JOIN trained_in as t2 ON t1.employeeid  =  t2.physician JOIN procedures as t3 ON t3.code  =  t2.treatment WHERE t1.name  =  "John Wen"	hospital_1
+SELECT stories FROM buildings ORDER BY height DESC LIMIT 1	company_office
+SELECT name FROM companies ORDER BY market_value_billion DESC	company_office
+SELECT industry FROM companies WHERE headquarters  =  "USA" INTERSECT SELECT industry FROM companies WHERE headquarters  =  "China"	company_office
+SELECT name FROM buildings WHERE status  =  "on-hold" ORDER BY stories ASC	company_office
+SELECT minister FROM party WHERE party_name != 'Progress Party'	party_people
+SELECT minister FROM party WHERE took_office  >  1961 OR took_office  <  1959	party_people
+SELECT minister ,  party_name FROM party ORDER BY took_office DESC	party_people
+SELECT t2.party_name ,  COUNT(*) FROM party_events as t1 JOIN party as t2 ON t1.party_id  =  t2.party_id GROUP BY t1.party_id	party_people
+SELECT t1.name FROM browser as t1 JOIN accelerator_compatible_browser as t2 ON t1.id  =  t2.browser_id JOIN web_client_accelerator as t3 ON t2.accelerator_id  =  t3.id WHERE t3.name  =  'CProxy' AND t2.compatible_since_year  >  1998	browser_web
+SELECT t2.lot_id ,  AVG(amount_of_transaction) FROM transactions as t1 JOIN transactions_lots as t2 ON t1.transaction_id  =  t2.transaction_id GROUP BY t2.lot_id ORDER BY AVG(amount_of_transaction)	tracking_share_transactions
+SELECT investor_details FROM investors	tracking_share_transactions
+SELECT lot_details FROM lots EXCEPT SELECT t1.lot_details FROM lots as t1 JOIN transactions_lots as t2 ON t1.lot_id  =  t2.lot_id	tracking_share_transactions
+SELECT investor_id ,  COUNT(*) FROM transactions WHERE transaction_type_code  =  "SALE" GROUP BY investor_id	tracking_share_transactions
+SELECT COUNT(*) ,  affiliation FROM university WHERE enrollment  >  20000 GROUP BY affiliation	university_basketball
+SELECT school FROM university WHERE founded  >  1850 OR affiliation  =  'Public'	university_basketball
+SELECT MAX(enrollment) FROM university	university_basketball
+SELECT t2.team_name ,  t2.acc_regular_season FROM university as t1 JOIN basketball_match as t2 ON t1.school_id  =  t2.school_id ORDER BY t1.founded LIMIT 1	university_basketball
+SELECT t3.house_number  ,  t1.name FROM restaurant as t1 JOIN geographic as t2 ON t1.city_name  =  t2.city_name JOIN location as t3 ON t1.id  =  t3.restaurant_id WHERE t2.region  =  "yosemite and mono lake area" AND t1.food_type  =  "french" AND t1.rating  >  2.5;	restaurants
+SELECT t2.house_number  ,  t1.name FROM restaurant as t1 JOIN location as t2 ON t1.id  =  t2.restaurant_id WHERE t2.city_name  =  "san francisco" AND t2.street_name  =  "buchanan" AND t1.food_type  =  "arabic" AND t1.rating  >  2.5;	restaurants
+SELECT t2.house_number  ,  t1.name FROM location as t2 JOIN restaurant as t1 ON t1.id  =  t2.restaurant_id  WHERE t1.city_name IN ( SELECT city_name FROM geographic WHERE region  =  "region0" ) AND t1.rating  >  2.5;	restaurants
+SELECT t2.house_number  ,  t1.name FROM restaurant as t1 JOIN location as t2 ON t1.id  =  t2.restaurant_id WHERE t2.city_name  =  "mountain view" AND t1.food_type  =  "arabic" AND t1.rating  >  2.5;	restaurants
+SELECT t2.house_number  ,  t1.name FROM restaurant as t1 JOIN location as t2 ON t1.id  =  t2.restaurant_id WHERE t2.city_name  =  "san francisco" AND t1.food_type  =  "french" AND t1.rating  =  ( SELECT MAX(t1.rating) FROM restaurant as t1 JOIN location as t2 ON t1.id  =  t2.restaurant_id WHERE t2.city_name  =  "san francisco" AND t1.food_type  =  "french" );	restaurants
+SELECT t2.house_number  ,  t1.name FROM restaurant as t1 JOIN location as t2 ON t1.id  =  t2.restaurant_id WHERE t2.city_name  =  "san francisco" AND t1.name  =  "jamerican cuisine";	restaurants
+SELECT t2.house_number  ,  t1.name FROM restaurant as t1 JOIN location as t2 ON t1.id  =  t2.restaurant_id WHERE t2.city_name  =  "san francisco" AND t2.street_name  =  "buchanan" AND t1.food_type  =  "arabic" AND t1.rating  >  2.5;	restaurants
+SELECT t2.house_number  ,  t1.name FROM restaurant as t1 JOIN location as t2 ON t1.id  =  t2.restaurant_id WHERE t2.city_name  =  "san francisco" AND t1.food_type  =  "french" AND t1.rating  =  ( SELECT MAX(t1.rating) FROM restaurant as t1 JOIN location as t2 ON t1.id  =  t2.restaurant_id WHERE t2.city_name  =  "san francisco" AND t1.food_type  =  "french" );	restaurants
+SELECT t2.house_number  ,  t1.name FROM restaurant as t1 JOIN location as t2 ON t1.id  =  t2.restaurant_id WHERE t2.city_name  =  "san francisco" AND t1.name  =  "jamerican cuisine";	restaurants
+SELECT t3.house_number  ,  t1.name FROM restaurant as t1 JOIN geographic as t2 ON t1.city_name  =  t2.city_name JOIN location as t3 ON t1.id  =  t3.restaurant_id WHERE t2.region  =  "bay area" AND t1.food_type  =  "american" AND t1.rating  =  ( SELECT MAX(t1.rating) FROM restaurant as t1 JOIN geographic as t2 ON t1.city_name  =  t2.city_name WHERE t2.region  =  "bay area" AND t1.food_type  =  "american" );	restaurants
+SELECT t3.house_number  ,  t1.name FROM restaurant as t1 JOIN geographic as t2 ON t1.city_name  =  t2.city_name JOIN location as t3 ON t1.id  =  t3.restaurant_id WHERE t2.region  =  "bay area" AND t1.food_type  =  "american" AND t1.rating  =  ( SELECT MAX(t1.rating) FROM restaurant as t1 JOIN geographic as t2 ON t1.city_name  =  t2.city_name WHERE t2.region  =  "bay area" AND t1.food_type  =  "american" );	restaurants
+SELECT t2.house_number  ,  t1.name FROM restaurant as t1 JOIN location as t2 ON t1.id  =  t2.restaurant_id WHERE t2.city_name  =  "san francisco" AND t2.street_name  =  "buchanan" AND t1.food_type  =  "arabic" AND t1.rating  >  2.5;	restaurants
+SELECT name FROM user_profiles ORDER BY followers DESC LIMIT 1	twitter_1
+SELECT name ,  followers FROM user_profiles ORDER BY followers DESC	twitter_1
+SELECT date FROM weather WHERE max_temperature_f  >  85	bike_1
+SELECT zip_code FROM weather GROUP BY zip_code HAVING AVG(mean_humidity)  <  70 INTERSECT SELECT zip_code FROM trip GROUP BY zip_code HAVING COUNT(*)  >=  100	bike_1
+SELECT t1.id FROM trip as t1 JOIN weather as t2 ON t1.zip_code  =  t2.zip_code GROUP BY t2.zip_code HAVING AVG(t2.mean_temperature_f)  >  60	bike_1
+SELECT DISTINCT start_station_name FROM trip WHERE duration  <  100	bike_1
+SELECT id FROM station WHERE city  =  "San Francisco" INTERSECT SELECT station_id FROM status GROUP BY station_id HAVING AVG(bikes_available)  >  10	bike_1
+SELECT id FROM trip WHERE duration  >=  (SELECT AVG(duration) FROM trip WHERE zip_code  =  94103)	bike_1
+SELECT date FROM weather WHERE zip_code  =  94107 AND events != "Fog" AND events != "Rain"	bike_1
+SELECT COUNT(DISTINCT city) FROM station	bike_1
+SELECT start_station_name ,  start_station_id FROM trip WHERE start_date LIKE "8/%" GROUP BY start_station_name ORDER BY COUNT(*) DESC LIMIT 1	bike_1
+SELECT start_station_id ,  start_station_name FROM trip GROUP BY start_station_name HAVING COUNT(*)  >=  200	bike_1
+SELECT campus FROM campuses WHERE location  =  "Chico"	csu_1
+SELECT COUNT(*) FROM campuses WHERE county  =  "Los Angeles"	csu_1
+SELECT COUNT(*) FROM campuses WHERE county  =  "Los Angeles"	csu_1
+SELECT campus FROM campuses WHERE county  =  "Los Angeles"	csu_1
+SELECT degrees FROM campuses as t1 JOIN degrees as t2 ON t1.id  =  t2.campus WHERE t1.campus  =  "San Jose State University" AND t2.year  =  2000	csu_1
+SELECT faculty FROM faculty as t1 JOIN campuses as t2 ON t1.campus  =  t2.id WHERE t1.year  =  2002 AND t2.campus  =  "Long Beach State University"	csu_1
+SELECT COUNT(*) FROM campuses	csu_1
+SELECT nationality FROM journalist GROUP BY nationality ORDER BY COUNT(*) DESC LIMIT 1	news_report
+SELECT t3.title FROM authors as t1 JOIN authorship as t2 ON t1.authid  =  t2.authid JOIN papers as t3 ON t2.paperid  =  t3.paperid WHERE t1.fname  =  "Olin" AND t1.lname  =  "Shivers"	icfp_1
+SELECT COUNT(DISTINCT t1.title) FROM papers as t1 JOIN authorship as t2 ON t1.paperid  =  t2.paperid JOIN inst as t3 ON t2.instid  =  t3.instid WHERE t3.name  =  "Tokohu University"	icfp_1
+SELECT t1.name FROM inst as t1 JOIN authorship as t2 ON t1.instid  =  t2.instid JOIN papers as t3 ON t2.paperid  =  t3.paperid GROUP BY t1.name ORDER BY COUNT(*) DESC LIMIT 1	icfp_1
+SELECT COUNT(*) FROM authors as t1 JOIN authorship as t2 ON t1.authid  =  t2.authid JOIN papers as t3 ON t2.paperid  =  t3.paperid WHERE  t1.fname  =  "Atsushi" AND t1.lname  =  "Ohori"	icfp_1
+SELECT t1.name FROM inst as t1 JOIN authorship as t2 ON t1.instid  =  t2.instid JOIN papers as t3 ON t2.paperid  =  t3.paperid GROUP BY t1.name ORDER BY COUNT(*) DESC LIMIT 1	icfp_1
+SELECT t3.title FROM authors as t1 JOIN authorship as t2 ON t1.authid  =  t2.authid JOIN papers as t3 ON t2.paperid  =  t3.paperid WHERE  t1.fname  =  "Aaron" AND t1.lname  =  "Turon"	icfp_1
+SELECT SUM(num_of_component) FROM furniture	manufacturer
+SELECT t2.friend FROM person as t1 JOIN personFriend as t2 ON t1.name  =  t2.friend WHERE t2.name  =  'Alice' AND t1.gender  =  'male' AND t1.job  =  'doctor'	network_2
+SELECT name FROM person EXCEPT SELECT name FROM personfriend	network_2
+SELECT t1.age FROM person as t1 JOIN personFriend as t2 ON t1.name  =  t2.friend WHERE t2.name =  'Zach' AND t2.year  =  (SELECT MAX(year) FROM personFriend WHERE name =  'Zach')	network_2
+SELECT COUNT(*) FROM person WHERE age  >  (SELECT MAX(age) FROM person WHERE job  =  'engineer')	network_2
+SELECT MIN(age) ,  job FROM person GROUP BY job	network_2
+SELECT AVG(age) ,  gender FROM person GROUP BY gender	network_2
+SELECT DISTINCT t4.name FROM personfriend as t1 JOIN person as t2 ON t1.name  =  t2.name JOIN personfriend as t3 ON t1.friend  =  t3.name JOIN personfriend as t4 ON t3.friend  =  t4.name WHERE t2.name  =  'Alice' AND t4.name != 'Alice'	network_2
+SELECT age FROM person WHERE job  =  'doctor' AND name  =  'Zach'	network_2
+SELECT product ,  chromosome ,  porphyria FROM enzyme WHERE location  =  'Cytosol'	medicine_enzyme_interaction
+SELECT name FROM enzyme WHERE product != 'Heme'	medicine_enzyme_interaction
+SELECT name FROM enzyme WHERE name LIKE "%ALA%"	medicine_enzyme_interaction
+SELECT t1.id ,  t1.name FROM medicine as t1 JOIN medicine_enzyme_interaction as t2 ON t2.medicine_id  =  t1.id GROUP BY t1.id HAVING COUNT(*)  >=  2	medicine_enzyme_interaction
+SELECT t1.booking_start_date ,  t1.booking_start_date FROM apartment_bookings as t1 JOIN apartments as t2 ON t1.apt_id  =  t2.apt_id WHERE t2.bedroom_count  >  2	apartment_rentals
+SELECT t1.booking_start_date ,  t1.booking_start_date FROM apartment_bookings as t1 JOIN guests as t2 ON t1.guest_id  =  t2.guest_id WHERE t2.gender_code  =  "Female"	apartment_rentals
+SELECT t1.building_address FROM apartment_buildings as t1 JOIN apartments as t2 ON t1.building_id  =  t2.building_id WHERE t2.bathroom_count  >  2	apartment_rentals
+SELECT t2.guest_first_name ,  t2.guest_last_name FROM apartment_bookings as t1 JOIN guests as t2 ON t1.guest_id  =  t2.guest_id WHERE t1.booking_status_code  =  "Confirmed"	apartment_rentals
+SELECT t1.facility_code FROM apartment_facilities as t1 JOIN apartments as t2 ON t1.apt_id  =  t2.apt_id WHERE t2.bedroom_count  >  4	apartment_rentals
+SELECT apt_number FROM apartments ORDER BY room_count ASC	apartment_rentals
+SELECT AVG(bedroom_count) FROM apartments	apartment_rentals
+SELECT building_full_name FROM apartment_buildings WHERE building_full_name LIKE "%court%"	apartment_rentals
+SELECT name ,  origin ,  owner FROM program	program_share
+SELECT name FROM program EXCEPT SELECT t1.name FROM program as t1 JOIN broadcast as t2 ON t1.program_id  =  t2.program_id WHERE t2.time_of_day  =  "Morning"	program_share
+SELECT owner FROM channel ORDER BY rating_in_percent DESC LIMIT 1	program_share
+SELECT name FROM channel WHERE owner  =  'CCTV' OR owner  =  'HBS'	program_share
+SELECT * FROM customer_master_index ORDER BY cmi_details DESC	local_govt_mdm
+SELECT district_name ,  city_population FROM district WHERE city_population BETWEEN 200000 AND 2000000	store_product
+SELECT district_name FROM district ORDER BY city_area ASC LIMIT 1	store_product
+SELECT SUM(city_population) FROM district WHERE city_area  >  (SELECT AVG(city_area) FROM district)	store_product
+SELECT district_name FROM district ORDER BY city_population DESC LIMIT 1	store_product
+SELECT manager_name FROM gas_station WHERE open_year  >  2000 GROUP BY manager_name ORDER BY COUNT(*) DESC LIMIT 1	gas_company
+SELECT company ,  rank FROM company ORDER BY sales_billion DESC	gas_company
+SELECT company ,  main_industry FROM company WHERE headquarters != 'USA'	gas_company
+SELECT t3.manager_name FROM station_company as t1 JOIN company as t2 ON t1.company_id  =  t2.company_id JOIN gas_station as t3 ON t1.station_id  =  t3.station_id WHERE t2.company  =  'ExxonMobil'	gas_company
+SELECT festival_name FROM festival_detail WHERE year  =  2007	entertainment_awards
+SELECT year FROM festival_detail GROUP BY year HAVING COUNT(*)  >  1	entertainment_awards
+SELECT name FROM building WHERE building_id NOT IN (SELECT building_id FROM institution)	protein_institute
+SELECT name FROM building EXCEPT SELECT t1.name FROM building as t1 JOIN institution as t2 ON t1.building_id  =  t2.building_id WHERE t2.founded  =  2003	protein_institute
+SELECT status ,  COUNT(*) FROM roller_coaster GROUP BY status	roller_coaster
+SELECT COUNT(*) FROM participants WHERE participant_type_code  =  'Organizer'	local_govt_in_alabama
+SELECT name ,  built_year FROM mill WHERE type  =  'Grondzeiler'	architecture
+SELECT builder ,  COUNT(*) FROM railway GROUP BY builder	railway
+SELECT wheels ,  location FROM railway	railway
+SELECT title ,  issues FROM book	book_2
+SELECT t1.title ,  t2.publication_date FROM book as t1 JOIN publication as t2 ON t1.book_id  =  t2.book_id	book_2

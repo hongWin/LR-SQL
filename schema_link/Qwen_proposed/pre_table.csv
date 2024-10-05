@@ -1,0 +1,179 @@
+reference_tables,predicted_tables
+"products, manufacturers","products, manufacturers"
+products,products
+manufacturers,manufacturers
+manufacturers,None
+manufacturers,manufacturers
+"products, manufacturers","products, manufacturers"
+manufacturers,manufacturers
+products,products
+"student, sportsinfo","sportsinfo, student"
+"plays_games, video_games",plays_games
+video_games,video_games
+video_games,video_games
+video_games,video_games
+"sportsinfo, student","sportsinfo, student"
+"student, plays_games",plays_games
+"student, sportsinfo","sportsinfo, student"
+musical,musical
+"actor, musical","musical, actor"
+"musical, actor","musical, actor"
+"actor, musical","musical, actor"
+"entrepreneur, people",entrepreneur
+"entrepreneur, people","entrepreneur, people"
+people,people
+entrepreneur,company
+"tourist_attractions, visitors, visits","tourist_attractions, visits, visitors"
+visits,visits
+"locations, tourist_attractions","locations, tourist_attractions"
+tourist_attractions,tourist_attractions
+"museums, tourist_attractions","museums, tourist_attractions"
+"locations, tourist_attractions",locations
+photos,photos
+"staff, tourist_attractions","staff, tourist_attractions"
+elimination,elimination
+wrestler,wrestler
+wrestler,wrestler
+elimination,elimination
+"user, tip",tip
+"category, business, review, user","category, user, business, review"
+"category, business, review, user","category, business, review"
+"category, business, neighbourhood","category, business, neighbourhood"
+"category, business",None
+"user, review","user, review"
+"category, business",None
+"user, review",review
+"review, business, user","business, review"
+"tip, business, user",tip
+"review, business","business, review"
+behavior_incident,"behavior_incident, ref_incident_type"
+student_addresses,"student_addresses, addresses"
+teachers,teachers
+students_in_detention,students_in_detention
+film,film
+film,film
+film_market_estimation,film_market_estimation
+film,film
+"catalog_contents, catalog_contents_Additional_Attributes",catalog_contents
+catalog_structure,catalog_structure
+catalogs,catalogs
+catalog_contents,catalog_contents
+airports,airports
+airports,airports
+airports,airports
+airlines,airlines
+airports,airports
+airports,airports
+airlines,airlines
+"airlines, routes","routes, airlines"
+game,game
+"physician, patient","physician, patient"
+department,None
+procedures,procedures
+"procedures, physician, trained_in","trained_in, procedures, physician"
+"physician, prescribes",prescribes
+appointment,appointment
+"nurse, on_call",on_call
+"procedures, physician, trained_in","trained_in, procedures, physician"
+department,None
+"procedures, physician, trained_in","trained_in, procedures, physician"
+buildings,buildings
+companies,company
+companies,company
+buildings,buildings
+party,party
+party,party
+party,party
+"party_events, party","party_events, party"
+"browser, accelerator_compatible_browser, web_client_accelerator","accelerator_compatible_browser, web_client_accelerator"
+"transactions, transactions_lots","transactions, transactions_lots"
+investors,"entrepreneur, investors"
+"lots, transactions_lots","lots, transactions_lots"
+transactions,transactions
+university,university
+university,university
+university,university
+"university, basketball_match","university, basketball_match"
+"restaurant, geographic, location","restaurant, geographic"
+"restaurant, location","restaurant, location"
+"location, restaurant, geographic","restaurant, geographic"
+"restaurant, location","restaurant, location"
+"restaurant, location","restaurant, location"
+"restaurant, location","restaurant, location"
+"restaurant, location","restaurant, location"
+"restaurant, location","restaurant, location"
+"restaurant, location","restaurant, location"
+"restaurant, geographic, location","restaurant, location, geographic"
+"restaurant, geographic, location","restaurant, location, geographic"
+"restaurant, location","restaurant, location"
+user_profiles,follows
+user_profiles,user_profiles
+weather,weather
+"weather, trip","weather, trip"
+"trip, weather","weather, trip"
+trip,trip
+"station, status","status, station"
+trip,trip
+weather,weather
+station,station
+trip,"station, trip"
+trip,"station, trip"
+campuses,campuses
+campuses,campuses
+campuses,campuses
+campuses,campuses
+"campuses, degrees","campuses, degrees"
+"faculty, campuses","faculty, campuses"
+campuses,campuses
+journalist,journalist
+"authors, authorship, papers","authorship, authors, papers"
+"papers, authorship, inst","inst, authorship, authors, papers"
+"inst, authorship, papers","inst, authorship, papers"
+"authors, authorship, papers","authorship, authors, papers"
+"inst, authorship, papers","authorship, authors, papers"
+"authors, authorship, papers","authorship, authors, papers"
+furniture,furniture
+"person, personFriend","personFriend, person"
+"person, personfriend",personfriend
+"person, personFriend",None
+person,person
+person,person
+person,person
+"personfriend, person",personfriend
+person,person
+enzyme,enzyme
+enzyme,enzyme
+enzyme,enzyme
+"medicine, medicine_enzyme_interaction","medicine, medicine_enzyme_interaction"
+"apartment_bookings, apartments","apartments, apartment_bookings"
+"apartment_bookings, guests","guests, apartment_bookings"
+"apartment_buildings, apartments","apartment_buildings, apartments"
+"apartment_bookings, guests","guests, apartment_bookings"
+"apartment_facilities, apartments","apartments, apartment_facilities"
+apartments,apartments
+apartments,apartments
+apartment_buildings,apartment_buildings
+program,program
+"program, broadcast","program, broadcast"
+channel,channel
+channel,channel
+customer_master_index,customer_master_index
+district,district
+district,district
+district,district
+district,district
+gas_station,gas_station
+company,company
+company,company
+"station_company, company, gas_station","company, station_company, gas_station"
+festival_detail,festival_detail
+festival_detail,festival_detail
+"building, institution","institution, building"
+"building, institution","institution, building"
+roller_coaster,roller_coaster
+participants,participants
+mill,mill
+railway,railway
+railway,railway
+book,book
+"book, publication","publication, book"
