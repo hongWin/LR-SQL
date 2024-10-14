@@ -24,7 +24,7 @@ This repository hosts the code for the LR-SQL paper, which is primarily used to 
 - The code for generating the SQL generation model dataset and the code for generating the dataset used in the paper will be released after the preprint is published.
 
 
-### Citation
+### Tips
 If you need totally open-source, please submit a Github issue, or contact hong Win via 2641873533@qq.com
 
 
