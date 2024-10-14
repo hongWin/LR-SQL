@@ -25,6 +25,6 @@ This repository hosts the code for the LR-SQL paper, which is primarily used to 
 
 
 ### Citation
-
+If you need totally open-source, please submit a Github issue, or contact hong Win via 2641873533@qq.com
 
 
