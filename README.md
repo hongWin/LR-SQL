@@ -2,7 +2,7 @@
 
 
 ## Overview
-This repository hosts the code for the LR-SQL paper, which is primarily used to accomplish Text2SQL tasks under resource-constrained conditions. We have simulated a large-scale database using the open-source dataset Spider and validated the effectiveness of our proposed method on this database. All models and experiments have been made open-source, and all experimental results have been saved in Jupyter Notebook files.
+This repository hosts the code for the LR-SQL paper, which is primarily used to accomplish Text2SQL tasks under resource-constrained conditions. We have simulated a large-scale database using the open-source dataset Spider and validated the effectiveness of our proposed method on this database. All models and experiments will be open-source, and all experimental results have been saved in Jupyter Notebook files.
 
 ## Dataset_generation
 - Spider initial dataset and code for generating the dataset used in the paper
