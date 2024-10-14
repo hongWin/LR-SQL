@@ -1,0 +1,48 @@
+########################check_GPU_usage
+nvidia-smi    // when training
+
+
+
+
+
+######################## start/check_inference_time
+df = pd.read_csv("mydataset_new/validation_dataset_formatted_cropped.csv",encoding="utf-8")
+outer_index = 0
+import re
+import time 
+pattern = re.compile(r'-- Tables: ([\w, ]+);')
+results = []
+#  schema_slicing
+start_time = time.time()
+for index, row in tqdm(df.iterrows(), total=len(df)):
+    question = row['question']
+    ref_tables = row['correct_tables']
+    instruction = get_instruction(schema_str)
+    question = get_input_value(question)
+    messages = [
+    {"role": "system", "content": f"{schema_str}"},
+    {"role": "user", "content": f"{question}"}]
+    response = predict(messages, model, tokenizer)
+    match = re.search(pattern, response)
+    if match:
+        table_names_str = match.group(1)
+        table_names = table_names_str.split(', ')
+        predict_table = ','.join(table_names)
+        print(f"++++++++++++++++index:{index}++++++++++++++++++++++++")
+        print("pre：", predict_table)
+        print("############################################")
+    else:
+        predict_table = "None"
+    results.append([ref_tables,predict_table])
+print(len(predict_table))
+end_time = time.time()  
+
+
+total_data = len(df['question'])
+total_time = end_time - start_time
+# print(total_data)
+signal_infernece_time = total_time/total_data
+print(signal_infernece_time)
+######################## end/check_inference_time
+
+
