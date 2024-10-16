@@ -1,0 +1,3648 @@
+reference_tables,predicted_tables
+manufacturers,manufacturers
+manufacturers,manufacturers
+"products, manufacturers","products, manufacturers"
+manufacturers,None
+manufacturers,manufacturers
+manufacturers,manufacturers
+manufacturers,manufacturers
+products,products
+"products, manufacturers","products, manufacturers"
+products,products
+products,products
+manufacturers,manufacturers
+"products, manufacturers","products, manufacturers"
+products,products
+products,products
+products,products
+"products, manufacturers","products, manufacturers"
+products,products
+manufacturers,manufacturers
+manufacturers,manufacturers
+"products, manufacturers","products, manufacturers"
+manufacturers,manufacturers
+"products, manufacturers","products, manufacturers"
+manufacturers,manufacturers
+manufacturers,manufacturers
+products,products
+products,products
+products,products
+manufacturers,manufacturers
+"products, manufacturers","products, manufacturers"
+"products, manufacturers",products
+products,products
+manufacturers,manufacturers
+manufacturers,manufacturers
+manufacturers,manufacturers
+manufacturers,manufacturers
+"products, manufacturers","products, manufacturers"
+"products, manufacturers","products, manufacturers"
+manufacturers,manufacturers
+products,products
+manufacturers,manufacturers
+"products, manufacturers","products, manufacturers"
+manufacturers,manufacturers
+manufacturers,None
+"products, manufacturers","products, manufacturers"
+"products, manufacturers","products, manufacturers"
+manufacturers,manufacturers
+manufacturers,manufacturers
+products,products
+products,products
+products,products
+"products, manufacturers",products
+manufacturers,manufacturers
+manufacturers,manufacturers
+products,products
+manufacturers,manufacturers
+"products, manufacturers","products, manufacturers"
+manufacturers,manufacturers
+products,products
+manufacturers,manufacturers
+"products, manufacturers","products, manufacturers"
+"manufacturers, products",None
+products,products
+manufacturers,city
+manufacturers,manufacturers
+products,products
+manufacturers,manufacturers
+"manufacturers, products",None
+"products, manufacturers","products, manufacturers"
+products,products
+manufacturers,manufacturers
+"products, manufacturers","products, manufacturers"
+sportsinfo,sportsinfo
+sportsinfo,sportsinfo
+"student, sportsinfo","student, sportsinfo"
+"sportsinfo, student","sportsinfo, student"
+student,student
+video_games,video_games
+plays_games,plays_games
+"student, sportsinfo","student, sportsinfo"
+sportsinfo,sportsinfo
+student,student
+plays_games,plays_games
+"sportsinfo, student","sportsinfo, student"
+"sportsinfo, student","sportsinfo, student"
+"student, sportsinfo","student, sportsinfo"
+video_games,video_games
+video_games,video_games
+"plays_games, video_games","plays_games, video_games"
+plays_games,plays_games
+video_games,video_games
+"student, sportsinfo","student, sportsinfo"
+"plays_games, video_games, student","plays_games, student, video_games"
+"student, plays_games","student, plays_games"
+"sportsinfo, student","sportsinfo, student"
+student,student
+sportsinfo,sportsinfo
+"plays_games, video_games","plays_games, video_games"
+sportsinfo,sportsinfo
+"sportsinfo, student","sportsinfo, student"
+"sportsinfo, student","student, sportsinfo"
+"student, sportsinfo","student, sportsinfo"
+student,student
+student,student
+"student, plays_games, video_games","student, plays_games, video_games"
+video_games,video_games
+sportsinfo,sportsinfo
+sportsinfo,sportsinfo
+"sportsinfo, student","sportsinfo, student"
+"student, sportsinfo","sportsinfo, student"
+sportsinfo,sportsinfo
+"student, sportsinfo","student, sportsinfo"
+"sportsinfo, plays_games","sportsinfo, plays_games"
+sportsinfo,sportsinfo
+video_games,video_games
+video_games,video_games
+sportsinfo,sportsinfo
+sportsinfo,sportsinfo
+video_games,video_games
+sportsinfo,sportsinfo
+student,student
+plays_games,plays_games
+"plays_games, video_games, student","plays_games, student, video_games"
+"student, plays_games, video_games","student, plays_games, video_games"
+video_games,video_games
+video_games,video_games
+video_games,video_games
+video_games,video_games
+video_games,video_games
+video_games,video_games
+sportsinfo,sportsinfo
+"sportsinfo, student","sportsinfo, student"
+video_games,video_games
+"student, plays_games","student, plays_games"
+"sportsinfo, student","sportsinfo, student"
+student,student
+sportsinfo,sportsinfo
+"plays_games, video_games","plays_games, video_games"
+"student, sportsinfo","student, sportsinfo"
+video_games,video_games
+"plays_games, video_games","plays_games, video_games"
+student,student
+sportsinfo,sportsinfo
+"sportsinfo, plays_games","sportsinfo, plays_games"
+"sportsinfo, student","sportsinfo, student"
+video_games,video_games
+"student, sportsinfo","student, sportsinfo"
+student,student
+sportsinfo,sportsinfo
+sportsinfo,sportsinfo
+ref_budget_codes,ref_budget_codes
+ref_budget_codes,ref_budget_codes
+projects,projects
+accounts,accounts
+"documents, documents_with_expenses","documents, documents_with_expenses"
+documents,documents
+projects,projects
+"documents_with_expenses, ref_budget_codes","documents_with_expenses, ref_budget_codes"
+"documents, documents_with_expenses","documents, documents_with_expenses"
+documents,documents
+documents,documents
+documents_with_expenses,documents_with_expenses
+"projects, documents","documents, projects"
+accounts,accounts
+"accounts, statements","accounts, statements"
+"documents, documents_with_Expenses","documents, documents_with_expenses"
+statements,statements
+"documents_with_expenses, ref_budget_codes","documents_with_expenses, ref_budget_codes"
+ref_budget_codes,ref_budget_codes
+documents,documents
+documents_with_expenses,documents_with_expenses
+"documents, documents_with_expenses","documents, documents_with_expenses"
+"statements, documents","statements, documents"
+"projects, documents","documents, projects"
+accounts,accounts
+ref_document_types,ref_document_types
+documents,documents
+ref_document_types,ref_document_types
+ref_document_types,ref_document_types
+accounts,accounts
+"documents_with_expenses, ref_budget_codes","documents_with_expenses, ref_budget_codes"
+"documents, documents_with_expenses","documents, documents_with_expenses"
+documents,documents
+documents,documents
+"projects, documents","documents, projects"
+documents,documents
+documents,documents
+documents_with_expenses,documents_with_expenses
+"documents, projects","documents, projects"
+documents,documents
+accounts,accounts
+"accounts, statements","accounts, statements"
+"documents, documents_with_Expenses","documents, documents_with_expenses"
+ref_budget_codes,ref_budget_codes
+documents,documents
+"documents, documents_with_expenses","documents, documents_with_expenses"
+documents,documents
+documents,documents
+accounts,accounts
+documents,documents
+accounts,accounts
+"documents, projects","documents, projects"
+documents_with_expenses,documents_with_expenses
+documents_with_expenses,documents_with_expenses
+projects,projects
+"ref_document_types, documents","ref_document_types, documents"
+statements,statements
+statements,statements
+statements,statements
+documents,documents
+"statements, documents","statements, documents"
+"ref_document_types, documents","ref_document_types, documents"
+"accounts, statements","accounts, statements"
+projects,projects
+documents_with_expenses,documents_with_expenses
+documents,documents
+"documents_with_expenses, ref_budget_codes","documents_with_expenses, ref_budget_codes"
+documents,documents
+"documents, documents_with_expenses","documents, documents_with_expenses"
+"documents, documents_with_expenses","documents, documents_with_expenses"
+documents_with_expenses,documents_with_expenses
+"accounts, statements","accounts, statements"
+documents,documents
+documents,documents
+documents,documents
+ref_budget_codes,ref_budget_codes
+"venue, paper","venue, paper"
+"paperkeyphrase, keyphrase, paper, writes, author","paperkeyphrase, paper, writes, keyphrase, author"
+"writes, author, paper","writes, paper, author"
+"writes, author","writes, author"
+"venue, paper","venue, paper"
+"paperdataset, dataset, paperkeyphrase, keyphrase","paperkeyphrase, paperdataset, dataset, keyphrase"
+"paperdataset, dataset, paperkeyphrase, keyphrase","paperkeyphrase, paper, paperdataset, dataset, keyphrase"
+"writes, author","writes, author"
+"paper, cite, venue","paper, cite, venue"
+"writes, author, paper","writes, paper, author"
+"writes, author, paper","writes, paper, author"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"paperkeyphrase, keyphrase, paper, writes, author","paperkeyphrase, paper, writes, keyphrase, author"
+"venue, paper, writes","venue, paper, writes"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"venue, paper, writes, author","venue, paper, writes, author"
+"paperkeyphrase, keyphrase, paper, venue","paperkeyphrase, paper, venue, keyphrase"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"writes, author, paper","writes, paper, author"
+"paperdataset, dataset, paper, venue","paper, venue, paperdataset, dataset"
+"venue, paper","venue, paper"
+"paperkeyphrase, keyphrase, paper, writes, author","paperkeyphrase, paper, writes, keyphrase, author"
+"venue, paper, writes, author","venue, paper, writes, author"
+"paperkeyphrase, keyphrase, paper, cite","paperkeyphrase, paper, cite, keyphrase"
+"venue, paper, writes, author","venue, paper, writes, author"
+"venue, paper","venue, paper"
+"paper, cite, writes, author","paper, cite, writes, author"
+"paperkeyphrase, keyphrase, paper, venue","paperkeyphrase, paper, venue, keyphrase"
+"writes, author","writes, author"
+"paper, journal, writes, author","writes, paper, author"
+"venue, paper, writes, author","venue, paper, writes, author"
+paper,paper
+"paperkeyphrase, keyphrase, paper, writes, author","paperkeyphrase, paper, writes, keyphrase, author"
+"venue, paper, writes","venue, paper, writes"
+"paperdataset, dataset, paper","paper, paperdataset, dataset"
+"writes, author","writes, author"
+"paperkeyphrase, keyphrase, paper, writes, author","paperkeyphrase, paper, writes, keyphrase, author"
+"paperkeyphrase, keyphrase, paper, writes","paperkeyphrase, paper, writes, keyphrase"
+"paper, cite, venue","paper, cite, venue"
+"writes, author, paper","writes, paper, author"
+"paperkeyphrase, keyphrase, paper, cite","paperkeyphrase, paper, cite, keyphrase"
+"writes, author, paper","writes, paper, author"
+"writes, paper","writes, paper"
+"writes, author","writes, author"
+"paperkeyphrase, keyphrase, paper, writes","paperkeyphrase, paper, writes, keyphrase"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"venue, paper, writes, author","venue, paper, writes, author"
+"paperdataset, dataset, paper, venue","paper, venue, paperdataset, dataset"
+"paperdataset, dataset, paper","paper, paperdataset, dataset"
+"venue, paper","venue, paper"
+"writes, author","writes, author"
+"venue, paper, writes","venue, paper, writes"
+"venue, paper","venue, paper"
+"writes, author","writes, author"
+"writes, paper","writes, paper"
+"venue, paper, writes","venue, paper, writes"
+"venue, paper","venue, paper"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"writes, author, paper","writes, paper, author"
+"paperkeyphrase, keyphrase, paper, writes, author","paperkeyphrase, paper, writes, keyphrase, author"
+"venue, paper","venue, paper"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"venue, paper","venue, paper"
+"paperdataset, dataset, paper","paper, paperdataset, dataset"
+"paperkeyphrase, keyphrase, paper, writes","paperkeyphrase, paper, writes, keyphrase"
+"writes, author","writes, author"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"writes, author, paper","writes, paper, author"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"venue, paper","venue, paper"
+"paper, cite, writes, author","paper, cite, writes, author"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"paperdataset, dataset, paperkeyphrase, keyphrase","paperkeyphrase, paperdataset, dataset, keyphrase"
+"paperkeyphrase, keyphrase, paper, writes, author","paperkeyphrase, paper, writes, keyphrase, author"
+paper,paper
+"writes, author, paper","writes, paper, author"
+"writes, author, paper","writes, paper, author"
+"paperkeyphrase, keyphrase, paper, venue","paperkeyphrase, paper, venue, keyphrase"
+"venue, paper, writes","venue, paper, writes"
+"writes, author, paper","writes, paper, author"
+"venue, paper, writes, author","venue, paper, writes, author"
+"writes, author, paper","writes, paper, author"
+"paper, journal","paper, journal"
+"writes, author, paper","writes, paper, author"
+"paperkeyphrase, keyphrase, paper, venue","paperkeyphrase, paper, venue, keyphrase"
+"paperkeyphrase, keyphrase, paper, writes, author","paperkeyphrase, paper, writes, keyphrase, author"
+"writes, author, cite","writes, cite, author"
+"venue, paper","venue, paper"
+"writes, author","writes, author"
+"paperkeyphrase, keyphrase, paper, writes","paperkeyphrase, paper, writes, keyphrase"
+"paper, cite, venue","paper, cite, venue"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"writes, author","writes, author"
+"writes, author","writes, author"
+paper,paper
+"writes, author","writes, author"
+venue,"venue, paper"
+"venue, paper","venue, paper"
+"writes, author, paper","writes, paper, author"
+"writes, author","writes, author"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+paper,"venue, paper"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"writes, author, paper","writes, paper, author"
+"venue, paper, writes, author","venue, paper, writes, author"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"venue, paper","venue, paper"
+"writes, author","writes, author"
+"paperdataset, dataset, paperkeyphrase, paper, venue, keyphrase","paperkeyphrase, paper, venue, paperdataset, dataset, keyphrase"
+"writes, author, paper","writes, paper, author"
+"paper, cite, venue","paper, cite, venue"
+"paperdataset, dataset, paperkeyphrase, keyphrase","paperkeyphrase, paperdataset, dataset, keyphrase"
+"paperkeyphrase, keyphrase, paper, writes, author","paperkeyphrase, paper, writes, keyphrase, author"
+"paperkeyphrase, keyphrase, cite, paper, venue","paperkeyphrase, paper, cite, venue, keyphrase"
+"paperkeyphrase, keyphrase, paper, writes","paperkeyphrase, paper, writes, keyphrase"
+"paper, cite, venue","paper, cite, venue"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"venue, paper","venue, paper"
+"paperkeyphrase, keyphrase, paper, writes, author","paperkeyphrase, paper, writes, keyphrase, author"
+"paperkeyphrase, keyphrase, paper, writes","paperkeyphrase, paper, writes, keyphrase"
+"paper, cite, writes, author","paper, cite, writes, author"
+"venue, paper","venue, paper"
+"paper, cite, venue","paper, cite, venue"
+"paperdataset, dataset, paperkeyphrase, keyphrase","paperkeyphrase, paperdataset, dataset, keyphrase"
+"writes, author, cite","writes, cite, author"
+"writes, author","writes, author"
+"paperkeyphrase, keyphrase, paper, writes","paperkeyphrase, paper, writes, keyphrase"
+"paperkeyphrase, keyphrase, paper, writes, author","paperkeyphrase, paper, writes, keyphrase, author"
+"venue, paper","venue, paper"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"venue, paper","venue, paper"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"writes, author, paper","writes, paper, author"
+"venue, paper, writes, author","writes, paper, author"
+"paperdataset, dataset, paper, venue","paper, venue, paperdataset, dataset"
+"paperkeyphrase, keyphrase, paper, writes, author","paperkeyphrase, paper, writes, keyphrase, author"
+"paperkeyphrase, keyphrase, paper, writes, author","paperkeyphrase, paper, writes, keyphrase, author"
+"venue, paper","venue, paper"
+"venue, paper","venue, paper"
+"writes, author, paper","writes, paper, author"
+"paperkeyphrase, keyphrase, paper, cite","paperkeyphrase, paper, cite, keyphrase"
+"paperdataset, dataset, paper","paper, paperdataset, dataset"
+"paper, paperkeyphrase, writes, author","paperkeyphrase, paper, writes, author"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"paperkeyphrase, keyphrase, paper, writes","paperkeyphrase, paper, writes, keyphrase"
+"writes, author","writes, author"
+"venue, paper, writes","venue, paper, writes"
+"writes, author, paper","writes, paper, author"
+"writes, author, cite","writes, cite, author"
+"writes, author, paper","writes, paper, author"
+"paper, paperdataset, writes, author","paper, writes, paperdataset, author"
+"paperdataset, dataset, paper","paper, paperdataset, dataset"
+"paperkeyphrase, keyphrase, paper, cite","paperkeyphrase, paper, cite, keyphrase"
+"venue, paper","venue, paper"
+"venue, paper, writes","venue, paper, writes"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"paperkeyphrase, keyphrase, paper, writes, author","paperkeyphrase, paper, writes, keyphrase, author"
+"writes, author","writes, author"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"writes, author, cite","writes, cite, author"
+"writes, author","writes, author"
+"paperdataset, dataset, paperkeyphrase, paper, keyphrase","paperkeyphrase, paper, keyphrase"
+"writes, author","writes, author"
+"paperkeyphrase, keyphrase, paper, writes, author","paperkeyphrase, paper, writes, keyphrase, author"
+"paper, cite, writes, author","paper, cite, writes, author"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"paperkeyphrase, keyphrase, paper, writes, author","paperkeyphrase, paper, writes, keyphrase, author"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"writes, author, paper","writes, paper, author"
+"writes, author, paper","writes, paper, author"
+"venue, paper","venue, paper"
+"paper, cite, writes, author","paper, cite, writes, author"
+"writes, author, paper","writes, paper, author"
+paper,"paperkeyphrase, paper, keyphrase"
+"venue, paper, writes","venue, paper, writes"
+"paperkeyphrase, keyphrase, writes, author","paperkeyphrase, paper, writes, keyphrase, author"
+"writes, author","writes, author"
+"paperkeyphrase, keyphrase, paper, venue","paperkeyphrase, paper, venue, keyphrase"
+"paperdataset, dataset, paper","paper, paperdataset, dataset"
+"paperkeyphrase, keyphrase, writes, author","paperkeyphrase, writes, keyphrase, author"
+"paperkeyphrase, keyphrase, paper, venue","paperkeyphrase, paper, venue, keyphrase"
+"venue, paper, writes","venue, paper, writes"
+"paper, paperkeyphrase, writes, author","paperkeyphrase, paper, writes, author"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"paperkeyphrase, keyphrase, paper, writes, author","paperkeyphrase, paper, writes, keyphrase, author"
+"writes, author, cite","writes, cite, author"
+"paperkeyphrase, keyphrase, paper, writes, author","paperkeyphrase, paper, writes, keyphrase, author"
+"paperdataset, dataset, paper, venue","paper, venue, paperdataset, dataset"
+"paperkeyphrase, keyphrase, paper, writes, author","paperkeyphrase, paper, writes, keyphrase, author"
+"writes, author, paper","writes, paper, author"
+"venue, paper, writes, author","venue, paper, writes, author"
+"venue, paper","venue, paper"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"writes, author, paper","writes, paper, author"
+"paper, cite, writes, author","paper, cite, writes, author"
+"paperkeyphrase, keyphrase, paper, writes, author","paperkeyphrase, paper, writes, keyphrase, author"
+"writes, author","writes, author"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"venue, paper","venue, paper"
+"paperkeyphrase, keyphrase, writes, author","paperkeyphrase, writes, keyphrase, author"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"writes, author, paper","writes, paper, author"
+"paperkeyphrase, keyphrase, writes, author","paperkeyphrase, paper, writes, keyphrase, author"
+paper,"paperkeyphrase, keyphrase"
+"writes, author, cite","writes, cite, author"
+"paperkeyphrase, keyphrase, paper, writes, author","paperkeyphrase, paper, writes, keyphrase, author"
+"writes, author, paper","writes, paper, author"
+"paperkeyphrase, keyphrase, writes, author","paperkeyphrase, paper, writes, keyphrase, author"
+"paper, paperkeyphrase, writes, author","paperkeyphrase, paper, writes, keyphrase, author"
+"writes, author, paper","writes, paper, author"
+"venue, paper, writes, author","venue, paper, writes, author"
+"venue, paper","venue, paper"
+"paperkeyphrase, keyphrase, paper, writes","paperkeyphrase, paper, writes, keyphrase"
+"paperkeyphrase, keyphrase, paper, writes, author","paperkeyphrase, paper, writes, keyphrase, author"
+"writes, author, paper","writes, paper, author"
+"paperkeyphrase, keyphrase, paper, venue","paperkeyphrase, paper, venue, keyphrase"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"venue, paper, writes, author","venue, paper, writes, author"
+"writes, author","writes, author"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"paperkeyphrase, keyphrase, paper, venue","paperkeyphrase, paper, venue, keyphrase"
+"paperkeyphrase, keyphrase, writes, paper, author","paperkeyphrase, paper, writes, keyphrase, author"
+"paperkeyphrase, keyphrase, paper, writes, author","paperkeyphrase, paper, writes, keyphrase, author"
+"paperkeyphrase, keyphrase, paper, cite","paperkeyphrase, paper, cite, keyphrase"
+"paperkeyphrase, keyphrase, paper, cite","paperkeyphrase, paper, cite, keyphrase"
+"paper, paperkeyphrase, writes, author","paperkeyphrase, paper, writes, author"
+"writes, author, paper","writes, paper, author"
+"paperkeyphrase, keyphrase, paper, venue","paperkeyphrase, paper, venue, keyphrase"
+"paperkeyphrase, keyphrase, paper, venue","paperkeyphrase, paper, venue, keyphrase"
+"paperdataset, dataset, paperkeyphrase, paper, venue, keyphrase","paperkeyphrase, paper, venue, paperdataset, dataset, keyphrase"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"paperkeyphrase, keyphrase, paper, cite","paperkeyphrase, paper, cite, keyphrase"
+"venue, paper, writes","venue, paper, writes"
+"paperdataset, dataset, paperkeyphrase, keyphrase","paperkeyphrase, paperdataset, dataset, keyphrase"
+"paper, cite, writes, author","paper, cite, writes, author"
+"writes, author, cite","writes, cite, author"
+"venue, paper, writes","venue, paper, writes"
+"paper, paperdataset, writes, author","paper, writes, paperdataset, author"
+"paper, cite, venue","paper, cite, venue"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"venue, paper","venue, paper"
+"venue, paper","venue, paper"
+"paperkeyphrase, keyphrase, paper, writes, author","paperkeyphrase, paper, writes, keyphrase, author"
+"writes, author, paper","writes, paper, author"
+"paperdataset, dataset, paperkeyphrase, paper, venue, keyphrase","paperkeyphrase, paper, venue, keyphrase"
+"venue, paper, writes, author","venue, paper, writes, author"
+"paperkeyphrase, keyphrase, paper, cite","paperkeyphrase, paper, cite, keyphrase"
+"paperkeyphrase, keyphrase, paper, venue","paperkeyphrase, paper, venue, keyphrase"
+"paperkeyphrase, keyphrase, paper, venue","paperkeyphrase, paper, venue, keyphrase"
+"writes, author","writes, author"
+"venue, paper, writes","venue, paper, writes"
+"writes, author, paper","writes, paper, author"
+"paperkeyphrase, keyphrase, writes, author","paperkeyphrase, paper, writes, keyphrase, author"
+"venue, paper, writes","venue, paper, writes"
+"paperkeyphrase, keyphrase, paper, writes","paperkeyphrase, paper, writes, keyphrase"
+"writes, author, paper","writes, paper, author"
+"writes, author","writes, author"
+"paper, cite, writes, author","paper, cite, writes, author"
+"writes, author","writes, author"
+"writes, author, paper","writes, paper, author"
+"paperdataset, dataset, paper","paper, paperdataset, dataset"
+"writes, author","writes, author"
+"paperkeyphrase, keyphrase, paper, writes, author","paperkeyphrase, paper, writes, keyphrase, author"
+"writes, author, cite","writes, cite, author"
+"paperdataset, dataset, paper, writes","paper, writes, paperdataset, dataset"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"paperkeyphrase, keyphrase, paper, venue","paperkeyphrase, paper, venue, keyphrase"
+"writes, author","writes, author"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"venue, paper, writes, author","venue, paper, writes, author"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"paper, paperdataset, writes, author","paper, writes, paperdataset, author"
+paper,"paperkeyphrase, paper, keyphrase"
+"writes, author","writes, author"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"paperkeyphrase, keyphrase, paper, venue","paperkeyphrase, paper, venue, keyphrase"
+"paper, cite, writes, author","paper, cite, writes, author"
+"paperdataset, dataset, paperkeyphrase, keyphrase","paperkeyphrase, paperdataset, dataset, keyphrase"
+"paper, journal, paperkeyphrase","paper, journal"
+"paperdataset, dataset, paperkeyphrase, keyphrase","paperkeyphrase, paperdataset, dataset, keyphrase"
+"venue, paper","venue, paper"
+"venue, paper, writes, author","venue, paper, writes, author"
+"paperkeyphrase, keyphrase, paper, cite","paperkeyphrase, paper, cite, keyphrase"
+"paperkeyphrase, keyphrase, paper, writes, author","paperkeyphrase, paper, writes, keyphrase, author"
+"writes, author, paper","writes, paper, author"
+"paper, cite, writes, author","paper, cite, writes, author"
+"writes, author, paper","writes, paper, author"
+"paper, cite, writes, author","paper, cite, writes, author"
+"venue, paper","venue, paper"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"writes, author","writes, author"
+"writes, author","writes, author"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"paperkeyphrase, keyphrase, paper, writes, author","paperkeyphrase, paper, writes, keyphrase, author"
+"paperkeyphrase, keyphrase, paper, writes, author","paperkeyphrase, paper, writes, keyphrase, author"
+"venue, paper","venue, paper"
+"paperkeyphrase, keyphrase, paper, venue","paperkeyphrase, paper, venue, keyphrase"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"paper, cite, venue","paper, cite, venue"
+"paperkeyphrase, keyphrase, writes, author","paperkeyphrase, paper, writes, keyphrase, author"
+"writes, author, paper","writes, paper, author"
+"paperkeyphrase, keyphrase, paper, venue","paperkeyphrase, paper, venue, keyphrase"
+"venue, paper, writes, author","venue, paper, writes, author"
+"venue, paper, writes, cite","paper, cite, venue"
+"paper, cite, writes, author","paper, cite, writes, author"
+"paper, paperdataset, writes, author","paper, writes, paperdataset, author"
+"venue, paper, writes","venue, paper, writes"
+"paper, paperdataset, writes, author","paper, writes, paperdataset, author"
+"paperdataset, dataset, paper","paper, paperdataset, dataset"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"writes, author, paper","writes, paper, author"
+"venue, paper, writes","venue, paper, writes"
+"venue, paper","venue, paper"
+"paper, paperdataset, writes, author","paper, writes, paperdataset, author"
+"paperkeyphrase, keyphrase, paper, cite","paperkeyphrase, paper, cite, keyphrase"
+"writes, author, paper","writes, paper, author"
+"writes, author, paper","writes, paper, author"
+"writes, author, paper","writes, paper, author"
+"paperkeyphrase, keyphrase, paper, venue","paperkeyphrase, paper, venue, keyphrase"
+"paperdataset, dataset, paperkeyphrase, keyphrase","paperkeyphrase, paperdataset, dataset, keyphrase"
+paper,papers
+"paperkeyphrase, keyphrase, paper, venue","paperkeyphrase, paper, venue, keyphrase"
+"paper, cite, writes, author","paper, cite, writes, author"
+"venue, paper, writes, author","venue, paper, writes, author"
+"venue, paper","venue, paper"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"writes, author","writes, author"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"venue, paper, writes, author","venue, paper, writes, author"
+"paperdataset, dataset, paper","paper, paperdataset, dataset"
+"writes, author","writes, author"
+"paperkeyphrase, keyphrase, paper, writes","paperkeyphrase, paper, writes, keyphrase"
+"paperdataset, dataset, paper, paperkeyphrase, keyphrase","paperkeyphrase, paper, paperdataset, dataset, keyphrase"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"writes, author","writes, author"
+"paperkeyphrase, keyphrase, paper, writes","paperkeyphrase, paper, writes, keyphrase"
+"venue, paper, writes","venue, paper, writes"
+"paperkeyphrase, keyphrase, paper, venue","paperkeyphrase, paper, venue, keyphrase"
+"writes, author","writes, author"
+"venue, paper, writes","venue, paper, writes"
+"writes, author, paper","writes, paper, author"
+"paperkeyphrase, keyphrase, paper, venue","paperkeyphrase, paper, venue, keyphrase"
+"writes, author, paper","writes, paper, author"
+"writes, author, paper","writes, paper, author"
+"paperdataset, dataset, paperkeyphrase, paper, venue, keyphrase","paperkeyphrase, paper, venue, paperdataset, dataset, keyphrase"
+"writes, author","writes, author"
+"paperkeyphrase, keyphrase, paper, venue","paperkeyphrase, paper, venue, keyphrase"
+"paperdataset, dataset, paper","paper, paperdataset, dataset"
+paper,paper
+"paper, cite, venue","paper, cite, venue"
+"writes, author, paper","writes, paper, author"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"venue, paper","venue, paper"
+"venue, paper, writes","venue, paper, writes"
+"writes, author","writes, paper, author"
+"venue, paper, writes, author","venue, paper, writes, author"
+"paperkeyphrase, keyphrase, writes, paper, author, venue","paperkeyphrase, paper, writes, keyphrase, author"
+"paperkeyphrase, keyphrase, paper, venue, writes, author","paperkeyphrase, paper, venue, keyphrase, author"
+"paperdataset, dataset, paperkeyphrase, keyphrase","paperkeyphrase, paperdataset, dataset, keyphrase"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"paperkeyphrase, keyphrase, paper, writes, author","paperkeyphrase, paper, writes, keyphrase, author"
+"writes, author","writes, author"
+"paperkeyphrase, keyphrase, paper, writes, author","paperkeyphrase, paper, writes, keyphrase, author"
+"writes, author, paper","writes, paper, author"
+"paperdataset, dataset, paper, venue","paper, venue, paperdataset, dataset"
+"venue, paper",None
+"writes, author","writes, author"
+"writes, author","writes, author"
+"writes, author","writes, author"
+"paperkeyphrase, keyphrase, paper, venue","paperkeyphrase, paper, venue, keyphrase"
+"venue, paper, writes, author","venue, paper, writes, author"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"paper, journal, writes, author","paper, writes, author"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"writes, author, paper","writes, paper, author"
+"paperkeyphrase, keyphrase, paper, writes","paperkeyphrase, paper, writes, keyphrase"
+"paperkeyphrase, keyphrase, paper, writes","paperkeyphrase, paper, writes, keyphrase"
+"paperkeyphrase, keyphrase, paper, venue","paperkeyphrase, paper, venue, keyphrase"
+"writes, author","writes, author"
+"paperdataset, dataset, paper","paper, paperdataset, dataset"
+"paperkeyphrase, keyphrase, paper, cite","paperkeyphrase, paper, cite, keyphrase"
+"writes, author","writes, author"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"writes, author, paper","writes, paper, author"
+"writes, paper","writes, paper"
+"writes, author","writes, author"
+"paperdataset, dataset, paperkeyphrase, keyphrase","paperkeyphrase, paperdataset, dataset, keyphrase"
+"paperdataset, dataset, paperkeyphrase, keyphrase","paperkeyphrase, paperdataset, dataset, keyphrase"
+"paperkeyphrase, keyphrase, writes, author","paperkeyphrase, writes, keyphrase, author"
+"writes, author","writes, author"
+"writes, author","writes, author"
+"venue, paper","venue, paper"
+"writes, author","writes, author"
+"venue, paper, writes, author","venue, paper, writes, author"
+"writes, author","writes, author"
+"paperkeyphrase, keyphrase, writes, author","paperkeyphrase, paper, writes, keyphrase, author"
+"writes, author, paper","writes, paper, author"
+"paperkeyphrase, keyphrase, paper, writes, author","paperkeyphrase, paper, writes, keyphrase, author"
+"paperkeyphrase, keyphrase, paper, venue","paperkeyphrase, paper, venue, keyphrase"
+"paper, cite, venue","paper, cite, venue"
+"paperkeyphrase, keyphrase, paper, cite","paperkeyphrase, paper, cite, keyphrase"
+"paperkeyphrase, keyphrase, writes, cite, author","paperkeyphrase, paper, writes, keyphrase, author"
+"paper, paperkeyphrase, writes, author","paperkeyphrase, paper, writes, keyphrase, author"
+"paperkeyphrase, keyphrase, paper, cite","paperkeyphrase, paper, cite, keyphrase"
+"paperkeyphrase, keyphrase, paper, venue","paperkeyphrase, paper, venue, keyphrase"
+"venue, paper","venue, paper"
+"venue, paper, writes, author","venue, paper, writes, author"
+"writes, author, paper","writes, paper, author"
+"paperkeyphrase, keyphrase, paper, venue","paperkeyphrase, paper, venue, keyphrase"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"paperkeyphrase, keyphrase, paper, writes, author","paperkeyphrase, paper, writes, keyphrase, author"
+"writes, author","writes, author"
+"paper, cite, writes, author","paper, cite, writes, author"
+"paper, cite, venue","paper, cite, venue"
+"paperkeyphrase, keyphrase, paper, venue","paperkeyphrase, paper, venue, keyphrase"
+"writes, author","writes, author"
+"paperdataset, dataset, paper","paper, paperdataset, dataset"
+"paper, cite, writes, author","paper, cite, writes, author"
+"paperkeyphrase, keyphrase, paper, venue","paperkeyphrase, paper, venue, keyphrase"
+"paperkeyphrase, keyphrase, paper, writes, author","paperkeyphrase, paper, writes, keyphrase, author"
+"paperdataset, dataset, paper, venue","paper, venue, paperdataset, dataset"
+"paperkeyphrase, keyphrase, paper, writes, author","paperkeyphrase, paper, writes, keyphrase, author"
+"venue, paper","venue, paper"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"venue, paper, writes, author","venue, paper, writes, author"
+"venue, paper, writes, author","writes, paper, author"
+"paperkeyphrase, keyphrase, paper, venue","paperkeyphrase, paper, venue, keyphrase"
+"paper, cite, writes, author","paper, cite, writes, author"
+"writes, author, paper","writes, paper, author"
+"paperkeyphrase, keyphrase, paper, writes, author","paperkeyphrase, paper, writes, keyphrase, author"
+"paper, cite","paper, cite"
+"writes, author, paper","writes, paper, author"
+"writes, author","writes, author"
+"venue, paper","venue, paper"
+"writes, author","writes, author"
+"paper, cite, writes, author","paper, cite, writes, author"
+"paperdataset, dataset, paper, venue","paper, venue, paperdataset, dataset"
+"paper, paperkeyphrase, venue, writes, author","paperkeyphrase, paper, writes, keyphrase, author"
+"paperkeyphrase, keyphrase, paper, venue","paperkeyphrase, paper, venue, keyphrase"
+"paperkeyphrase, keyphrase, paper, cite","paperkeyphrase, paper, cite, keyphrase"
+"venue, paper, writes","venue, paper, writes"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"paperkeyphrase, keyphrase, paper, venue","paperkeyphrase, paper, venue, keyphrase"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"venue, paper, writes","venue, paper, writes"
+"writes, author, paper","writes, paper, author"
+"writes, author, paper","writes, author"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"writes, author, paper","writes, paper, author"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"paperkeyphrase, keyphrase, writes, paper, author, venue","paperkeyphrase, paper, writes, keyphrase, author"
+"writes, author, paper","writes, paper, author"
+"paperkeyphrase, keyphrase, writes, author","paperkeyphrase, paper, writes, keyphrase, author"
+"venue, paper, writes","venue, paper, writes"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"writes, author, paper","writes, paper, author"
+"venue, paper","venue, paper"
+"writes, author","writes, author"
+"writes, author","writes, author"
+"paperkeyphrase, keyphrase, paper, writes","paperkeyphrase, paper, writes, keyphrase"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"venue, paper, writes","venue, paper, writes"
+"writes, author","writes, author"
+"paperdataset, dataset, paper","paper, paperdataset, dataset"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"venue, paper","venue, paper"
+"venue, paper","venue, paper"
+"paperkeyphrase, keyphrase, paper, cite","paperkeyphrase, paper, cite, keyphrase"
+"venue, paper, writes, author","venue, paper, writes, author"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"venue, paper, writes","venue, paper, writes"
+"paper, cite, writes, author","paper, cite, writes, author"
+"paperkeyphrase, keyphrase, paper, writes, author","paperkeyphrase, paper, writes, keyphrase, author"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+paper,None
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"paperdataset, dataset, paper, writes","paper, writes, paperdataset, dataset"
+"paper, journal, paperkeyphrase","paper, journal"
+"paper, cite, writes, author","paper, cite, writes, author"
+"paperkeyphrase, keyphrase, paper, venue","paperkeyphrase, paper, venue, keyphrase"
+"paperdataset, dataset, paperkeyphrase, keyphrase","paperkeyphrase, paperdataset, dataset, keyphrase"
+"writes, author, paper","writes, author"
+"writes, author, paper","writes, paper, author"
+"paper, cite, writes, author","paper, cite, writes, author"
+"writes, author","writes, author"
+"venue, paper","venue, paper"
+"writes, author, paper","writes, paper, author"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"paper, cite","paper, cite"
+"venue, paper","venue, paper"
+"paperdataset, dataset, paperkeyphrase, paper, keyphrase","paperkeyphrase, paper, keyphrase"
+"writes, author, paper","writes, paper, author"
+"writes, author, paper","writes, paper, author"
+"paperdataset, dataset, paper","paper, paperdataset, dataset"
+"paperkeyphrase, keyphrase, paper, venue","paperkeyphrase, paper, venue, keyphrase"
+"venue, paper, writes","venue, paper, writes"
+"writes, author","writes, author"
+"writes, author, paper","writes, paper, author"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"paper, cite, venue","paper, cite, venue"
+"paperkeyphrase, keyphrase, paper, writes, author","paperkeyphrase, paper, writes, keyphrase, author"
+"writes, author","writes, author"
+"paperkeyphrase, keyphrase, paper","paperkeyphrase, paper, keyphrase"
+"paper, cite, venue","paper, cite, venue"
+"paper, cite, writes, author","paper, cite, writes, author"
+"paperdataset, dataset, paperkeyphrase, paper, venue, keyphrase","paperkeyphrase, paper, venue, paperdataset, dataset, keyphrase"
+budget,budget
+endowment,endowment
+school,None
+"endowment, school","endowment, school"
+school,None
+school,school
+school,school
+endowment,endowment
+"budget, school","budget, school"
+school,university
+school,school
+endowment,endowment
+endowment,endowment
+"school, endowment","school, endowment"
+"budget, school, endowment","budget, school, endowment"
+"budget, school","budget, school"
+school,None
+endowment,endowment
+school,school
+"endowment, school","endowment, school"
+budget,budget
+budget,budget
+"endowment, school","endowment, school"
+"school, budget","school, budget"
+musical,musical
+"actor, musical","actor, musical"
+"actor, musical","actor, musical"
+"actor, musical","actor, musical"
+musical,musical
+musical,musical
+musical,musical
+actor,actor
+actor,actor
+"actor, musical","actor, musical"
+actor,actor
+musical,musical
+musical,musical
+"actor, musical","actor, musical"
+actor,actor
+musical,musical
+actor,actor
+"musical, actor","actor, musical"
+actor,actor
+actor,actor
+musical,musical
+actor,actor
+musical,musical
+"actor, musical","actor, musical"
+"musical, actor","actor, musical"
+musical,musical
+"actor, musical","actor, musical"
+"actor, musical","actor, musical"
+musical,musical
+"actor, musical","actor, musical"
+musical,musical
+musical,musical
+actor,actor
+"actor, musical","actor, musical"
+actor,actor
+musical,musical
+entrepreneur,entrepreneur
+"entrepreneur, people","entrepreneur, people"
+entrepreneur,entrepreneur
+entrepreneur,entrepreneur
+"entrepreneur, people","entrepreneur, people"
+people,people
+entrepreneur,entrepreneur
+"entrepreneur, people","entrepreneur, people"
+entrepreneur,entrepreneur
+"people, entrepreneur","people, entrepreneur"
+"entrepreneur, people","entrepreneur, people"
+entrepreneur,entrepreneur
+"entrepreneur, people","entrepreneur, people"
+people,people
+"people, entrepreneur","people, entrepreneur"
+"entrepreneur, people","entrepreneur, people"
+entrepreneur,entrepreneur
+people,people
+"entrepreneur, people","entrepreneur, people"
+people,people
+entrepreneur,entrepreneur
+entrepreneur,entrepreneur
+entrepreneur,entrepreneur
+entrepreneur,entrepreneur
+"entrepreneur, people","entrepreneur, people"
+entrepreneur,entrepreneur
+entrepreneur,entrepreneur
+"entrepreneur, people","entrepreneur, people"
+"entrepreneur, people","entrepreneur, people"
+"entrepreneur, people","entrepreneur, people"
+"entrepreneur, people","entrepreneur, people"
+"entrepreneur, people","entrepreneur, people"
+entrepreneur,entrepreneur
+"entrepreneur, people","entrepreneur, people"
+"entrepreneur, people","entrepreneur, people"
+entrepreneur,entrepreneur
+"genres, tracks, media_types","tracks, genres, media_types"
+customers,customers
+"tracks, playlist_tracks, playlists","tracks, playlist_tracks, playlists"
+"tracks, playlist_tracks, playlists","tracks, playlist_tracks, playlists"
+"customers, invoices","customers, invoices"
+invoices,invoices
+"genres, tracks, media_types","tracks, genres, media_types"
+"employees, customers","employees, customers"
+employees,employees
+"albums, tracks","albums, tracks"
+genres,genres
+customers,customers
+"customers, invoices","customers, invoices"
+albums,albums
+invoices,invoices
+"tracks, invoice_lines, invoices, customers","tracks, invoice_lines, invoices, customers"
+invoices,invoices
+"albums, tracks","albums, tracks"
+invoices,invoices
+employees,employees
+"customers, invoices","customers, invoices"
+"albums, tracks","albums, tracks"
+customers,customers
+playlists,playlists
+invoices,invoices
+employees,employees
+employees,employees
+"genres, tracks, media_types","tracks, genres, media_types"
+invoices,invoices
+"genres, tracks","tracks, genres"
+employees,employees
+customers,customers
+genres,genres
+"employees, customers","employees, customers"
+employees,employees
+media_types,media_types
+"genres, tracks","tracks, genres"
+"customers, invoices","customers, invoices"
+albums,albums
+employees,employees
+"albums, artists","albums, artists"
+customers,customers
+employees,employees
+tracks,tracks
+invoices,invoices
+invoices,invoices
+invoices,invoices
+employees,employees
+"customers, invoices","customers, invoices"
+"tracks, playlist_tracks, playlists","tracks, playlist_tracks, playlists"
+tracks,tracks
+invoices,invoices
+employees,employees
+"genres, tracks","tracks, genres"
+tracks,tracks
+invoices,invoices
+"albums, tracks","albums, tracks"
+"genres, tracks","tracks, genres"
+"employees, customers","employees, customers"
+"customers, invoices","customers, invoices"
+"genres, tracks","tracks, genres"
+"genres, tracks","tracks, genres"
+"albums, artists","albums, artists"
+"customers, invoices","customers, invoices"
+albums,albums
+"customers, invoices","customers, invoices"
+invoices,invoices
+"customers, invoices","customers, invoices"
+employees,employees
+"albums, artists","albums, artists"
+"customers, invoices","customers, invoices"
+"tracks, playlist_tracks, playlists","tracks, playlist_tracks, playlists"
+employees,employees
+invoices,invoices
+playlists,playlists
+"tracks, invoice_lines, invoices, customers","tracks, invoice_lines, invoices, customers"
+employees,employees
+"playlist_tracks, playlists","playlist_tracks, playlists"
+invoices,invoices
+tracks,tracks
+employees,employees
+albums,albums
+tracks,tracks
+customers,customers
+"genres, tracks","tracks, genres"
+"tracks, playlist_tracks, playlists","tracks, playlist_tracks, playlists"
+customers,customers
+"customers, invoices","customers, invoices"
+customers,customers
+"genres, tracks, media_types","tracks, genres, media_types"
+customers,customers
+employees,employees
+"artists, albums","artists, albums"
+"artists, albums","artists, albums"
+employees,employees
+invoices,invoices
+media_types,media_types
+customers,customers
+albums,albums
+"albums, tracks","albums, tracks"
+albums,albums
+hotels,hotels
+"tourist_attractions, visits","tourist_attractions, visits"
+tourist_attractions,tourist_attractions
+"tourist_attractions, tourist_attraction_features, features","tourist_attractions, tourist_attraction_features, features"
+locations,locations
+hotels,hotels
+hotels,hotels
+"ref_attraction_types, tourist_attractions","ref_attraction_types, tourist_attractions"
+hotels,hotels
+"museums, tourist_attractions","museums, tourist_attractions"
+photos,photos
+locations,locations
+"photos, tourist_attractions","photos, tourist_attractions"
+"royal_family, tourist_attractions","royal_family, tourist_attractions"
+"tourist_attractions, visitors, visits","tourist_attractions, visits, visitors"
+locations,locations
+"shops, tourist_attractions","shops, tourist_attractions"
+"tourist_attractions, visits","tourist_attractions, visits"
+"tourist_attractions, visitors, visits","tourist_attractions, visits, visitors"
+hotels,hotels
+"shops, tourist_attractions","shops, tourist_attractions"
+hotels,hotels
+hotels,hotels
+staff,staff
+"visitors, visits","visits, visitors"
+"staff, tourist_attractions","staff, tourist_attractions"
+hotels,hotels
+"locations, tourist_attractions","tourist_attractions, locations"
+"street_markets, tourist_attractions","street_markets, tourist_attractions"
+"tourist_attractions, visits, visitors","visits, tourist_attractions, visitors"
+"tourist_attractions, visits","tourist_attractions, visits"
+"locations, tourist_attractions","tourist_attractions, locations"
+"photos, tourist_attractions","photos, tourist_attractions"
+"tourist_attractions, visits","tourist_attractions, visits"
+hotels,hotels
+visits,visits
+hotels,hotels
+hotels,hotels
+locations,locations
+hotels,hotels
+tourist_attractions,tourist_attractions
+photos,photos
+"photos, tourist_attractions","photos, tourist_attractions"
+tourist_attractions,tourist_attractions
+tourist_attractions,tourist_attractions
+"hotels, ref_hotel_star_ratings","hotels, ref_hotel_star_ratings"
+"visitors, visits","visits, visitors"
+tourist_attractions,tourist_attractions
+"museums, tourist_attractions","museums, tourist_attractions"
+locations,locations
+staff,staff
+"tourist_attractions, visits","tourist_attractions, visits"
+tourist_attractions,tourist_attractions
+locations,locations
+"tourist_attractions, visitors, visits","tourist_attractions, visits, visitors"
+"locations, tourist_attractions","tourist_attractions, locations"
+"tourist_attractions, tourist_attraction_features, features","tourist_attractions, tourist_attraction_features, features"
+hotels,hotels
+"hotels, ref_hotel_star_ratings","hotels, ref_hotel_star_ratings"
+"royal_family, tourist_attractions","royal_family, tourist_attractions"
+hotels,hotels
+"visitors, visits","visits, visitors"
+hotels,hotels
+hotels,hotels
+tourist_attractions,tourist_attractions
+"locations, tourist_attractions","tourist_attractions, locations"
+"tourist_attractions, visits, visitors","tourist_attractions, visits, visitors"
+visits,visits
+"street_markets, tourist_attractions","street_markets, tourist_attractions"
+visitors,visitors
+"photos, tourist_attractions","photos, tourist_attractions"
+"tourist_attractions, visitors, visits","tourist_attractions, visits, visitors"
+"tourist_attractions, visits","tourist_attractions, visits"
+"visitors, visits","visits, visitors"
+locations,locations
+tourist_attractions,tourist_attractions
+"employee, certificate, aircraft","employee, certificate, aircraft"
+aircraft,aircraft
+flight,flight
+flight,flight
+flight,flight
+aircraft,aircraft
+employee,employee
+employee,employee
+"flight, aircraft","flight, aircraft"
+employee,employee
+"employee, certificate, aircraft","employee, certificate, aircraft"
+"employee, certificate","employee, certificate"
+flight,flight
+employee,employee
+aircraft,aircraft
+employee,employee
+employee,employee
+employee,employee
+"certificate, aircraft","certificate, aircraft"
+certificate,certificate
+"flight, aircraft","flight, aircraft"
+employee,employee
+"certificate, aircraft","certificate, aircraft"
+employee,employee
+"employee, certificate, aircraft","employee, certificate, aircraft"
+"flight, aircraft","flight, aircraft"
+aircraft,aircraft
+aircraft,aircraft
+aircraft,aircraft
+flight,flight
+flight,flight
+flight,flight
+flight,flight
+flight,flight
+flight,flight
+employee,employee
+flight,flight
+employee,employee
+"flight, aircraft","flight, aircraft"
+flight,flight
+"employee, certificate, aircraft","employee, certificate, aircraft"
+"employee, certificate, aircraft","employee, certificate, aircraft"
+"employee, certificate","employee, certificate"
+flight,flight
+aircraft,aircraft
+aircraft,aircraft
+employee,employee
+employee,employee
+flight,flight
+flight,flight
+flight,flight
+"employee, certificate, aircraft","employee, certificate, aircraft"
+"employee, certificate, aircraft","employee, certificate, aircraft"
+"flight, aircraft","flight, aircraft"
+"employee, certificate, aircraft","employee, certificate, aircraft"
+employee,employee
+employee,employee
+"employee, certificate","employee, certificate"
+aircraft,aircraft
+flight,flight
+aircraft,aircraft
+certificate,certificate
+"certificate, aircraft","certificate, aircraft"
+flight,flight
+flight,flight
+"employee, certificate","employee, certificate"
+aircraft,aircraft
+aircraft,aircraft
+aircraft,aircraft
+flight,flight
+"flight, aircraft","flight, aircraft"
+aircraft,aircraft
+flight,flight
+flight,flight
+"certificate, aircraft",aircraft
+flight,flight
+employee,employee
+aircraft,aircraft
+aircraft,aircraft
+flight,flight
+flight,flight
+"flight, aircraft","flight, aircraft"
+flight,flight
+"employee, certificate, aircraft","employee, certificate, aircraft"
+employee,employee
+aircraft,aircraft
+flight,flight
+river,river
+river,river
+river,river
+state,state
+state,state
+border_info,border_info
+state,state
+river,river
+city,city
+city,city
+state,state
+river,river
+"state, border_info","state, border_info"
+highlow,highlow
+state,state
+state,state
+border_info,border_info
+"highlow, river","highlow, river"
+"city, state","city, state"
+"state, river","state, river"
+state,state
+border_info,border_info
+highlow,highlow
+state,state
+highlow,highlow
+city,city
+highlow,highlow
+city,city
+state,state
+highlow,highlow
+"city, state","city, state"
+state,state
+river,river
+"state, border_info","state, border_info"
+state,state
+state,state
+river,river
+river,river
+"highlow, state, city","highlow, state"
+city,city
+"city, highlow","city, highlow"
+"state, highlow","highlow, state"
+state,state
+"state, river","state, river"
+city,city
+border_info,border_info
+city,city
+state,state
+highlow,highlow
+highlow,highlow
+state,state
+border_info,border_info
+river,river
+"highlow, border_info","highlow, border_info"
+mountain,mountain
+city,city
+river,river
+city,city
+city,city
+state,state
+city,city
+"state, river","state, river"
+"state, river","state, river"
+border_info,border_info
+state,state
+highlow,highlow
+"state, highlow","state, highlow"
+"state, border_info","state, border_info"
+state,state
+city,city
+state,state
+"city, state","city, state"
+highlow,highlow
+city,city
+state,state
+city,city
+river,river
+city,city
+"state, river","state, river"
+highlow,highlow
+city,city
+"city, border_info","city, border_info"
+state,state
+river,river
+highlow,highlow
+city,city
+state,state
+city,city
+state,state
+state,state
+highlow,mountain
+city,city
+highlow,highlow
+river,river
+"city, state","city, state"
+city,city
+highlow,highlow
+"river, state","river, state"
+river,river
+river,river
+river,river
+"city, state","city, state"
+state,state
+"state, city","state, city"
+city,city
+"city, state","city, state"
+city,city
+city,city
+"river, border_info","river, border_info"
+city,city
+city,city
+river,river
+state,state
+river,border_info
+"state, border_info","state, border_info"
+"state, border_info","state, border_info"
+river,river
+"river, highlow","river, highlow"
+"city, state","city, state"
+state,state
+"city, state","city, state"
+border_info,border_info
+city,city
+river,river
+city,city
+"city, river","city, river"
+"highlow, state","highlow, state"
+river,river
+river,river
+highlow,highlow
+"border_info, river","border_info, river"
+river,river
+"city, state","city, state"
+city,city
+city,city
+highlow,highlow
+state,state
+"river, city","river, city"
+"state, river","state, river"
+river,river
+"city, state","city, state"
+"highlow, state","highlow, state"
+highlow,highlow
+"state, river","state, river"
+"highlow, state","state, highlow"
+"state, highlow","state, highlow"
+river,river
+state,state
+state,state
+state,state
+"city, river","city, river"
+highlow,highlow
+highlow,highlow
+city,city
+state,state
+state,state
+city,city
+river,river
+highlow,highlow
+"river, state","river, state"
+city,city
+city,city
+"state, border_info","state, border_info"
+river,river
+river,river
+state,state
+city,city
+"state, border_info","state, border_info"
+state,state
+state,state
+river,river
+city,city
+state,state
+city,city
+"state, border_info","state, border_info"
+river,river
+city,city
+mountain,mountain
+"border_info, state","state, border_info"
+highlow,highlow
+"state, border_info","state, border_info"
+state,state
+state,state
+"city, border_info","city, border_info"
+"state, border_info","state, border_info"
+mountain,mountain
+state,state
+river,river
+city,city
+highlow,highlow
+highlow,highlow
+"state, border_info","state, border_info"
+city,city
+state,state
+river,river
+"highlow, state","highlow, state"
+state,state
+river,river
+"state, border_info","state, border_info"
+lake,lake
+state,state
+"border_info, state","border_info, state"
+mountain,mountain
+river,river
+state,state
+state,state
+city,city
+"city, river","city, river"
+state,state
+"state, border_info","state, border_info"
+city,city
+state,state
+river,river
+city,city
+city,city
+state,state
+"state, river","state, river"
+highlow,highlow
+state,state
+highlow,highlow
+river,river
+highlow,highlow
+river,river
+city,city
+"border_info, river","border_info, river"
+state,state
+"state, border_info","state, border_info"
+highlow,highlow
+highlow,highlow
+river,river
+river,river
+city,city
+"highlow, border_info","highlow, border_info"
+state,state
+city,city
+river,river
+highlow,highlow
+state,state
+river,river
+river,river
+"river, border_info, state","river, border_info, state"
+river,river
+state,state
+"city, state","city, state"
+"river, border_info","river, border_info"
+river,river
+state,state
+state,state
+state,state
+river,river
+city,city
+river,river
+state,state
+city,city
+"border_info, river","border_info, river"
+city,city
+state,state
+state,state
+"highlow, river","river, highlow"
+"highlow, border_info","highlow, border_info"
+city,city
+river,river
+state,state
+city,city
+"border_info, state","border_info, state"
+"city, state","city, state"
+border_info,border_info
+"river, border_info","river, border_info"
+"highlow, border_info","highlow, border_info"
+border_info,border_info
+river,river
+"border_info, river","border_info, river"
+river,river
+city,city
+highlow,highlow
+highlow,highlow
+state,state
+river,river
+"border_info, state","border_info, state"
+state,state
+river,river
+border_info,border_info
+state,state
+river,river
+river,river
+city,city
+border_info,border_info
+river,river
+city,city
+"state, river","state, river"
+state,state
+"city, state","city, state"
+river,river
+state,state
+state,state
+city,city
+highlow,highlow
+river,river
+state,state
+state,state
+river,river
+highlow,highlow
+state,state
+state,state
+river,river
+river,river
+state,state
+"state, river","state, river"
+state,state
+"highlow, state","highlow, state"
+lake,lake
+highlow,highlow
+state,state
+"city, state","city, state"
+state,state
+city,city
+mountain,mountain
+state,state
+city,city
+mountain,mountain
+"border_info, state","state, border_info"
+state,state
+"highlow, border_info, state","state, border_info, highlow"
+highlow,highlow
+city,city
+river,river
+border_info,border_info
+city,city
+river,river
+river,river
+city,city
+city,city
+river,river
+state,state
+"river, highlow","river, highlow"
+river,river
+state,state
+state,state
+"border_info, state","border_info, state"
+river,river
+"lake, border_info","border_info, lake"
+city,city
+river,river
+"state, river","state, river"
+river,river
+"state, highlow","state, highlow"
+city,city
+state,state
+state,state
+city,city
+state,state
+city,city
+city,city
+city,city
+river,river
+river,river
+mountain,mountain
+"river, city","river, city"
+state,state
+"state, river","state, river"
+city,city
+"river, border_info, state","river, border_info, state"
+river,river
+"highlow, state","state, highlow"
+state,state
+state,state
+state,state
+lake,lake
+mountain,mountain
+"river, border_info","river, border_info"
+state,state
+state,state
+highlow,highlow
+state,state
+"border_info, state","border_info, state"
+city,city
+mountain,mountain
+state,state
+city,city
+"city, state","city, state"
+state,state
+state,state
+"highlow, state","highlow, state"
+"state, border_info","state, border_info"
+highlow,highlow
+"city, state","city, state"
+"river, state","river, state"
+city,city
+"city, border_info","city, border_info"
+"highlow, border_info","highlow, border_info"
+"state, border_info","state, border_info"
+mountain,mountain
+city,city
+river,river
+highlow,highlow
+state,state
+lake,lake
+"highlow, state","state, highlow"
+state,state
+"state, river","state, river"
+"state, border_info","state, border_info"
+"state, border_info","state, border_info"
+highlow,highlow
+river,river
+"highlow, river","river, highlow"
+river,river
+highlow,highlow
+mountain,mountain
+river,river
+highlow,highlow
+state,state
+"border_info, state","border_info, state"
+river,river
+river,river
+state,state
+river,river
+"city, state","city, state"
+"highlow, river","highlow, river"
+state,state
+state,state
+city,city
+border_info,border_info
+city,city
+river,river
+river,river
+river,river
+river,river
+city,city
+state,state
+"city, state, river","city, state, river"
+river,river
+state,state
+state,state
+river,river
+border_info,border_info
+highlow,highlow
+"state, border_info","state, border_info"
+"state, river","state, river"
+highlow,highlow
+city,city
+city,city
+city,city
+river,river
+state,state
+river,river
+city,city
+highlow,highlow
+highlow,highlow
+city,city
+state,state
+highlow,highlow
+border_info,border_info
+border_info,border_info
+city,city
+"state, border_info","state, border_info"
+"river, border_info, state","river, border_info, state"
+"highlow, river","highlow, river"
+"state, river","state, river"
+city,city
+city,city
+highlow,highlow
+state,state
+river,river
+state,state
+state,state
+state,state
+lake,lake
+river,river
+river,river
+city,city
+river,river
+city,city
+state,state
+highlow,highlow
+"state, border_info","state, border_info"
+"city, state, river","city, state, river"
+river,river
+river,river
+"border_info, river","border_info, river"
+city,city
+river,river
+highlow,highlow
+"river, border_info","river, border_info"
+"border_info, river","border_info, river"
+"state, river","state, river"
+state,state
+river,river
+city,city
+highlow,highlow
+city,city
+state,state
+"river, border_info","river, border_info"
+city,city
+state,state
+river,river
+highlow,highlow
+"border_info, state","border_info, state"
+river,river
+state,state
+"river, border_info","river, border_info"
+mountain,mountain
+river,river
+river,river
+city,city
+state,state
+river,river
+border_info,border_info
+city,city
+"elimination, wrestler","elimination, wrestler"
+wrestler,wrestler
+wrestler,wrestler
+elimination,elimination
+"elimination, wrestler","elimination, wrestler"
+elimination,elimination
+elimination,elimination
+"elimination, wrestler","elimination, wrestler"
+elimination,elimination
+"wrestler, elimination","wrestler, elimination"
+elimination,elimination
+wrestler,wrestler
+"elimination, wrestler","elimination, wrestler"
+"elimination, wrestler","elimination, wrestler"
+elimination,elimination
+elimination,elimination
+wrestler,wrestler
+elimination,elimination
+wrestler,wrestler
+wrestler,wrestler
+elimination,elimination
+"elimination, wrestler","elimination, wrestler"
+wrestler,wrestler
+wrestler,wrestler
+wrestler,wrestler
+wrestler,wrestler
+"elimination, wrestler","elimination, wrestler"
+elimination,elimination
+wrestler,wrestler
+wrestler,wrestler
+wrestler,wrestler
+wrestler,wrestler
+"wrestler, elimination","wrestler, elimination"
+elimination,elimination
+wrestler,wrestler
+"elimination, wrestler","elimination, wrestler"
+"review, business","review, business"
+"user, review","review, user"
+"category, business","category, business"
+review,review
+"category, business","category, business"
+"category, business","category, business"
+business,"business, review"
+"review, business","review, business"
+"user, tip","tip, user"
+"category, business, tip, user","category, business, tip, user"
+"category, business, neighbourhood","category, business, neighbourhood"
+"review, business","review, business"
+tip,tip
+"category, business","category, business"
+"category, business","category, business"
+"category, business","category, business"
+"user, tip","tip, user"
+user,user
+"review, business, user","review, business, user"
+"category, business","category, business"
+"checkin, business, neighbourhood","checkin, business, neighbourhood"
+"category, business","category, business"
+"review, business, user","review, business, user"
+"user, tip","tip, user"
+"category, business, neighbourhood","category, business, neighbourhood"
+business,business
+"tip, business","tip, business"
+"user, review","review, user"
+"category, business, review, user","category, business, review, user"
+"neighbourhood, business","neighbourhood, business"
+"category, business, review, user","category, business, review, user"
+"category, business","category, business"
+"category, business","category, business"
+"category, business","category, business"
+business,business
+"category, business, review, user","category, business, review, user"
+business,business
+"category, business, checkin","category, business, checkin"
+"user, tip","tip, user"
+user,user
+"category, business, review","category, business, review"
+business,business
+"category, business, review, user","category, business, review, user"
+"category, business","category, business"
+"category, business","category, business"
+"neighbourhood, business, review","neighbourhood, business, review"
+tip,tip
+"user, review","review, user"
+business,business
+"category, business","category, business"
+"category, business","category, business"
+business,business
+"tip, business, user","tip, business, user"
+"user, review","review, user"
+"category, business","category, business"
+business,business
+business,None
+"category, business","category, business"
+"review, business, user","review, business, user"
+"category, business, review, user","category, business, review, user"
+"category, business","category, business"
+"category, business, neighbourhood","category, business, neighbourhood"
+"category, business","category, business"
+"category, business","category, business"
+"category, business","category, business"
+"category, business, checkin","category, business, checkin"
+business,business
+"category, business","category, business"
+"category, business","category, business"
+"category, business","category, business"
+"category, business, review, user","category, business, review, user"
+"tip, business","tip, business"
+"category, business, neighbourhood","category, business, neighbourhood"
+"category, business","category, business"
+"category, business, checkin","category, business, checkin"
+"user, review, tip","review, tip, user"
+"review, business, user","review, business, user"
+business,business
+"tip, business","tip, business"
+"category, business","category, business"
+"neighbourhood, business","neighbourhood, business"
+review,review
+"review, business, user","review, business, user"
+"category, business","category, business"
+"user, review","review, user"
+"category, business, checkin","category, business, checkin"
+"tip, business, user","tip, business, user"
+business,business
+"category, business, review, user","category, business, review, user"
+"user, tip","tip, user"
+"tip, business","tip, business"
+"category, business","category, business"
+"category, business, review, user","category, business, review, user"
+"user, review","review, user"
+"category, business, review, user","category, business, review, user"
+"category, business","category, business"
+"category, business, review, user","category, business, review, user"
+"category, business","category, business"
+"category, business","category, business"
+review,review
+movie,movie
+movie,movie
+movie,movie
+movie,movie
+movie,movie
+movie,movie
+movie,movie
+book_club,book_club
+movie,movie
+book_club,book_club
+"movie, culture_company","culture_company, movie"
+"movie, culture_company, book_club","culture_company, book_club, movie"
+book_club,book_club
+movie,movie
+book_club,book_club
+book_club,book_club
+"movie, culture_company, book_club","culture_company, book_club, movie"
+book_club,book_club
+book_club,book_club
+movie,movie
+"culture_company, book_club","culture_company, book_club"
+book_club,book_club
+book_club,book_club
+book_club,book_club
+"movie, culture_company","culture_company, movie"
+book_club,book_club
+book_club,book_club
+"culture_company, book_club","culture_company, book_club"
+book_club,book_club
+book_club,book_club
+book_club,book_club
+book_club,book_club
+movie,movie
+book_club,book_club
+book_club,book_club
+"detention, Ref_detention_Type","ref_detention_type, detention"
+teachers,teachers
+"addresses, teachers","addresses, teachers"
+"addresses, Student_addresses","addresses, Student_addresses"
+"student_addresses, students","student_addresses, students"
+detention,detention
+students,students
+"addresses, Student_addresses","addresses, Student_addresses"
+"addresses, students, teachers","addresses, students, teachers"
+"assessment_notes, students","assessment_notes, students"
+"assessment_notes, students","assessment_notes, students"
+"student_addresses, students","student_addresses, students"
+"students, behavior_incident","students, behavior_incident"
+teachers,teachers
+"addresses, teachers","addresses, teachers"
+teachers,teachers
+detention,detention
+assessment_notes,assessment_notes
+student_addresses,student_addresses
+"addresses, Student_addresses","addresses, Student_addresses"
+"behavior_incident, students","behavior_incident, students"
+student_addresses,student_addresses
+"behavior_incident, ref_incident_type","ref_incident_type, behavior_incident"
+"assessment_notes, teachers","assessment_notes, teachers"
+addresses,addresses
+"detention, teachers","detention, teachers"
+assessment_notes,assessment_notes
+behavior_incident,behavior_incident
+students,students
+ref_incident_type,ref_incident_type
+addresses,addresses
+"detention, teachers","detention, teachers"
+behavior_incident,behavior_incident
+"addresses, students",None
+"behavior_incident, students","behavior_incident, students"
+"addresses, Student_addresses","addresses, Student_addresses"
+competition,competition
+club,club
+player,player
+player,player
+player,player
+competition,competition
+competition,competition
+competition,competition
+player,player
+club_rank,club_rank
+"club, player","club, player"
+"club, player","club, player"
+competition,competition
+player,player
+"club, player","club, player"
+club,club
+competition,competition
+club_rank,club_rank
+competition,competition
+club,club
+"club, player","club, player"
+competition,competition
+player,player
+player,player
+competition,competition
+player,player
+competition,competition
+club_rank,club_rank
+"club, player","club, player"
+club_rank,club_rank
+club_rank,club_rank
+competition,competition
+club_rank,club_rank
+"club, player","club, player"
+"club, player","club, player"
+player,player
+club,club
+player,player
+competition,competition
+competition,competition
+player,player
+competition,competition
+club,club
+competition,competition
+club,club
+competition,competition
+player,player
+track,track
+"race, track","race, track"
+track,track
+race,race
+race,race
+race,race
+race,race
+"track, race","track, race"
+track,track
+track,track
+race,race
+race,race
+track,track
+track,track
+race,race
+"race, track","race, track"
+track,track
+track,track
+track,track
+"race, track","race, track"
+"track, race","track, race"
+track,tracks
+race,race
+track,track
+race,race
+track,track
+race,race
+track,track
+"track, race","track, race"
+track,tracks
+race,race
+"track, race","track, race"
+race,race
+"race, track","race, track"
+"race, track","race, track"
+track,track
+"race, track","race, track"
+track,track
+"film, film_market_estimation, market","film, film_market_estimation, market"
+"film, film_market_estimation","film, film_market_estimation"
+"film, film_market_estimation","film, film_market_estimation"
+film,film
+"film_market_estimation, market","film_market_estimation, market"
+market,market
+"film, film_market_estimation","film, film_market_estimation"
+film,film
+film,film
+market,market
+film_market_estimation,film_market_estimation
+market,market
+"film, film_market_estimation","film, film_market_estimation"
+film,film
+market,market
+market,market
+"film, film_market_estimation, market",film
+film,film
+film_market_estimation,film_market_estimation
+market,market
+film,film
+market,market
+market,market
+film,film
+"film_market_estimation, market","film_market_estimation, market"
+film,film
+film,film
+film,film
+"film, film_market_estimation","film, film_market_estimation"
+film_market_estimation,film_market_estimation
+film_market_estimation,film_market_estimation
+"film_market_estimation, market","film_market_estimation, market"
+"film_market_estimation, market","film_market_estimation, market"
+film,film
+film,film
+"film, film_market_estimation","film, film_market_estimation"
+"film, film_market_estimation","film, film_market_estimation"
+"film, film_market_estimation","film, film_market_estimation"
+film,film
+film,film
+film,film
+film,film
+film,film
+film,film
+catalog_contents,catalog_contents
+"catalog_contents, catalog_contents_Additional_Attributes",catalog_contents
+"catalogs, catalog_structure","catalogs, catalog_structure"
+"catalog_contents, catalog_structure","catalog_contents, catalog_structure"
+catalog_contents,catalog_contents
+catalog_contents,catalog_contents
+catalog_contents,catalog_contents
+catalog_contents,catalog_contents
+attribute_definitions,attribute_definitions
+catalogs,catalogs
+catalog_contents,catalog_contents
+catalog_contents,catalog_contents
+catalog_contents,catalog_contents
+"attribute_definitions, catalog_contents_additional_attributes","catalog_contents_additional_attributes, attribute_definitions"
+catalog_contents,catalog_contents
+catalog_contents,None
+catalog_contents,catalog_contents
+catalog_contents,catalog_contents
+"catalogs, catalog_structure","catalogs, catalog_structure"
+catalog_contents,catalog_contents
+catalog_contents,catalog_contents
+catalog_structure,catalog_structure
+catalogs,catalogs
+"attribute_definitions, catalog_contents_additional_attributes","catalog_contents_additional_attributes, attribute_definitions"
+catalog_contents,None
+"catalog_contents, catalog_contents_Additional_Attributes","catalog_contents, catalog_contents_additional_attributes"
+catalogs,catalogs
+catalog_contents,catalog_contents
+"catalog_contents, catalog_structure","catalog_contents, catalog_structure"
+attribute_definitions,attribute_definitions
+"catalog_contents, catalog_contents_Additional_Attributes","catalog_contents, catalog_contents_additional_attributes"
+catalog_contents,catalog_contents
+catalogs,catalogs
+catalog_contents,catalog_contents
+catalog_structure,catalog_structure
+catalog_contents,catalog_contents
+attribute_definitions,attribute_definitions
+catalogs,catalogs
+"routes, airports","routes, airports"
+"airlines, routes","routes, airlines"
+airlines,airlines
+airports,airports
+airports,airports
+airports,airports
+airports,airports
+"routes, airports","airports, routes"
+airlines,airlines
+airlines,airlines
+airports,airports
+airports,airports
+airports,airports
+"airports, routes","airports, routes"
+airlines,airlines
+airlines,airlines
+airports,airports
+"airlines, routes","routes, airlines"
+"airports, routes","airports, routes"
+airlines,airlines
+airports,airports
+"airports, routes","airports, routes"
+"routes, airports","routes, airports"
+airports,airports
+"airports, routes","airports, routes"
+airports,airports
+airports,airports
+airports,airports
+airports,airports
+airports,airports
+airports,airports
+"airports, routes","airports, routes"
+"airports, routes","airports, routes"
+airlines,airlines
+airports,airports
+airlines,airlines
+"airports, routes","airports, routes"
+"airlines, routes","routes, airlines"
+airports,airports
+"airlines, routes","routes, airlines"
+"airports, routes","airports, routes"
+"airports, routes","airports, routes"
+airports,airports
+"airports, routes","airports, routes"
+airlines,airlines
+airports,airports
+"airports, routes","airports, routes"
+airports,airports
+"routes, airports, airlines","routes, airports, airlines"
+airports,airports
+"routes, airports","routes, airports"
+airports,airports
+airports,airports
+airports,airports
+"airports, routes","airports, routes"
+airports,airports
+"airports, routes","airports, routes"
+"airlines, routes","routes, airlines"
+"routes, airports","routes, airports"
+"routes, airports","airports, routes"
+"airlines, routes","routes, airlines"
+airlines,airlines
+airports,airports
+airlines,airlines
+"airlines, routes","routes, airlines"
+airports,airports
+airports,airports
+airlines,airlines
+airports,airports
+"airlines, routes","routes, airlines"
+"routes, airports, airlines","routes, airports, airlines"
+airports,airports
+airports,airports
+"airlines, routes","routes, airlines"
+"artist, song","artist, song"
+song,song
+"files, song",files
+"files, song","files, song"
+"artist, song","artist, song"
+"artist, song","artist, song"
+"song, files","song, files"
+"files, song","files, song"
+song,song
+song,song
+"artist, song","artist, song"
+artist,artist
+song,song
+"artist, song","artist, song"
+song,song
+files,files
+files,files
+song,song
+song,song
+"artist, song","artist, song"
+"files, song","files, song"
+"artist, song",song
+"files, song","files, song"
+files,files
+"files, song","files, song"
+"files, song","files, song"
+song,song
+"files, song","files, song"
+"files, song","files, song"
+"artist, song","artist, song"
+"artist, song","artist, song"
+artist,artist
+files,files
+song,song
+"files, song","files, song"
+"artist, song","artist, song"
+"files, song","files, song"
+"artist, song","artist, song"
+"artist, song","artist, song"
+genre,genre
+"song, files","song, files"
+artist,artist
+"files, song","files, song"
+song,song
+"artist, song","artist, song"
+song,song
+"artist, song","artist, song"
+song,song
+files,files
+song,song
+"files, song","files, song"
+song,song
+"artist, song",song
+"artist, song","artist, song"
+"files, song","files, song"
+artist,artist
+"files, song","files, song"
+song,song
+song,song
+genre,genre
+"artist, song","artist, song"
+song,song
+"artist, song","artist, song"
+"artist, song","artist, song"
+"files, song","files, song"
+files,files
+"artist, song","artist, song"
+"artist, song","artist, song"
+"artist, song","artist, song"
+song,song
+"files, song","files, song"
+"artist, song","artist, song"
+"artist, song","artist, song"
+song,song
+song,song
+song,song
+song,song
+"artist, song","artist, song"
+artist,artist
+"artist, song","artist, song"
+"artist, song","artist, song"
+song,song
+song,song
+"files, song","files, song"
+"files, song","files, song"
+"artist, song","artist, song"
+song,song
+files,files
+"artist, song","artist, song"
+song,song
+injury_accident,injury_accident
+game,game
+"game, stadium, injury_accident","stadium, game, injury_accident"
+"stadium, game, injury_accident","stadium, game, injury_accident"
+"game, injury_accident","game, injury_accident"
+"stadium, game, injury_accident","stadium, game, injury_accident"
+game,game
+game,game
+stadium,stadium
+"stadium, game, injury_accident","stadium, game, injury_accident"
+"game, stadium, injury_accident","stadium, game, injury_accident"
+"game, injury_accident","game, injury_accident"
+"game, injury_accident","game, injury_accident"
+"injury_accident, game","injury_accident, game"
+injury_accident,injury_accident
+"stadium, game","stadium, game"
+stadium,stadium
+"game, injury_accident","game, injury_accident"
+"physician, appointment","physician, appointment"
+"procedures, physician, trained_in","physician, trained_in, procedures"
+"patient, prescribes, medication","patient, prescribes, medication"
+"nurse, appointment","nurse, appointment"
+"procedures, physician, trained_in","physician, trained_in, procedures"
+undergoes,undergoes
+department,department
+stay,stay
+physician,physician
+"physician, trained_in, procedures","physician, trained_in, procedures"
+"procedures, physician, trained_in","physician, trained_in, procedures"
+room,"block, room"
+"patient, appointment","patient, appointment"
+"physician, affiliated_with, department","physician, affiliated_with, department"
+"physician, affiliated_with, department","physician, affiliated_with, department"
+"physician, trained_in, procedures","physician, trained_in, procedures"
+"physician, trained_in, procedures","physician, trained_in, procedures"
+"physician, prescribes","physician, prescribes"
+"stay, patient, prescribes, medication","stay, patient, prescribes, medication"
+"patient, prescribes, medication","patient, prescribes, medication"
+"physician, affiliated_with, department","physician, affiliated_with, department"
+"appointment, physician","physician, appointment"
+room,room
+nurse,nurse
+"procedures, physician, trained_in","physician, trained_in, procedures"
+appointment,appointment
+"nurse, on_call","nurse, on_call"
+"appointment, patient","patient, appointment"
+"physician, prescribes, medication","physician, prescribes, medication"
+"physician, trained_in, procedures","physician, trained_in, procedures"
+"physician, affiliated_with, department","physician, affiliated_with, department"
+"affiliated_with, department","affiliated_with, department"
+stay,stay
+"physician, patient","physician, patient"
+"stay, patient, prescribes, medication","stay, patient, prescribes, medication"
+"appointment, physician","appointment, physician"
+affiliated_with,affiliated_with
+"undergoes, patient, stay","undergoes, patient, stay"
+appointment,appointment
+"nurse, appointment","nurse, appointment"
+nurse,nurse
+"nurse, on_call","nurse, on_call"
+"physician, patient","physician, patient"
+affiliated_with,affiliated_with
+"medication, prescribes","prescribes, medication"
+room,None
+"physician, trained_in, procedures","physician, trained_in, procedures"
+"medication, prescribes","prescribes, medication"
+"physician, prescribes, medication","physician, prescribes, medication"
+department,department
+"physician, prescribes","physician, prescribes"
+"appointment, patient","patient, appointment"
+stay,stay
+"block, room","block, room"
+"undergoes, patient, stay","undergoes, stay"
+"procedures, physician, trained_in","physician, trained_in, procedures"
+"block, room","block, room"
+room,room
+"physician, appointment","physician, appointment"
+"undergoes, nurse","undergoes, nurse"
+procedures,procedures
+"procedures, physician, trained_in","physician, trained_in, procedures"
+"physician, trained_in, procedures","physician, trained_in, procedures"
+"affiliated_with, department","affiliated_with, department"
+"physician, prescribes, medication","physician, prescribes, medication"
+procedures,procedures
+"department, physician","department, physician"
+"physician, affiliated_with, department","physician, affiliated_with, department"
+appointment,appointment
+"physician, prescribes, medication","physician, prescribes, medication"
+on_call,"on_call, nurse"
+"patient, prescribes, physician","patient, prescribes, physician"
+on_call,on_call
+procedures,procedures
+"patient, prescribes, medication","patient, prescribes, medication"
+procedures,procedures
+procedures,procedures
+physician,physician
+stay,stay
+"block, room","block, room"
+"physician, trained_in, procedures","physician, trained_in, procedures"
+"block, room","block, room"
+"undergoes, nurse","undergoes, nurse"
+department,department
+department,department
+"physician, patient","physician, patient"
+"physician, affiliated_with, department","physician, affiliated_with, department"
+"patient, prescribes, physician","patient, prescribes, physician"
+procedures,procedures
+"physician, trained_in, procedures","physician, trained_in, procedures"
+"grapes, wine","grapes, wine"
+wine,wine
+wine,wine
+wine,wine
+"appellations, wine","wine, appellations"
+"grapes, wine","grapes, wine"
+wine,wine
+"grapes, wine","grapes, wine"
+"wine, appellations","wine, appellations"
+wine,wine
+"appellations, wine","wine, appellations"
+wine,wine
+"appellations, wine","wine, appellations"
+wine,wine
+wine,wine
+wine,wine
+wine,wine
+wine,wine
+wine,wine
+wine,wine
+wine,wine
+"grapes, wine","grapes, wine"
+"wine, appellations","wine, appellations"
+appellations,appellations
+wine,wine
+wine,wine
+wine,wine
+wine,wine
+"appellations, wine","wine, appellations"
+wine,wine
+wine,wine
+wine,wine
+appellations,appellations
+wine,wine
+"grapes, wine","grapes, wine"
+wine,wine
+wine,wine
+wine,wine
+"appellations, wine","wine, appellations"
+wine,wine
+"grapes, wine","grapes, wine"
+"appellations, wine",wine
+wine,wine
+wine,wine
+wine,wine
+"wine, appellations","wine, appellations"
+"appellations, wine","wine, appellations"
+"grapes, wine","grapes, wine"
+"grapes, wine","grapes, wine"
+wine,wine
+wine,wine
+wine,wine
+appellations,appellations
+wine,wine
+"grapes, wine","grapes, wine"
+wine,wine
+wine,wine
+wine,wine
+wine,wine
+"appellations, wine","wine, appellations"
+wine,wine
+wine,wine
+appellations,appellations
+wine,wine
+"appellations, wine","wine, appellations"
+"appellations, wine","wine, appellations"
+wine,wine
+"appellations, wine",wine
+wine,wine
+"grapes, wine","grapes, wine"
+wine,wine
+wine,wine
+wine,wine
+"appellations, wine","wine, appellations"
+companies,None
+buildings,buildings
+"office_locations, buildings, companies","office_locations, buildings, companies"
+companies,companies
+companies,companies
+companies,companies
+"office_locations, buildings, companies","office_locations, buildings, companies"
+companies,companies
+buildings,buildings
+companies,companies
+companies,companies
+companies,companies
+companies,companies
+buildings,buildings
+buildings,buildings
+companies,None
+companies,companies
+companies,companies
+companies,companies
+"buildings, office_locations","buildings, office_locations"
+companies,companies
+companies,companies
+companies,companies
+companies,companies
+"office_locations, buildings, companies","office_locations, buildings, companies"
+companies,companies
+"office_locations, buildings, companies","office_locations, buildings, companies"
+companies,companies
+buildings,buildings
+companies,companies
+companies,companies
+"office_locations, buildings, companies","office_locations, buildings, companies"
+companies,companies
+companies,companies
+companies,None
+"office_locations, buildings, companies","office_locations, buildings, companies"
+"member, party","member, party"
+party,party
+party,party
+party,party
+"party_events, party","party_events, party"
+"region, party, party_events","region, party, party_events"
+party,party
+member,member
+"member, party","member, party"
+party_events,party_events
+"party_events, party","party_events, party"
+"member, party","member, party"
+party_events,party_events
+"member, party","member, party"
+"member, party_events","member, party_events"
+"member, party","member, party"
+party,party
+party,party
+region,region
+"party, member","party, member"
+"party_events, party","party_events, party"
+"party, region","party, region"
+"party, region","party, region"
+party,party
+region,region
+"member, party_events","member, party_events"
+party,party
+"member, party_events","member, party_events"
+"member, party","member, party"
+"party_events, party","party_events, party"
+"member, party","member, party"
+"party, member","party, member"
+party,party
+"member, party","member, party"
+region,region
+member,member
+party,None
+"region, party, party_events","region, party, party_events"
+party,party
+"member, party_events","member, party_events"
+web_client_accelerator,web_client_accelerator
+browser,browser
+web_client_accelerator,web_client_accelerator
+"browser, accelerator_compatible_browser","accelerator_compatible_browser, browser"
+browser,browser
+"web_client_accelerator, accelerator_compatible_browser","web_client_accelerator, accelerator_compatible_browser, browser"
+web_client_accelerator,web_client_accelerator
+web_client_accelerator,web_client_accelerator
+"accelerator_compatible_browser, browser, web_client_accelerator","accelerator_compatible_browser, web_client_accelerator, browser"
+"accelerator_compatible_browser, browser, web_client_accelerator","accelerator_compatible_browser, web_client_accelerator, browser"
+"web_client_accelerator, accelerator_compatible_browser, browser","web_client_accelerator, accelerator_compatible_browser, browser"
+"web_client_accelerator, accelerator_compatible_browser, browser","web_client_accelerator, accelerator_compatible_browser, browser"
+browser,browser
+browser,browser
+browser,browser
+"web_client_accelerator, accelerator_compatible_browser, browser","web_client_accelerator, accelerator_compatible_browser, browser"
+"web_client_accelerator, accelerator_compatible_browser","web_client_accelerator, accelerator_compatible_browser"
+"sales, transactions","sales, transactions"
+lots,lots
+"investors, transactions","investors, transactions"
+"investors, transactions","investors, transactions"
+transactions,transactions
+"lots, transactions_lots","lots, transactions_lots"
+transactions,transactions
+"investors, transactions","investors, transactions"
+transactions,transactions
+transactions,transactions
+transactions,transactions
+transactions,transactions
+transactions,transactions
+transactions,transactions
+transactions,transactions
+"ref_transaction_types, transactions","transactions, ref_transaction_types"
+"transactions, transactions_lots","transactions, transactions_lots"
+lots,lots
+transactions,transactions
+"ref_transaction_types, transactions","transactions, ref_transaction_types"
+transactions,transactions
+"investors, lots","investors, lots"
+transactions,transactions
+transactions,transactions
+investors,investors
+"investors, transactions","investors, transactions"
+transactions,transactions
+transactions,transactions
+"investors, transactions","investors, transactions"
+investors,investors
+"lots, transactions_lots, transactions","transactions, transactions_lots, lots"
+"transactions, transactions_lots","transactions, transactions_lots"
+ref_transaction_types,ref_transaction_types
+transactions,transactions
+transactions,transactions
+transactions,transactions
+"sales, purchases","sales, purchases"
+"university, basketball_match","university, basketball_match"
+university,university
+basketball_match,basketball_match
+university,university
+basketball_match,basketball_match
+"university, basketball_match","university, basketball_match"
+university,university
+basketball_match,basketball_match
+university,university
+"university, basketball_match","university, basketball_match"
+"university, basketball_match","university, basketball_match"
+university,university
+"university, basketball_match","university, basketball_match"
+"university, basketball_match","university, basketball_match"
+university,university
+university,university
+"university, basketball_match","university, basketball_match"
+basketball_match,basketball_match
+"university, basketball_match","university, basketball_match"
+"university, basketball_match","university, basketball_match"
+university,university
+university,university
+basketball_match,basketball_match
+basketball_match,basketball_match
+university,university
+university,university
+university,university
+university,university
+university,university
+university,university
+university,university
+basketball_match,basketball_match
+university,university
+university,university
+university,university
+university,university
+university,university
+university,university
+basketball_match,basketball_match
+university,university
+university,university
+university,university
+"restaurant, geographic, location","restaurant, geographic, location"
+"restaurant, location","restaurant, location"
+"restaurant, location","restaurant, location"
+"restaurant, location","restaurant, location"
+"restaurant, location","restaurant, location"
+"restaurant, geographic, location","restaurant, geographic, location"
+"restaurant, location","restaurant, location"
+"restaurant, geographic","restaurant, geographic"
+"restaurant, location","restaurant, location"
+"restaurant, location","restaurant, location"
+"restaurant, location","restaurant, location"
+"restaurant, geographic, location","restaurant, geographic, location"
+"location, restaurant, geographic","restaurant, geographic, location"
+"location, restaurant, geographic","restaurant, geographic, location"
+"restaurant, location","restaurant, location"
+"restaurant, location","restaurant, location"
+"restaurant, location","restaurant, location"
+"restaurant, location",business
+"restaurant, location","restaurant, location"
+"restaurant, geographic","restaurant, geographic"
+"restaurant, geographic, location","restaurant, geographic, location"
+"restaurant, location","restaurant, location"
+"restaurant, geographic, location","restaurant, geographic, location"
+"restaurant, location","restaurant, location"
+"restaurant, location","restaurant, location"
+"restaurant, geographic, location","restaurant, geographic, location"
+"restaurant, geographic, location","restaurant, geographic, location"
+"restaurant, location","restaurant, location"
+"restaurant, geographic, location","restaurant, geographic, location"
+"restaurant, location","restaurant, location"
+"restaurant, geographic, location","restaurant, geographic, location"
+"restaurant, location","restaurant, location"
+"restaurant, geographic, location","restaurant, geographic, location"
+"location, restaurant, geographic","restaurant, geographic, location"
+"restaurant, location","restaurant, location"
+"restaurant, location","restaurant, location"
+"restaurant, geographic, location","restaurant, geographic, location"
+"restaurant, location","restaurant, location"
+"restaurant, geographic, location","restaurant, geographic, location"
+"restaurant, location","restaurant, location"
+"location, restaurant, geographic","restaurant, geographic, location"
+"restaurant, location","restaurant, location"
+"restaurant, location","restaurant, location"
+"restaurant, geographic","restaurant, geographic"
+"restaurant, location","restaurant, location"
+"restaurant, location","restaurant, location"
+"restaurant, location","category, business"
+"restaurant, location","restaurant, location"
+"restaurant, location","restaurant, location"
+"restaurant, location","restaurant, location"
+"restaurant, geographic, location","restaurant, geographic, location"
+"restaurant, location","restaurant, location"
+"restaurant, location","restaurant, location"
+"restaurant, location","restaurant, location"
+"restaurant, location","restaurant, location"
+"restaurant, location","restaurant, location"
+"restaurant, location","restaurant, location"
+"restaurant, location","restaurant, location"
+"restaurant, location","restaurant, location"
+"restaurant, location","restaurant, location"
+"restaurant, location","restaurant, location"
+"restaurant, location","restaurant, location"
+"restaurant, geographic, location","restaurant, geographic, location"
+"restaurant, geographic, location","restaurant, geographic, location"
+"restaurant, location","restaurant, location"
+"restaurant, location","restaurant, location"
+"restaurant, location","restaurant, location"
+"location, restaurant, geographic","restaurant, geographic, location"
+"restaurant, location","restaurant, location"
+"restaurant, location","restaurant, location"
+"restaurant, geographic, location","restaurant, geographic, location"
+"restaurant, location","restaurant, location"
+"restaurant, location","restaurant, location"
+"restaurant, location","restaurant, location"
+"restaurant, location","restaurant, location"
+"restaurant, location","restaurant, location"
+"location, restaurant, geographic","restaurant, geographic, location"
+"restaurant, location","restaurant, location"
+"restaurant, location","restaurant, location"
+"restaurant, geographic","restaurant, geographic"
+"restaurant, geographic","restaurant, geographic"
+"restaurant, geographic, location","restaurant, geographic, location"
+"restaurant, location","restaurant, location"
+"restaurant, location","restaurant, location"
+"restaurant, geographic, location","restaurant, geographic, location"
+"restaurant, geographic","restaurant, geographic"
+"restaurant, location","restaurant, location"
+"restaurant, location","restaurant, location"
+"restaurant, geographic, location","restaurant, geographic, location"
+"restaurant, location","restaurant, location"
+"restaurant, location","restaurant, location"
+"restaurant, location","restaurant, location"
+"restaurant, location","restaurant, location"
+"restaurant, location","restaurant, location"
+"restaurant, location","restaurant, location"
+"restaurant, location","restaurant, location"
+"restaurant, location","restaurant, location"
+"restaurant, geographic","restaurant, geographic"
+"restaurant, location","restaurant, location"
+"restaurant, geographic, location","restaurant, geographic, location"
+"restaurant, location","restaurant, location"
+"restaurant, location","restaurant, location"
+"restaurant, location","restaurant, location"
+"restaurant, geographic, location","restaurant, geographic, location"
+"restaurant, location","restaurant, location"
+"restaurant, location","restaurant, location"
+"restaurant, geographic, location","restaurant, geographic, location"
+"restaurant, location","restaurant, location"
+"restaurant, location","restaurant, location"
+"restaurant, location","restaurant, location"
+"restaurant, location","restaurant, location"
+"restaurant, location","restaurant, location"
+"restaurant, location","restaurant, location"
+"user_profiles, follows","user_profiles, follows"
+tweets,tweets
+user_profiles,user_profiles
+"user_profiles, tweets","user_profiles, tweets"
+"user_profiles, follows",user_profiles
+tweets,tweets
+"user_profiles, tweets","user_profiles, tweets"
+user_profiles,None
+user_profiles,user_profiles
+"user_profiles, tweets",tweets
+follows,user_profiles
+user_profiles,user_profiles
+"user_profiles, tweets","user_profiles, tweets"
+user_profiles,user_profiles
+user_profiles,customers
+"user_profiles, tweets","user_profiles, tweets"
+tweets,tweets
+tweets,tweets
+"user_profiles, tweets","user_profiles, tweets"
+user_profiles,user_profiles
+user_profiles,user_profiles
+"user_profiles, follows","user_profiles, follows"
+follows,user_profiles
+"user_profiles, follows","user_profiles, follows"
+user_profiles,user_profiles
+weather,weather
+station,station
+weather,weather
+"trip, station","station, trip"
+weather,weather
+weather,weather
+weather,weather
+station,station
+trip,trip
+trip,trip
+station,station
+"station, trip","station, trip"
+trip,trip
+trip,trip
+weather,weather
+"station, status","station, status"
+station,station
+"station, status","station, status"
+trip,trip
+"station, trip","station, trip"
+trip,trip
+weather,weather
+"station, trip","station, trip"
+"station, trip","station, trip"
+"weather, trip","weather, trip"
+"station, status","station, status"
+"station, status","station, status"
+weather,weather
+station,station
+station,station
+"station, trip","station, trip"
+weather,weather
+"station, status","station, status"
+trip,trip
+"trip, station","station, trip"
+weather,weather
+trip,trip
+weather,weather
+"trip, station",trip
+station,station
+weather,weather
+"trip, weather","trip, weather"
+weather,weather
+weather,weather
+trip,trip
+"station, status","station, status"
+trip,trip
+weather,weather
+weather,weather
+weather,weather
+trip,trip
+"station, status","station, status"
+trip,trip
+trip,trip
+station,station
+trip,trip
+"status, station","station, status"
+"station, trip","station, trip"
+weather,weather
+"station, status","station, status"
+weather,weather
+weather,weather
+trip,trip
+station,station
+weather,weather
+weather,weather
+"station, status","station, status"
+weather,weather
+station,station
+"station, status","station, status"
+station,station
+"station, status","station, status"
+"trip, station","station, trip"
+weather,weather
+trip,trip
+"station, trip","station, trip"
+"trip, station",trip
+trip,trip
+weather,weather
+station,station
+weather,weather
+"trip, weather","trip, weather"
+weather,weather
+"station, status","station, status"
+"station, trip","station, trip"
+weather,weather
+"status, station","status, station"
+"station, trip","station, trip"
+"weather, trip","weather, trip"
+"station, trip","station, trip"
+trip,trip
+"station, trip","station, trip"
+station,business
+weather,weather
+degrees,"campuses, degrees"
+campuses,campuses
+"campuses, faculty, degrees","campuses, faculty, degrees"
+"discipline_enrollments, campuses","discipline_enrollments, campuses"
+"campuses, faculty","campuses, faculty"
+degrees,"campuses, degrees"
+campuses,campuses
+"campuses, degrees","campuses, degrees"
+"campuses, faculty","campuses, faculty"
+campuses,campuses
+campuses,campuses
+faculty,faculty
+"faculty, campuses","faculty, campuses"
+campuses,campuses
+csu_fees,csu_fees
+"campuses, faculty","campuses, faculty"
+degrees,degrees
+campuses,campuses
+"discipline_enrollments, campuses","discipline_enrollments, campuses"
+"campuses, degrees","campuses, degrees"
+degrees,degrees
+csu_fees,csu_fees
+"campuses, faculty, degrees","campuses, faculty, degrees"
+"csu_fees, campuses","csu_fees, campuses"
+"campuses, degrees","campuses, degrees"
+"faculty, campuses","faculty, campuses"
+"campuses, enrollments","campuses, enrollments"
+"campuses, degrees","campuses, degrees"
+campuses,campuses
+"campuses, faculty, degrees","campuses, faculty, degrees"
+campuses,campuses
+"faculty, campuses","faculty, campuses"
+campuses,campuses
+campuses,campuses
+"campuses, degrees","campuses, degrees"
+campuses,campuses
+csu_fees,csu_fees
+"campuses, csu_fees","campuses, csu_fees"
+"faculty, campuses","faculty, campuses"
+"csu_fees, campuses","campuses, csu_fees"
+"campuses, csu_fees","campuses, csu_fees"
+campuses,campuses
+"campuses, faculty, degrees","campuses, faculty, degrees"
+campuses,campuses
+csu_fees,csu_fees
+"campuses, faculty","campuses, faculty"
+"discipline_enrollments, campuses","discipline_enrollments, campuses"
+campuses,campuses
+csu_fees,csu_fees
+campuses,campuses
+"csu_fees, campuses","campuses, csu_fees"
+"campuses, degrees","campuses, degrees"
+"campuses, enrollments","campuses, enrollments"
+campuses,campuses
+"campuses, faculty","campuses, faculty"
+csu_fees,csu_fees
+"csu_fees, campuses","csu_fees, campuses"
+"campuses, degrees","campuses, degrees"
+"campuses, degrees","campuses, degrees"
+campuses,campuses
+csu_fees,csu_fees
+"discipline_enrollments, campuses","discipline_enrollments, campuses"
+"campuses, faculty","campuses, faculty"
+journalist,journalist
+"news_report, event, journalist","news_report, journalist, event"
+"news_report, event, journalist","news_report, journalist, event"
+journalist,journalist
+journalist,journalist
+journalist,journalist
+"journalist, news_report","journalist, news_report"
+event,event
+"news_report, event, journalist","news_report, journalist"
+event,event
+"news_report, event, journalist","news_report, journalist"
+"journalist, news_report","journalist, news_report"
+journalist,journalist
+journalist,journalist
+journalist,journalist
+event,event
+journalist,journalist
+rooms,rooms
+rooms,rooms
+rooms,rooms
+reservations,reservations
+rooms,rooms
+rooms,rooms
+rooms,rooms
+reservations,reservations
+"reservations, rooms","reservations, rooms"
+"reservations, rooms","reservations, rooms"
+rooms,rooms
+rooms,rooms
+reservations,reservations
+"reservations, rooms","reservations, rooms"
+reservations,reservations
+"reservations, rooms","reservations, rooms"
+rooms,rooms
+reservations,reservations
+rooms,rooms
+"reservations, rooms","reservations, apartment_buildings, apartments"
+"reservations, rooms","reservations, rooms"
+"reservations, rooms","reservations, rooms"
+"reservations, rooms","reservations, rooms"
+rooms,rooms
+"reservations, rooms","reservations, rooms"
+rooms,rooms
+rooms,rooms
+rooms,rooms
+rooms,rooms
+rooms,rooms
+rooms,rooms
+rooms,rooms
+"reservations, rooms","reservations, rooms"
+rooms,rooms
+rooms,rooms
+rooms,rooms
+reservations,reservations
+"reservations, rooms","reservations, rooms"
+"rooms, reservations","rooms, reservations"
+rooms,rooms
+rooms,rooms
+rooms,rooms
+rooms,rooms
+rooms,rooms
+"reservations, rooms","reservations, rooms"
+"reservations, rooms","reservations, rooms"
+"reservations, rooms","reservations, rooms"
+rooms,rooms
+reservations,reservations
+rooms,rooms
+rooms,rooms
+rooms,rooms
+rooms,rooms
+reservations,reservations
+rooms,rooms
+rooms,rooms
+rooms,rooms
+rooms,rooms
+rooms,rooms
+rooms,rooms
+rooms,rooms
+rooms,rooms
+rooms,rooms
+rooms,rooms
+rooms,rooms
+rooms,rooms
+rooms,rooms
+"authors, authorship, papers","authors, authorship, papers"
+"authors, authorship, inst","authors, authorship, inst"
+"authors, authorship, inst","authors, authorship, inst"
+"authors, authorship, papers, inst","authors, authorship, papers, inst"
+"authors, authorship, papers","authors, authorship, papers"
+papers,papers
+"authors, authorship, papers","authors, authorship, papers"
+authors,authors
+inst,inst
+papers,papers
+"authors, authorship, papers","writes, papers"
+papers,papers
+"authors, authorship, inst","authors, authorship, inst"
+"authors, authorship, papers","authors, authorship, papers"
+authors,authors
+"inst, authorship, papers","authorship, inst, papers"
+"papers, authorship, inst","authorship, papers, inst"
+"authors, authorship, papers","authors, authorship, papers"
+"papers, authorship, inst","authorship, papers, inst"
+papers,papers
+authors,authors
+"authors, authorship, inst","authors, authorship, inst"
+"papers, authorship, inst","authorship, papers, inst"
+"authors, authorship, papers","authors, authorship, papers"
+authors,authors
+"authors, authorship, papers","authors, authorship, papers"
+authors,authors
+"authors, authorship, papers, inst","authors, authorship, papers, inst"
+authors,authors
+"authors, authorship, papers","authors, authorship, papers"
+"inst, authorship, papers","inst, papers"
+"authors, authorship, papers","writes, papers"
+"authors, authorship, papers","authors, authorship, papers"
+"authors, authorship, inst","authors, authorship, inst"
+"authors, authorship, papers","authors, authorship, papers"
+"authors, authorship, papers","authors, authorship, papers"
+authors,authors
+"papers, authorship, inst","authorship, papers, inst"
+"papers, authorship, inst","authorship, papers, inst"
+"inst, authorship, papers","authorship, inst, papers"
+authors,authors
+"authors, authorship, inst","authors, authorship, inst"
+authors,authors
+"authors, authorship, papers","authors, authorship, papers"
+authors,authors
+"authorship, papers","authorship, papers"
+"authors, authorship, papers","authors, authorship, papers"
+authors,authors
+"authors, authorship, papers","authors, authorship, papers"
+"authors, authorship, papers","authors, authorship, papers"
+inst,inst
+"papers, authorship, inst","authorship, papers, inst"
+"inst, authorship, papers","inst, papers"
+"authors, authorship, papers","writes, papers"
+"authors, authorship, papers, inst","authors, authorship, papers, inst"
+"papers, authorship, inst","authorship, papers, inst"
+"authors, authorship, papers","writes, papers"
+"authors, authorship, papers, inst","authors, authorship, papers, inst"
+authors,authors
+papers,papers
+manufacturer,manufacturer
+furniture,furniture
+manufacturer,manufacturer
+"furniture, furniture_manufacte, manufacturer","furniture_manufacte, manufacturer, furniture"
+"manufacturer, furniture_manufacte","manufacturer, furniture_manufacte"
+"furniture, furniture_manufacte","furniture_manufacte, furniture"
+manufacturer,manufacturer
+"furniture, furniture_manufacte","furniture_manufacte, furniture"
+"furniture, furniture_manufacte","furniture_manufacte, furniture"
+manufacturer,manufacturer
+furniture,furniture
+"manufacturer, furniture_manufacte","manufacturer, furniture_manufacte"
+manufacturer,manufacturer
+furniture,furniture
+furniture,furniture
+"person, personFriend","person, personFriend"
+personfriend,"person, personFriend"
+person,person
+"person, personFriend","person, personFriend"
+"person, personFriend",personfriend
+"person, personFriend","person, personFriend"
+person,person
+"person, personFriend","person, personFriend"
+person,person
+person,person
+"person, personFriend","person, personFriend"
+person,person
+person,person
+person,person
+person,person
+"person, personFriend","person, personFriend"
+"person, personFriend","person, personFriend"
+"personfriend, person","person, personFriend"
+"person, personFriend","person, personFriend"
+"person, personFriend","person, personFriend"
+person,person
+person,person
+person,person
+person,person
+"person, personFriend","person, personFriend"
+"person, personFriend","person, personFriend"
+"person, personFriend","person, personFriend"
+"personfriend, person","personfriend, person"
+"person, personFriend","person, personFriend"
+"person, personFriend","person, personFriend"
+person,person
+personfriend,personfriend
+person,person
+person,person
+person,person
+"person, personFriend","person, personFriend"
+"person, personFriend","person, personFriend"
+personfriend,personfriend
+person,person
+person,person
+"person, personFriend","person, personFriend"
+"person, personFriend","person, personFriend"
+person,person
+person,person
+person,person
+"person, personFriend","person, personFriend"
+"person, personFriend","person, personFriend"
+person,person
+"personfriend, person","person, personFriend"
+"person, personFriend","person, personFriend"
+person,person
+person,person
+"person, personFriend","person, personFriend"
+"person, personfriend","person, personFriend"
+"person, personFriend","person, personFriend"
+person,person
+"person, personFriend","person, personFriend"
+person,person
+person,person
+person,person
+person,None
+"person, personfriend","person, personFriend"
+person,person
+"person, personFriend","person, personFriend"
+person,person
+person,person
+person,person
+"person, personFriend","person, personFriend"
+"person, personFriend","person, personFriend"
+"personfriend, person","person, personFriend"
+person,person
+"person, personFriend","person, personFriend"
+"person, personFriend","person, personFriend"
+personfriend,personfriend
+person,person
+person,person
+"person, personFriend","person, personFriend"
+personfriend,personfriend
+"medicine, medicine_enzyme_interaction","medicine_enzyme_interaction, medicine"
+enzyme,enzyme
+"enzyme, medicine_enzyme_interaction","enzyme, medicine_enzyme_interaction"
+"medicine, medicine_enzyme_interaction","medicine_enzyme_interaction, medicine"
+"enzyme, medicine_enzyme_interaction","enzyme, medicine_enzyme_interaction"
+"medicine, medicine_enzyme_interaction","medicine_enzyme_interaction, medicine"
+"medicine, medicine_enzyme_interaction, enzyme","medicine_enzyme_interaction, enzyme, medicine"
+"enzyme, medicine_enzyme_interaction","enzyme, medicine_enzyme_interaction"
+medicine,medicine
+"medicine_enzyme_interaction, medicine, enzyme","medicine_enzyme_interaction, medicine"
+medicine,medicine
+enzyme,enzyme
+medicine,medicine
+enzyme,enzyme
+medicine_enzyme_interaction,"paperkeyphrase, medicine_enzyme_interaction, keyphrase"
+"medicine, medicine_enzyme_interaction, enzyme","medicine_enzyme_interaction, enzyme, medicine"
+enzyme,enzyme
+medicine,medicine
+"enzyme, medicine_enzyme_interaction","enzyme, medicine_enzyme_interaction"
+enzyme,enzyme
+"enzyme, medicine_enzyme_interaction, medicine","enzyme, medicine_enzyme_interaction, medicine"
+enzyme,enzyme
+medicine,medicine
+"enzyme, medicine_enzyme_interaction, medicine","enzyme, medicine_enzyme_interaction, medicine"
+medicine_enzyme_interaction,medicine_enzyme_interaction
+"enzyme, medicine_enzyme_interaction","enzyme, medicine_enzyme_interaction"
+"medicine, medicine_enzyme_interaction","medicine_enzyme_interaction, medicine"
+enzyme,enzyme
+enzyme,enzyme
+medicine,medicine
+enzyme,enzyme
+"enzyme, medicine_enzyme_interaction","enzyme, medicine_enzyme_interaction"
+"medicine, medicine_enzyme_interaction","medicine_enzyme_interaction, medicine"
+enzyme,enzyme
+"medicine, medicine_enzyme_interaction","medicine_enzyme_interaction, medicine"
+enzyme,enzyme
+enzyme,enzyme
+medicine,medicine
+enzyme,enzyme
+medicine,medicine
+"apartment_bookings, apartments","apartment_bookings, apartments"
+apartments,apartments
+apartment_buildings,apartment_buildings
+guests,guests
+apartment_buildings,apartment_buildings
+"apartment_facilities, apartments","apartment_facilities, apartments"
+"apartments, apartment_facilities","apartments, apartment_facilities"
+apartment_buildings,apartment_buildings
+apartments,apartments
+apartments,apartments
+"apartment_buildings, apartments","apartment_buildings, apartments"
+apartments,apartments
+apartments,apartments
+"apartments, view_unit_status","view_unit_status, apartments"
+apartments,apartments
+apartments,apartments
+apartments,apartments
+apartments,apartments
+apartment_bookings,apartment_bookings
+"apartment_facilities, apartments","apartment_facilities, apartments"
+apartments,apartments
+apartments,apartments
+apartment_buildings,apartment_buildings
+"apartment_bookings, guests","apartment_bookings, guests"
+apartments,apartments
+"apartment_bookings, guests","apartment_bookings, guests"
+"apartment_buildings, apartments","apartment_buildings, apartments"
+"apartment_bookings, apartments","apartment_bookings, apartments"
+apartments,apartments
+apartments,apartments
+"apartment_facilities, apartments","apartment_facilities, apartments"
+guests,guests
+apartments,apartments
+apartment_buildings,apartment_buildings
+guests,guests
+apartments,apartments
+apartments,apartments
+guests,guests
+"apartment_bookings, apartments","apartment_bookings, apartments"
+"apartment_bookings, apartments","apartment_bookings, apartments"
+apartments,apartments
+"apartment_bookings, apartments","apartment_bookings, apartments"
+"apartment_bookings, apartments","apartment_bookings, apartments"
+apartment_bookings,apartment_bookings
+apartments,apartments
+apartment_buildings,apartment_buildings
+"apartment_buildings, apartments","apartment_buildings, apartments"
+"apartment_bookings, apartments","apartment_bookings, apartments"
+apartments,apartments
+"apartment_bookings, guests","apartment_bookings, guests"
+"apartment_buildings, apartments","apartment_buildings, apartments"
+"apartments, view_unit_status","apartments, view_unit_status"
+"apartment_bookings, apartments","apartment_bookings, apartments"
+apartment_bookings,apartment_bookings
+apartment_bookings,apartment_bookings
+guests,guests
+apartment_bookings,apartment_bookings
+"apartment_bookings, apartments","apartment_bookings, apartments"
+apartments,apartments
+guests,guests
+apartments,apartments
+"apartment_bookings, apartments","apartment_bookings, apartments"
+"apartment_bookings, apartments","apartment_bookings, apartments"
+"apartment_buildings, apartments","apartment_buildings, apartments"
+"apartment_bookings, apartments","apartment_bookings, apartments"
+apartments,apartments
+"apartment_bookings, apartments","apartment_bookings, apartments"
+"apartments, apartment_facilities","apartments, apartment_facilities"
+apartment_buildings,apartment_buildings
+apartments,apartments
+"apartment_facilities, apartments","apartment_facilities, apartments"
+apartments,apartments
+"loan, bank, customer","bank, loan, customer"
+"loan, bank, customer","bank, loan"
+customer,customer
+customer,customer
+bank,bank
+customer,customer
+"loan, bank, customer","bank, loan"
+"bank, loan","bank, loan"
+bank,bank
+customer,customer
+bank,bank
+bank,bank
+customer,customer
+"bank, loan","bank, loan"
+bank,bank
+bank,bank
+"customer, loan","customer, loan"
+"customer, loan","customer, loan"
+bank,bank
+"bank, loan","bank, loan"
+customer,customer
+customer,customer
+customer,customer
+bank,bank
+bank,bank
+"customer, loan","customer, loan"
+customer,customer
+bank,customers
+bank,bank
+"customer, loan","customer, loan"
+bank,bank
+customer,customer
+"customer, loan","customer, loan"
+bank,bank
+bank,bank
+"bank, loan","bank, loan"
+"customer, loan","customer, loan"
+"customer, loan","customer, loan"
+"customer, loan","customer, loan"
+"customer, loan","customer, loan"
+"customer, loan","customer, loan"
+"bank, loan","bank, loan"
+customer,customer
+customer,customer
+customer,customer
+bank,bank
+"bank, loan","bank, loan"
+bank,bank
+"customer, loan","customer, loan"
+"customer, loan","customer, loan"
+customer,customer
+bank,bank
+customer,customer
+"customer, loan","customer, loan"
+"customer, loan","customer, loan"
+"customer, loan","customer, loan"
+"customer, loan","customer, loan"
+"bank, loan","bank, loan"
+bank,bank
+customer,customer
+customer,customer
+"customer, loan","customer, loan"
+bank,customers
+"bank, loan","bank, loan"
+"bank, loan","bank, loan"
+customer,customer
+customer,customer
+bank,bank
+customer,customer
+"customer, loan","customer, loan"
+customer,customer
+"customer, loan","customer, loan"
+"stock, device, shop","stock, shop, device"
+shop,shop
+"device, stock","stock, device"
+"stock, device, shop","stock, shop, device"
+"stock, shop","stock, shop"
+device,device
+shop,shop
+device,device
+device,device
+device,device
+"device, stock","stock, device"
+"stock, shop","stock, shop"
+device,device
+stock,stock
+"stock, shop","stock, shop"
+shop,shop
+"stock, shop","stock, shop"
+device,device
+shop,shop
+shop,shop
+shop,shop
+device,device
+"stock, shop","stock, shop"
+"stock, shop","stock, shop"
+device,device
+device,device
+"shop, stock","shop, stock"
+"shop, stock","shop, stock"
+device,device
+shop,shop
+stock,stock
+device,device
+shop,shop
+"stock, device","stock, device"
+device,device
+device,device
+ship,ship
+captain,captain
+captain,captain
+ship,ship
+"ship, captain","ship, captain"
+ship,ship
+"ship, captain","ship, captain"
+captain,captain
+captain,captain
+ship,ship
+captain,captain
+captain,captain
+captain,captain
+ship,ship
+"ship, captain","ship, captain"
+ship,ship
+captain,captain
+captain,captain
+captain,captain
+ship,ship
+ship,ship
+captain,captain
+captain,captain
+"ship, captain","ship, captain"
+"ship, captain","ship, captain"
+ship,ship
+"ship, captain","ship, captain"
+captain,captain
+captain,captain
+ship,ship
+captain,captain
+captain,captain
+captain,captain
+"ship, captain","ship, captain"
+captain,captain
+captain,captain
+captain,captain
+captain,captain
+ship,ship
+captain,captain
+ship,ship
+ship,ship
+captain,captain
+"ship, captain","ship, captain"
+channel,channel
+program,program
+channel,channel
+program,program
+channel,channel
+broadcast,broadcast
+program,program
+"channel, broadcast","channel, broadcast"
+"program, broadcast","broadcast, program"
+channel,channel
+channel,channel
+program,program
+channel,channel
+"program, broadcast","broadcast, channel, program"
+"program, broadcast","broadcast, program"
+"program, broadcast","broadcast, program"
+program,program
+channel,channel
+channel,channel
+"channel, broadcast","channel, broadcast"
+broadcast,broadcast
+program,program
+broadcast,broadcast
+channel,channel
+program,program
+channel,channel
+"program, broadcast","broadcast, program"
+broadcast,broadcast
+program,program
+program,program
+channel,channel
+channel,channel
+channel,channel
+"program, broadcast","broadcast, program"
+program,program
+"channel, broadcast","channel, broadcast"
+representative,representative
+representative,representative
+"election, representative","election, representative"
+representative,representative
+representative,representative
+"election, representative","election, representative"
+"election, representative","election, representative"
+representative,representative
+election,election
+representative,representative
+"election, representative","election, representative"
+election,election
+representative,representative
+representative,representative
+"election, representative","election, representative"
+election,election
+election,election
+"representative, election","representative, election"
+chip_model,chip_model
+phone,"chip_model, phone"
+phone,phone
+"chip_model, phone","chip_model, phone"
+"screen_mode, phone","phone, screen_mode"
+"screen_mode, phone","phone, screen_mode"
+phone,phone
+chip_model,chip_model
+"chip_model, phone","chip_model, phone"
+chip_model,chip_model
+"screen_mode, phone","phone, screen_mode"
+"chip_model, phone","chip_model, phone"
+phone,phone
+phone,phone
+"screen_mode, phone","phone, screen_mode"
+"chip_model, phone","chip_model, phone"
+phone,phone
+"chip_model, phone","chip_model, phone"
+chip_model,chip_model
+"screen_mode, phone","phone, screen_mode"
+screen_mode,screen_mode
+phone,phone
+chip_model,chip_model
+"chip_model, phone, screen_mode","chip_model, phone, screen_mode"
+chip_model,chip_model
+"screen_mode, phone","phone, screen_mode"
+phone,phone
+"technician, repair_assignment","technician, repair_assignment"
+technician,technician
+technician,technician
+technician,technician
+technician,technician
+technician,technician
+technician,technician
+"repair_assignment, machine, technician","repair_assignment, technician, machine"
+technician,technician
+technician,technician
+"technician, repair_assignment","technician, repair_assignment"
+technician,technician
+technician,technician
+technician,technician
+technician,technician
+"repair_assignment, technician","repair_assignment, technician"
+"repair_assignment, machine, technician","repair_assignment, technician, machine"
+technician,technician
+technician,technician
+technician,technician
+"repair_assignment, machine, technician","repair_assignment, technician, machine"
+technician,technician
+"repair_assignment, machine, technician","repair_assignment, technician, machine"
+technician,technician
+technician,technician
+"repair_assignment, machine, technician","repair_assignment, technician, machine"
+"repair_assignment, technician","repair_assignment, technician"
+submission,submission
+submission,submission
+workshop,workshop
+submission,submission
+"submission, acceptance","submission, acceptance"
+"submission, acceptance","submission, acceptance"
+submission,submission
+submission,submission
+submission,submission
+"acceptance, submission","acceptance, submission"
+"acceptance, submission","acceptance, submission"
+submission,submission
+submission,submission
+submission,submission
+"acceptance, submission","acceptance, submission"
+submission,submission
+workshop,workshop
+submission,submission
+submission,submission
+"acceptance, submission","acceptance, submission"
+"acceptance, submission","acceptance, submission"
+submission,submission
+submission,submission
+"acceptance, submission","acceptance, submission"
+submission,submission
+"acceptance, submission","acceptance, submission"
+submission,submission
+"rent_arrears, cmi_cross_references, customer_master_index","rent_arrears, cmi_cross_references, customer_master_index"
+"cmi_cross_references, benefits_overpayments","cmi_cross_references, benefits_overpayments"
+"cmi_cross_references, parking_fines","parking_fines, cmi_cross_references"
+rent_arrears,rent_arrears
+"electoral_register, cmi_cross_references","electoral_register, cmi_cross_references"
+parking_fines,parking_fines
+"customer_master_index, cmi_cross_references","customer_master_index, cmi_cross_references"
+"business_rates, cmi_cross_references","business_rates, cmi_cross_references"
+cmi_cross_references,cmi_cross_references
+cmi_cross_references,cmi_cross_references
+customer_master_index,customer_master_index
+"customer_master_index, cmi_cross_references","customer_master_index, cmi_cross_references"
+"cmi_cross_references, parking_fines","cmi_cross_references, parking_fines"
+product,products
+store,store
+"store, store_district, district","store, store_district, district"
+"store, store_district, district","store, store_district, district"
+product,product
+"store, store_district, district","store, store_district, district"
+product,product
+"store, store_district, district","store, store_district, district"
+district,district
+product,product
+district,district
+district,district
+district,district
+product,product
+product,products
+"store, store_district, district","store, store_district, district"
+district,district
+"store, store_district, district","store, store_district, district"
+"store, store_district, district","store, store_district, district"
+product,product
+district,district
+"store, store_district, district","store, store_district, district"
+"product, store_product, store","store_product, store, product"
+product,product
+product,product
+"product, store_product, store","store_product, store, product"
+"store, store_district, district","store, store_district, district"
+district,district
+product,product
+product,product
+"store, store_district, district","store, store_district, district"
+district,district
+district,district
+district,district
+store,store
+"store, store_district, district","store, store_district, district"
+district,district
+product,product
+"store, store_district, district","store, store_district, district"
+product,product
+gas_station,gas_station
+company,company
+"station_company, company","station_company, company"
+gas_station,gas_station
+company,company
+"station_company, company, gas_station","station_company, gas_station, company"
+company,companies
+company,companies
+company,companies
+company,companies
+company,None
+company,companies
+company,companies
+"station_company, company, gas_station","station_company, gas_station, company"
+gas_station,gas_station
+company,companies
+gas_station,gas_station
+gas_station,gas_station
+company,company
+company,company
+company,company
+company,None
+company,company
+company,station_company
+company,company
+company,companies
+company,company
+"company, station_company","station_company, company"
+gas_station,gas_station
+company,company
+"company, station_company","station_company, company"
+gas_station,gas_station
+gas_station,gas_station
+"station_company, company, gas_station","station_company, gas_station, company"
+gas_station,gas_station
+company,company
+gas_station,gas_station
+"station_company, company, gas_station","station_company, gas_station, company"
+company,company
+"station_company, company, gas_station","station_company, gas_station, company"
+"station_company, company, gas_station","station_company, gas_station, company"
+company,companies
+festival_detail,festival_detail
+festival_detail,festival_detail
+festival_detail,festival_detail
+artwork,artwork
+"nomination, artwork, festival_detail","nomination, artwork, festival_detail"
+artwork,artwork
+festival_detail,festival_detail
+"nomination, artwork, festival_detail","nomination, artwork, festival_detail"
+festival_detail,festival_detail
+festival_detail,festival_detail
+"nomination, artwork, festival_detail","nomination, artwork, festival_detail"
+artwork,artwork
+festival_detail,festival_detail
+"nomination, artwork, festival_detail","nomination, artwork, festival_detail"
+festival_detail,festival_detail
+festival_detail,festival_detail
+artwork,artwork
+"nomination, artwork, festival_detail","nomination, artwork, festival_detail"
+"nomination, artwork, festival_detail","nomination, artwork"
+artwork,artwork
+building,buildings
+building,buildings
+"institution, protein, building","institution, protein, building"
+"institution, protein","institution, protein"
+building,building
+institution,institution
+building,buildings
+building,None
+"institution, protein","institution, protein"
+building,building
+"building, institution","building, institution"
+"institution, protein","institution, protein"
+institution,institution
+"building, institution","building, institution"
+"building, institution","building, institution"
+institution,institution
+"institution, protein","institution, protein"
+institution,institution
+roller_coaster,roller_coaster
+roller_coaster,roller_coaster
+roller_coaster,roller_coaster
+"country, roller_coaster","country, roller_coaster"
+"country, roller_coaster","country, roller_coaster"
+roller_coaster,roller_coaster
+roller_coaster,roller_coaster
+"country, roller_coaster","country, roller_coaster"
+roller_coaster,roller_coaster
+"country, roller_coaster","country, roller_coaster"
+roller_coaster,roller_coaster
+"country, roller_coaster","country, roller_coaster"
+roller_coaster,roller_coaster
+country,country
+roller_coaster,roller_coaster
+roller_coaster,roller_coaster
+events,events
+"services, events",events
+"events, participants_in_events","events, participants_in_events"
+"events, participants_in_events","events, participants_in_events"
+participants_in_events,participants_in_events
+"participants, participants_in_events, events, services","participants_in_events, events, services"
+participants,participants
+"participants, participants_in_events","participants_in_events, participants"
+participants_in_events,participants_in_events
+participants,participants
+"events, participants_in_events, participants","events, participants_in_events, participants"
+"events, services","events, services"
+participants,participants
+"participants, participants_in_Events","participants_in_events, participants"
+bridge,bridge
+"architect, mill","architect, mill"
+"bridge, architect","bridge, architect"
+"architect, bridge","architect, bridge"
+architect,architect
+"architect, mill","architect, mill"
+mill,mill
+"architect, bridge, mill","architect, bridge, mill"
+"mill, architect","mill, architect"
+mill,mill
+"bridge, architect","bridge, architect"
+architect,architect
+"mill, architect, bridge","mill, architect, bridge"
+mill,mill
+"architect, mill","architect, mill"
+bridge,bridge
+railway,railway
+railway,railway
+manager,manager
+manager,manager
+train,train
+manager,manager
+manager,manager
+railway,railway
+manager,manager
+"railway, train","railway, train"
+"railway, train","railway, train"
+railway,railway
+railway,railway
+manager,manager
+railway,railway
+"railway, train","railway, train"
+manager,manager
+railway,railway
+manager,manager
+publication,publication
+publication,publication
+book,book
+publication,publication
+publication,publication
+book,book
+publication,publication
+"book, publication","book, publication"
+book,book
+"book, publication","book, publication"
+book,book
+publication,publication
+publication,publication
+book,book_club
+book,book
+publication,publication
+"book, publication","book, publication"
+"book, publication","book, publication"
+publication,publication
