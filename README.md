@@ -23,8 +23,10 @@ This repository hosts the code for the LR-SQL paper, which is primarily used to 
 - The dataset for schema_link will be released after the preprint is published.
 - The code for generating the SQL generation model dataset and the code for generating the dataset used in the paper will be released after the preprint is published.
 
+### contact information
+If have any problem  ,contact hong Win via 2641873533@qq.com
 
-### Tips
-If you need totally open-source or dataset, please submit a Github issue, or contact hong Win via 2641873533@qq.com
+### Paper
+https://arxiv.org/abs/2410.11457
 
 
