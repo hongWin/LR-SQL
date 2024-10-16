@@ -18,7 +18,7 @@ This repository hosts the code for the LR-SQL paper, which is primarily used to 
 ### SQL_generation
 - Project files for the SQL generation model, including the code and results of our proposed method, all comparative experiments, evaluation, and code for generating the SQL generation model dataset.
 - Benchmark using the standard Spider dataset can be easily plug-and-play once the gold and predict files are available.
-- 
+  
 ### Notes
 - ~~The dataset for schema_link will be released after the preprint is published.~~
 - ~~The code and the dataset for SQL generation model will be released after the preprint is published.~~
