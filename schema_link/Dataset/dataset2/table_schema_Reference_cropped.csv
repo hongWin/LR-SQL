@@ -1,0 +1,953 @@
+Reference_group
+"CREATE TABLE `Manufacturers` (
+  Code INTEGER,
+  Name VARCHAR(255),
+  Headquarter VARCHAR(255),
+  Founder VARCHAR(255),
+  Revenue REAL
+);"
+"CREATE TABLE `Products` (
+  Code INTEGER,
+  Name VARCHAR(255),
+  Price DECIMAL,
+  Manufacturer INTEGER REFERENCES Manufacturers(Code)
+);"
+"CREATE TABLE `Student` (
+  StuID INTEGER,
+  LName VARCHAR(12),
+  Fname VARCHAR(12),
+  Age INTEGER,
+  Sex VARCHAR(1),
+  Major INTEGER,
+  Advisor INTEGER,
+  city_code VARCHAR(3)
+);"
+"CREATE TABLE `Plays_Games` (
+  StuID INTEGER REFERENCES Student(StuID),
+  GameID INTEGER REFERENCES Video_Games(GameID),
+  Hours_Played INTEGER
+);"
+"CREATE TABLE `SportsInfo` (
+  StuID INTEGER REFERENCES Student(StuID),
+  SportName VARCHAR(32),
+  HoursPerWeek INTEGER,
+  GamesPlayed INTEGER,
+  OnScholarship VARCHAR(1)
+);"
+"CREATE TABLE `actor` (
+  Actor_ID INT PRIMARY KEY,
+  Name TEXT,
+  Musical_ID INT REFERENCES actor(Actor_ID),
+  Character TEXT,
+  Duration TEXT,
+  age INT
+);"
+"CREATE TABLE `entrepreneur` (
+  Entrepreneur_ID INT PRIMARY KEY,
+  People_ID INT REFERENCES people(People_ID),
+  Company TEXT,
+  Money_Requested REAL,
+  Investor TEXT
+);"
+"CREATE TABLE `people` (
+  People_ID INT PRIMARY KEY,
+  Name TEXT,
+  Height REAL,
+  Weight REAL,
+  Date_of_Birth TEXT
+);"
+"CREATE TABLE `Ref_Hotel_Star_Ratings` (
+  star_rating_code CHAR(15) PRIMARY KEY,
+  star_rating_description VARCHAR(80)
+);"
+"CREATE TABLE `Ref_Attraction_Types` (
+  Attraction_Type_Code CHAR(15) PRIMARY KEY,
+  Attraction_Type_Description VARCHAR(255)
+);"
+"CREATE TABLE `Hotels` (
+  hotel_id INTEGER,
+  star_rating_code CHAR(15) REFERENCES Ref_Hotel_Star_Ratings(star_rating_code),
+  pets_allowed_yn CHAR(1),
+  price_range REAL,
+  other_hotel_details VARCHAR(255)
+);"
+"CREATE TABLE `Tourist_Attractions` (
+  Tourist_Attraction_ID INTEGER,
+  Attraction_Type_Code CHAR(15) REFERENCES Ref_Attraction_Types(Attraction_Type_Code),
+  Location_ID INTEGER REFERENCES Locations(Location_ID),
+  How_to_Get_There VARCHAR(255),
+  Name VARCHAR(255),
+  Description VARCHAR(255),
+  Opening_Hours VARCHAR(255),
+  Other_Details VARCHAR(255)
+);"
+"CREATE TABLE `Street_Markets` (
+  Market_ID INTEGER REFERENCES Tourist_Attractions(Tourist_Attraction_ID),
+  Market_Details VARCHAR(255)
+);"
+"CREATE TABLE `Shops` (
+  Shop_ID INTEGER REFERENCES Tourist_Attractions(Tourist_Attraction_ID),
+  Shop_Details VARCHAR(255)
+);"
+"CREATE TABLE `Museums` (
+  Museum_ID INTEGER REFERENCES Tourist_Attractions(Tourist_Attraction_ID),
+  Museum_Details VARCHAR(255)
+);"
+"CREATE TABLE `Royal_Family` (
+  Royal_Family_ID INTEGER REFERENCES Tourist_Attractions(Tourist_Attraction_ID),
+  Royal_Family_Details VARCHAR(255)
+);"
+"CREATE TABLE `Theme_Parks` (
+  Theme_Park_ID INTEGER REFERENCES Tourist_Attractions(Tourist_Attraction_ID),
+  Theme_Park_Details VARCHAR(255)
+);"
+"CREATE TABLE `Visits` (
+  Visit_ID INTEGER,
+  Tourist_Attraction_ID INTEGER REFERENCES Tourist_Attractions(Tourist_Attraction_ID),
+  Tourist_ID INTEGER REFERENCES Visitors(Tourist_ID),
+  Visit_Date DATETIME,
+  Visit_Details VARCHAR(40)
+);"
+"CREATE TABLE `Photos` (
+  Photo_ID INTEGER,
+  Tourist_Attraction_ID INTEGER REFERENCES Tourist_Attractions(Tourist_Attraction_ID),
+  Name VARCHAR(255),
+  Description VARCHAR(255),
+  Filename VARCHAR(255),
+  Other_Details VARCHAR(255)
+);"
+"CREATE TABLE `Staff` (
+  Staff_ID INTEGER,
+  Tourist_Attraction_ID INTEGER REFERENCES Tourist_Attractions(Tourist_Attraction_ID),
+  Name VARCHAR(40),
+  Other_Details VARCHAR(255)
+);"
+"CREATE TABLE `Tourist_Attraction_Features` (
+  Tourist_Attraction_ID INTEGER PRIMARY KEY REFERENCES Tourist_Attractions(Tourist_Attraction_ID),
+  Feature_ID INTEGER PRIMARY KEY REFERENCES Features(Feature_ID)
+);"
+"CREATE TABLE `wrestler` (
+  Wrestler_ID INT PRIMARY KEY,
+  Name TEXT,
+  Reign TEXT,
+  Days_held TEXT,
+  Location TEXT,
+  Event TEXT
+);"
+"CREATE TABLE `Elimination` (
+  Elimination_ID TEXT PRIMARY KEY,
+  Wrestler_ID TEXT REFERENCES wrestler(Wrestler_ID),
+  Team TEXT,
+  Eliminated_By TEXT,
+  Elimination_Move TEXT,
+  Time TEXT
+);"
+"CREATE TABLE `business` (
+  bid INT PRIMARY KEY,
+  business_id TEXT,
+  name TEXT,
+  full_address TEXT,
+  city TEXT,
+  latitude TEXT,
+  longitude TEXT,
+  review_count INT,
+  is_open INT,
+  rating REAL,
+  state TEXT
+);"
+"CREATE TABLE `category` (
+  id INT PRIMARY KEY,
+  business_id TEXT REFERENCES business(business_id),
+  category_name TEXT
+);"
+"CREATE TABLE `checkin` (
+  cid INT PRIMARY KEY,
+  business_id TEXT REFERENCES business(business_id),
+  count INT,
+  day TEXT
+);"
+"CREATE TABLE `neighbourhood` (
+  id INT PRIMARY KEY,
+  business_id TEXT REFERENCES business(business_id),
+  neighbourhood_name TEXT
+);"
+"CREATE TABLE `review` (
+  rid INT PRIMARY KEY,
+  business_id TEXT REFERENCES business(business_id),
+  user_id TEXT REFERENCES user(user_id),
+  rating REAL,
+  text TEXT,
+  year INT,
+  month TEXT
+);"
+"CREATE TABLE `tip` (
+  tip_id INT PRIMARY KEY,
+  business_id TEXT REFERENCES business(business_id),
+  text TEXT,
+  user_id TEXT REFERENCES user(user_id),
+  likes INT,
+  year INT,
+  month TEXT
+);"
+"CREATE TABLE `Ref_Detention_Type` (
+  detention_type_code VARCHAR(10) PRIMARY KEY,
+  detention_type_description VARCHAR(80)
+);"
+"CREATE TABLE `Ref_Incident_Type` (
+  incident_type_code VARCHAR(10) PRIMARY KEY,
+  incident_type_description VARCHAR(80)
+);"
+"CREATE TABLE `Addresses` (
+  address_id INTEGER,
+  line_1 VARCHAR(120),
+  line_2 VARCHAR(120),
+  line_3 VARCHAR(120),
+  city VARCHAR(80),
+  zip_postcode VARCHAR(20),
+  state_province_county VARCHAR(50),
+  country VARCHAR(50),
+  other_address_details VARCHAR(255)
+);"
+"CREATE TABLE `Students` (
+  student_id INTEGER,
+  address_id INTEGER REFERENCES Addresses(address_id),
+  first_name VARCHAR(80),
+  middle_name VARCHAR(40),
+  last_name VARCHAR(40),
+  cell_mobile_number VARCHAR(40),
+  email_address VARCHAR(40),
+  date_first_rental DATETIME,
+  date_left_university DATETIME,
+  other_student_details VARCHAR(255)
+);"
+"CREATE TABLE `Teachers` (
+  teacher_id INTEGER,
+  address_id INTEGER REFERENCES Addresses(address_id),
+  first_name VARCHAR(80),
+  middle_name VARCHAR(80),
+  last_name VARCHAR(80),
+  gender VARCHAR(1),
+  cell_mobile_number VARCHAR(40),
+  email_address VARCHAR(40),
+  other_details VARCHAR(255)
+);"
+"CREATE TABLE `Assessment_Notes` (
+  notes_id INTEGER,
+  student_id INTEGER REFERENCES Students(student_id),
+  teacher_id INTEGER REFERENCES Teachers(teacher_id),
+  date_of_notes DATETIME,
+  text_of_notes VARCHAR(255),
+  other_details VARCHAR(255)
+);"
+"CREATE TABLE `Behavior_Incident` (
+  incident_id INTEGER,
+  incident_type_code VARCHAR(10) REFERENCES Ref_Incident_Type(incident_type_code),
+  student_id INTEGER REFERENCES Students(student_id),
+  date_incident_start DATETIME,
+  date_incident_end DATETIME,
+  incident_summary VARCHAR(255),
+  recommendations VARCHAR(255),
+  other_details VARCHAR(255)
+);"
+"CREATE TABLE `Detention` (
+  detention_id INTEGER,
+  detention_type_code VARCHAR(10) REFERENCES Ref_Detention_Type(detention_type_code),
+  teacher_id INTEGER REFERENCES Teachers(teacher_id),
+  datetime_detention_start DATETIME,
+  datetime_detention_end DATETIME,
+  detention_summary VARCHAR(255),
+  other_details VARCHAR(255)
+);"
+"CREATE TABLE `Student_Addresses` (
+  student_id INTEGER REFERENCES Students(student_id),
+  address_id INTEGER REFERENCES Addresses(address_id),
+  date_address_from DATETIME,
+  date_address_to DATETIME,
+  monthly_rental DECIMAL(19,4),
+  other_details VARCHAR(255)
+);"
+"CREATE TABLE `Students_in_Detention` (
+  student_id INTEGER REFERENCES Students(student_id),
+  detention_id INTEGER REFERENCES Detention(detention_id),
+  incident_id INTEGER REFERENCES Behavior_Incident(incident_id)
+);"
+"CREATE TABLE `film` (
+  Film_ID INT PRIMARY KEY,
+  Title TEXT,
+  Studio TEXT,
+  Director TEXT,
+  Gross_in_dollar INT
+);"
+"CREATE TABLE `film_market_estimation` (
+  Estimation_ID INT PRIMARY KEY,
+  Low_Estimate REAL,
+  High_Estimate REAL,
+  Film_ID INT REFERENCES film(Film_ID),
+  Type TEXT,
+  Market_ID INT REFERENCES market(Market_ID),
+  Year INT
+);"
+"CREATE TABLE `Catalogs` (
+  catalog_id INTEGER,
+  catalog_name VARCHAR(50),
+  catalog_publisher VARCHAR(80),
+  date_of_publication DATETIME,
+  date_of_latest_revision DATETIME
+);"
+"CREATE TABLE `Catalog_Structure` (
+  catalog_level_number INTEGER,
+  catalog_id INTEGER REFERENCES Catalogs(catalog_id),
+  catalog_level_name VARCHAR(50)
+);"
+"CREATE TABLE `Catalog_Contents` (
+  catalog_entry_id INTEGER,
+  catalog_level_number INTEGER REFERENCES Catalog_Structure(catalog_level_number),
+  parent_entry_id INTEGER,
+  previous_entry_id INTEGER,
+  next_entry_id INTEGER,
+  catalog_entry_name VARCHAR(80),
+  product_stock_number VARCHAR(50),
+  price_in_dollars DOUBLE,
+  price_in_euros DOUBLE,
+  price_in_pounds DOUBLE,
+  capacity VARCHAR(20),
+  length VARCHAR(20),
+  height VARCHAR(20),
+  width VARCHAR(20)
+);"
+"CREATE TABLE `Catalog_Contents_Additional_Attributes` (
+  catalog_entry_id INTEGER REFERENCES Catalog_Contents(catalog_entry_id),
+  catalog_level_number INTEGER REFERENCES Catalog_Structure(catalog_level_number),
+  attribute_id INTEGER,
+  attribute_value VARCHAR(255)
+);"
+"CREATE TABLE `routes` (
+  rid INTEGER,
+  dst_apid INTEGER REFERENCES airports(apid),
+  dst_ap varchar(4),
+  src_apid bigint REFERENCES airports(apid),
+  src_ap varchar(4),
+  alid bigint REFERENCES airlines(alid),
+  airline varchar(4),
+  codeshare TEXT
+);"
+"CREATE TABLE `airports` (
+  apid INTEGER,
+  name TEXT,
+  city TEXT,
+  country TEXT,
+  x REAL,
+  y REAL,
+  elevation bigint,
+  iata character varchar(3),
+  icao character varchar(4)
+);"
+"CREATE TABLE `stadium` (
+  id INT PRIMARY KEY,
+  name TEXT,
+  Home_Games INT,
+  Average_Attendance REAL,
+  Total_Attendance REAL,
+  Capacity_Percentage REAL
+);"
+"CREATE TABLE `game` (
+  stadium_id INT REFERENCES stadium(id),
+  id INT PRIMARY KEY,
+  Season INT,
+  Date TEXT,
+  Home_team TEXT,
+  Away_team TEXT,
+  Score TEXT,
+  Competition TEXT
+);"
+"CREATE TABLE `injury_accident` (
+  game_id INT REFERENCES game(id),
+  id INT PRIMARY KEY,
+  Player TEXT,
+  Injury TEXT,
+  Number_of_matches TEXT,
+  Source TEXT
+);"
+"CREATE TABLE `Physician` (
+  EmployeeID INTEGER,
+  Name VARCHAR(30),
+  Position VARCHAR(30),
+  SSN INTEGER
+);"
+"CREATE TABLE `Department` (
+  DepartmentID INTEGER,
+  Name VARCHAR(30),
+  Head INTEGER REFERENCES Physician(EmployeeID)
+);"
+"CREATE TABLE `Affiliated_With` (
+  Physician INTEGER PRIMARY KEY REFERENCES Physician(EmployeeID),
+  Department INTEGER PRIMARY KEY REFERENCES Department(DepartmentID),
+  PrimaryAffiliation BOOLEAN
+);"
+"CREATE TABLE `Trained_In` (
+  Physician INTEGER PRIMARY KEY REFERENCES Physician(EmployeeID),
+  Treatment INTEGER PRIMARY KEY REFERENCES Procedures(Code),
+  CertificationDate DATETIME,
+  CertificationExpires DATETIME
+);"
+"CREATE TABLE `Patient` (
+  SSN INTEGER,
+  Name VARCHAR(30),
+  Address VARCHAR(30),
+  Phone VARCHAR(30),
+  InsuranceID INTEGER,
+  PCP INTEGER REFERENCES Physician(EmployeeID)
+);"
+"CREATE TABLE `Nurse` (
+  EmployeeID INTEGER,
+  Name VARCHAR(30),
+  Position VARCHAR(30),
+  Registered BOOLEAN,
+  SSN INTEGER
+);"
+"CREATE TABLE `Appointment` (
+  AppointmentID INTEGER,
+  Patient INTEGER REFERENCES Patient(SSN),
+  PrepNurse INTEGER REFERENCES Nurse(EmployeeID),
+  Physician INTEGER REFERENCES Physician(EmployeeID),
+  Start DATETIME,
+  End DATETIME,
+  ExaminationRoom TEXT
+);"
+"CREATE TABLE `Prescribes` (
+  Physician INTEGER PRIMARY KEY REFERENCES Physician(EmployeeID),
+  Patient INTEGER PRIMARY KEY REFERENCES Patient(SSN),
+  Medication INTEGER PRIMARY KEY REFERENCES Medication(Code),
+  Date DATETIME PRIMARY KEY,
+  Appointment INTEGER REFERENCES Appointment(AppointmentID),
+  Dose VARCHAR(30)
+);"
+"CREATE TABLE `Block` (
+  BlockFloor INTEGER PRIMARY KEY,
+  BlockCode INTEGER PRIMARY KEY
+);"
+"CREATE TABLE `Room` (
+  RoomNumber INTEGER,
+  RoomType VARCHAR(30),
+  BlockFloor INTEGER REFERENCES Block(BlockFloor),
+  BlockCode INTEGER REFERENCES Block(BlockCode),
+  Unavailable BOOLEAN
+);"
+"CREATE TABLE `On_Call` (
+  Nurse INTEGER PRIMARY KEY REFERENCES Nurse(EmployeeID),
+  BlockFloor INTEGER PRIMARY KEY REFERENCES Block(BlockFloor),
+  BlockCode INTEGER PRIMARY KEY REFERENCES Block(BlockCode),
+  OnCallStart DATETIME PRIMARY KEY,
+  OnCallEnd DATETIME PRIMARY KEY
+);"
+"CREATE TABLE `Stay` (
+  StayID INTEGER,
+  Patient INTEGER REFERENCES Patient(SSN),
+  Room INTEGER REFERENCES Room(RoomNumber),
+  StayStart DATETIME,
+  StayEnd DATETIME
+);"
+"CREATE TABLE `Undergoes` (
+  Patient INTEGER PRIMARY KEY REFERENCES Patient(SSN),
+  Procedures INTEGER PRIMARY KEY REFERENCES Procedures(Code),
+  Stay INTEGER PRIMARY KEY REFERENCES Stay(StayID),
+  DateUndergoes DATETIME PRIMARY KEY,
+  Physician INTEGER REFERENCES Physician(EmployeeID),
+  AssistingNurse INTEGER REFERENCES Nurse(EmployeeID)
+);"
+"CREATE TABLE `buildings` (
+  id INT PRIMARY KEY,
+  name TEXT,
+  City TEXT,
+  Height INT,
+  Stories INT,
+  Status TEXT
+);"
+"CREATE TABLE `Office_locations` (
+  building_id INT PRIMARY KEY REFERENCES buildings(id),
+  company_id INT PRIMARY KEY REFERENCES Companies(id),
+  move_in_year INT
+);"
+"CREATE TABLE `region` (
+  Region_ID INT PRIMARY KEY,
+  Region_name TEXT,
+  Date TEXT,
+  Label TEXT,
+  Format TEXT,
+  Catalogue TEXT
+);"
+"CREATE TABLE `party` (
+  Party_ID INT PRIMARY KEY,
+  Minister TEXT,
+  Took_office TEXT,
+  Left_office TEXT,
+  Region_ID INT REFERENCES region(Region_ID),
+  Party_name TEXT
+);"
+"CREATE TABLE `member` (
+  Member_ID INT PRIMARY KEY,
+  Member_Name TEXT,
+  Party_ID TEXT REFERENCES party(Party_ID),
+  In_office TEXT
+);"
+"CREATE TABLE `party_events` (
+  Event_ID INT PRIMARY KEY,
+  Event_Name TEXT,
+  Party_ID INT REFERENCES party(Party_ID),
+  Member_in_charge_ID INT REFERENCES member(Member_ID)
+);"
+"CREATE TABLE `Web_client_accelerator` (
+  id INT PRIMARY KEY,
+  name TEXT,
+  Operating_system TEXT,
+  Client TEXT,
+  Connection TEXT
+);"
+"CREATE TABLE `accelerator_compatible_browser` (
+  accelerator_id INT PRIMARY KEY REFERENCES Web_client_accelerator(id),
+  browser_id INT PRIMARY KEY REFERENCES browser(id),
+  compatible_since_year INT
+);"
+"CREATE TABLE `Investors` (
+  investor_id INTEGER,
+  Investor_details VARCHAR(255)
+);"
+"CREATE TABLE `Lots` (
+  lot_id INTEGER,
+  investor_id INTEGER REFERENCES Investors(investor_id),
+  lot_details VARCHAR(255)
+);"
+"CREATE TABLE `Transactions` (
+  transaction_id INTEGER,
+  investor_id INTEGER REFERENCES Investors(investor_id),
+  transaction_type_code VARCHAR(10) REFERENCES Ref_Transaction_Types(transaction_type_code),
+  date_of_transaction DATETIME,
+  amount_of_transaction DECIMAL(19,4),
+  share_count VARCHAR(40),
+  other_details VARCHAR(255)
+);"
+"CREATE TABLE `Sales` (
+  sales_transaction_id INTEGER REFERENCES Transactions(transaction_id),
+  sales_details VARCHAR(255)
+);"
+"CREATE TABLE `Purchases` (
+  purchase_transaction_id INTEGER REFERENCES Transactions(transaction_id),
+  purchase_details VARCHAR(255)
+);"
+"CREATE TABLE `Transactions_Lots` (
+  transaction_id INTEGER REFERENCES Transactions(transaction_id),
+  lot_id INTEGER REFERENCES Lots(lot_id)
+);"
+"CREATE TABLE `basketball_match` (
+  Team_ID INT PRIMARY KEY,
+  School_ID INT REFERENCES university(School_ID),
+  Team_Name TEXT,
+  ACC_Regular_Season TEXT,
+  ACC_Percent TEXT,
+  ACC_Home TEXT,
+  ACC_Road TEXT,
+  All_Games TEXT,
+  All_Games_Percent INT,
+  All_Home TEXT,
+  All_Road TEXT,
+  All_Neutral TEXT
+);"
+"CREATE TABLE `university` (
+  School_ID INT PRIMARY KEY,
+  School TEXT,
+  Location TEXT,
+  Founded REAL,
+  Affiliation TEXT,
+  Enrollment REAL,
+  Nickname TEXT,
+  Primary_conference TEXT
+);"
+"CREATE TABLE `GEOGRAPHIC` (
+  CITY_NAME TEXT PRIMARY KEY,
+  COUNTY TEXT,
+  REGION TEXT
+);"
+"CREATE TABLE `RESTAURANT` (
+  ID INT PRIMARY KEY,
+  NAME TEXT,
+  FOOD_TYPE TEXT,
+  CITY_NAME TEXT REFERENCES GEOGRAPHIC(CITY_NAME),
+  RATING REAL
+);"
+"CREATE TABLE `LOCATION` (
+  RESTAURANT_ID INT PRIMARY KEY REFERENCES RESTAURANT(RESTAURANT_ID),
+  HOUSE_NUMBER INT,
+  STREET_NAME TEXT,
+  CITY_NAME TEXT REFERENCES GEOGRAPHIC(CITY_NAME)
+);"
+"CREATE TABLE `follows` (
+  f1 int(11) PRIMARY KEY REFERENCES user_profiles(uid),
+  f2 int(11) PRIMARY KEY REFERENCES user_profiles(uid)
+);"
+"CREATE TABLE `tweets` (
+  id bigint(20) PRIMARY KEY,
+  uid int(11) REFERENCES user_profiles(uid),
+  text char(140),
+  createdate datetime
+);"
+"CREATE TABLE `user_profiles` (
+  uid int(11) PRIMARY KEY,
+  name varchar(255),
+  email varchar(255),
+  partitionid int(11),
+  followers int(11)
+);"
+"CREATE TABLE `station` (
+  id INTEGER,
+  name TEXT,
+  lat NUMERIC,
+  long NUMERIC,
+  dock_count INTEGER,
+  city TEXT,
+  installation_date TEXT
+);"
+"CREATE TABLE `status` (
+  station_id INTEGER REFERENCES station(id),
+  bikes_available INTEGER,
+  docks_available INTEGER,
+  time TEXT
+);"
+"CREATE TABLE `Campuses` (
+  Id INTEGER,
+  Campus TEXT,
+  Location TEXT,
+  County TEXT,
+  Year INTEGER
+);"
+"CREATE TABLE `csu_fees` (
+  Campus INTEGER REFERENCES Campuses(Id),
+  Year INTEGER,
+  CampusFee INTEGER
+);"
+"CREATE TABLE `degrees` (
+  Year INTEGER PRIMARY KEY,
+  Campus INTEGER PRIMARY KEY REFERENCES Campuses(Id),
+  Degrees INTEGER
+);"
+"CREATE TABLE `discipline_enrollments` (
+  Campus INTEGER PRIMARY KEY REFERENCES Campuses(Id),
+  Discipline INTEGER PRIMARY KEY,
+  Year INTEGER,
+  Undergraduate INTEGER,
+  Graduate INTEGER
+);"
+"CREATE TABLE `enrollments` (
+  Campus INTEGER PRIMARY KEY REFERENCES Campuses(Id),
+  Year INTEGER PRIMARY KEY,
+  TotalEnrollment_AY INTEGER,
+  FTE_AY INTEGER
+);"
+"CREATE TABLE `faculty` (
+  Campus INTEGER REFERENCES Campuses(Id),
+  Year INTEGER,
+  Faculty REAL
+);"
+"CREATE TABLE `journalist` (
+  journalist_ID INT PRIMARY KEY,
+  Name TEXT,
+  Nationality TEXT,
+  Age TEXT,
+  Years_working INT
+);"
+"CREATE TABLE `news_report` (
+  journalist_ID INT PRIMARY KEY REFERENCES journalist(journalist_ID),
+  Event_ID INT PRIMARY KEY REFERENCES event(Event_ID),
+  Work_Type TEXT
+);"
+"CREATE TABLE `Authors` (
+  authID INTEGER,
+  lname TEXT,
+  fname TEXT
+);"
+"CREATE TABLE `Authorship` (
+  authID INTEGER PRIMARY KEY REFERENCES Authors(authID),
+  instID INTEGER PRIMARY KEY REFERENCES Inst(instID),
+  paperID INTEGER PRIMARY KEY REFERENCES Papers(paperID),
+  authOrder INTEGER
+);"
+"CREATE TABLE `manufacturer` (
+  Manufacturer_ID INT PRIMARY KEY,
+  Open_Year REAL,
+  Name TEXT,
+  Num_of_Factories INT,
+  Num_of_Shops INT
+);"
+"CREATE TABLE `furniture_manufacte` (
+  Manufacturer_ID INT PRIMARY KEY REFERENCES manufacturer(Manufacturer_ID),
+  Furniture_ID INT PRIMARY KEY REFERENCES furniture(Furniture_ID),
+  Price_in_Dollar REAL
+);"
+"CREATE TABLE `Person` (
+  name varchar(20) PRIMARY KEY,
+  age INTEGER,
+  city TEXT,
+  gender TEXT,
+  job TEXT
+);"
+"CREATE TABLE `PersonFriend` (
+  name varchar(20) REFERENCES Person(name),
+  friend varchar(20) REFERENCES Person(name),
+  year INTEGER
+);"
+"CREATE TABLE `enzyme` (
+  id INT PRIMARY KEY,
+  name TEXT,
+  Location TEXT,
+  Product TEXT,
+  Chromosome TEXT,
+  OMIM INT,
+  Porphyria TEXT
+);"
+"CREATE TABLE `medicine_enzyme_interaction` (
+  enzyme_id INT PRIMARY KEY REFERENCES enzyme(id),
+  medicine_id INT PRIMARY KEY REFERENCES medicine(id),
+  interaction_type TEXT
+);"
+"CREATE TABLE `Apartment_Buildings` (
+  building_id INTEGER PRIMARY KEY,
+  building_short_name CHAR(15),
+  building_full_name VARCHAR(80),
+  building_description VARCHAR(255),
+  building_address VARCHAR(255),
+  building_manager VARCHAR(50),
+  building_phone VARCHAR(80)
+);"
+"CREATE TABLE `Apartments` (
+  apt_id INTEGER PRIMARY KEY,
+  building_id INTEGER REFERENCES Apartment_Buildings(building_id),
+  apt_type_code CHAR(15),
+  apt_number CHAR(10),
+  bathroom_count INTEGER,
+  bedroom_count INTEGER,
+  room_count CHAR(5)
+);"
+"CREATE TABLE `Apartment_Facilities` (
+  apt_id INTEGER PRIMARY KEY REFERENCES Apartments(apt_id),
+  facility_code CHAR(15) PRIMARY KEY
+);"
+"CREATE TABLE `Apartment_Bookings` (
+  apt_booking_id INTEGER PRIMARY KEY,
+  apt_id INTEGER REFERENCES Apartments(apt_id),
+  guest_id INTEGER REFERENCES Guests(guest_id),
+  booking_status_code CHAR(15),
+  booking_start_date DATETIME,
+  booking_end_date DATETIME
+);"
+"CREATE TABLE `View_Unit_Status` (
+  apt_id INTEGER REFERENCES Apartments(apt_id),
+  apt_booking_id INTEGER REFERENCES Apartment_Bookings(apt_booking_id),
+  status_date DATETIME PRIMARY KEY,
+  available_yn BIT
+);"
+"CREATE TABLE `channel` (
+  Channel_ID INT PRIMARY KEY,
+  Name TEXT,
+  Owner TEXT,
+  Share_in_percent REAL,
+  Rating_in_percent REAL
+);"
+"CREATE TABLE `broadcast` (
+  Channel_ID INT PRIMARY KEY REFERENCES channel(Channel_ID),
+  Program_ID INT PRIMARY KEY REFERENCES program(Program_ID),
+  Time_of_day TEXT
+);"
+"CREATE TABLE `broadcast_share` (
+  Channel_ID INT PRIMARY KEY REFERENCES channel(Channel_ID),
+  Program_ID INT PRIMARY KEY REFERENCES program(Program_ID),
+  Date TEXT,
+  Share_in_percent REAL
+);"
+"CREATE TABLE `Customer_Master_Index` (
+  master_customer_id INTEGER,
+  cmi_details VARCHAR(255)
+);"
+"CREATE TABLE `CMI_Cross_References` (
+  cmi_cross_ref_id INTEGER,
+  master_customer_id INTEGER REFERENCES Customer_Master_Index(master_customer_id),
+  source_system_code CHAR(15)
+);"
+"CREATE TABLE `Council_Tax` (
+  council_tax_id INTEGER,
+  cmi_cross_ref_id INTEGER REFERENCES CMI_Cross_References(cmi_cross_ref_id)
+);"
+"CREATE TABLE `Business_Rates` (
+  business_rates_id INTEGER,
+  cmi_cross_ref_id INTEGER REFERENCES CMI_Cross_References(cmi_cross_ref_id)
+);"
+"CREATE TABLE `Benefits_Overpayments` (
+  council_tax_id INTEGER,
+  cmi_cross_ref_id INTEGER REFERENCES CMI_Cross_References(cmi_cross_ref_id)
+);"
+"CREATE TABLE `Parking_Fines` (
+  council_tax_id INTEGER,
+  cmi_cross_ref_id INTEGER REFERENCES CMI_Cross_References(cmi_cross_ref_id)
+);"
+"CREATE TABLE `Rent_Arrears` (
+  council_tax_id INTEGER,
+  cmi_cross_ref_id INTEGER REFERENCES CMI_Cross_References(cmi_cross_ref_id)
+);"
+"CREATE TABLE `Electoral_Register` (
+  electoral_register_id INTEGER,
+  cmi_cross_ref_id INTEGER REFERENCES CMI_Cross_References(cmi_cross_ref_id)
+);"
+"CREATE TABLE `store` (
+  Store_ID INT PRIMARY KEY,
+  Store_Name TEXT,
+  Type TEXT,
+  Area_size REAL,
+  Number_of_product_category REAL,
+  Ranking INT
+);"
+"CREATE TABLE `store_product` (
+  Store_ID INT PRIMARY KEY REFERENCES store(Store_ID),
+  Product_ID INT PRIMARY KEY REFERENCES product(Product_ID)
+);"
+"CREATE TABLE `store_district` (
+  Store_ID INT PRIMARY KEY REFERENCES store(Store_ID),
+  District_ID INT REFERENCES district(District_ID)
+);"
+"CREATE TABLE `gas_station` (
+  Station_ID INT PRIMARY KEY,
+  Open_Year INT,
+  Location TEXT,
+  Manager_Name TEXT,
+  Vice_Manager_Name TEXT,
+  Representative_Name TEXT
+);"
+"CREATE TABLE `station_company` (
+  Station_ID INT PRIMARY KEY REFERENCES gas_station(Station_ID),
+  Company_ID INT PRIMARY KEY REFERENCES company(Company_ID),
+  Rank_of_the_Year INT
+);"
+"CREATE TABLE `artwork` (
+  Artwork_ID INT PRIMARY KEY,
+  Type TEXT,
+  Name TEXT
+);"
+"CREATE TABLE `nomination` (
+  Artwork_ID INT PRIMARY KEY REFERENCES artwork(Artwork_ID),
+  Festival_ID INT PRIMARY KEY REFERENCES festival_detail(Festival_ID),
+  Result TEXT
+);"
+"CREATE TABLE `building` (
+  building_id TEXT PRIMARY KEY,
+  Name TEXT,
+  Street_address TEXT,
+  Years_as_tallest TEXT,
+  Height_feet INT,
+  Floors INT
+);"
+"CREATE TABLE `Institution` (
+  Institution_id TEXT PRIMARY KEY,
+  Institution TEXT,
+  Location TEXT,
+  Founded REAL,
+  Type TEXT,
+  Enrollment INT,
+  Team TEXT,
+  Primary_Conference TEXT,
+  building_id TEXT REFERENCES building(building_id)
+);"
+"CREATE TABLE `protein` (
+  common_name TEXT PRIMARY KEY,
+  protein_name TEXT,
+  divergence_from_human_lineage REAL,
+  accession_number TEXT,
+  sequence_length REAL,
+  sequence_identity_to_human_protein TEXT,
+  Institution_id TEXT REFERENCES Institution(Institution_id)
+);"
+"CREATE TABLE `roller_coaster` (
+  Roller_Coaster_ID INT PRIMARY KEY,
+  Name TEXT,
+  Park TEXT,
+  Country_ID INT REFERENCES country(Country_ID),
+  Length REAL,
+  Height REAL,
+  Speed TEXT,
+  Opened TEXT,
+  Status TEXT
+);"
+"CREATE TABLE `country` (
+  Country_ID INT PRIMARY KEY,
+  Name TEXT,
+  Population INT,
+  Area INT,
+  Languages TEXT
+);"
+"CREATE TABLE `Services` (
+  Service_ID INTEGER,
+  Service_Type_Code CHAR(15)
+);"
+"CREATE TABLE `Events` (
+  Event_ID INTEGER,
+  Service_ID INTEGER REFERENCES Services(Service_ID),
+  Event_Details VARCHAR(255)
+);"
+"CREATE TABLE `Participants_in_Events` (
+  Event_ID INTEGER PRIMARY KEY REFERENCES Events(Event_ID),
+  Participant_ID INTEGER PRIMARY KEY REFERENCES Participants(Participant_ID)
+);"
+"CREATE TABLE `architect` (
+  id TEXT PRIMARY KEY,
+  name TEXT,
+  nationality TEXT,
+  gender TEXT
+);"
+"CREATE TABLE `bridge` (
+  architect_id INT REFERENCES architect(id),
+  id INT PRIMARY KEY,
+  name TEXT,
+  location TEXT,
+  length_meters REAL,
+  length_feet REAL
+);"
+"CREATE TABLE `mill` (
+  architect_id INT REFERENCES architect(id),
+  id INT PRIMARY KEY,
+  location TEXT,
+  name TEXT,
+  type TEXT,
+  built_year INT,
+  notes TEXT
+);"
+"CREATE TABLE `railway` (
+  Railway_ID INT PRIMARY KEY,
+  Railway TEXT,
+  Builder TEXT,
+  Built TEXT,
+  Wheels TEXT,
+  Location TEXT,
+  ObjectNumber TEXT
+);"
+"CREATE TABLE `train` (
+  Train_ID INT PRIMARY KEY,
+  Train_Num TEXT,
+  Name TEXT,
+  From TEXT,
+  Arrival TEXT,
+  Railway_ID INT REFERENCES railway(Railway_ID)
+);"
+"CREATE TABLE `railway_manage` (
+  Railway_ID INT PRIMARY KEY REFERENCES railway(Railway_ID),
+  Manager_ID INT PRIMARY KEY REFERENCES manager(Manager_ID),
+  From_Year TEXT
+);"
+"CREATE TABLE `publication` (
+  Publication_ID INT PRIMARY KEY,
+  Book_ID INT REFERENCES book(Book_ID),
+  Publisher TEXT,
+  Publication_Date TEXT,
+  Price REAL
+);"
+"CREATE TABLE `book` (
+  Book_ID INT PRIMARY KEY,
+  Title TEXT,
+  Issues REAL,
+  Writer TEXT
+);"
