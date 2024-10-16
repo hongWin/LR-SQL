@@ -27,6 +27,6 @@ This repository hosts the code for the LR-SQL paper, which is primarily used to 
 - 2641873533@qq.com
 
 ### Paper
-https://arxiv.org/abs/2410.11457
+- https://arxiv.org/abs/2410.11457
 
 
