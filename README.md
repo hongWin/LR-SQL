@@ -6,6 +6,7 @@ This repository hosts the code for the LR-SQL paper, which is primarily used to 
 
 ### Paper
 - https://arxiv.org/abs/2410.11457
+  ![Alt Text](requirements/pic2_crop.png)
   
 ### Requirements
 - Project environment requirements, where requirement1.txt is suitable for GLM4 and Qwen2 models, and requirement2.txt is suitable for the Deepspeak model.
