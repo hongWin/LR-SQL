@@ -29,5 +29,17 @@ This repository hosts the code for the LR-SQL paper, which is primarily used to 
 ### Sponsorship and Support
 - China Telecom Jiangsu Branch
 
+### Cited
+- @misc{Wuzhenghong2024lr-sql:,
+    title={LR-SQL: A Supervised Fine-Tuning Method for Text2SQL Tasks under  Low-Resource Scenarios},
+    howpublished = "\url{https://synthical.com/article/5fd506b3-ed3d-4173-b5fb-e703b589c742}",
+    author={Wen Wuzhenghong and Zhang Yongpan and Pan Su},
+    year={2024},
+    month={9},
+    eprint={2410.11457},
+    archivePrefix={arXiv},
+    primaryClass={cs.AI}
+}
+
 
 
