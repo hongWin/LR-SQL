@@ -26,5 +26,8 @@ This repository hosts the code for the LR-SQL paper, which is primarily used to 
 - If you need to verify our data generation process, please contact 2641873533@qq.com.
 
 
+### Sponsorship and Support
+- China Telecom Jiangsu Branch
+
 
 
