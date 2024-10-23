@@ -10,7 +10,7 @@ This repository hosts the code for the LR-SQL paper, which is primarily used to 
   
 ### Requirements
 - Project environment requirements, where requirement1.txt is suitable for GLM4 and Qwen2 models, and requirement2.txt is suitable for the Deepspeak model.
-- During our experiments, we found that different versions of PEFT (Parameter-Efficient Fine-Tuning) libraries and Transformer libraries can lead to inconsistent memory usage during model fine-tuning. We used the GLM4 model from June 2024, but in August, GLM4 updated some of its files to be compatible with the latest version of the Transformer library. We recommend that when running our project, you strictly follow the environment requirements we provide and replace the existing GLM4 model files with the corresponding files from the GLM4_elder_file. Our CUDA version is cuda11.8, and the GPU model is 1 * A800 80G.
+- During our experiments, we found that different versions of PEFT (Parameter-Efficient Fine-Tuning) libraries and Transformer libraries can lead to inconsistent memory usage during model fine-tuning. We used the GLM4 model from June 2024, but in August, GLM4 updated some of its files to be compatible with the latest version of the Transformer library. We recommend that when running our project, please strictly follow the environment requirements we provide and replace the existing GLM4 model files with the corresponding files from the GLM4_elder_file. Our CUDA version is cuda11.8, and the GPU model is 1 * A800 80G.
 
 ### schema_link
 - Project files for the table prediction model, including the code and results of our proposed method as well as all comparative experiments.
